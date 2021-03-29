@@ -7,80 +7,59 @@ namespace TP_1
         static void Main(string[] args)
         {
 
-            string opcion;
+            string opcion = string.Empty;
             string opcionDeUsuario;
             string opcionAdmin;
 
             Agencia agencia = new Agencia();
 
-            Console.WriteLine("*************Bienvenido****************");
-            Console.WriteLine("*Elija usuario  ***********************");
-            Console.WriteLine("***************************************");
-            Console.WriteLine("");
-            Console.WriteLine("A - Administrador");
-            Console.WriteLine("B - Cliente");
-            Console.WriteLine("");
-            Console.WriteLine("X - SALIR");
-            Console.WriteLine("***************************************");
 
-
-            opcion = Console.ReadLine();
-            
             while (opcion != "X")
             {
-                
-                switch (opcion.ToUpper().Trim())
+                opcion = menuBienvenida();
+
+                if (opcion == "A")
                 {
-                    case "A":
-                        Console.WriteLine("***************************************");
-                        Console.WriteLine("**Opciones de Administrador************");
-                        Console.WriteLine("***************************************");
-                        Console.WriteLine("A - Insertar Alojamiento\n");
-                        Console.WriteLine("X - Volver");
-                        Console.WriteLine("***************************************");
-                        opcion = Console.ReadLine();
-                        ingresarAlojamiento(opcion, agencia);
-                        /* PEDIMOS SOLO UN ID PARA COMPARAR */
+                    opcion = menuAdministrador();
+                    while (opcion != "A")
+                    {
+                        if (opcion == "A")
+                        {
+                          opcion = ingresarAlojamiento(opcion, agencia);
+                        } 
+                    }
+        
 
-                        Console.ReadLine();
-                        break;
-
-                    case "B":
-                        Console.WriteLine("***************************************");
-                        Console.WriteLine("**Opciones de Cliente******************");
-                        Console.WriteLine("***************************************");
-                        Console.WriteLine("A - ver Alojamientos\n");
-                        Console.WriteLine("X - Volver");
-                        Console.WriteLine("***************************************");
-
-                        opcion = Console.ReadLine();
-
-                        break;
-
-
-                    default:
-                        Console.WriteLine("INGRESE DE NUEVO UNA OPCION");
-                        opcion = Console.ReadLine();
-                        break;
                 }
-
-                if (opcion == "X")
+                else if (opcion == "B")
+                {
+                    opcion = menuCliente();
+                }
+                else if (opcion == "X")
                 {
                     Console.WriteLine("Gracias por usar la App!");
                     Console.WriteLine("Buena Suerte!");
-
                 }
+                else
+                {
+                    Console.WriteLine("Ingrese una opcion correcta");
+                    opcion = Console.ReadLine();
+                }
+
             }
 
 
 
 
+            int x = 1;
             foreach (var item in agencia.alojamientosAgencia)
             {
                 if (item != null)
                 {
                     Console.WriteLine(item);
+                    Console.WriteLine(x);
                 }
+                x++;
             }
 
 
@@ -186,18 +165,57 @@ namespace TP_1
 
         }
 
-        public static void ingresarAlojamiento(string opcionAdmin, Agencia a)
+
+        // MENUES
+        public static string menuBienvenida()
         {
+            Console.WriteLine("*************Bienvenido****************");
+            Console.WriteLine("*Elija usuario  ***********************");
+            Console.WriteLine("***************************************");
+            Console.WriteLine("");
+            Console.WriteLine("A - Administrador");
+            Console.WriteLine("B - Cliente");
+            Console.WriteLine("");
+            Console.WriteLine("X - SALIR");
+            Console.WriteLine("***************************************");
+            return Console.ReadLine();
+        }
+
+        public static string menuAdministrador()
+        {
+            Console.WriteLine("***************************************");
+            Console.WriteLine("**Opciones de Administrador************");
+            Console.WriteLine("***************************************");
+            Console.WriteLine("A - Insertar Alojamiento\n");
+            Console.WriteLine("X - Volver");
+            Console.WriteLine("***************************************");
+            return Console.ReadLine();
+        }
+
+        public static string menuCliente()
+        {
+            Console.WriteLine("***************************************");
+            Console.WriteLine("**Opciones de Cliente******************");
+            Console.WriteLine("***************************************");
+            Console.WriteLine("A - ver Alojamientos\n");
+            Console.WriteLine("X - Volver");
+            Console.WriteLine("***************************************");
+
+            return Console.ReadLine();
+        }
+
+
+        public static string ingresarAlojamiento(string opcionAdmin, Agencia a)
+        {
+            Console.WriteLine("***************************************");
+            Console.WriteLine("A - Insertar Hotel");
+            Console.WriteLine("B - Insertar Cabaña\n");
+            Console.WriteLine("x - Volver");
+            Console.WriteLine("***************************************");
+            opcionAdmin = Console.ReadLine();
 
             while (opcionAdmin != "X")
             {
-                Console.WriteLine("***************************************");
-                Console.WriteLine("A - Insertar Hotel");
-                Console.WriteLine("A - Insertar Cabaña\n");
-                Console.WriteLine("X - Volver");
-                Console.WriteLine("***************************************");
-                opcionAdmin = Console.ReadLine();
-
                 if (opcionAdmin.ToUpper().Trim() == "A")
                 {
                     crearHotel(a);
@@ -212,7 +230,7 @@ namespace TP_1
                     opcionAdmin = Console.ReadLine();
                 }
             }
-
+            return menuAdministrador();
         }
 
         public static void crearHotel(Agencia a)
@@ -264,6 +282,7 @@ namespace TP_1
         public static void crearCabania(Agencia a)
         {
             string nombre = "Cabania" + Alojamiento.codigo;
+
 
             string ciudad = string.Empty;
             string barrio = string.Empty;

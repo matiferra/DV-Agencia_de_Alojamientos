@@ -43,6 +43,7 @@ namespace TP_1
                 if (alojamientosAgencia[x] == null)
                 {
                     alojamientosAgencia[x] = a;
+                    lugarVacio = true;
                 }
                 x++;
             }
