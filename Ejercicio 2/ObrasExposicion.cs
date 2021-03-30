@@ -8,9 +8,14 @@ namespace Ejercicio_2
     {
         public ObraArte[] exposicion { get; set; }
 
-        public void insertObra(ObraArte[] a)
+        public ObraExposicion(int cantObras)
         {
-            
+            exposicion = new ObraArte[cantObras];
+        }
+
+        public void insertObra(ObraArte a)
+        {
+
 
         }
 

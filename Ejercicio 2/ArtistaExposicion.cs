@@ -6,11 +6,11 @@ namespace Ejercicio_2
 {
     class ArtistaExposicion
     {
-        Artista[] ArtistasExp { get; set; }
+        List<ArtistaExposicion> ArtistasExp { get; set; }
 
-        public ArtistaExposicion(int cantArtistas)
+        public ArtistaExposicion()
         {
-            ArtistasExp= new Artista[cantArtistas];
+            ArtistasExp = new List<ArtistaExposicion>();
         }
 
         public int cantidadArtistas()
