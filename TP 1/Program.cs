@@ -22,9 +22,26 @@ namespace TP_1
                 else if (opcion == "B")
                 {
                     opcion = menuCliente();
-                    while (opcion != "X")
+                    while (opcion != "S")
                     {
-                        opcion = listaDeAlojamiento(agencia);
+                        opcion = menuVerAlojamientos();
+                        if(opcion == "A")
+                        {
+                            opcion = listaDeAlojamiento(agencia);
+
+                        }else if(opcion == "B")
+                        {
+                            opcion = soloHoteles(agencia);
+
+                        }
+                        else if (opcion == "C")
+                        {
+                            opcion = cabaniasentrePrecios(agencia);
+                        }
+                        else if (opcion == "D")
+                        {
+                            opcion = masEstrellas(agencia);
+                        }
                     }
                 }
                 else if (opcion == "X")
@@ -38,98 +55,7 @@ namespace TP_1
                     opcion = Console.ReadLine();
                 }
             } while (opcion != "A" || opcion != "B" || opcion != "X");
-
-            #region CODIGO COMENTADO
-            /*
-           Agencia a1 = new Agencia();
-           Hotel h1 = new Hotel(1, "Buenos Aires", "Congreso", "dos", 50, true, 10);
-           //Console.WriteLine(h1);
-           a1.insertarAlojamiento(h1);
-
-           Console.WriteLine("*********************");
-           Hotel h2 = new Hotel(2, "Bariloche", "Cerro Otto", "cinco", 80, true, 15);
-           //Console.WriteLine(h2);
-           a1.insertarAlojamiento(h2);
-
-           Console.WriteLine("*********************");
-           Cabania c1 = new Cabania(1, "Mendoza", "Montaña", "tres", 12, false, 16000, 6, 2);
-           //Console.WriteLine(c1);
-           a1.insertarAlojamiento(c1);
-
-
-           Console.WriteLine("*********************");
-           Cabania c2 = new Cabania(2, "Salta", "Purmamarca", "cuatro", 10, false, 13000, 4, 2);
-           //Console.WriteLine(c2);
-           a1.insertarAlojamiento(c2);
-
-
-           Console.WriteLine("*********************");
-           Cabania c3 = new Cabania(3, "Ciudad de Cordoba", "Alberdi", "tres", 11, false, 12000, 5, 2);
-           //Console.WriteLine(c3);
-           a1.insertarAlojamiento(c3);
-
-
-           Console.WriteLine("*********************");
-           Console.WriteLine("*********ALOJAMIENTOS INSERTADOS************");
-
-           foreach (var item in a1.alojamientosAgencia)
-           {
-               if( item != null)
-               {
-                   Console.WriteLine(item);
-               }
-           }
-
-           Console.ReadLine();
-
-           Console.WriteLine("*********************");
-
-           Agencia soloHoteles = a1.soloHoteles();
-
-           Console.WriteLine("********** SOLO HOTELES ***********");
-           int x = 0;
-           bool encontrado = true;
-           while( soloHoteles.alojamientosAgencia.Length > x && encontrado == true )
-           {
-               Console.WriteLine(soloHoteles.alojamientosAgencia[x]);
-
-               if (soloHoteles.alojamientosAgencia[x] == null)
-               {
-                   encontrado = false;
-               }
-               x++;
-           }
-           Console.ReadLine();
-
-           Console.WriteLine("********** MAS DE 3 Estrellas ***********");
-           Agencia masEstrellas = a1.masEstrellas(3);
-
-           foreach (var item in masEstrellas.alojamientosAgencia)
-           {
-               if (item != null)
-               {
-                   Console.WriteLine(item);
-               }
-           }
-
-           Console.ReadLine();
-
-           Console.WriteLine("********** Cabania entre precio y precio ***********");
-           Agencia cabaniasentrePrecios = a1.cabaniasentrePrecios(11000, 15000);
-
-           foreach (var item in cabaniasentrePrecios.alojamientosAgencia)
-           {
-               if (item != null)
-               {
-                   Console.WriteLine(item);
-               }
-           }
-           Console.ReadLine();
-           Console.WriteLine("Hay Alojamiento? "+a1.hayAlojamiento());
-           Console.WriteLine("Esta Llena? " + a1.estaLlena());
-
-           */
-            #endregion
+        
         }
 
         public static string listaDeAlojamiento(Agencia agencia)
@@ -152,6 +78,77 @@ namespace TP_1
             result = Console.ReadLine();
             return result.ToUpper().Trim();
         }
+        public static string cabaniasentrePrecios(Agencia agencia)
+        {
+            string result = string.Empty;
+            Agencia temp = new Agencia();
+            double desde;
+            double hasta;
+
+            Console.WriteLine("Ingrese precio desde");
+            desde = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese precio hasta");
+            hasta = double.Parse(Console.ReadLine());
+
+            temp = agencia.cabaniasentrePrecios(desde, hasta);
+            foreach (var item in temp.alojamientosAgencia)
+            {
+                if(item != null)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+            Console.WriteLine("***************************************");
+            Console.WriteLine("X - para volver");
+            result = Console.ReadLine();
+            return result.ToUpper().Trim();
+
+        }
+
+        public static string soloHoteles(Agencia agencia)
+        {
+            string result = string.Empty;
+            Agencia temp = new Agencia();
+            temp = agencia.soloHoteles();
+            foreach (var item in temp.alojamientosAgencia)
+            {
+                if (item != null)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+            Console.WriteLine("***************************************");
+            Console.WriteLine("X - para volver");
+            result = Console.ReadLine();
+            return result.ToUpper().Trim();
+        }
+        public static string masEstrellas(Agencia agencia)
+        {
+            string result = string.Empty;
+            Agencia temp = new Agencia();
+            int cantEstrellas;
+
+
+            Console.WriteLine("Ingrese a partir de cuantas estrellas");
+            cantEstrellas = int.Parse(Console.ReadLine());
+
+
+            temp = agencia.masEstrellas(cantEstrellas);
+            foreach (var item in temp.alojamientosAgencia)
+            {
+                if (item != null)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+            Console.WriteLine("***************************************");
+            Console.WriteLine("X - para volver");
+            result = Console.ReadLine();
+            return result.ToUpper().Trim();
+
+        }
+
 
         #region Menues
         public static string menuBienvenida()
@@ -185,6 +182,21 @@ namespace TP_1
             Console.WriteLine("**Opciones de Cliente******************");
             Console.WriteLine("***************************************");
             Console.WriteLine("A - ver Alojamientos\n");
+            Console.WriteLine("X - Volver");
+            Console.WriteLine("***************************************");
+
+            return Console.ReadLine();
+        }
+
+        public static string menuVerAlojamientos()
+        {
+            Console.WriteLine("***************************************");
+            Console.WriteLine("**Opciones de Cliente******************");
+            Console.WriteLine("***************************************");
+            Console.WriteLine("A - Ver Todos los Alojamientos");
+            Console.WriteLine("B - Filtrar solo Hoteles");
+            Console.WriteLine("C - Filtrar Cabaña segun el precio deseado");
+            Console.WriteLine("D - Filtrar Alojamientos por estrellas\n");
             Console.WriteLine("X - Volver");
             Console.WriteLine("***************************************");
 
