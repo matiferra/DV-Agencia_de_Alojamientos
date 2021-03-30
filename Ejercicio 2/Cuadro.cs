@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ejercicio_2
 {
-    class Cuadro : ObraArte
+    abstract class Cuadro : ObraArte
     {
         public double Base {get; set;}
         public double altura {get; set;}

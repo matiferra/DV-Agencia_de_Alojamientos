@@ -30,13 +30,13 @@ namespace Ejercicio_2
         {
             return true;
         }
-        public Artista recuperaArtista(String nom)
+        public Artista recuperaArtista(string nom)
         {
             Artista a = null;
 
             return a;
         }
-        public ArtistaExposicion artistasNac(String Nac)
+        public ArtistaExposicion artistasNac(string Nac)
         {
             ArtistaExposicion a = null;
             
