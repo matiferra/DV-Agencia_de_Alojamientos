@@ -6,44 +6,62 @@ namespace Ejercicio_2
 {
     class ArtistaExposicion
     {
-        List<ArtistaExposicion> ArtistasExp { get; set; }
+        public List<Artista> ArtistasExp { get; set; }
 
         public ArtistaExposicion()
         {
-            ArtistasExp = new List<ArtistaExposicion>();
+            ArtistasExp = new List<Artista>();
         }
 
         public int cantidadArtistas()
         {
-            return 0;
+            return ArtistasExp.Count;
         }
 
         public bool estaArtista(ObraArte o)
         {
-            return true;
+            foreach (var item in ArtistasExp)
+            {
+                if(item.nombre == o.nombreArtista)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         public bool estaLlena()
         {
-            return true;
+            return ArtistasExp.Capacity == ArtistasExp.Count ? true : false;
         }
         public bool hayArtista()
         {
-            return true;
+            return ArtistasExp.Count != 0 ? true : false;
         }
         public Artista recuperaArtista(string nom)
         {
-            Artista a = null;
 
-            return a;
+            foreach (var item in ArtistasExp)
+            {
+                if(item.nombre == nom)
+                {
+                    return item;
+                }
+            }
+
+            return null;
         }
         public ArtistaExposicion artistasNac(string Nac)
         {
-            ArtistaExposicion a = null;
-            
-            return a;
+            ArtistaExposicion artistasConMismaNacionalidad = null;
+            foreach (var item in ArtistasExp)
+            {
+                if (item.nacionalidad == Nac)
+                {
+                    artistasConMismaNacionalidad.ArtistasExp.Add(item);
+                }
+            }        
+            return artistasConMismaNacionalidad;
         }
-
-
 
     }
 }

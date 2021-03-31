@@ -22,7 +22,7 @@ namespace TP_1
                 else if (opcion == "B")
                 {
                     opcion = menuCliente();
-                    while (opcion != "S")
+                    while (opcion != "0")
                     {
                         opcion = menuVerAlojamientos();
                         if(opcion == "A")
@@ -197,7 +197,7 @@ namespace TP_1
             Console.WriteLine("B - Filtrar solo Hoteles");
             Console.WriteLine("C - Filtrar Cabaña segun el precio deseado");
             Console.WriteLine("D - Filtrar Alojamientos por estrellas\n");
-            Console.WriteLine("X - Volver");
+            Console.WriteLine("0 - Volver");
             Console.WriteLine("***************************************");
 
             return Console.ReadLine();
@@ -210,7 +210,7 @@ namespace TP_1
             Console.WriteLine("***************************************");
             Console.WriteLine("A - Insertar Hotel");
             Console.WriteLine("B - Insertar Cabaña\n");
-            Console.WriteLine("x - Volver");
+            Console.WriteLine("X - Volver");
             Console.WriteLine("***************************************");
             opcionAdmin = Console.ReadLine();
 
