@@ -9,8 +9,8 @@ namespace Ejercicio_2
         public double peso { get; set; }
         public double volumen { get; set; }
 
-        public Escultura(double peso, double volumen, int codigo, string nombre, string nombreArtista, int anioCreacion, DateTime fechaIngreso) 
-            : base(codigo, nombre, nombreArtista, anioCreacion, fechaIngreso)
+        public Escultura(double peso, double volumen, string nombre, string nombreArtista, int anioCreacion, DateTime fechaIngreso) 
+            : base(nombre, nombreArtista, anioCreacion, fechaIngreso)
         {
             this.peso = peso;
             this.volumen = volumen;

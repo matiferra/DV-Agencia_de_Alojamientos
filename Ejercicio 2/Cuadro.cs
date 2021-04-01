@@ -9,8 +9,8 @@ namespace Ejercicio_2
         public double Base {get; set;}
         public double altura {get; set;}
 
-        public Cuadro(double Base, double altura, int codigo, string nombre, string nombreArtista, int anioCreacion, DateTime fechaIngreso)
-            : base (codigo, nombre, nombreArtista, anioCreacion, fechaIngreso)
+        public Cuadro(double Base, double altura, string nombre, string nombreArtista, int anioCreacion, DateTime fechaIngreso)
+            : base (nombre, nombreArtista, anioCreacion, fechaIngreso)
         {
             this.Base = Base;
             this.altura = altura;

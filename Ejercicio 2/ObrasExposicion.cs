@@ -13,7 +13,7 @@ namespace Ejercicio_2
             exposicion = new ObraArte[cantObras];
         }
 
-        public void insertObra(ObraArte a)
+        public void insertarObra(ObraArte a)
         {
             int x = 0;
             bool encontrado = false;
@@ -100,7 +100,7 @@ namespace Ejercicio_2
             {
                 if (exposicion[i].nombreArtista == Nom)
                 {
-                    o.insertObra(exposicion[i]);
+                    o.insertarObra(exposicion[i]);
                 }
             }
             return o;
@@ -113,7 +113,8 @@ namespace Ejercicio_2
             {
                 if (exposicion[i] is Cuadro)
                 {
-                    o.insertObra(exposicion[i]);
+                    if(exposicion[i] is CuadroPrestado)
+                    o.insertarObra(exposicion[i]);
                 }
 
             }

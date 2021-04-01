@@ -13,7 +13,7 @@ namespace Ejercicio_2
         public int anioCreacion{ get; set; }
         public DateTime fechaIngreso{ get; set; }
 
-        public ObraArte(int codigo, string nombre, string nombreArtista, int anioCreacion, DateTime fechaIngreso)
+        public ObraArte(string nombre, string nombreArtista, int anioCreacion, DateTime fechaIngreso)
         {
             codigo++;
             this.codigoObraArte = codigo;
