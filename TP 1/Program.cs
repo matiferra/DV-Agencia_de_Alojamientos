@@ -33,11 +33,9 @@ namespace TP_1
 
         }
 
-        public static string listaDeAlojamiento(Agencia agencia)
+        public static void listaDeAlojamiento(Agencia agencia)
         {
-            string result = string.Empty;
             int x = 1;
-
             foreach (var item in agencia.alojamientosAgencia)
             {
                 if (item != null)
@@ -47,15 +45,18 @@ namespace TP_1
                     x++;
                 }
             }
+            if (x == 1)
+            {
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("--------NO HAY REGISTROS CARGADOS------");
+                Console.WriteLine("---------------------------------------");
+            }
 
-            Console.WriteLine("***************************************");
-            Console.WriteLine("X - para volver");
-            result = Console.ReadLine();
-            return result.ToUpper().Trim();
         }
         public static void cabaniasentrePrecios(Agencia agencia)
         {
             Agencia temp = new Agencia();
+            int contador = 0;
             double desde;
             double hasta;
 
@@ -71,7 +72,15 @@ namespace TP_1
                 if (item != null)
                 {
                     Console.WriteLine(item);
+                    contador++;
                 }
+            }
+            if (contador == 0)
+            {
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("--------NO HAY REGISTROS CARGADOS------");
+                Console.WriteLine("---------------------------------------");
+
             }
             Console.WriteLine("***************************************");
             Console.ReadLine();
@@ -82,24 +91,34 @@ namespace TP_1
         {
             Agencia temp = new Agencia();
             temp = agencia.soloHoteles();
+            int contador = 0;
             foreach (var item in temp.alojamientosAgencia)
             {
                 if (item != null)
                 {
                     Console.WriteLine(item);
+                    contador++;
                 }
             }
-            Console.WriteLine("***************************************");
+            if (contador == 0)
+            {
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("--------NO HAY REGISTROS CARGADOS------");
+                Console.WriteLine("---------------------------------------");
+
+            }
+
+
+
             Console.ReadLine();
         }
         public static void masEstrellas(Agencia agencia)
         {
             Agencia temp = new Agencia();
             int cantEstrellas;
-
+            int contador = 0;
             Console.WriteLine("Ingrese a partir de cuantas estrellas");
             cantEstrellas = int.Parse(Console.ReadLine());
-
 
             temp = agencia.masEstrellas(cantEstrellas);
             foreach (var item in temp.alojamientosAgencia)
@@ -107,7 +126,15 @@ namespace TP_1
                 if (item != null)
                 {
                     Console.WriteLine(item);
+                    contador++;
                 }
+            }
+            if (contador == 0)
+            {
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("--------NO HAY REGISTROS CARGADOS------");
+                Console.WriteLine("---------------------------------------");
+
             }
             Console.WriteLine("***************************************");
             Console.ReadLine();
@@ -197,16 +224,7 @@ namespace TP_1
 
                 if (opcion == "A")
                 {
-                    if (agencia.alojamientosAgencia != null)
-                    {
-                        foreach (var item in agencia.alojamientosAgencia)
-                        {
-                            if (item != null)
-                            {
-                                Console.WriteLine(item);
-                            }
-                        }
-                    }
+                    listaDeAlojamiento(agencia);
                 }
                 else if (opcion == "B")
                 {
