@@ -247,29 +247,29 @@ namespace TP_1
         public static void ingresarAlojamiento(Agencia a)
         {
             string opcion = string.Empty;
-            Console.WriteLine("***************************************");
-            Console.WriteLine("A - Insertar Hotel");
-            Console.WriteLine("B - Insertar Cabaña\n");
-            Console.WriteLine("X - Volver");
-            Console.WriteLine("***************************************");
-            opcion = Console.ReadLine();
-
-            while (opcion != "X")
+            do
             {
-                if (opcion.ToUpper().Trim() == "A")
+                Console.WriteLine("***************************************");
+                Console.WriteLine("A - Insertar Hotel");
+                Console.WriteLine("B - Insertar Cabaña\n");
+                Console.WriteLine("X - Volver");
+                Console.WriteLine("***************************************");
+                opcion = Console.ReadLine();
+                if (opcion == "A")
                 {
                     crearHotel(a);
                 }
-                else if (opcion.ToUpper().Trim() == "B")
+                else if (opcion == "B")
                 {
                     crearCabania(a);
                 }
-                else
+                else if (opcion != "A" && opcion != "B" && opcion != "X")
                 {
                     Console.WriteLine("VUELVA INGRESAR UNA OPCION CORRECTA");
                     opcion = Console.ReadLine();
                 }
-            }
+            } while (opcion != "X");
+            
         }
 
         public static void crearHotel(Agencia a)
