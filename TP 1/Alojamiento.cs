@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TP_1
 {
-    abstract class Alojamiento
+    abstract class Alojamiento 
     {
         public static int codigo { get; set; } = 0;
         public int codigoInstancia { get; set; }

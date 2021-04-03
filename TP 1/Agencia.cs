@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TP_1
 {
-    class Agencia
+    class Agencia 
     {
         public static int CantAloj { get; set; }
         public Alojamiento[] alojamientosAgencia { get; set; }

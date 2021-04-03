@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TP_1
 {
-    class Hotel : Alojamiento
+    class Hotel : Alojamiento 
     {
 
 

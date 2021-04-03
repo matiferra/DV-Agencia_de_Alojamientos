@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TP_1
 {
-    class Cabania : Alojamiento
+    class Cabania : Alojamiento 
     {
         public double precioxDia { get; set; }
         public int habitaciones { get; set; }
