@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ejercicio_2
+namespace Ejercicio_2  
 {
     abstract class Cuadro : ObraArte
     {
@@ -15,5 +15,7 @@ namespace Ejercicio_2
             this.Base = Base;
             this.altura = altura;
         }
+
+
     }
 }

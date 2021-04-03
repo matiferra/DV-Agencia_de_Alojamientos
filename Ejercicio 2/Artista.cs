@@ -19,5 +19,14 @@ namespace Ejercicio_2
             this.fechaFallecimiento = fechaFallecimiento;
         }
 
+        public override string ToString()
+        {
+            return
+                "\nNombre\n" + nombre +""
+                + "\nnacionalidad\n" + nacionalidad
+                + "\nFecha de nacimiento\n" + fechaNacimiento.ToString("dd/mm/yyyy") 
+                + "\nFecha de fallecimiento\n" + fechaFallecimiento.ToString("dd/mm/yyyy");
+        }
+         
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ejercicio_2
+namespace Ejercicio_2 
 {
     class Escultura : ObraArte
     {
@@ -16,5 +16,12 @@ namespace Ejercicio_2
             this.volumen = volumen;
         }
 
+        
+        public override string ToString()
+        {
+            return base.ToString()
+                + $"\n Peso = {peso}"
+                + $"\n Volumen = {volumen}";
+        }
     }
 }

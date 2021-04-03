@@ -1,38 +1,24 @@
 ﻿using System;
 
-namespace Ejercicio_2
+namespace Ejercicio_2 
 {
+   
     class Program
     {
+        private static object centro;
+
         static void Main(string[] args)
         {
-            string opcion = string.Empty;
-
-            CentroCultural centro = new CentroCultural();
-
-            do
-            {
-                opcion = menuBienvenida();
-
-                if (opcion == "A")
-                {
-                    poblarCentroCultural(centro);
-                }
-                else if (opcion == "B")
-                {
-                    mostrarDatosIngresados(centro);
-                }
-                else
-                {
-                    Console.WriteLine("INGRESO MAL LA OPCION");
-                }
-
-
-            } while (opcion != "X");
+            CentroCultural centro = new CentroCultural(); 
+            menuBienvenida(centro);
 
         }
-        public static string menuBienvenida()
+        public static void menuBienvenida(CentroCultural centro)
         {
+            string opcion = null; 
+            do
+            {
+
             Console.WriteLine("*************Bienvenido****************");
             Console.WriteLine("*Elija usuario  ***********************");
             Console.WriteLine("***************************************");
@@ -42,13 +28,34 @@ namespace Ejercicio_2
             Console.WriteLine("");
             Console.WriteLine("X - SALIR");
             Console.WriteLine("***************************************");
-            return Console.ReadLine().ToUpper().Trim();
+            opcion = Console.ReadLine().ToUpper().Trim();
+            if (opcion == "A")
+            {
+                poblarCentroCultural(centro);
+            }
+            else if (opcion == "B")
+            {
+                mostrarDatosIngresados(centro);
+            }
+            else if (opcion == "X")
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                Console.WriteLine("INGRESO MAL LA OPCION");
+            }
+            }
+            while(opcion != "X") ;
+
         }
+
+   
 
         public static void poblarCentroCultural(CentroCultural centro)
         {
             string opcion = string.Empty;
-            do
+           do
             {
                 Console.WriteLine("***************************************");
                 Console.WriteLine("A - Insertar Artista");
@@ -60,6 +67,7 @@ namespace Ejercicio_2
 
                 if (opcion.ToUpper().Trim() == "A")
                 {
+
                     opcion = crearArtista(centro.artistas);
                 }
                 else if (opcion.ToUpper().Trim() == "B")
@@ -70,12 +78,13 @@ namespace Ejercicio_2
                 {
                     opcion = crearCuadroPrestado(centro.Obras);
                 }
-                else
+                else if (opcion.ToUpper().Trim() != "A" && opcion.ToUpper().Trim() != "B" && opcion.ToUpper().Trim() != "C" && opcion.ToUpper().Trim() != "X")
                 {
                     Console.WriteLine("VUELVA INGRESAR UNA OPCION CORRECTA");
-                    opcion = Console.ReadLine();
                 }
-            } while (opcion == "X");
+            
+           } while (opcion != "X") ;
+            menuBienvenida(centro);
         }
 
 
@@ -199,17 +208,17 @@ namespace Ejercicio_2
 
         public static void mostrarDatosIngresados(CentroCultural centro)
         {
-            if (centro.artistas.ArtistasExp != null)
+            if (centro.artistas.ArtistasExp.Count != 0)
             {
 
                 Console.WriteLine("*************** ARTISTAS ****************");
                 foreach (var item in centro.artistas.ArtistasExp)
                 {
-                    Console.WriteLine(item);
+                    Console.WriteLine(item.ToString());
                 }
             }
             Console.WriteLine("*************** ESCULTURAS ****************");
-            if (centro.artistas.ArtistasExp != null)
+            if (centro.artistas.ArtistasExp.Count != 0)
             {
                 foreach (var item in centro.Obras.exposicion)
                 {
@@ -221,7 +230,7 @@ namespace Ejercicio_2
                 }
             }
             Console.WriteLine("*************** CUADROS ****************");
-            if (centro.artistas.ArtistasExp != null)
+            if (centro.artistas.ArtistasExp.Count != 0)
             {
                 foreach (var item in centro.Obras.exposicion)
                 {

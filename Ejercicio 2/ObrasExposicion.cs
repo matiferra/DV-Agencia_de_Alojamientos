@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ejercicio_2
+namespace Ejercicio_2 
 {
     class ObrasExposicion
     {

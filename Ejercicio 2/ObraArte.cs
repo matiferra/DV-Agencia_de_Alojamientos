@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ejercicio_2
+namespace Ejercicio_2 
 {
     class ObraArte
     {
@@ -22,6 +22,15 @@ namespace Ejercicio_2
             this.anioCreacion = anioCreacion;
             this.fechaIngreso = fechaIngreso;
         }
-
+        override
+        public string ToString()
+        {
+            return 
+                $" codigo: {codigoObraArte} "+
+                $"\n Nombre: {nombre}"+
+                $"\n Nombre de Artista: {nombreArtista}"+
+                $"\n Año de Creacion: {anioCreacion} "+
+                $"\n Fecha de Ingreso: {fechaIngreso} ";
+        }
     }
 }
