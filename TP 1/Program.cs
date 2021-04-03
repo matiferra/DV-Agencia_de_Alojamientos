@@ -13,36 +13,11 @@ namespace TP_1
                 opcion = menuBienvenida();
                 if (opcion == "A")
                 {
-                    opcion = menuAdministrador();
-                    while (opcion != "X")
-                    {
-                        opcion = ingresarAlojamiento(opcion, agencia);
-                    }
+                    menuAdministrador(agencia);
                 }
                 else if (opcion == "B")
                 {
-                    opcion = menuCliente();
-                    while (opcion != "0")
-                    {
-                        opcion = menuVerAlojamientos();
-                        if(opcion == "A")
-                        {
-                            opcion = listaDeAlojamiento(agencia);
-
-                        }else if(opcion == "B")
-                        {
-                            opcion = soloHoteles(agencia);
-
-                        }
-                        else if (opcion == "C")
-                        {
-                            opcion = cabaniasentrePrecios(agencia);
-                        }
-                        else if (opcion == "D")
-                        {
-                            opcion = masEstrellas(agencia);
-                        }
-                    }
+                    menuCliente(agencia);
                 }
                 else if (opcion == "X")
                 {
@@ -54,8 +29,8 @@ namespace TP_1
                     Console.WriteLine("Ingrese una opcion correcta");
                     opcion = Console.ReadLine();
                 }
-            } while (opcion != "A" || opcion != "B" || opcion != "X");
-        
+            } while (opcion != "X");
+
         }
 
         public static string listaDeAlojamiento(Agencia agencia)
@@ -78,9 +53,8 @@ namespace TP_1
             result = Console.ReadLine();
             return result.ToUpper().Trim();
         }
-        public static string cabaniasentrePrecios(Agencia agencia)
+        public static void cabaniasentrePrecios(Agencia agencia)
         {
-            string result = string.Empty;
             Agencia temp = new Agencia();
             double desde;
             double hasta;
@@ -94,21 +68,18 @@ namespace TP_1
             temp = agencia.cabaniasentrePrecios(desde, hasta);
             foreach (var item in temp.alojamientosAgencia)
             {
-                if(item != null)
+                if (item != null)
                 {
                     Console.WriteLine(item);
                 }
             }
             Console.WriteLine("***************************************");
-            Console.WriteLine("X - para volver");
-            result = Console.ReadLine();
-            return result.ToUpper().Trim();
+            Console.ReadLine();
 
         }
 
-        public static string soloHoteles(Agencia agencia)
+        public static void soloHoteles(Agencia agencia)
         {
-            string result = string.Empty;
             Agencia temp = new Agencia();
             temp = agencia.soloHoteles();
             foreach (var item in temp.alojamientosAgencia)
@@ -119,16 +90,12 @@ namespace TP_1
                 }
             }
             Console.WriteLine("***************************************");
-            Console.WriteLine("X - para volver");
-            result = Console.ReadLine();
-            return result.ToUpper().Trim();
+            Console.ReadLine();
         }
-        public static string masEstrellas(Agencia agencia)
+        public static void masEstrellas(Agencia agencia)
         {
-            string result = string.Empty;
             Agencia temp = new Agencia();
             int cantEstrellas;
-
 
             Console.WriteLine("Ingrese a partir de cuantas estrellas");
             cantEstrellas = int.Parse(Console.ReadLine());
@@ -143,10 +110,7 @@ namespace TP_1
                 }
             }
             Console.WriteLine("***************************************");
-            Console.WriteLine("X - para volver");
-            result = Console.ReadLine();
-            return result.ToUpper().Trim();
-
+            Console.ReadLine();
         }
 
 
@@ -165,75 +129,132 @@ namespace TP_1
             return Console.ReadLine().ToUpper().Trim();
         }
 
-        public static string menuAdministrador()
+        public static void menuAdministrador(Agencia agencia)
         {
-            Console.WriteLine("\n***************************************");
-            Console.WriteLine("**Opciones de Administrador************");
-            Console.WriteLine("***************************************");
-            Console.WriteLine("A - Insertar Alojamiento\n");
-            Console.WriteLine("X - Volver");
-            Console.WriteLine("***************************************");
-            return Console.ReadLine().ToUpper().Trim();
+            string opcion = string.Empty;
+            do
+            {
+                Console.WriteLine("\n***************************************");
+                Console.WriteLine("**Opciones de Administrador************");
+                Console.WriteLine("***************************************");
+                Console.WriteLine("A - Insertar Alojamiento\n");
+                Console.WriteLine("X - Volver");
+                Console.WriteLine("***************************************");
+                opcion = Console.ReadLine();
+                if (opcion == "A")
+                {
+                    ingresarAlojamiento(agencia);
+                }
+                else if (opcion != "X")
+                {
+                    Console.WriteLine("Ingrese una opcion correcta");
+                    opcion = Console.ReadLine();
+                }
+
+            } while (opcion != "X");
+
+        }
+        public static void menuCliente(Agencia agencia)
+        {
+            string opcion = string.Empty;
+            do
+            {
+                Console.WriteLine("***************************************");
+                Console.WriteLine("**Opciones de Cliente******************");
+                Console.WriteLine("***************************************");
+                Console.WriteLine("A - ver Alojamientos\n");
+                Console.WriteLine("X - Volver");
+                Console.WriteLine("***************************************");
+                opcion = Console.ReadLine();
+                if (opcion == "A")
+                {
+                    menuVerAlojamientos(agencia);
+                }
+                else if (opcion != "X")
+                {
+                    Console.WriteLine("Ingrese una opcion correcta");
+                    opcion = Console.ReadLine();
+                }
+
+            } while (opcion != "X");
         }
 
-        public static string menuCliente()
+        public static void menuVerAlojamientos(Agencia agencia)
         {
-            Console.WriteLine("***************************************");
-            Console.WriteLine("**Opciones de Cliente******************");
-            Console.WriteLine("***************************************");
-            Console.WriteLine("A - ver Alojamientos\n");
-            Console.WriteLine("X - Volver");
-            Console.WriteLine("***************************************");
+            string opcion = string.Empty;
+            do
+            {
+                Console.WriteLine("***************************************");
+                Console.WriteLine("**Opciones de Cliente******************");
+                Console.WriteLine("***************************************");
+                Console.WriteLine("A - Ver Todos los Alojamientos");
+                Console.WriteLine("B - Filtrar solo Hoteles");
+                Console.WriteLine("C - Filtrar Cabaña segun el precio deseado");
+                Console.WriteLine("D - Filtrar Alojamientos por estrellas\n");
+                Console.WriteLine("X - Volver");
+                Console.WriteLine("***************************************");
+                opcion = Console.ReadLine();
 
-            return Console.ReadLine();
-        }
+                if (opcion == "A")
+                {
+                    if (agencia.alojamientosAgencia != null)
+                    {
+                        foreach (var item in agencia.alojamientosAgencia)
+                        {
+                            if (item != null)
+                            {
+                                Console.WriteLine(item);
+                            }
+                        }
+                    }
+                }
+                else if (opcion == "B")
+                {
+                    soloHoteles(agencia);
+                }
+                else if (opcion == "C")
+                {
+                    cabaniasentrePrecios(agencia);
+                }
+                else if (opcion == "D")
+                {
+                    masEstrellas(agencia);
+                }
+            } while (opcion != "X");
 
-        public static string menuVerAlojamientos()
-        {
-            Console.WriteLine("***************************************");
-            Console.WriteLine("**Opciones de Cliente******************");
-            Console.WriteLine("***************************************");
-            Console.WriteLine("A - Ver Todos los Alojamientos");
-            Console.WriteLine("B - Filtrar solo Hoteles");
-            Console.WriteLine("C - Filtrar Cabaña segun el precio deseado");
-            Console.WriteLine("D - Filtrar Alojamientos por estrellas\n");
-            Console.WriteLine("0 - Volver");
-            Console.WriteLine("***************************************");
-
-            return Console.ReadLine();
         }
         #endregion
 
 
-        public static string ingresarAlojamiento(string opcionAdmin, Agencia a)
+        public static void ingresarAlojamiento(Agencia a)
         {
+            string opcion = string.Empty;
             Console.WriteLine("***************************************");
             Console.WriteLine("A - Insertar Hotel");
             Console.WriteLine("B - Insertar Cabaña\n");
             Console.WriteLine("X - Volver");
             Console.WriteLine("***************************************");
-            opcionAdmin = Console.ReadLine();
+            opcion = Console.ReadLine();
 
-            while (opcionAdmin != "X")
+            while (opcion != "X")
             {
-                if (opcionAdmin.ToUpper().Trim() == "A")
+                if (opcion.ToUpper().Trim() == "A")
                 {
-                    opcionAdmin = crearHotel(a);
+                    crearHotel(a);
                 }
-                else if (opcionAdmin.ToUpper().Trim() == "B")
+                else if (opcion.ToUpper().Trim() == "B")
                 {
-                    opcionAdmin = crearCabania(a);
+                    crearCabania(a);
                 }
                 else
                 {
                     Console.WriteLine("VUELVA INGRESAR UNA OPCION CORRECTA");
-                    opcionAdmin = Console.ReadLine();
+                    opcion = Console.ReadLine();
                 }
             }
-            return menuAdministrador();
         }
 
-        public static string crearHotel(Agencia a)
+        public static void crearHotel(Agencia a)
         {
             string result = string.Empty;
             string ciudad = string.Empty;
@@ -266,7 +287,7 @@ namespace TP_1
             {
                 Console.WriteLine("Error al insertar alojamiento" + ex.Message);
             }
-            return result;
+            Console.ReadLine();
         }
 
         private static bool seteoTv()
@@ -292,9 +313,8 @@ namespace TP_1
             return tv;
         }
 
-        public static string crearCabania(Agencia a)
+        public static void crearCabania(Agencia a)
         {
-            string result = string.Empty;
             string ciudad = string.Empty;
             string barrio = string.Empty;
             string estrellas = string.Empty;
@@ -325,14 +345,12 @@ namespace TP_1
             {
                 a.insertarAlojamiento(new Cabania(ciudad, barrio, estrellas, cantPersonas, tv, precioxDia, habitaciones, banios));
                 Console.WriteLine("La cabaña se inserto con exito!!");
-                result = "X";
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al insertar alojamiento" + ex.Message);
             }
-            return result;
-
+            Console.ReadLine();
         }
     }
 }
