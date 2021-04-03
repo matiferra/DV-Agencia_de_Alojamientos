@@ -30,15 +30,15 @@ namespace Ejercicio_2
                 Console.WriteLine("X - SALIR");
                 Console.WriteLine("***************************************");
                 opcion = Console.ReadLine().ToUpper().Trim();
-                if (opcion == "A")
+                if (opcion.ToUpper().Trim() == "A")
                 {
                     poblarCentroCultural(centro);
                 }
-                else if (opcion == "B")
+                else if (opcion.ToUpper().Trim() == "B")
                 {
                     mostrarDatosIngresados(centro);
                 }
-                else if (opcion == "X")
+                else if (opcion.ToUpper().Trim() == "X")
                 {
                     Environment.Exit(0);
                 }
@@ -47,7 +47,7 @@ namespace Ejercicio_2
                     Console.WriteLine("INGRESO MAL LA OPCION");
                 }
             }
-            while (opcion != "X");
+            while (opcion.ToUpper().Trim() != "X");
 
         }
 
@@ -106,13 +106,13 @@ namespace Ejercicio_2
             Console.WriteLine("*Ingrese Nombre del artista = ");
             nombreArtista = Console.ReadLine();
             Console.WriteLine("*Ingrese Anio de creacion = ");
-            anioCreacion = int.Parse(Console.ReadLine());
+            anioCreacion = verificarInt(Console.ReadLine());
             Console.WriteLine("*Ingrese Fecha de Ingreso = ");
-            fechaIngreso = DateTime.Parse(Console.ReadLine());
+            fechaIngreso = verificarFecha(Console.ReadLine());
             Console.WriteLine("*Ingrese el Peso = ");
-            peso = Double.Parse(Console.ReadLine());
+            peso = verificarDouble(Console.ReadLine());
             Console.WriteLine("*Ingrese el Volumen = ");
-            volumen = Double.Parse(Console.ReadLine());
+            volumen = verificarDouble(Console.ReadLine());
             Console.WriteLine("************************************");
             try
             {
@@ -147,15 +147,15 @@ namespace Ejercicio_2
             Console.WriteLine("*Ingrese Nombre del artista = ");
             nombreArtista = Console.ReadLine();
             Console.WriteLine("*Ingrese Anio de creacion = ");
-            anioCreacion = int.Parse(Console.ReadLine());
+            anioCreacion = verificarInt(Console.ReadLine());
             Console.WriteLine("*Ingrese Fecha de Ingreso = ");
-            fechaIngreso = DateTime.Parse(Console.ReadLine());
+            fechaIngreso = verificarFecha(Console.ReadLine());
             Console.WriteLine("*Ingrese el Base = ");
-            Base = Double.Parse(Console.ReadLine());
+            Base = verificarDouble(Console.ReadLine());
             Console.WriteLine("*Ingrese la Altura = ");
-            altura = Double.Parse(Console.ReadLine());
+            altura = verificarDouble(Console.ReadLine());
             Console.WriteLine("*Ingrese Fecha de Devolucion = ");
-            fechaDevolucion = DateTime.Parse(Console.ReadLine());
+            fechaDevolucion = verificarFecha(Console.ReadLine());
             Console.WriteLine("*Ingrese Nombre de Galeria = ");
             nombreGaleria = Console.ReadLine();
 
@@ -190,9 +190,9 @@ namespace Ejercicio_2
             Console.WriteLine("*Ingrese Nacionalidad = ");
             nacionalidad = Console.ReadLine();
             Console.WriteLine("*Ingrese Fecha de nacimiento = ");
-            fechaNacimiento = DateTime.Parse(Console.ReadLine());
+            fechaNacimiento = verificarFecha(Console.ReadLine());
             Console.WriteLine("*Ingrese Fecha de fallecimiento = ");
-            fechaFallecimiento = DateTime.Parse(Console.ReadLine());
+            fechaFallecimiento = verificarFecha(Console.ReadLine());
             try
             {
                 artistas.ArtistasExp.Add(new Artista(nombre, nacionalidad, fechaNacimiento, fechaFallecimiento));
@@ -329,7 +329,7 @@ namespace Ejercicio_2
         public static void mostrarArtistasOrdenadosNombre(CentroCultural centro)
         {
             List<Artista> sorted = centro.artistas.ArtistasExp.OrderBy(x => x.nombre).ToList();
-            
+
             Console.WriteLine(String.Join(Environment.NewLine, sorted));
 
         }
@@ -347,7 +347,7 @@ namespace Ejercicio_2
                     contador++;
                 }
             }
-            
+
             if (contador == 0)
             {
                 Console.WriteLine("---------------------------------------");
@@ -390,9 +390,9 @@ namespace Ejercicio_2
             Console.WriteLine("Ingrese nombre Galeria");
             galeria = Console.ReadLine();
             obras = centro.Obras.todosLosCuadrosPrestados();
-            if(obras != null)
+            if (obras != null)
             {
-                 string[] nombresCuadrosGaleria = new string[obras.exposicion.Length];
+                string[] nombresCuadrosGaleria = new string[obras.exposicion.Length];
                 foreach (var item in obras.exposicion)
                 {
                     if (item != null)
@@ -433,6 +433,81 @@ namespace Ejercicio_2
                 Console.WriteLine("---------------------------------------");
             }
             //TODO
+        }
+
+        public static DateTime verificarFecha(string datoIngresado)
+        {
+            bool ok;
+            DateTime fecha = DateTime.MinValue;
+            do
+            {
+                ok = true;
+                if (ok == true)
+                {
+                    try
+                    {
+                        fecha = DateTime.Parse(datoIngresado);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Ingrese en formato dd/mm/yyyy");
+                        datoIngresado = Console.ReadLine();
+                        ok = false;
+                    }
+                }
+            } while (ok != true);
+
+            return fecha;
+        }
+
+        public static int verificarInt(string datoIngresado)
+        {
+            bool ok;
+            int entero = 0;
+            do
+            {
+                ok = true;
+                if (ok == true)
+                {
+                    try
+                    {
+                        entero = int.Parse(datoIngresado);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Ingrese en un numero entero");
+                        datoIngresado = Console.ReadLine();
+                        ok = false;
+                    }
+                }
+            } while (ok != true);
+
+            return entero;
+        }
+
+        public static Double verificarDouble(string datoIngresado)
+        {
+            bool ok;
+            double real = 0;
+            do
+            {
+                ok = true;
+                if (ok == true)
+                {
+                    try
+                    {
+                        real = Double.Parse(datoIngresado);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Ingrese en un numero entero con coma");
+                        datoIngresado = Console.ReadLine();
+                        ok = false;
+                    }
+                }
+            } while (ok != true);
+
+            return real;
         }
 
     }

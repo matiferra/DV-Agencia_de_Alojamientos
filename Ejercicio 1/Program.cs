@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace TP_1
+namespace Ejercicio_1
 {
-    class Program 
+    class Program
     {
         static void Main(string[] args)
         {
@@ -53,6 +53,81 @@ namespace TP_1
             }
 
         }
+
+        public static DateTime verificarFecha(string datoIngresado)
+        {
+            bool ok;
+            DateTime fecha = DateTime.MinValue;
+            do
+            {
+                ok = true;
+                if (ok == true)
+                {
+                    try
+                    {
+                        fecha = DateTime.Parse(datoIngresado);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Ingrese en formato dd/mm/yyyy");
+                        datoIngresado = Console.ReadLine();
+                        ok = false;
+                    }
+                }
+            } while (ok != true);
+
+            return fecha;
+        }
+
+        public static int verificarInt(string datoIngresado)
+        {
+            bool ok;
+            int entero = 0;
+            do
+            {
+                ok = true;
+                if (ok == true)
+                {
+                    try
+                    {
+                        entero = int.Parse(datoIngresado);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Ingrese en un numero entero");
+                        datoIngresado = Console.ReadLine();
+                        ok = false;
+                    }
+                }
+            } while (ok != true);
+
+            return entero;
+        }
+
+        public static Double verificarDouble(string datoIngresado)
+        {
+            bool ok;
+            double real = 0;
+            do
+            {
+                ok = true;
+                if (ok == true)
+                {
+                    try
+                    {
+                        real = Double.Parse(datoIngresado);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Ingrese en un numero entero con coma");
+                        datoIngresado = Console.ReadLine();
+                        ok = false;
+                    }
+                }
+            } while (ok != true);
+
+            return real;
+        }
         public static void cabaniasentrePrecios(Agencia agencia)
         {
             Agencia temp = new Agencia();
@@ -61,10 +136,10 @@ namespace TP_1
             double hasta;
 
             Console.WriteLine("Ingrese precio desde");
-            desde = double.Parse(Console.ReadLine());
+            desde = verificarDouble(Console.ReadLine());
 
             Console.WriteLine("Ingrese precio hasta");
-            hasta = double.Parse(Console.ReadLine());
+            hasta = verificarDouble(Console.ReadLine());
 
             temp = agencia.cabaniasentrePrecios(desde, hasta);
             foreach (var item in temp.alojamientosAgencia)
@@ -118,7 +193,7 @@ namespace TP_1
             int cantEstrellas;
             int contador = 0;
             Console.WriteLine("Ingrese a partir de cuantas estrellas");
-            cantEstrellas = int.Parse(Console.ReadLine());
+            cantEstrellas = verificarInt(Console.ReadLine());
 
             temp = agencia.masEstrellas(cantEstrellas);
             foreach (var item in temp.alojamientosAgencia)
@@ -168,17 +243,17 @@ namespace TP_1
                 Console.WriteLine("X - Volver");
                 Console.WriteLine("***************************************");
                 opcion = Console.ReadLine();
-                if (opcion == "A")
+                if (opcion.ToUpper().Trim() == "A")
                 {
                     ingresarAlojamiento(agencia);
                 }
-                else if (opcion != "X")
+                else if (opcion.ToUpper().Trim() != "X")
                 {
                     Console.WriteLine("Ingrese una opcion correcta");
                     opcion = Console.ReadLine();
                 }
 
-            } while (opcion != "X");
+            } while (opcion.ToUpper().Trim() != "X");
 
         }
         public static void menuCliente(Agencia agencia)
@@ -193,17 +268,17 @@ namespace TP_1
                 Console.WriteLine("X - Volver");
                 Console.WriteLine("***************************************");
                 opcion = Console.ReadLine();
-                if (opcion == "A")
+                if (opcion.ToUpper().Trim() == "A")
                 {
                     menuVerAlojamientos(agencia);
                 }
-                else if (opcion != "X")
+                else if (opcion.ToUpper().Trim() != "X")
                 {
                     Console.WriteLine("Ingrese una opcion correcta");
                     opcion = Console.ReadLine();
                 }
 
-            } while (opcion != "X");
+            } while (opcion.ToUpper().Trim() != "X");
         }
 
         public static void menuVerAlojamientos(Agencia agencia)
@@ -255,21 +330,21 @@ namespace TP_1
                 Console.WriteLine("X - Volver");
                 Console.WriteLine("***************************************");
                 opcion = Console.ReadLine();
-                if (opcion == "A")
+                if (opcion.ToUpper().Trim() == "A")
                 {
                     crearHotel(a);
                 }
-                else if (opcion == "B")
+                else if (opcion.ToUpper().Trim() == "B")
                 {
                     crearCabania(a);
                 }
-                else if (opcion != "A" && opcion != "B" && opcion != "X")
+                else if (opcion.ToUpper().Trim() != "A" && opcion.ToUpper().Trim() != "B" && opcion.ToUpper().Trim() != "X")
                 {
                     Console.WriteLine("VUELVA INGRESAR UNA OPCION CORRECTA");
                     opcion = Console.ReadLine();
                 }
             } while (opcion != "X");
-            
+
         }
 
         public static void crearHotel(Agencia a)
@@ -290,10 +365,10 @@ namespace TP_1
             Console.WriteLine("*Ingrese Estrellas = ");
             estrellas = Console.ReadLine();
             Console.WriteLine("*Ingrese Limite de Personas = ");
-            cantPersonas = int.Parse(Console.ReadLine());
+            cantPersonas = verificarInt(Console.ReadLine());
             tv = seteoTv();
             Console.WriteLine("*Ingrese Precio por Persona = ");
-            precioxPersona = int.Parse(Console.ReadLine());
+            precioxPersona = verificarInt(Console.ReadLine());
             Console.WriteLine("************************************");
             try
             {
@@ -317,15 +392,19 @@ namespace TP_1
                 Console.WriteLine("* Desea que tenga TV? Ingrese SI o NO");
                 opcionTV = Console.ReadLine();
 
-                if (opcionTV == "SI")
+                if (opcionTV.ToUpper().Trim() == "SI")
                 {
                     tv = true;
                     opcionTV = "correcto";
                 }
-                else if (opcionTV == "NO")
+                else if (opcionTV.ToUpper().Trim() == "NO")
                 {
                     tv = false;
                     opcionTV = "correcto";
+                }
+                else
+                {
+                    opcionTV = "incorrecto";
                 }
             }
             return tv;
@@ -350,14 +429,14 @@ namespace TP_1
             Console.WriteLine("*Ingrese Estrellas = ");
             estrellas = Console.ReadLine();
             Console.WriteLine("*Ingrese Limite de Personas = ");
-            cantPersonas = int.Parse(Console.ReadLine());
+            cantPersonas = verificarInt(Console.ReadLine());
             tv = seteoTv();
             Console.WriteLine("*Ingrese Precio por Dia= ");
-            precioxDia = int.Parse(Console.ReadLine());
+            precioxDia = verificarInt(Console.ReadLine());
             Console.WriteLine("*Ingrese Numero de Habitacion = ");
-            habitaciones = int.Parse(Console.ReadLine());
+            habitaciones = verificarInt(Console.ReadLine());
             Console.WriteLine("*Ingrese Numero de Baños = ");
-            banios = int.Parse(Console.ReadLine());
+            banios = verificarInt(Console.ReadLine());
 
             try
             {

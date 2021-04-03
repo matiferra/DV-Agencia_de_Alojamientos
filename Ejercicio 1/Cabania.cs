@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TP_1
+namespace Ejercicio_1
 {
     class Cabania : Alojamiento 
     {
