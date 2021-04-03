@@ -1,61 +1,62 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace Ejercicio_2 
+namespace Ejercicio_2
 {
-   
+
     class Program
     {
-        private static object centro;
 
         static void Main(string[] args)
         {
-            CentroCultural centro = new CentroCultural(); 
+            CentroCultural centro = new CentroCultural();
             menuBienvenida(centro);
 
         }
         public static void menuBienvenida(CentroCultural centro)
         {
-            string opcion = null; 
+            string opcion = null;
             do
             {
 
-            Console.WriteLine("*************Bienvenido****************");
-            Console.WriteLine("*Elija usuario  ***********************");
-            Console.WriteLine("***************************************");
-            Console.WriteLine("");
-            Console.WriteLine("A - Poblar el Centro Cultural");
-            Console.WriteLine("B - Mostrar Datos ingresados");
-            Console.WriteLine("");
-            Console.WriteLine("X - SALIR");
-            Console.WriteLine("***************************************");
-            opcion = Console.ReadLine().ToUpper().Trim();
-            if (opcion == "A")
-            {
-                poblarCentroCultural(centro);
+                Console.WriteLine("*************Bienvenido****************");
+                Console.WriteLine("*Elija usuario  ***********************");
+                Console.WriteLine("***************************************");
+                Console.WriteLine("");
+                Console.WriteLine("A - Poblar el Centro Cultural");
+                Console.WriteLine("B - Mostrar Datos ingresados");
+                Console.WriteLine("");
+                Console.WriteLine("X - SALIR");
+                Console.WriteLine("***************************************");
+                opcion = Console.ReadLine().ToUpper().Trim();
+                if (opcion == "A")
+                {
+                    poblarCentroCultural(centro);
+                }
+                else if (opcion == "B")
+                {
+                    mostrarDatosIngresados(centro);
+                }
+                else if (opcion == "X")
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    Console.WriteLine("INGRESO MAL LA OPCION");
+                }
             }
-            else if (opcion == "B")
-            {
-                mostrarDatosIngresados(centro);
-            }
-            else if (opcion == "X")
-            {
-                Environment.Exit(0);
-            }
-            else
-            {
-                Console.WriteLine("INGRESO MAL LA OPCION");
-            }
-            }
-            while(opcion != "X") ;
+            while (opcion != "X");
 
         }
 
-   
+
 
         public static void poblarCentroCultural(CentroCultural centro)
         {
             string opcion = string.Empty;
-           do
+            do
             {
                 Console.WriteLine("***************************************");
                 Console.WriteLine("A - Insertar Artista");
@@ -82,8 +83,8 @@ namespace Ejercicio_2
                 {
                     Console.WriteLine("VUELVA INGRESAR UNA OPCION CORRECTA");
                 }
-            
-           } while (opcion != "X") ;
+
+            } while (opcion != "X");
             menuBienvenida(centro);
         }
 
@@ -208,40 +209,231 @@ namespace Ejercicio_2
 
         public static void mostrarDatosIngresados(CentroCultural centro)
         {
-            if (centro.artistas.ArtistasExp.Count != 0)
+            string opcion = string.Empty;
+            do
             {
+                Console.WriteLine("***************************************");
+                Console.WriteLine("A - Mostrar todos");
+                Console.WriteLine("B - Mostrar Artista por orden Alfabetico");
+                Console.WriteLine("C - Mostrar Obras ordenadas por año");
+                Console.WriteLine("D - Mostrar Obras de Artistas segun Nacionalidad");
+                Console.WriteLine("E - Mostrar Cuandros de una misma Galeria");
+                Console.WriteLine("F - Mostrar Todos los cuadros prestados\n");
+                Console.WriteLine("X - Volver");
+                Console.WriteLine("***************************************");
+                opcion = Console.ReadLine();
 
-                Console.WriteLine("*************** ARTISTAS ****************");
-                foreach (var item in centro.artistas.ArtistasExp)
+                if (opcion.ToUpper().Trim() == "A")
+                {
+                    mostrarTodos(centro);
+                }
+                else if (opcion.ToUpper().Trim() == "B")
+                {
+                    mostrarArtistasOrdenadosNombre(centro);
+                }
+                else if (opcion.ToUpper().Trim() == "C")
+                {
+                    mostrarObrasOrdenadasAnio(centro);
+                }
+                else if (opcion.ToUpper().Trim() == "D")
+                {
+                    mostrarArtistasNacionalidad(centro);
+                }
+                else if (opcion.ToUpper().Trim() == "E")
+                {
+                    mostrarCuadrosMismaGaleria(centro);
+
+                }
+                else if (opcion.ToUpper().Trim() == "F")
+                {
+                    mostrarTodosCuadrosPrestados(centro);
+
+                }
+            } while (opcion != "X");
+
+
+        }
+
+        public static void mostrarTodos(CentroCultural centro)
+        {
+            int contadorArt = 0;
+            int contadorEsc = 0;
+            int contadorCuadro = 0;
+
+
+            Console.WriteLine("*************** ARTISTAS ****************");
+            foreach (var item in centro.artistas.ArtistasExp)
+            {
+                if (item != null)
                 {
                     Console.WriteLine(item.ToString());
+                    contadorArt++;
                 }
             }
-            Console.WriteLine("*************** ESCULTURAS ****************");
-            if (centro.artistas.ArtistasExp.Count != 0)
+
+            if (contadorArt == 0)
             {
-                foreach (var item in centro.Obras.exposicion)
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("--------NO HAY REGISTROS CARGADOS------");
+                Console.WriteLine("---------------------------------------");
+            }
+
+            Console.WriteLine("*************** ESCULTURAS ****************");
+
+            foreach (var item in centro.Obras.exposicion)
+            {
+                if (item is Escultura)
                 {
-                    if (item is Escultura)
+                    if (item != null)
                     {
                         Console.WriteLine(item);
+                        contadorEsc++;
+                    }
+                }
+
+            }
+
+            if (contadorEsc == 0)
+            {
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("--------NO HAY REGISTROS CARGADOS------");
+                Console.WriteLine("---------------------------------------");
+            }
+
+            Console.WriteLine("*************** CUADROS ****************");
+
+
+            foreach (var item in centro.Obras.exposicion)
+            {
+                if (item is Cuadro)
+                {
+                    if (item != null)
+                    {
+                        Console.WriteLine(item);
+                        contadorCuadro++;
                     }
 
                 }
+
             }
-            Console.WriteLine("*************** CUADROS ****************");
-            if (centro.artistas.ArtistasExp.Count != 0)
+
+            if (contadorCuadro == 0)
             {
-                foreach (var item in centro.Obras.exposicion)
-                {
-                    if (item is Cuadro)
-                    {
-                        Console.WriteLine(item);
-                    }
-                }
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("--------NO HAY REGISTROS CARGADOS------");
+                Console.WriteLine("---------------------------------------");
             }
         }
 
-    }
 
+        public static void mostrarArtistasOrdenadosNombre(CentroCultural centro)
+        {
+            List<Artista> sorted = centro.artistas.ArtistasExp.OrderBy(x => x.nombre).ToList();
+            
+            Console.WriteLine(String.Join(Environment.NewLine, sorted));
+
+        }
+
+        public static void mostrarObrasOrdenadasAnio(CentroCultural centro)
+        {
+            int contador = 0;
+            //   data = data.OrderBy(x => x.Name).ToArray();
+
+            foreach (var item in centro.Obras.exposicion)
+            {
+                if (item != null)
+                {
+                    Console.WriteLine(item);
+                    contador++;
+                }
+            }
+            
+            if (contador == 0)
+            {
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("--------NO HAY REGISTROS CARGADOS------");
+                Console.WriteLine("---------------------------------------");
+            }
+
+        }
+        public static void mostrarArtistasNacionalidad(CentroCultural centro)
+        {
+            ArtistaExposicion a = null;
+            string nacionalidad = string.Empty;
+            int contador = 0;
+
+            Console.WriteLine("Ingrese Nacionalidad");
+            nacionalidad = Console.ReadLine();
+
+            a = centro.artistas.artistasNac(nacionalidad);
+            foreach (var item in a.ArtistasExp)
+            {
+                if (item != null)
+                {
+                    Console.WriteLine(item);
+                    contador++;
+                }
+            }
+            if (contador == 0)
+            {
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("--------NO HAY REGISTROS CARGADOS------");
+                Console.WriteLine("---------------------------------------");
+            }
+        }
+        public static void mostrarCuadrosMismaGaleria(CentroCultural centro)
+        {
+            string galeria = string.Empty;
+            ObrasExposicion obras = null;
+            int contador = 0;
+
+            Console.WriteLine("Ingrese nombre Galeria");
+            galeria = Console.ReadLine();
+            obras = centro.Obras.todosLosCuadrosPrestados();
+            if(obras != null)
+            {
+                 string[] nombresCuadrosGaleria = new string[obras.exposicion.Length];
+                foreach (var item in obras.exposicion)
+                {
+                    if (item != null)
+                    {
+                        Console.WriteLine(item);
+                        contador++;
+                    }
+                }
+            }
+
+            if (contador == 0)
+            {
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("--------NO HAY REGISTROS CARGADOS------");
+                Console.WriteLine("---------------------------------------");
+            }
+        }
+        public static void mostrarTodosCuadrosPrestados(CentroCultural centro)
+        {
+            ObrasExposicion o = null;
+            o = centro.Obras.todosLosCuadrosPrestados();
+            int contador = 0;
+            if (o != null)
+            {
+                foreach (var item in o.exposicion)
+                {
+                    if (item != null)
+                    {
+                        Console.WriteLine(item);
+                        contador++;
+                    }
+                }
+            }
+            if (contador == 0)
+            {
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("--------NO HAY REGISTROS CARGADOS------");
+                Console.WriteLine("---------------------------------------");
+            }
+            //TODO
+        }
+
+    }
 }
