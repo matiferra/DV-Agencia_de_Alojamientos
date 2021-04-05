@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ejercicio_2 
+namespace Ejercicio_2
 {
     class CentroCultural
     {
@@ -10,7 +10,8 @@ namespace Ejercicio_2
         public ObrasExposicion Obras { get; set; }
         public ArtistaExposicion artistas { get; set; }
 
-        public CentroCultural(){
+        public CentroCultural()
+        {
             this.nombre = string.Empty;
             this.Obras = new ObrasExposicion(100);
             this.artistas = new ArtistaExposicion();
@@ -55,18 +56,27 @@ namespace Ejercicio_2
 
             String[] nombresCuadrosGaleria = new String[obras.exposicion.Length];
 
+            bool encontrado = false;
+            int x = 0;
+
             foreach (var item in obras.exposicion)
             {
-                
+                encontrado = false;
                 CuadroPrestado c = (CuadroPrestado)item;
-                if(c.nombreGaleria == Gal)
+                if (c != null)
                 {
-                    for (int i = 0; i < obras.exposicion.Length; i++)
+                    if (c.nombreGaleria == Gal)
                     {
-                        if (obras.exposicion[i] == null)
+                        while(x < nombresCuadrosGaleria.Length &&  encontrado == false)
                         {
-                            nombresCuadrosGaleria[i] = obras.exposicion[i].nombre;
+                            if (nombresCuadrosGaleria[x] == null)
+                            {
+                                nombresCuadrosGaleria[x] = item.nombre;
+                                encontrado = true;
+                            }
+                            x++;
                         }
+                        
                     }
                 }
             }

@@ -108,7 +108,7 @@ namespace Ejercicio_2
 
         public ObrasExposicion todosLosCuadrosPrestados()
         {
-            ObrasExposicion o = null;
+            ObrasExposicion o = new ObrasExposicion(100);
             for (int i = 0; i < exposicion.Length; i++)
             {
                 if (exposicion[i] is Cuadro)

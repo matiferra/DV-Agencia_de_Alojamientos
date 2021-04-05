@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mele_\\source\\repos\\Plataformas TP 1\\Ejercicio 2\\Ejercicio 2.csproj",
+      "projectUniqueName": "D:\\My Documents\\GitHub\\tpPlataformas\\Ejercicio 2\\Ejercicio 2.csproj",
       "projectName": "Ejercicio 2",
-      "projectPath": "C:\\Users\\mele_\\source\\repos\\Plataformas TP 1\\Ejercicio 2\\Ejercicio 2.csproj",
+      "projectPath": "D:\\My Documents\\GitHub\\tpPlataformas\\Ejercicio 2\\Ejercicio 2.csproj",
       "packagesPath": "C:\\Users\\mele_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mele_\\source\\repos\\Plataformas TP 1\\Ejercicio 2\\obj\\",
+      "outputPath": "D:\\My Documents\\GitHub\\tpPlataformas\\Ejercicio 2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mele_\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -18,5 +18,14 @@ namespace Ejercicio_2
 
         }
 
+        public override string ToString()
+        {
+            return 
+                "\n CUADRO PRESTADO \n"
+                + base.ToString()
+                + "\n Fecha de Devolucion = " + fechaDevolucion.ToString("dd/mm/yyyy")
+                + $"\n Nombre de Galeria = {nombreGaleria}\n";
+        }
+
     }
 }

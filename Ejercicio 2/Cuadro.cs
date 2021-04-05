@@ -15,7 +15,12 @@ namespace Ejercicio_2
             this.Base = Base;
             this.altura = altura;
         }
-
+        public override string ToString()
+        {
+            return base.ToString()
+                + $"\n Base = {Base}"
+                + $"\n Atura = {altura}";
+        }
 
     }
 }

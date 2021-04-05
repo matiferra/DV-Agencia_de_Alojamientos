@@ -52,7 +52,7 @@ namespace Ejercicio_2
         }
         public ArtistaExposicion artistasNac(string Nac)
         {
-            ArtistaExposicion artistasConMismaNacionalidad = null;
+            ArtistaExposicion artistasConMismaNacionalidad = new ArtistaExposicion();
             foreach (var item in ArtistasExp)
             {
                 if (item.nacionalidad == Nac)

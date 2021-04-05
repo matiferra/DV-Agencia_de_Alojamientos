@@ -25,12 +25,13 @@ namespace Ejercicio_2
         override
         public string ToString()
         {
-            return 
-                $" codigo: {codigoObraArte} "+
-                $"\n Nombre: {nombre}"+
-                $"\n Nombre de Artista: {nombreArtista}"+
-                $"\n Año de Creacion: {anioCreacion} "+
-                $"\n Fecha de Ingreso: {fechaIngreso} ";
+            return
+                $" codigo: {codigoObraArte} " +
+                $"\n Nombre: {nombre}" +
+                $"\n Nombre de Artista: {nombreArtista}" +
+                $"\n Año de Creacion: {anioCreacion} " +
+                "\n Fecha de Ingreso: " + fechaIngreso.ToString("dd/mm/yyyy");
+            
         }
     }
 }

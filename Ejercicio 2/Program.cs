@@ -20,8 +20,8 @@ namespace Ejercicio_2
             do
             {
 
+                Console.WriteLine("***************************************");
                 Console.WriteLine("*************Bienvenido****************");
-                Console.WriteLine("*Elija usuario  ***********************");
                 Console.WriteLine("***************************************");
                 Console.WriteLine("");
                 Console.WriteLine("A - Poblar el Centro Cultural");
@@ -337,16 +337,19 @@ namespace Ejercicio_2
         public static void mostrarObrasOrdenadasAnio(CentroCultural centro)
         {
             int contador = 0;
-            //   data = data.OrderBy(x => x.Name).ToArray();
-
-            foreach (var item in centro.Obras.exposicion)
+            var a = centro.Obras.exposicion.ToList();
+            List<ObraArte> guardo = new List<ObraArte>();
+            foreach (var item in a)
             {
                 if (item != null)
                 {
-                    Console.WriteLine(item);
+                    guardo.Add(item);
                     contador++;
                 }
             }
+            List<ObraArte> sorted = guardo.OrderBy(x => x.anioCreacion).ToList();
+
+            Console.WriteLine(String.Join(Environment.NewLine, sorted));
 
             if (contador == 0)
             {
@@ -384,19 +387,22 @@ namespace Ejercicio_2
         public static void mostrarCuadrosMismaGaleria(CentroCultural centro)
         {
             string galeria = string.Empty;
-            ObrasExposicion obras = null;
             int contador = 0;
 
             Console.WriteLine("Ingrese nombre Galeria");
             galeria = Console.ReadLine();
-            obras = centro.Obras.todosLosCuadrosPrestados();
-            if (obras != null)
+
+            string[] nombresCuadrosGaleria = new string[100];
+            nombresCuadrosGaleria = centro.nombresCuadrosGaleria(galeria);
+
+            Console.WriteLine("\nNombre de Cuadros");
+            if (nombresCuadrosGaleria != null)
             {
-                string[] nombresCuadrosGaleria = new string[obras.exposicion.Length];
-                foreach (var item in obras.exposicion)
+                foreach (var item in nombresCuadrosGaleria)
                 {
                     if (item != null)
                     {
+                       
                         Console.WriteLine(item);
                         contador++;
                     }
