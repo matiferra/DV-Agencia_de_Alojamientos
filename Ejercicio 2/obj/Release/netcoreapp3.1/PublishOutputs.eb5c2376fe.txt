@@ -1,0 +1,5 @@
+C:\Users\mele_\Desktop\Ejercicio 2.exe
+C:\Users\mele_\Desktop\Ejercicio 2.dll
+C:\Users\mele_\Desktop\Ejercicio 2.deps.json
+C:\Users\mele_\Desktop\Ejercicio 2.runtimeconfig.json
+C:\Users\mele_\Desktop\Ejercicio 2.pdb

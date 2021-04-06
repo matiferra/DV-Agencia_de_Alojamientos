@@ -153,6 +153,25 @@ namespace Ejercicio_1
                 case "cinco":
                     retorno = 5;
                     break;
+                case "*":
+                    retorno = 1;
+                    break;
+
+                case "**":
+                    retorno = 2;
+                    break;
+
+                case "***":
+                    retorno = 3;
+                    break;
+
+                case "****":
+                    retorno = 4;
+                    break;
+
+                case "*****":
+                    retorno = 5;
+                    break;
                 default:
                     retorno = 0;
                     break;
