@@ -44,6 +44,25 @@ namespace Ejercicio_2
             return contador;
 
         }
+
+        public bool existeObra(ObraArte o)
+        {
+            bool existeObra = false;
+            int x = 0;
+
+            while (x < exposicion.Length && existeObra == false)
+            {
+                if(exposicion[x] == o)
+                {
+                    existeObra = true;
+                }
+
+            }
+            
+            return existeObra;
+
+        }
+
         public bool estaLLena()
         {
 
