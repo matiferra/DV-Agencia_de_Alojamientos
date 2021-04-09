@@ -12,14 +12,12 @@ namespace Ejercicio_2
         {
             CentroCultural centro = new CentroCultural();
             menuBienvenida(centro);
-
         }
         public static void menuBienvenida(CentroCultural centro)
         {
             string opcion = null;
             do
             {
-
                 Console.WriteLine("***************************************");
                 Console.WriteLine("*************Bienvenido****************");
                 Console.WriteLine("***************************************");
@@ -195,7 +193,7 @@ namespace Ejercicio_2
             fechaFallecimiento = verificarFecha(Console.ReadLine());
             try
             {
-                artistas.ArtistasExp.Add(new Artista(nombre, nacionalidad, fechaNacimiento, fechaFallecimiento));
+                artistas.insertarArtista(new Artista(nombre, nacionalidad, fechaNacimiento, fechaFallecimiento));
                 Console.WriteLine("El artista se inserto con exito!!");
                 result = "X";
             }

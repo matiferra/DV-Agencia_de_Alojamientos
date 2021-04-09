@@ -13,6 +13,11 @@ namespace Ejercicio_2
             ArtistasExp = new List<Artista>();
         }
 
+        public void insertarArtista(Artista artista)
+        {
+            ArtistasExp.Add(artista);
+        }
+
         public int cantidadArtistas()
         {
             return ArtistasExp.Count;
