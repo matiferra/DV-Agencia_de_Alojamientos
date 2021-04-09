@@ -1,5 +1,5 @@
 Aclaraciones EJERCICIO 1
-
+ 
 Respetamos el UML excepto por el método de la clase Alojamiento llamado igualCodigo.
 El reemplazo consistió en volver estática la variable código la cual se va incrementando en cada construcción de un objeto de esta clase, con el fin de que no se repite el mismo código en dos objetos
 
