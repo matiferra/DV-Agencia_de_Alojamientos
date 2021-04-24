@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ejercicio_1
 {
-    class Agencia 
+    class Agencia
     {
         public static int CantAloj { get; set; }
         public Alojamiento[] alojamientosAgencia { get; set; }
@@ -187,8 +187,8 @@ namespace Ejercicio_1
             {
                 if (alojamientosAgencia[x] != null)
                 {
-                int cantEstrellas = conversionEntero(alojamientosAgencia[x].estrellas);
-                    if ( cantEstrellas >= estrellas)
+                    int cantEstrellas = conversionEntero(alojamientosAgencia[x].estrellas);
+                    if (cantEstrellas >= estrellas)
                     {
                         masEstrellas[x] = alojamientosAgencia[x];
                     }
@@ -202,14 +202,14 @@ namespace Ejercicio_1
         public Agencia cabaniasentrePrecios(double desde, double hasta)
         {
             Agencia ag = new Agencia();
-            
+
             for (int x = 0; x < alojamientosAgencia.Length; x++)
             {
                 if (alojamientosAgencia[x] is Cabania)
                 {
-                    Cabania cab = (Cabania) alojamientosAgencia[x];
+                    Cabania cab = (Cabania)alojamientosAgencia[x];
 
-                    if (cab.precioxDia >  desde && cab.precioxDia <= hasta)
+                    if (cab.precioxDia > desde && cab.precioxDia <= hasta)
                     {
                         ag.insertarAlojamiento(alojamientosAgencia[x]);
                     }
@@ -218,22 +218,22 @@ namespace Ejercicio_1
             return ag;
         }
 
-public bool eliminarAlojamiento(Alojamiento a)
+        public bool eliminarAlojamiento(Alojamiento a)
         {
-        int x = 0;
-        bool encontrado = false;
+            int x = 0;
+            bool encontrado = false;
             while (x < alojamientosAgencia.Length && encontrado == false)
             {
                 if (alojamientosAgencia[x].codigoInstancia == a.codigoInstancia)
                 {
-                    alojamientosAgencia[x]= null;
+                    alojamientosAgencia[x] = null;
                     encontrado = true;
 
                 }
-            
+
             }
             return encontrado;
-        
+
         }
 
         public bool modificarAlojamiento(Alojamiento a)
@@ -260,11 +260,11 @@ public bool eliminarAlojamiento(Alojamiento a)
             for (int x = 0; x < alojamientosAgencia.Length; x++)
             {
                 Alojamiento a = alojamientosAgencia[x];
-                    if (a.getPrecio() > desde && a.getPrecio() <= hasta) // Agregue un metodo abstracto getPrecio en 		Alojamientos que cabania lo implementa como PrecioxDia y hotel como precioXPersona
-                    {
-                        ag.insertarAlojamiento(alojamientosAgencia[x]);
-                    }
-                
+                if (a.getPrecio() > desde && a.getPrecio() <= hasta) // Agregue un metodo abstracto getPrecio en 		Alojamientos que cabania lo implementa como PrecioxDia y hotel como precioXPersona
+                {
+                    ag.insertarAlojamiento(alojamientosAgencia[x]);
+                }
+
             }
             return ag;
         }
