@@ -218,6 +218,57 @@ namespace Ejercicio_1
             return ag;
         }
 
+public bool eliminarAlojamiento(Alojamiento a)
+        {
+        int x = 0;
+        bool encontrado = false;
+            while (x < alojamientosAgencia.Length && encontrado == false)
+            {
+                if (alojamientosAgencia[x].codigoInstancia == a.codigoInstancia)
+                {
+                    alojamientosAgencia[x]= null;
+                    encontrado = true;
+
+                }
+            
+            }
+            return encontrado;
+        
+        }
+
+        public bool modificarAlojamiento(Alojamiento a)
+        {
+            int x = 0;
+            bool modificado = false;
+            while (x < alojamientosAgencia.Length && modificado == false)
+            {
+                if (alojamientosAgencia[x].codigoInstancia == a.codigoInstancia)
+                {
+                    alojamientosAgencia[x] = a;
+                    modificado = true;
+
+                }
+
+            }
+            return modificado;
+        }
+
+        public Agencia alojamientosEntrePrecios(double desde, double hasta)
+        {
+            Agencia ag = new Agencia();
+
+            for (int x = 0; x < alojamientosAgencia.Length; x++)
+            {
+                Alojamiento a = alojamientosAgencia[x];
+                    if (a.getPrecio() > desde && a.getPrecio() <= hasta) // Agregue un metodo abstracto getPrecio en 		Alojamientos que cabania lo implementa como PrecioxDia y hotel como precioXPersona
+                    {
+                        ag.insertarAlojamiento(alojamientosAgencia[x]);
+                    }
+                
+            }
+            return ag;
+        }
+
     }
 
 }
