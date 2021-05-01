@@ -420,7 +420,7 @@ namespace Ejercicio_1
             int precioxDia = 0;
             int habitaciones = 0;
             int banios = 0;
-
+             
             Console.WriteLine("*********** NUEVO CABAÑA ************");
             Console.WriteLine("*Ingrese Ciudad = ");
             ciudad = Console.ReadLine();

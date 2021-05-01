@@ -5,19 +5,19 @@ using System.Text;
 namespace Ejercicio_1
 {
     class Reserva
-    {
-        private int ID { get; set; }
-        private DateTime FDesde { get; set; }
-        private DateTime FHasta { get; set; }
-        private Alojamiento propiedad { get; set; }
-        private Usuario persona { get; set; }
-        private double precio { get; set; }
+    { 
+        public int ID { get; set; }
+        public DateTime FDesde { get; set; }
+        public DateTime FHasta { get; set; }
+        public Alojamiento propiedad { get; set; } 
+        public Usuario persona { get; set; }
+        public float precio { get; set; }
 
 
         public Reserva()
         { }
 
-        public Reserva(int ID, DateTime FDesde, DateTime FHasta, Alojamiento propiedad, Usuario persona, double precio)
+        public Reserva(int ID, DateTime FDesde, DateTime FHasta, Alojamiento propiedad, Usuario persona, float precio)
         {
             this.ID = ID;
             this.FDesde = FDesde;

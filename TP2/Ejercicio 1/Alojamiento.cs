@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Ejercicio_1
-{
+{ 
     abstract class Alojamiento 
     {
         public static int codigo { get; set; } = 0;
@@ -38,7 +38,7 @@ namespace Ejercicio_1
             return false;
         }
 
-
+         
         public override string ToString()
         {
             return
@@ -49,6 +49,8 @@ namespace Ejercicio_1
                 "\nCantidad de Personas: " + cantPersonas +
                 "\nTv: " + tv;
         }
+
+        public abstract double getPrecio();
 
     }
 }

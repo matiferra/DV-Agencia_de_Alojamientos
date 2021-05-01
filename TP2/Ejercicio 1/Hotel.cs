@@ -7,8 +7,8 @@ namespace Ejercicio_1
     class Hotel : Alojamiento 
     {
 
-
-        private double precioxPersona { get; set; }
+         
+        private double precioxPersona;
 
         public Hotel(string ciudad, string barrio, string estrellas, int cantPersonas, Boolean tv, double precioxPersona) 
             : base(ciudad, barrio, estrellas, cantPersonas, tv)
@@ -25,6 +25,10 @@ namespace Ejercicio_1
                 "\nPrecio por Persona: " + precioxPersona;
         }
 
+        public override double getPrecio()
+        {
+            return this.precioxPersona;
+        }
 
 
 

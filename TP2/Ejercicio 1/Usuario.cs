@@ -6,12 +6,12 @@ namespace Ejercicio_1
 {
     class Usuario
     {
-        private int DNI { get; set; }
-        private string nombre{ get; set; }
-        private string mail{ get; set; }
-        private string password { get; set; }
-        private bool esAdmin { get; set; }
-        private bool bloqueado { get; set; }
+        public int DNI { get; set; }
+        public string nombre{ get; set; }
+        public string mail{ get; set; }
+        public string password { get; set; }
+        public bool esAdmin { get; set; }
+        public bool bloqueado { get; set; } 
 
         public Usuario()
             { }

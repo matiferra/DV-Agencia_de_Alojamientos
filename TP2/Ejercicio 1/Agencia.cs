@@ -8,8 +8,8 @@ namespace Ejercicio_1
     {
         public static int CantAloj { get; set; }
         public Alojamiento[] alojamientosAgencia { get; set; }
-
-
+        public List<Alojamiento> misAlojamientos { get; set; }
+        public int cantAlojamientos  { get; set; }
 
         public Agencia()
         {
@@ -58,7 +58,7 @@ namespace Ejercicio_1
             {
                 if (alojamientosAgencia[i] is Hotel)
                 {
-                    ag.insertarAlojamiento(alojamientosAgencia[i]);
+                    ag.insertarAlojamiento(alojamientosAgencia[i].);
                 }
             }
 
@@ -209,7 +209,11 @@ namespace Ejercicio_1
                 {
                     Cabania cab = (Cabania)alojamientosAgencia[x];
 
+<<<<<<< HEAD
+                    if (cab.getPrecio() > desde && cab.getPrecio() <= hasta)
+=======
                     if (cab.precioxDia > desde && cab.precioxDia <= hasta)
+>>>>>>> 8ed478e1443d59d3e5f8728339b906f344c1c90b
                     {
                         ag.insertarAlojamiento(alojamientosAgencia[x]);
                     }
@@ -228,9 +232,11 @@ namespace Ejercicio_1
                 {
                     alojamientosAgencia[x] = null;
                     encontrado = true;
-
                 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 8ed478e1443d59d3e5f8728339b906f344c1c90b
             }
             return encontrado;
 
@@ -253,6 +259,8 @@ namespace Ejercicio_1
             return modificado;
         }
 
+
+        // PENSAAAAAAAAAAAAAAAAAAAAAAAR AGENCIA NO VE RESERVA
         public Agencia alojamientosEntrePrecios(double desde, double hasta)
         {
             Agencia ag = new Agencia();
@@ -262,12 +270,52 @@ namespace Ejercicio_1
                 Alojamiento a = alojamientosAgencia[x];
                 if (a.getPrecio() > desde && a.getPrecio() <= hasta) // Agregue un metodo abstracto getPrecio en 		Alojamientos que cabania lo implementa como PrecioxDia y hotel como precioXPersona
                 {
-                    ag.insertarAlojamiento(alojamientosAgencia[x]);
+<<<<<<< HEAD
+                    ag.misAlojamientos.Add(alojamientosAgencia[x]);
                 }
-
             }
             return ag;
         }
+
+        public Agencia alojamientosEntrePreciosMasParametros(int cantPersonas, DateTime diaDesde, DateTime diaHasta`, double desde, double hasta)
+        {
+            Agencia ag = new Agencia();
+            ag.alojamientosEntrePrecios(desde, hasta);
+            double precioTotal; 
+             
+            TimeSpan difFechas = diaHasta - diaDesde;
+            int dias = difFechas.Days;
+
+
+            foreach (var item in ag.misAlojamientos)
+            {
+                if(item is Hotel)
+                {
+                    precioTotal = item.getPrecio() * cantPersonas * dias;
+                    if(precioTotal > hasta)
+                    {
+                        ag.misAlojamientos.Remove(item);
+                    }
+                }
+
+                if (item is Cabania)
+                {
+                    precioTotal = item.getPrecio() * dias;
+                    if (precioTotal > hasta)
+                    {
+                        ag.misAlojamientos.Remove(item);
+                    }
+=======
+                    ag.insertarAlojamiento(alojamientosAgencia[x]);
+>>>>>>> 8ed478e1443d59d3e5f8728339b906f344c1c90b
+                }
+
+            }
+
+            return ag;
+        }
+
+
 
     }
 

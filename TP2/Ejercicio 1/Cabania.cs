@@ -6,8 +6,8 @@ namespace Ejercicio_1
 {
     class Cabania : Alojamiento 
     {
-        public double precioxDia { get; set; }
-        public int habitaciones { get; set; }
+        private double precioxDia; 
+        public int habitaciones { get; set; } 
         public int banios { get; set; }
         public Cabania(string ciudad, string barrio, string estrellas, int cantPersonas, Boolean tv, double precioxDia, int habitaciones, int banios)
             : base(ciudad, barrio, estrellas, cantPersonas, tv)
@@ -18,6 +18,8 @@ namespace Ejercicio_1
 
         }
 
+
+
         public override string ToString()
         {
             return
@@ -27,6 +29,13 @@ namespace Ejercicio_1
                 "\nHabitaciones: " + habitaciones +
                  "\nbanios: " + banios;
         }
+
+
+        public override double getPrecio()
+        {
+            return this.precioxDia;
+        }
+
 
     }
 }

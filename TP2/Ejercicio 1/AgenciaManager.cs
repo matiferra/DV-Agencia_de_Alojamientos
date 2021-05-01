@@ -24,7 +24,44 @@ namespace Ejercicio_1
 
         public List<List<string>> buscarAlojamientos(string Ciudad, DateTime Pdesde, DateTime Phasta, int cantPersonas, string tipo)
         {
-            List<List<string>> lista = null;
+            List<List<string>> lista = new List<List<string>>();
+
+            tipo.ToUpper();
+
+            List<string> alojamientos = new List<string>();
+
+            alojamientos.Add("asd");
+             
+            foreach (var item in miAgencia.misAlojamientos)
+            { 
+                if(tipo == "HOTEL" && item is Hotel)
+                {
+                    alojamientos.Add("HOTEL: \nciudad: " + item.ciudad + 
+                        "\nbarrio: " + item.barrio + 
+                        "\nestellas: " + item.estrellas + 
+                        "\ncantidad de personas: " + item.cantPersonas + 
+                        "\nPrecio por persona: " + item.getPrecio());
+
+                    
+                }
+
+            }
+
+
+            /*foreach (var item in miAgencia.misAlojamientos)
+            {
+                if(tipo == "HOTEL" && item is Hotel)
+                {
+                    foreach (var lista2 in lista)
+                    {
+                        foreach (var cadenas in lista2)
+                        {
+                            cadenas = "asd";
+                        }
+                    }
+                }
+            }*/
+
 
             return lista;
         }
