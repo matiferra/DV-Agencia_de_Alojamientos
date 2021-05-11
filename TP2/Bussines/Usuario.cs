@@ -12,12 +12,14 @@ namespace Bussines
         public string password { get; set; }
         public bool esAdmin { get; set; }
         public bool bloqueado { get; set; }
+        public int intentosLogueo { get; set; }
 
         public Usuario()
         {
         }
         public Usuario(int DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado)
         {
+            this.intentosLogueo = 0;
             this.DNI = DNI;
             this.nombre = nombre;
             this.mail = mail;

@@ -198,7 +198,6 @@ namespace Bussines
             return masEstrellas;
         }
 
-
         public Agencia cabaniasentrePrecios(double desde, double hasta)
         {
             Agencia ag = new Agencia();

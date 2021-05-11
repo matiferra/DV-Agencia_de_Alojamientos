@@ -236,6 +236,15 @@ namespace Bussines
 
         public bool autenticarUsuario(int DNI, string password)
         {
+            Usuario user = null;
+            foreach (var item in misUsuarios)
+            {
+                if(item.DNI == DNI)
+                {
+                    user = item;
+                }
+            }
+
             bool autenticado = false;
 
             foreach (var item in misUsuarios)
@@ -247,6 +256,11 @@ namespace Bussines
                 }
                 else
                 {
+                    user.intentosLogueo++;
+                    if(user.intentosLogueo >= 3)
+                    {
+                        user.bloqueado = true;
+                    }
                     autenticado = false;
                 }
             }
@@ -266,6 +280,7 @@ namespace Bussines
                     {
                         item.bloqueado = false;
                         desbloqueado = true;
+                        item.intentosLogueo = 0;
                     }
                 }
             }
@@ -303,6 +318,54 @@ namespace Bussines
             }
 
             return eliminado;
+        }
+
+        public int cambiarContrasenia(int DNI, string oldPass, string newPass1, string newPass2)
+        {
+
+            //1 = MAL PASS VIEJO
+            //2 = MAL PASS NUEVO
+            //3 = CAMBIADA
+
+            int cambiada = 0;
+
+            foreach (var item in misUsuarios)
+            {
+                if (item.DNI == DNI)
+                {
+                    if(oldPass == item.password)
+                    {
+                        if(newPass1 == newPass2){
+                            item.password = newPass1;
+                            cambiada = 3;
+                        } else
+                        {
+                            cambiada = 2;
+                        }
+                    } else
+                    {
+                        cambiada = 1;
+                    }
+                }
+            }
+
+            return cambiada;
+        }
+
+
+        public Usuario buscarUsuario(int DNI)
+        {
+            Usuario user = null;
+
+            foreach (var item in misUsuarios)
+            {
+                if(item.DNI == DNI)
+                {
+                    user = item;
+                }
+            }
+
+            return user;
         }
 
     }
