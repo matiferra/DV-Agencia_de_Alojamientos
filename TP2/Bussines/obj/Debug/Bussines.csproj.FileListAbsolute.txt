@@ -1,0 +1,6 @@
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\bin\Debug\Bussines.dll
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\bin\Debug\Bussines.pdb
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.dll
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.pdb
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
