@@ -1,18 +1,25 @@
-﻿using Bussines;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Agencia.Views
 {
     public partial class Cliente : Form
     {
-        AgenciaManager Ag = new AgenciaManager();
-
+        private Form currentChildForm;
         public Cliente()
-        {          
+        {
             InitializeComponent();
-            mesajeError.Visible = false;
+            panel1.BackColor = Color.FromArgb(60, Color.Black);
+            panel2.BackColor = Color.FromArgb(60, Color.Black);
+            OpenChildForm(new BusquedaAlojamiento());
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -22,50 +29,72 @@ namespace Agencia.Views
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-
             Application.Exit();
         }
 
-      
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            if (!string.IsNullOrEmpty(text_localidad.Text) && !string.IsNullOrEmpty(text_fecha.Text) && !string.IsNullOrEmpty(text_fecha.Text) 
-                && !string.IsNullOrEmpty(text_cantidad.Text) && !string.IsNullOrEmpty(seleccion_tipo_aloj.Text))
+
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void Cliente_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+
+        private void OpenChildForm(Form childForm)
+        {
+            //open only form
+            if (currentChildForm != null)
             {
-
-                var Lista = Ag.buscarAlojamientos(text_localidad.Text, DateTime.Parse(text_fecha.Text),
-                                             DateTime.Parse(text_fecha.Text), int.Parse(text_cantidad.Text), seleccion_tipo_aloj.Text);
-
-
-                for (int i = 0; i < Lista.Count; i++)
-                {
-                    //adicionamos un row
-                    dataGridView1.Rows.Add();
-                    //colocamos la info
-                    dataGridView1.Rows[i].Cells[0].Value = Lista.ToString();
-                }
-
-                //limpío los campos de los filtros
-
-                text_localidad.Text = "";
-                text_fecha.Text = "";
-                text_fecha.Text = "";
-                text_cantidad.Text = "";
-                seleccion_tipo_aloj.Text = "";
-
+                currentChildForm.Close();
             }
-            else
-            {
-                mesajeError.Visible = true;
-                mesajeError.Text = "Todos los campos son requeridos!!";
+            currentChildForm = childForm;
+            //End
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel2.Controls.Add(childForm);
+            panel2.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            
+            
 
-            }
-          
+        }
 
-        }     
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
 
-       
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new RecuperarContraseña());
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AdmReservas());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login l = new Login();
+            l.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new BusquedaAlojamiento()); 
+        }
     }
 }

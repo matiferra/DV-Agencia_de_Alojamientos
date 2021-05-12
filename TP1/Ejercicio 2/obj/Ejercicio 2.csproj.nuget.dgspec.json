@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benjaminv066\\Desktop\\GitHub\\tpPlataformas\\Ejercicio 2\\Ejercicio 2.csproj": {}
+    "C:\\Users\\BGH\\Source\\Repos\\tpPlataformas\\TP1\\Ejercicio 2\\Ejercicio 2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benjaminv066\\Desktop\\GitHub\\tpPlataformas\\Ejercicio 2\\Ejercicio 2.csproj": {
+    "C:\\Users\\BGH\\Source\\Repos\\tpPlataformas\\TP1\\Ejercicio 2\\Ejercicio 2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benjaminv066\\Desktop\\GitHub\\tpPlataformas\\Ejercicio 2\\Ejercicio 2.csproj",
+        "projectUniqueName": "C:\\Users\\BGH\\Source\\Repos\\tpPlataformas\\TP1\\Ejercicio 2\\Ejercicio 2.csproj",
         "projectName": "Ejercicio 2",
-        "projectPath": "C:\\Users\\benjaminv066\\Desktop\\GitHub\\tpPlataformas\\Ejercicio 2\\Ejercicio 2.csproj",
-        "packagesPath": "C:\\Users\\benjaminv066\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benjaminv066\\Desktop\\GitHub\\tpPlataformas\\Ejercicio 2\\obj\\",
+        "projectPath": "C:\\Users\\BGH\\Source\\Repos\\tpPlataformas\\TP1\\Ejercicio 2\\Ejercicio 2.csproj",
+        "packagesPath": "C:\\Users\\BGH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\BGH\\Source\\Repos\\tpPlataformas\\TP1\\Ejercicio 2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\benjaminv066\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BGH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {

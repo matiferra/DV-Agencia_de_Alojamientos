@@ -4,3 +4,9 @@ E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal
 E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.dll
 E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.pdb
 E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.dll
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.pdb
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.dll
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.pdb

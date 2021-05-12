@@ -63,6 +63,26 @@ namespace Agencia.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fadminitrador {
+            get {
+                object obj = ResourceManager.GetObject("Fadminitrador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fcliente {
+            get {
+                object obj = ResourceManager.GetObject("Fcliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondoAdministrador {
             get {
                 object obj = ResourceManager.GetObject("fondoAdministrador", resourceCulture);

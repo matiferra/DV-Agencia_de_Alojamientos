@@ -1,14 +1,8 @@
-﻿using Bussines;
-
-
+﻿
 namespace Agencia
 {
-   
     partial class Login
     {
-        AgenciaManager Manager = new AgenciaManager();
-
-
         /// <summary>
         /// Variable del diseñador necesaria.
         /// </summary>
@@ -42,9 +36,9 @@ namespace Agencia
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.registro = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -85,7 +79,6 @@ namespace Agencia
             this.seleccion.Name = "seleccion";
             this.seleccion.Size = new System.Drawing.Size(285, 31);
             this.seleccion.TabIndex = 4;
-            this.seleccion.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -122,50 +115,49 @@ namespace Agencia
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(320, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(234, 33);
+            this.label2.Size = new System.Drawing.Size(238, 33);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Login Cliente/admin\r\n";
+            this.label2.Text = "Login Cliente/Admin\r\n";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // registro
+            // 
+            this.registro.BackColor = System.Drawing.Color.Transparent;
+            this.registro.FlatAppearance.BorderSize = 2;
+            this.registro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.registro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.registro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registro.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registro.ForeColor = System.Drawing.Color.White;
+            this.registro.Location = new System.Drawing.Point(297, 339);
+            this.registro.Name = "registro";
+            this.registro.Size = new System.Drawing.Size(131, 45);
+            this.registro.TabIndex = 18;
+            this.registro.Text = "Registrarse";
+            this.registro.UseVisualStyleBackColor = false;
+            this.registro.Click += new System.EventHandler(this.registro_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(773, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(737, -1);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.Size = new System.Drawing.Size(51, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabIndex = 44;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(809, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(794, -1);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(30, 30);
+            this.btnCerrar.Size = new System.Drawing.Size(54, 31);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabIndex = 43;
             this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(297, 339);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 45);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Registrarse";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
@@ -174,12 +166,12 @@ namespace Agencia
             this.BackgroundImage = global::Agencia.Properties.Resources.fondoLogin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(860, 481);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.registro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.seleccion);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
@@ -205,9 +197,9 @@ namespace Agencia
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button registro;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.Button button1;
     }
 }
 

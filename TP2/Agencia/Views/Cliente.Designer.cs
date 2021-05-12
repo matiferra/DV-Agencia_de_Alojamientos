@@ -30,166 +30,29 @@ namespace Agencia.Views
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.text_localidad = new System.Windows.Forms.TextBox();
-            this.text_fecha = new System.Windows.Forms.TextBox();
-            this.text_cantidad = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.seleccion_tipo_aloj = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.result = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mesajeError = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.FlatAppearance.BorderSize = 2;
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(110, 377);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(129, 39);
-            this.btnLogin.TabIndex = 34;
-            this.btnLogin.Text = "Aceptar";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(82, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 23);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Cant de personas";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(84, 152);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 23);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Fecha";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(83, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 23);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Localidad";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(390, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 33);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Cliente";
-            // 
-            // text_localidad
-            // 
-            this.text_localidad.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.text_localidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.text_localidad.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_localidad.Location = new System.Drawing.Point(89, 129);
-            this.text_localidad.Name = "text_localidad";
-            this.text_localidad.Size = new System.Drawing.Size(167, 24);
-            this.text_localidad.TabIndex = 35;
-            // 
-            // text_fecha
-            // 
-            this.text_fecha.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.text_fecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.text_fecha.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_fecha.Location = new System.Drawing.Point(89, 178);
-            this.text_fecha.Name = "text_fecha";
-            this.text_fecha.Size = new System.Drawing.Size(167, 24);
-            this.text_fecha.TabIndex = 36;
-            // 
-            // text_cantidad
-            // 
-            this.text_cantidad.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.text_cantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.text_cantidad.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_cantidad.Location = new System.Drawing.Point(88, 231);
-            this.text_cantidad.Name = "text_cantidad";
-            this.text_cantidad.Size = new System.Drawing.Size(95, 24);
-            this.text_cantidad.TabIndex = 37;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(281, 67);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(292, 33);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Busqueda de alojamiento";
-            // 
-            // seleccion_tipo_aloj
-            // 
-            this.seleccion_tipo_aloj.BackColor = System.Drawing.Color.AliceBlue;
-            this.seleccion_tipo_aloj.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seleccion_tipo_aloj.FormattingEnabled = true;
-            this.seleccion_tipo_aloj.Items.AddRange(new object[] {
-            "Hotel",
-            "Cabañas"});
-            this.seleccion_tipo_aloj.Location = new System.Drawing.Point(87, 284);
-            this.seleccion_tipo_aloj.Name = "seleccion_tipo_aloj";
-            this.seleccion_tipo_aloj.Size = new System.Drawing.Size(167, 31);
-            this.seleccion_tipo_aloj.TabIndex = 39;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(81, 258);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 23);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "Tipo de alojamiento";
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(768, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(736, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.Size = new System.Drawing.Size(51, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 42;
             this.pictureBox3.TabStop = false;
@@ -199,90 +62,160 @@ namespace Agencia.Views
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(804, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(793, 0);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(30, 30);
+            this.btnCerrar.Size = new System.Drawing.Size(54, 31);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 41;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // dataGridView1
+            // panel2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.result});
-            this.dataGridView1.Location = new System.Drawing.Point(262, 113);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(503, 321);
-            this.dataGridView1.TabIndex = 43;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Location = new System.Drawing.Point(180, 46);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(679, 410);
+            this.panel2.TabIndex = 44;
             // 
-            // result
+            // panel1
             // 
-            this.result.HeaderText = "result";
-            this.result.Name = "result";
-            this.result.ReadOnly = true;
-            this.result.Width = 450;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.iconPictureBox1);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(180, 478);
+            this.panel1.TabIndex = 43;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // mesajeError
+            // button4
             // 
-            this.mesajeError.AutoSize = true;
-            this.mesajeError.ForeColor = System.Drawing.Color.Red;
-            this.mesajeError.Location = new System.Drawing.Point(82, 327);
-            this.mesajeError.Name = "mesajeError";
-            this.mesajeError.Size = new System.Drawing.Size(62, 13);
-            this.mesajeError.TabIndex = 44;
-            this.mesajeError.Text = "mesajeError";
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(3, 151);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(180, 45);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Buscar Alojamiento";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(0, 372);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(180, 50);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Cerrar sesion";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(1, 276);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(180, 50);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Cambiar contraseña";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(49, 113);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 18);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Cliente";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(0, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 45);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Mis Reservas";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.Control;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 92;
+            this.iconPictureBox1.Location = new System.Drawing.Point(41, 18);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.iconPictureBox1.Size = new System.Drawing.Size(94, 92);
+            this.iconPictureBox1.TabIndex = 0;
+            this.iconPictureBox1.TabStop = false;
             // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Agencia.Properties.Resources.fondoCliente;
+            this.BackgroundImage = global::Agencia.Properties.Resources.Fadminitrador;
             this.ClientSize = new System.Drawing.Size(859, 477);
-            this.Controls.Add(this.mesajeError);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.seleccion_tipo_aloj);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.text_cantidad);
-            this.Controls.Add(this.text_fecha);
-            this.Controls.Add(this.text_localidad);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cliente";
             this.Text = "Cliente";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Cliente_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox text_localidad;
-        private System.Windows.Forms.TextBox text_fecha;
-        private System.Windows.Forms.TextBox text_cantidad;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox seleccion_tipo_aloj;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn result;
-        private System.Windows.Forms.Label mesajeError;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -5,18 +5,24 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bussines;
 
 namespace Agencia
 {
     public partial class Login : Form
     {
-        private Form1 form;
+        AgenciaManager ag = new AgenciaManager();
+       
+        Administrador admin;
+        Cliente client;
         public Login()
         {
             InitializeComponent();
+            
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -31,31 +37,23 @@ namespace Agencia
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           
-
         String selec =seleccion.SelectedItem.ToString();
             if(selec == "Administrador")
             {
-            Administrador admin = new Administrador();
-            admin.MdiParent = form;
-            admin.Show();
             this.Hide();
-
+                    admin = new Administrador();
+                    admin.Show();
             } else if (selec == "Cliente")
             {
-                Cliente client = new Cliente();
-                client.MdiParent = form;
-                client.Show();
                 this.Hide();
+                client = new Cliente();
+                client.Show();
             }
-
-           
-
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void cerrarAdmin(object sender, FormClosedEventArgs e)
         {
-            seleccion.SelectedItem.ToString();
+            admin = null;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -68,9 +66,16 @@ namespace Agencia
 
         }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
         private void Login_MouseDown(object sender, MouseEventArgs e)
         {
-           
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void Login_MouseUp(object sender, MouseEventArgs e)
@@ -85,7 +90,16 @@ namespace Agencia
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void registro_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegistroUsuario registroUsuario = new RegistroUsuario();
+            registroUsuario.Show();
+        }
+
+       
     }
 }
