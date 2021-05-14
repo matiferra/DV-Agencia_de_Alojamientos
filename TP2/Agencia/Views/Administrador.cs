@@ -19,9 +19,7 @@ namespace Agencia.Views
         public Administrador()
         {
             InitializeComponent();
-         this.BackColor = Color.White;
-        panel1.BackColor = Color.FromArgb(60, Color.Black);
-            panel2.BackColor = Color.FromArgb(60, Color.Black);
+      
         }
        
 
@@ -31,20 +29,6 @@ namespace Agencia.Views
             this.BackColor = Color.Transparent;
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
@@ -74,17 +58,15 @@ namespace Agencia.Views
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panel3.Controls.Add(childForm);
-            panel3.Tag = childForm;
+            panel2.Controls.Add(childForm);
+            panel2.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
            
         }
-        private void reservasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
 
+      
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -92,7 +74,7 @@ namespace Agencia.Views
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
+           
         }
 
 
@@ -122,6 +104,13 @@ namespace Agencia.Views
             OpenChildForm(new AdmReservas());
         }
 
+        private void button3_Click_1(object sender, EventArgs e)
+
+        {
+            OpenChildForm(new AdmAlojamientos());
+        }
+
+
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -132,16 +121,38 @@ namespace Agencia.Views
 
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            OpenChildForm(new AdmAlojamientos());
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
             Login l = new Login();
             l.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

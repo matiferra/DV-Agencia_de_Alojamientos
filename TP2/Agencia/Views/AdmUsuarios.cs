@@ -17,7 +17,7 @@ namespace Agencia.Views
         public AdmUsuarios()
         {
             InitializeComponent();
-           
+            panel1.BackColor = Color.FromArgb(60, Color.Black);
 
         }
 
@@ -49,6 +49,21 @@ namespace Agencia.Views
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new EditUsuario());  
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -40,8 +40,10 @@ namespace Agencia
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -50,7 +52,7 @@ namespace Agencia
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cambria", 12.5F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(104, 239);
+            this.label4.Location = new System.Drawing.Point(104, 252);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(230, 20);
             this.label4.TabIndex = 28;
@@ -61,7 +63,7 @@ namespace Agencia
             this.textBox3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(360, 235);
+            this.textBox3.Location = new System.Drawing.Point(332, 218);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(197, 24);
             this.textBox3.TabIndex = 27;
@@ -72,7 +74,7 @@ namespace Agencia
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cambria", 13F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(104, 196);
+            this.label3.Location = new System.Drawing.Point(114, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(149, 21);
             this.label3.TabIndex = 26;
@@ -83,7 +85,7 @@ namespace Agencia
             this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(360, 193);
+            this.textBox2.Location = new System.Drawing.Point(360, 206);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(197, 24);
             this.textBox2.TabIndex = 25;
@@ -94,7 +96,7 @@ namespace Agencia
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cambria", 13F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(104, 154);
+            this.label1.Location = new System.Drawing.Point(108, 137);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 21);
             this.label1.TabIndex = 24;
@@ -105,7 +107,7 @@ namespace Agencia
             this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(360, 151);
+            this.textBox1.Location = new System.Drawing.Point(360, 164);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(197, 24);
             this.textBox1.TabIndex = 23;
@@ -114,13 +116,13 @@ namespace Agencia
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 12.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(199, 71);
+            this.label2.Location = new System.Drawing.Point(188, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 33);
+            this.label2.Size = new System.Drawing.Size(252, 20);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Cambiar Contraseña";
+            this.label2.Text = "CAMBIA TU CONTRASEÑA";
             // 
             // btnLogin
             // 
@@ -131,7 +133,7 @@ namespace Agencia
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(428, 290);
+            this.btnLogin.Location = new System.Drawing.Point(428, 303);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(129, 39);
             this.btnLogin.TabIndex = 29;
@@ -160,28 +162,39 @@ namespace Agencia
             this.btnMinimizar.TabIndex = 30;
             this.btnMinimizar.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Location = new System.Drawing.Point(28, 30);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(618, 389);
+            this.panel1.TabIndex = 67;
+            // 
             // RecuperarContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(680, 410);
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::Agencia.Properties.Resources.Fcliente;
+            this.ClientSize = new System.Drawing.Size(680, 443);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RecuperarContraseña";
             this.Text = "RecuperarContraseña";
             this.Load += new System.EventHandler(this.RecuperarContraseña_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +212,6 @@ namespace Agencia
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -14,9 +14,7 @@ using Bussines;
 namespace Agencia
 {
     public partial class Login : Form
-    {
-        AgenciaManager ag = new AgenciaManager();
-       
+    {  
         Administrador admin;
         Cliente client;
         public Login()
@@ -25,10 +23,7 @@ namespace Agencia
             
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+     
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
@@ -49,11 +44,6 @@ namespace Agencia
                 client = new Cliente();
                 client.Show();
             }
-        }
-
-        public void cerrarAdmin(object sender, FormClosedEventArgs e)
-        {
-            admin = null;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -78,16 +68,7 @@ namespace Agencia
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void Login_MouseUp(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void Login_MouseMove(object sender, MouseEventArgs e)
-        {
-          
-        }
-
+  
         private void pictureBox3_Click(object sender, EventArgs e)
         {
              this.WindowState = FormWindowState.Minimized;
@@ -100,6 +81,14 @@ namespace Agencia
             registroUsuario.Show();
         }
 
-       
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

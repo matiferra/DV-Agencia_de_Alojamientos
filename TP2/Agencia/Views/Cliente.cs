@@ -96,5 +96,27 @@ namespace Agencia.Views
         {
             OpenChildForm(new BusquedaAlojamiento()); 
         }
+
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

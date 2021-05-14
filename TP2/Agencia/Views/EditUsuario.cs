@@ -15,9 +15,15 @@ namespace Agencia.Views
         public EditUsuario()
         {
             InitializeComponent();
+            panel1.BackColor = Color.FromArgb(60, Color.Black);
         }
 
         private void btnAceptarmodi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditUsuario_Load(object sender, EventArgs e)
         {
 
         }

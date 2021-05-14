@@ -15,6 +15,8 @@ namespace Agencia
         public RecuperarContraseña()
         {
             InitializeComponent();
+
+            panel1.BackColor = Color.FromArgb(60, Color.Black);
         }
 
         private void RecuperarContraseña_Load(object sender, EventArgs e)
