@@ -14,6 +14,11 @@ namespace Agencia
         [STAThread]
         static void Main()
         {
+            //txt
+            //cargar List<>
+
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());

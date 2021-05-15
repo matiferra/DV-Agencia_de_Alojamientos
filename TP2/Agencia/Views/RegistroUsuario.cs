@@ -10,26 +10,11 @@ using System.Windows.Forms;
 using Bussines;
 using System.IO;
 
+
 namespace Agencia.Views
 {
     public partial class RegistroUsuario : Form
     {
-
-        string nombre;
-        string password;
-        int DNI;
-        string email;
-        string tipoAlojamiento;
-        string tipoUsuario;
-
-
-
-        static string fileName = "users.txt";
-        static string sourcePath = @"C:\plataformas";
-        static string targetPath = @"C:\plataformas";
-        string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
-
-
         AgenciaManager ag = new AgenciaManager();
 
         public RegistroUsuario()
@@ -37,38 +22,45 @@ namespace Agencia.Views
             InitializeComponent();
         }
 
-
-
         private void registrarse_Click(object sender, EventArgs e)
         {
+            string usuario = txtUsername.Text;
+            string password = txtPassword.Text;
+            string DNI = txtDocu.Text;
+            string email = txtEmail.Text;
+            //string tipoUsuario = seleccion.Text;
 
-            //string[] lineas = { txtUsername.Text, txtEmail.Text };
-            //using (StreamWriter outp = new StreamWriter(@"c/d"))
-            //{
-            //    foreach (var item in lineas)
-            //    {
-            //        outp.WriteLine(lineas);
-            //    }
-            //}
-            string[] datos = { txtDocu.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text, seleccion.Text };
-            if (!File.Exists(sourceFile))
+
+            string fileName = usuario + ".txt";
+            string sourcePath = @"C:\plataformas";
+            string sourceFile = Path.Combine(sourcePath + @"\USER\CLIENTES", fileName);
+
+
+            if (!string.IsNullOrEmpty(usuario) || !string.IsNullOrEmpty(password) || !string.IsNullOrEmpty(DNI) || !string.IsNullOrEmpty(email))
             {
-                File.WriteAllLines(sourceFile, datos);
-            } else
-            {
-                foreach (var item in datos)
+                if (!Directory.Exists(sourcePath))
                 {
-                    File.AppendAllText(sourceFile, item + Environment.NewLine);
+                    Directory.CreateDirectory(sourcePath);
+                    Directory.CreateDirectory(sourcePath + @"\USER");
+                    Directory.CreateDirectory(sourcePath + @"\USER\CLIENTES");
                 }
-                
 
+                string[] datos = { txtDocu.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text, seleccion.Text };
+                if (!File.Exists(sourceFile))
+                {
+                    File.WriteAllLines(sourceFile, datos);
+                }
+                else
+                {
+                    foreach (var item in datos)
+                    {
+                        File.AppendAllText(sourceFile, item + Environment.NewLine);
+                    }
+                }
             }
 
 
-
         }
-
-
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {

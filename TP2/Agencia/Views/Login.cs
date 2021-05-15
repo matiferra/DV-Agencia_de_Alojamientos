@@ -43,8 +43,6 @@ namespace Agencia
 
             if (selec == "Administrador")
             {
-
-                
                     this.Hide();
                     admin = new Administrador();
                     admin.Show();
