@@ -24,9 +24,19 @@ namespace Agencia
         public Login()
         {
             InitializeComponent();
-            
         }
 
+        public void ocultarRegistro()
+        {
+            string select = seleccion.SelectedItem.ToString();
+
+            if(select == "Administrador")
+            {
+                registro.Visible = false;
+
+            } 
+
+        }
      
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
@@ -61,10 +71,10 @@ namespace Agencia
 
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void Login_Load(object sender, EventArgs e) { 
+        
+            
+    }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

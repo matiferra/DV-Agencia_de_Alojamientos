@@ -22,14 +22,24 @@ namespace Bussines
         {
             bool esta = false;
             int i = 0;
-            while (i < alojamientosAgencia.Length && esta != false)
+            /*while (i < alojamientosAgencia.Length && esta != false)
             {
                 if (alojamientosAgencia[i] == a)
                 {
                     esta = true;
                 }
                 i++;
+            }*/
+            //CODIGO AGREGADO
+            foreach (var item in misAlojamientos)
+            {
+                if(item == a)
+                {
+                    esta = true;
+                }
             }
+            
+
             return esta;
         }
 
@@ -48,6 +58,9 @@ namespace Bussines
                 x++;
             }
 
+            //CODIGO AGREGADO
+            misAlojamientos.Add(a);
+
         }
 
         public Agencia soloHoteles()
@@ -59,6 +72,14 @@ namespace Bussines
                 if (alojamientosAgencia[i] is Hotel)
                 {
                     ag.insertarAlojamiento(alojamientosAgencia[i]);
+                }
+            }
+
+            foreach (var item in misAlojamientos)
+            {
+                if (item is Hotel)
+                {
+                    ag.misAlojamientos.Add(item);
                 }
             }
 
@@ -183,6 +204,7 @@ namespace Bussines
         private Alojamiento[] recolectar(int estrellas)
         {
             Alojamiento[] masEstrellas = new Alojamiento[CantAloj];
+            List<Alojamiento> masEstrellasLista = new List<Alojamiento>();
             for (int x = 0; x < alojamientosAgencia.Length; x++)
             {
                 if (alojamientosAgencia[x] != null)
@@ -194,6 +216,16 @@ namespace Bussines
                     }
                 }
             }
+            foreach (var item in misAlojamientos)
+            {
+                int cantEstrellas = conversionEntero(item.estrellas);
+                if (cantEstrellas >= estrellas)
+                {
+                    masEstrellasLista.Add(item);
+                }
+                
+            }
+            
 
             return masEstrellas;
         }

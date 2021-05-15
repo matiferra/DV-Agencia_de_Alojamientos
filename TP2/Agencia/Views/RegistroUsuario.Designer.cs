@@ -30,7 +30,6 @@ namespace Agencia.Views
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroUsuario));
-            this.seleccion = new System.Windows.Forms.ComboBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtDocu = new System.Windows.Forms.TextBox();
@@ -44,21 +43,6 @@ namespace Agencia.Views
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
-            // seleccion
-            // 
-            this.seleccion.BackColor = System.Drawing.Color.AliceBlue;
-            this.seleccion.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seleccion.ForeColor = System.Drawing.Color.DarkGray;
-            this.seleccion.FormattingEnabled = true;
-            this.seleccion.Items.AddRange(new object[] {
-            "Cliente",
-            "Administrador"});
-            this.seleccion.Location = new System.Drawing.Point(298, 326);
-            this.seleccion.Name = "seleccion";
-            this.seleccion.Size = new System.Drawing.Size(285, 31);
-            this.seleccion.TabIndex = 7;
-            this.seleccion.Text = "Tipo de usuario";
-            // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.Azure;
@@ -66,6 +50,7 @@ namespace Agencia.Views
             this.txtPassword.ForeColor = System.Drawing.Color.DarkGray;
             this.txtPassword.Location = new System.Drawing.Point(298, 191);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(285, 31);
             this.txtPassword.TabIndex = 6;
             this.txtPassword.Text = "Contraseña";
@@ -186,7 +171,6 @@ namespace Agencia.Views
             this.Controls.Add(this.registrarse);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtDocu);
-            this.Controls.Add(this.seleccion);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -201,8 +185,6 @@ namespace Agencia.Views
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox seleccion;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtDocu;

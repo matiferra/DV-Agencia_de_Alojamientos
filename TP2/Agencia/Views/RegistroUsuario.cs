@@ -45,7 +45,7 @@ namespace Agencia.Views
                     Directory.CreateDirectory(sourcePath + @"\USER\CLIENTES");
                 }
 
-                string[] datos = { txtDocu.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text, seleccion.Text };
+                string[] datos = { txtDocu.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text};
                 if (!File.Exists(sourceFile))
                 {
                     File.WriteAllLines(sourceFile, datos);
