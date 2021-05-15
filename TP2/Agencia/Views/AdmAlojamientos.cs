@@ -9,13 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
- 
+
 namespace Agencia.Views
 {
     public partial class AdmAlojamientos : Form
     {
+        static Bussines.Agencia a = new Bussines.Agencia();
 
- 	    static string fileName = "alojamiento.txt";
+        static string fileName = "alojamientos.txt";
         static string sourcePath = @"C:\plataformas";
         string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
 
@@ -32,9 +33,92 @@ namespace Agencia.Views
 
         public AdmAlojamientos()
         {
+            leerAlojamientos();
             InitializeComponent();
             panel1.BackColor = Color.FromArgb(60, Color.Black);
-            
+
+        }
+
+        private void leerAlojamientos()
+        {
+            //LEER
+            string fileName = "alojamientos.txt";
+            string sourcePath = @"C:\plataformas";
+            string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
+            string contenido = String.Empty;
+
+            if (File.Exists(sourceFile))
+            {
+                contenido = File.ReadAllText(sourceFile);
+                string[] lineas = contenido.Split(new[] { Environment.NewLine },
+                                                    StringSplitOptions.None
+                );
+
+                //LINEAS DEL ARCHIVO
+                //1 - Tipo Alojamiento
+                //2 - ciudad
+                //3 - barrio
+                //4 - estrellas
+                //5 - cantPersonas
+                //6 - tv
+                //7 - precio
+                //8 - habitaciones
+                //9 - banios
+
+                string TipoAlojamiento;
+                string ciudad;
+                string barrio;
+                string estrellas;
+                int cantPersonas;
+                bool tv;
+                double precio;
+                int habitaciones;
+                int banios;
+
+
+                for (int i = 0; i < lineas.Length - 1; i++)
+                {
+                    TipoAlojamiento = lineas[i];
+                    ciudad = lineas[i + 1];
+                    barrio = lineas[i + 2];
+                    estrellas = lineas[i + 3];
+                    cantPersonas = int.Parse(lineas[i + 4]);
+                    tv = bool.Parse(lineas[i + 5]);
+                    precio = Double.Parse(lineas[i + 6]);
+                    
+                   
+
+                    try
+                    {
+                        if (TipoAlojamiento == "Hotel")
+                        {
+                            //string ciudad, string barrio, string estrellas, int cantPersonas, Boolean tv, double precioxPersona
+                            Bussines.Hotel hotel = new Bussines.Hotel(ciudad, barrio, estrellas, cantPersonas, tv, precio);
+                            a.insertarAlojamiento(hotel);
+                        }
+                        else
+                        {
+                            habitaciones = int.Parse(lineas[i + 7]);
+                            banios = int.Parse(lineas[i + 8]);
+
+                            //string ciudad, string barrio, string estrellas, int cantPersonas, Boolean tv, double precioxDia, int habitaciones, int banios
+                            Bussines.Cabania cabania = new Bussines.Cabania(ciudad, barrio, estrellas, cantPersonas, tv, precio, habitaciones, banios);
+                            
+                            a.insertarAlojamiento(cabania);
+                        }
+                        i = i + 9;
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("No existe");
+            }
+            Bussines.AgenciaManager ag = new Bussines.AgenciaManager(a);
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
@@ -106,7 +190,8 @@ namespace Agencia.Views
                 personasText.Text = "N° de personas";
                 precioText.Visible = true;
                 personasText.Visible = true;
-            } else if(selec == "Hotel")
+            }
+            else if (selec == "Hotel")
             {
                 baniosText.Visible = false;
                 habitacionesText.Visible = false;
@@ -117,7 +202,7 @@ namespace Agencia.Views
 
             }
 
-            
+
 
         }
 
@@ -139,9 +224,9 @@ namespace Agencia.Views
             precio = precioText.Text;
             habitaciones = habitacionesText.Text;
             banios = baniosText.Text;
-          
 
-            string[] datos = { tipoAlojamiento , ciudad, barrio, estrellas, personas, tv,  precio, habitaciones, banios, " "};
+
+            string[] datos = { tipoAlojamiento, ciudad, barrio, estrellas, personas, tv, precio, habitaciones, banios, " " };
             if (!File.Exists(sourceFile))
             {
                 File.WriteAllLines(sourceFile, datos);
@@ -153,6 +238,11 @@ namespace Agencia.Views
                     File.AppendAllText(sourceFile, item + Environment.NewLine);
                 }
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

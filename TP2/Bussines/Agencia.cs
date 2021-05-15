@@ -13,6 +13,7 @@ namespace Bussines
 
         public Agencia()
         {
+            misAlojamientos = new List<Alojamiento>();
             CantAloj = 50;
             alojamientosAgencia = new Alojamiento[CantAloj];
         }
@@ -48,7 +49,7 @@ namespace Bussines
             int x = 0;
             bool lugarVacio = false;
 
-            while (alojamientosAgencia.Length > x && lugarVacio == false)
+           /* while (alojamientosAgencia.Length > x && lugarVacio == false)
             {
                 if (alojamientosAgencia[x] == null)
                 {
@@ -56,7 +57,7 @@ namespace Bussines
                     lugarVacio = true;
                 }
                 x++;
-            }
+            }*/
 
             //CODIGO AGREGADO
             misAlojamientos.Add(a);
@@ -67,13 +68,13 @@ namespace Bussines
         {
             Agencia ag = new Agencia();
 
-            for (int i = 0; i < alojamientosAgencia.Length; i++)
+            /*for (int i = 0; i < alojamientosAgencia.Length; i++)
             {
                 if (alojamientosAgencia[i] is Hotel)
                 {
                     ag.insertarAlojamiento(alojamientosAgencia[i]);
                 }
-            }
+            }*/
 
             foreach (var item in misAlojamientos)
             {

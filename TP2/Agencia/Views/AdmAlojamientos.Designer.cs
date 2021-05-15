@@ -33,7 +33,7 @@ namespace Agencia.Views
             this.tvSi = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.ciudadText = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.alojamientosGrid = new System.Windows.Forms.DataGridView();
             this.barrioText = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.estrellasText = new System.Windows.Forms.TextBox();
@@ -46,7 +46,8 @@ namespace Agencia.Views
             this.habitacionesText = new System.Windows.Forms.TextBox();
             this.precioText = new System.Windows.Forms.TextBox();
             this.personasText = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.alojamientosGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,14 +104,17 @@ namespace Agencia.Views
             this.ciudadText.Text = "Ciudad";
             this.ciudadText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // dataGridView1
+            // alojamientosGrid
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(306, 73);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(286, 232);
-            this.dataGridView1.TabIndex = 59;
+            this.alojamientosGrid.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.alojamientosGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.alojamientosGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Index});
+            this.alojamientosGrid.Location = new System.Drawing.Point(306, 73);
+            this.alojamientosGrid.Name = "alojamientosGrid";
+            this.alojamientosGrid.Size = new System.Drawing.Size(286, 232);
+            this.alojamientosGrid.TabIndex = 59;
+            this.alojamientosGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // barrioText
             // 
@@ -224,7 +228,7 @@ namespace Agencia.Views
             this.panel1.Controls.Add(this.estrellasText);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.barrioText);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.alojamientosGrid);
             this.panel1.Controls.Add(this.ciudadText);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.tvSi);
@@ -278,6 +282,13 @@ namespace Agencia.Views
             this.personasText.TabIndex = 65;
             this.personasText.Text = "N° de personas";
             // 
+            // Index
+            // 
+            this.Index.HeaderText = "Index";
+            this.Index.Name = "Index";
+            this.Index.ReadOnly = true;
+            this.Index.Width = 230;
+            // 
             // AdmAlojamientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,7 +304,7 @@ namespace Agencia.Views
             this.Text = "Alojamientos";
             this.Load += new System.EventHandler(this.AdmAlojamientos_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdmAlojamientos_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alojamientosGrid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -306,7 +317,7 @@ namespace Agencia.Views
         private System.Windows.Forms.RadioButton tvSi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ciudadText;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView alojamientosGrid;
         private System.Windows.Forms.TextBox barrioText;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox estrellasText;
@@ -319,5 +330,6 @@ namespace Agencia.Views
         private System.Windows.Forms.TextBox personasText;
         private System.Windows.Forms.TextBox habitacionesText;
         private System.Windows.Forms.TextBox baniosText;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Index;
     }
 }

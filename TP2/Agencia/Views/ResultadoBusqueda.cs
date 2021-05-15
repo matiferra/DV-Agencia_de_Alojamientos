@@ -20,11 +20,11 @@ namespace Agencia.Views
         public ResultadoBusqueda()
         {
             InitializeComponent();
-            leerAlojamiento();
+            leerAlojamientos();
         }
 
 
-        private void leerAlojamiento()
+        private void leerAlojamientos()
         {
             //LEER
             string fileName = "alojamientos.txt";
@@ -96,12 +96,10 @@ namespace Agencia.Views
 
         private void button2_Click(object sender, EventArgs e)
         {
-            leerAlojamiento();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            leerAlojamiento();
         }
     }
 }

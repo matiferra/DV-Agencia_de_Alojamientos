@@ -34,7 +34,7 @@ namespace Agencia
         {
             //LEER
             string fileName = "usuarios.txt";
-            string sourcePath = @"C:\plataformas";
+            string sourcePath = @"C:\plataformas\USER";
             string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
             string contenido = String.Empty;
 
@@ -54,13 +54,28 @@ namespace Agencia
                 //4 - esAdmin
                 //5 - bloqueado
 
+                string nombre;
+                int DNI;
+                string mail;
+                string password;
+                bool esAdmin;
+                bool bloqueado;
+
                 for (int i = 0; i < lineas.Length; i++)
                 {
+
+                    DNI = int.Parse(lineas[i]);
+                    nombre = lineas[i + 1];
+                    mail = lineas[i + 2];
+                    password = lineas[i+3];
+                    esAdmin = bool.Parse(lineas[i+4]);
+                    bloqueado = bool.Parse(lineas[i+5]);
+
                     try
                     {
                         //int DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado
-                        ag.agregarUsuario(int.Parse(lineas[i + 1]), lineas[i], lineas[i + 2], lineas[i + 3], bool.Parse(lineas[i + 4]), bool.Parse(lineas[i + 5]));
-                        i = i + 7;
+                        ag.agregarUsuario(DNI, nombre, mail, password, esAdmin, bloqueado);
+                        i = i + 6;
                     }
                     catch (Exception e)
                     {
@@ -100,6 +115,8 @@ namespace Agencia
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
+
             String selec = seleccion.SelectedItem.ToString();
 
             usuario = txtUsername.Text;
@@ -120,9 +137,15 @@ namespace Agencia
                 {
                     if (item.nombre == usuario && item.password == contrasenia)
                     {
-                    this.Hide();
-                    client = new Cliente();
-                    client.Show();
+                        if(item.bloqueado != false)
+                        {
+                            this.Hide();
+                            client = new Cliente();
+                            client.Show();
+                        }
+                    } else
+                    {
+                        item.intentosLogueo++;
                     }
                 }
             }
