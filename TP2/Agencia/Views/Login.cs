@@ -18,6 +18,7 @@ namespace Agencia
     {  
         Administrador admin;
         Cliente client;
+        static Bussines.Agencia a = new Bussines.Agencia();
 
         string usuario;
         string contrasenia;
@@ -83,6 +84,8 @@ namespace Agencia
             {
                 Console.WriteLine("No existe");
             }
+
+            Bussines.AgenciaManager ag = new Bussines.AgenciaManager(a);
         }
 
         public void ocultarRegistro()
