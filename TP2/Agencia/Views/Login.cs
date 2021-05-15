@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bussines;
+using System.IO;
 
 namespace Agencia
 {
@@ -24,6 +25,64 @@ namespace Agencia
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void leerUsuarios()
+        {
+            //LEER
+            string fileName = "alojamientos.txt";
+            string sourcePath = @"C:\plataformas";
+            string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
+            string contenido = String.Empty;
+
+            if (File.Exists(sourceFile))
+            {
+                contenido = File.ReadAllText(sourceFile);
+                string[] lineas = contenido.Split(new[] { Environment.NewLine },
+                                                    StringSplitOptions.None
+                );
+
+                //LINEAS DEL ARCHIVO
+                //1 - Tipo Alojamiento
+                //2 - ciudad
+                //3 - barrio
+                //4 - estrellas
+                //5 - cantPersonas
+                //6 - tv
+                //7 - precio
+                //8 - habitaciones
+                //9 - banios
+
+                for (int i = 0; i < lineas.Length; i++)
+                {
+                    try
+                    {
+                        if (lineas[0] == "Hotel")
+                        {
+                            //string ciudad, string barrio, string estrellas, int cantPersonas, Boolean tv, double precioxPersona
+                            Bussines.Hotel hotel = new Bussines.Hotel(lineas[1], lineas[2], lineas[3], int.Parse(lineas[4]), bool.Parse(lineas[5]), Double.Parse(lineas[6]));
+                            a.insertarAlojamiento(hotel);
+                        }
+                        else
+                        {
+                            //string ciudad, string barrio, string estrellas, int cantPersonas, Boolean tv, double precioxDia, int habitaciones, int banios
+                            Bussines.Cabania cabania = new Bussines.Cabania(lineas[1], lineas[2], lineas[3], int.Parse(lineas[4]), bool.Parse(lineas[5]), Double.Parse(lineas[6]), int.Parse(lineas[7]), int.Parse(lineas[8]));
+
+                            a.insertarAlojamiento(cabania);
+
+                        }
+                        i = i + 10;
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("No existe");
+            }
         }
 
         public void ocultarRegistro()
