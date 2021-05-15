@@ -16,14 +16,15 @@ namespace Agencia.Views
     {
 
         static Bussines.Agencia a = new Bussines.Agencia();
-   
+
         public ResultadoBusqueda()
         {
             InitializeComponent();
+            leerAlojamiento();
         }
-        
 
-        public void leerAlojamiento()
+
+        private void leerAlojamiento()
         {
             //LEER
             string fileName = "alojamientos.txt";
@@ -37,9 +38,41 @@ namespace Agencia.Views
                 string[] lineas = contenido.Split(new[] { Environment.NewLine },
                                                     StringSplitOptions.None
                 );
-                foreach (string linea in lineas)
+
+                //LINEAS DEL ARCHIVO
+                //1 - Tipo Alojamiento
+                //2 - ciudad
+                //3 - barrio
+                //4 - estrellas
+                //5 - cantPersonas
+                //6 - tv
+                //7 - precio
+                //8 - habitaciones
+                //9 - banios
+
+                for (int i = 0; i < lineas.Length; i++)
                 {
-                    Console.WriteLine(linea);
+                    try
+                    {
+                        if (lineas[0] == "Hotel")
+                        {
+                            //string ciudad, string barrio, string estrellas, int cantPersonas, Boolean tv, double precioxPersona
+                            Bussines.Hotel hotel = new Bussines.Hotel(lineas[2], lineas[3], lineas[4], int.Parse(lineas[5]), bool.Parse(lineas[6]), Double.Parse(lineas[7]));
+                            i = i + 9;
+                            a.insertarAlojamiento(hotel);
+                        }
+                        else
+                        {
+                            //string ciudad, string barrio, string estrellas, int cantPersonas, Boolean tv, double precioxDia, int habitaciones, int banios
+                            Bussines.Cabania cabania = new Bussines.Cabania(lineas[2], lineas[3], lineas[4], int.Parse(lineas[5]), bool.Parse(lineas[6]), Double.Parse(lineas[7]), int.Parse(lineas[8]), int.Parse(lineas[9]));
+                            i = i + 11;
+                            a.insertarAlojamiento(cabania);
+
+                        }
+                    } catch(Exception e)
+                    {
+
+                    }
                 }
             }
             else
@@ -47,22 +80,9 @@ namespace Agencia.Views
                 Console.WriteLine("No existe");
             }
         }
-        //ARRAY
-        /*if (datos[1] == "Hotel")
-        {
-            Bussines.Hotel hotel = new Bussines.Hotel(datos[2], datos[2], datos[2], datos[2], datos[2], datos[2],);
 
-        }else
-        {
-            Bussines.Cabania cabania = new Bussines.Cabania(datos[2], datos[2], datos[2], datos[2], datos[2], datos[2],);
 
-        }*/
-
-    }
         Bussines.AgenciaManager ag = new Bussines.AgenciaManager(a);
-
-        // CARGARLO EN  Agencia.misAlejomiento()
-
 
         private void label1_Click(object sender, EventArgs e)
         {

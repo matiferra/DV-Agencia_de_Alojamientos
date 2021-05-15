@@ -125,11 +125,11 @@ namespace Agencia.Views
         {
             if (tvSi.Checked)
             {
-                tv = "Si";
+                tv = "true";
             }
             else
             {
-                tv = "No";
+                tv = "false";
             }
             ciudad = ciudadText.Text;
             barrio = barrioText.Text;
@@ -139,8 +139,9 @@ namespace Agencia.Views
             precio = precioText.Text;
             habitaciones = habitacionesText.Text;
             banios = baniosText.Text;
+          
 
-            string[] datos = { tipoAlojamiento , ciudad, barrio, estrellas, tv, personas, precio, habitaciones, banios, " "};
+            string[] datos = { tipoAlojamiento , ciudad, barrio, estrellas, personas, tv,  precio, habitaciones, banios, " "};
             if (!File.Exists(sourceFile))
             {
                 File.WriteAllLines(sourceFile, datos);
