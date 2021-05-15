@@ -1,0 +1,89 @@
+Hotel
+CABA
+Belgrano
+******
+3
+true
+700
+N° de habitaciones
+N° de baños
+ 
+Hotel
+CABA
+Recoleta
+******
+2
+true
+1000
+N° de habitaciones
+N° de baños
+ 
+Hotel
+Tres Arroyos
+Solano
+****
+4
+false
+500
+N° de habitaciones
+N° de baños
+ 
+Hotel
+Pergamino
+Don Bosco
+**
+2
+true
+400
+N° de habitaciones
+N° de baños
+ 
+Hotel
+Tres Arroyos
+La liguria
+***
+1
+false
+800
+N° de habitaciones
+N° de baños
+ 
+Hotel
+Pergamino
+Santa Catarina
+*
+2
+true
+400
+N° de habitaciones
+N° de baños
+ 
+Cabaña
+Zarate
+Santa Rita
+***
+10
+true
+4000
+6
+2
+ 
+Cabaña
+Santo Tome
+Villa Pueyrredon
+****
+8
+true
+3000
+4
+2
+ 
+Cabaña
+Necochea
+Fiorito
+*
+8
+false
+1000
+4
+1
