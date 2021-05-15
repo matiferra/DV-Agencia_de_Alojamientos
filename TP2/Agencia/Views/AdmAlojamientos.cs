@@ -152,8 +152,6 @@ namespace Agencia.Views
                 {
                     File.AppendAllText(sourceFile, item + Environment.NewLine);
                 }
-
-
             }
         }
     }
