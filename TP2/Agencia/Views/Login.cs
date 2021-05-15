@@ -8,30 +8,32 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms; 
+using System.Windows.Forms;
 using Bussines;
 using System.IO;
 
 namespace Agencia
 {
     public partial class Login : Form
-    {  
+    {
         Administrador admin;
         Cliente client;
         static Bussines.Agencia a = new Bussines.Agencia();
+        static Bussines.AgenciaManager ag = new Bussines.AgenciaManager(a);
 
         string usuario;
         string contrasenia;
 
         public Login()
         {
+            leerUsuarios();
             InitializeComponent();
         }
 
         private void leerUsuarios()
         {
             //LEER
-            string fileName = "alojamientos.txt";
+            string fileName = "usuarios.txt";
             string sourcePath = @"C:\plataformas";
             string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
             string contenido = String.Empty;
@@ -43,36 +45,22 @@ namespace Agencia
                                                     StringSplitOptions.None
                 );
 
+
                 //LINEAS DEL ARCHIVO
-                //1 - Tipo Alojamiento
-                //2 - ciudad
-                //3 - barrio
-                //4 - estrellas
-                //5 - cantPersonas
-                //6 - tv
-                //7 - precio
-                //8 - habitaciones
-                //9 - banios
+                //0 - nombre
+                //1 - DNI
+                //2 - mail
+                //3 - password
+                //4 - esAdmin
+                //5 - bloqueado
 
                 for (int i = 0; i < lineas.Length; i++)
                 {
                     try
                     {
-                        if (lineas[0] == "Hotel")
-                        {
-                            //string ciudad, string barrio, string estrellas, int cantPersonas, Boolean tv, double precioxPersona
-                            Bussines.Hotel hotel = new Bussines.Hotel(lineas[1], lineas[2], lineas[3], int.Parse(lineas[4]), bool.Parse(lineas[5]), Double.Parse(lineas[6]));
-                            a.insertarAlojamiento(hotel);
-                        }
-                        else
-                        {
-                            //string ciudad, string barrio, string estrellas, int cantPersonas, Boolean tv, double precioxDia, int habitaciones, int banios
-                            Bussines.Cabania cabania = new Bussines.Cabania(lineas[1], lineas[2], lineas[3], int.Parse(lineas[4]), bool.Parse(lineas[5]), Double.Parse(lineas[6]), int.Parse(lineas[7]), int.Parse(lineas[8]));
-
-                            a.insertarAlojamiento(cabania);
-
-                        }
-                        i = i + 10;
+                        //int DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado
+                        ag.agregarUsuario(int.Parse(lineas[i + 1]), lineas[i], lineas[i + 2], lineas[i + 3], bool.Parse(lineas[i + 4]), bool.Parse(lineas[i + 5]));
+                        i = i + 7;
                     }
                     catch (Exception e)
                     {
@@ -85,7 +73,7 @@ namespace Agencia
                 Console.WriteLine("No existe");
             }
 
-            Bussines.AgenciaManager ag = new Bussines.AgenciaManager(a);
+
         }
 
         public void ocultarRegistro()
@@ -103,7 +91,7 @@ namespace Agencia
             }
 
         }
-     
+
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
@@ -112,24 +100,33 @@ namespace Agencia
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-        String selec =seleccion.SelectedItem.ToString();
+            String selec = seleccion.SelectedItem.ToString();
 
             usuario = txtUsername.Text;
             contrasenia = txtPassword.Text;
 
-            if (selec == "Administrador")
+            foreach (var item in ag.misUsuarios)
             {
+                if (item.esAdmin == true)
+                {
+                    if (item.nombre == usuario && item.password == contrasenia)
+                    {
+                        this.Hide();
+                        admin = new Administrador();
+                        admin.Show();
+                    }
+                }
+                else
+                {
+                    if (item.nombre == usuario && item.password == contrasenia)
+                    {
                     this.Hide();
-                    admin = new Administrador();
-                    admin.Show();
-      
-
-            } else if (selec == "Cliente")
-            {
-                this.Hide();
-                client = new Cliente();
-                client.Show();
+                    client = new Cliente();
+                    client.Show();
+                    }
+                }
             }
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -137,10 +134,11 @@ namespace Agencia
 
         }
 
-        private void Login_Load(object sender, EventArgs e) { 
-        
-            
-    }
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+
+        }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -154,10 +152,10 @@ namespace Agencia
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-  
+
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-             this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void registro_Click(object sender, EventArgs e)
@@ -181,6 +179,6 @@ namespace Agencia
         {
             ocultarRegistro();
         }
-  
+
     }
 }

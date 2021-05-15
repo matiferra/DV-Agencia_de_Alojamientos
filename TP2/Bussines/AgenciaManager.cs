@@ -7,6 +7,8 @@ namespace Bussines
     public class AgenciaManager
     {
 
+
+
         private Agencia miAgencia { set; get; }
         public List<Usuario> misUsuarios;
         public List<Reserva> misReservas;

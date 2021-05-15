@@ -54,10 +54,10 @@ namespace Agencia.Views
                 {
                     try
                     {
-                        if (lineas[0] == "Hotel")
+                        if (lineas[i] == "Hotel")
                         {
                             //string ciudad, string barrio, string estrellas, int cantPersonas, Boolean tv, double precioxPersona
-                            Bussines.Hotel hotel = new Bussines.Hotel(lineas[1], lineas[2], lineas[3], int.Parse(lineas[4]), bool.Parse(lineas[5]), Double.Parse(lineas[6]));
+                            Bussines.Hotel hotel = new Bussines.Hotel(lineas[i+1], lineas[i + 2], lineas[i+3], int.Parse(lineas[i+4]), bool.Parse(lineas[i+5]), Double.Parse(lineas[i+6]));
                             a.insertarAlojamiento(hotel);
                         }
                         else
@@ -66,7 +66,6 @@ namespace Agencia.Views
                             Bussines.Cabania cabania = new Bussines.Cabania(lineas[1], lineas[2], lineas[3], int.Parse(lineas[4]), bool.Parse(lineas[5]), Double.Parse(lineas[6]), int.Parse(lineas[7]), int.Parse(lineas[8]));
                             
                             a.insertarAlojamiento(cabania);
-
                         }
                         i = i + 10;
                     } catch(Exception e)
@@ -81,10 +80,9 @@ namespace Agencia.Views
             }
         }
 
-
         Bussines.AgenciaManager ag = new Bussines.AgenciaManager(a);
+       
 
-        ag.
 
         private void label1_Click(object sender, EventArgs e)
         {

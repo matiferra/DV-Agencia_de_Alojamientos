@@ -34,7 +34,7 @@ namespace Agencia.Views
 
 
 
-            string fileName = usuario + ".txt";
+            string fileName = "usuarios.txt";
             string sourcePath = @"C:\plataformas";
             string sourceFile = Path.Combine(sourcePath + @"\USER", fileName);
 
@@ -47,7 +47,7 @@ namespace Agencia.Views
                     Directory.CreateDirectory(sourcePath + @"\USER");
                 }
 
-                string[] datos = { txtDocu.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text, esAdmin, bloqueado };
+                string[] datos = { txtDocu.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text, esAdmin, bloqueado, " " };
                 if (!File.Exists(sourceFile))
                 {
                     File.WriteAllLines(sourceFile, datos);

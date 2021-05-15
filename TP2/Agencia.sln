@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agencia", "Agencia\Agencia.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bussines", "Bussines\Bussines.csproj", "{69F51213-E06C-4C2C-A8FF-BC8EFC93FEF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asd", "C:\Users\mele_\source\repos\asd\asd\asd.csproj", "{94DA0075-40B3-4DE2-9ED2-98720822D1F1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{69F51213-E06C-4C2C-A8FF-BC8EFC93FEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69F51213-E06C-4C2C-A8FF-BC8EFC93FEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69F51213-E06C-4C2C-A8FF-BC8EFC93FEF3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{94DA0075-40B3-4DE2-9ED2-98720822D1F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94DA0075-40B3-4DE2-9ED2-98720822D1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94DA0075-40B3-4DE2-9ED2-98720822D1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94DA0075-40B3-4DE2-9ED2-98720822D1F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
