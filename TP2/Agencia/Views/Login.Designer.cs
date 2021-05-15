@@ -77,8 +77,10 @@ namespace Agencia
             "Administrador"});
             this.seleccion.Location = new System.Drawing.Point(297, 292);
             this.seleccion.Name = "seleccion";
+            this.seleccion.SelectedItem = "Cliente";
             this.seleccion.Size = new System.Drawing.Size(285, 31);
             this.seleccion.TabIndex = 4;
+            this.seleccion.SelectedIndexChanged += new System.EventHandler(this.seleccion_SelectedIndexChanged);
             // 
             // pictureBox1
             // 

@@ -42,7 +42,7 @@ namespace Agencia.Views
                 {
                     Directory.CreateDirectory(sourcePath);
                     Directory.CreateDirectory(sourcePath + @"\USER");
-                    Directory.CreateDirectory(sourcePath + @"\USER\CLIENTES");
+                    Directory.CreateDirectory(sourcePath + @"\USER\CLIEN/*T*/ES");
                 }
 
                 string[] datos = { txtDocu.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text};

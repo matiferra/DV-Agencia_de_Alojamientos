@@ -30,11 +30,15 @@ namespace Agencia
         {
             string select = seleccion.SelectedItem.ToString();
 
-            if(select == "Administrador")
+            if (select == "Administrador")
             {
                 registro.Visible = false;
 
-            } 
+            }
+            else if (select == "Cliente")
+            {
+                registro.Visible = true;
+            }
 
         }
      
@@ -110,5 +114,11 @@ namespace Agencia
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void seleccion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ocultarRegistro();
+        }
+  
     }
 }
