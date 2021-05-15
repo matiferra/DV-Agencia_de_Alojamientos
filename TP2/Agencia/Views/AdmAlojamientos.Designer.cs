@@ -29,50 +29,54 @@ namespace Agencia.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.tvNo = new System.Windows.Forms.RadioButton();
+            this.tvSi = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ciudadText = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.barrioText = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.estrellasText = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tipoAlojamientoCombo = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.baniosText = new System.Windows.Forms.TextBox();
+            this.habitacionesText = new System.Windows.Forms.TextBox();
+            this.precioText = new System.Windows.Forms.TextBox();
+            this.personasText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // radioButton2
+            // tvNo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton2.Location = new System.Drawing.Point(99, 261);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(40, 17);
-            this.radioButton2.TabIndex = 53;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.tvNo.AutoSize = true;
+            this.tvNo.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.tvNo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tvNo.Location = new System.Drawing.Point(99, 261);
+            this.tvNo.Margin = new System.Windows.Forms.Padding(0);
+            this.tvNo.Name = "tvNo";
+            this.tvNo.Size = new System.Drawing.Size(40, 17);
+            this.tvNo.TabIndex = 53;
+            this.tvNo.TabStop = true;
+            this.tvNo.Text = "No";
+            this.tvNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // tvSi
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton1.Location = new System.Drawing.Point(32, 261);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(36, 17);
-            this.radioButton1.TabIndex = 52;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Si";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.tvSi.AutoSize = true;
+            this.tvSi.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.tvSi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tvSi.Location = new System.Drawing.Point(32, 261);
+            this.tvSi.Margin = new System.Windows.Forms.Padding(0);
+            this.tvSi.Name = "tvSi";
+            this.tvSi.Size = new System.Drawing.Size(36, 17);
+            this.tvSi.TabIndex = 52;
+            this.tvSi.TabStop = true;
+            this.tvSi.Text = "Si";
+            this.tvSi.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -87,37 +91,37 @@ namespace Agencia.Views
             this.label3.Text = "Servicio de Tv?";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox1
+            // ciudadText
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlText;
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox1.Location = new System.Drawing.Point(17, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 31);
-            this.textBox1.TabIndex = 56;
-            this.textBox1.Text = "Ciudad";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ciudadText.BackColor = System.Drawing.SystemColors.ControlText;
+            this.ciudadText.Font = new System.Drawing.Font("Cambria", 11F);
+            this.ciudadText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.ciudadText.Location = new System.Drawing.Point(17, 73);
+            this.ciudadText.Name = "ciudadText";
+            this.ciudadText.Size = new System.Drawing.Size(137, 25);
+            this.ciudadText.TabIndex = 56;
+            this.ciudadText.Text = "Ciudad";
+            this.ciudadText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(210, 73);
+            this.dataGridView1.Location = new System.Drawing.Point(306, 73);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(382, 232);
+            this.dataGridView1.Size = new System.Drawing.Size(286, 232);
             this.dataGridView1.TabIndex = 59;
             // 
-            // textBox2
+            // barrioText
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlText;
-            this.textBox2.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.Location = new System.Drawing.Point(17, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 31);
-            this.textBox2.TabIndex = 61;
-            this.textBox2.Text = "Barrio";
+            this.barrioText.BackColor = System.Drawing.SystemColors.ControlText;
+            this.barrioText.Font = new System.Drawing.Font("Cambria", 11F);
+            this.barrioText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.barrioText.Location = new System.Drawing.Point(17, 120);
+            this.barrioText.Name = "barrioText";
+            this.barrioText.Size = new System.Drawing.Size(137, 25);
+            this.barrioText.TabIndex = 61;
+            this.barrioText.Text = "Barrio";
             // 
             // button5
             // 
@@ -135,16 +139,16 @@ namespace Agencia.Views
             this.button5.Text = "Eliminar";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // estrellasText
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlText;
-            this.textBox3.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox3.Location = new System.Drawing.Point(17, 168);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 31);
-            this.textBox3.TabIndex = 62;
-            this.textBox3.Text = "Estrellas";
+            this.estrellasText.BackColor = System.Drawing.SystemColors.ControlText;
+            this.estrellasText.Font = new System.Drawing.Font("Cambria", 11F);
+            this.estrellasText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.estrellasText.Location = new System.Drawing.Point(17, 168);
+            this.estrellasText.Name = "estrellasText";
+            this.estrellasText.Size = new System.Drawing.Size(137, 25);
+            this.estrellasText.TabIndex = 62;
+            this.estrellasText.Text = "Estrellas";
             // 
             // button6
             // 
@@ -163,17 +167,21 @@ namespace Agencia.Views
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // comboBox1
+            // tipoAlojamientoCombo
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ControlText;
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 13F);
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(18, 216);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 28);
-            this.comboBox1.TabIndex = 63;
-            this.comboBox1.Text = "Tipo Alojamiento";
+            this.tipoAlojamientoCombo.BackColor = System.Drawing.SystemColors.ControlText;
+            this.tipoAlojamientoCombo.Font = new System.Drawing.Font("Cambria", 11F);
+            this.tipoAlojamientoCombo.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.tipoAlojamientoCombo.FormattingEnabled = true;
+            this.tipoAlojamientoCombo.Items.AddRange(new object[] {
+            "Hotel",
+            "Cabaña"});
+            this.tipoAlojamientoCombo.Location = new System.Drawing.Point(18, 216);
+            this.tipoAlojamientoCombo.Name = "tipoAlojamientoCombo";
+            this.tipoAlojamientoCombo.Size = new System.Drawing.Size(136, 25);
+            this.tipoAlojamientoCombo.TabIndex = 63;
+            this.tipoAlojamientoCombo.Text = "Tipo Alojamiento";
+            this.tipoAlojamientoCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button4
             // 
@@ -190,36 +198,85 @@ namespace Agencia.Views
             this.button4.TabIndex = 60;
             this.button4.Text = "Agregar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(14, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 28);
+            this.label1.Size = new System.Drawing.Size(186, 25);
             this.label1.TabIndex = 64;
             this.label1.Text = "ALOJAMIENTOS";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.baniosText);
+            this.panel1.Controls.Add(this.habitacionesText);
+            this.panel1.Controls.Add(this.precioText);
+            this.panel1.Controls.Add(this.personasText);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.tipoAlojamientoCombo);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.estrellasText);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.barrioText);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.ciudadText);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.tvSi);
+            this.panel1.Controls.Add(this.tvNo);
             this.panel1.Location = new System.Drawing.Point(28, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(618, 389);
             this.panel1.TabIndex = 65;
+            // 
+            // baniosText
+            // 
+            this.baniosText.BackColor = System.Drawing.SystemColors.ControlText;
+            this.baniosText.Font = new System.Drawing.Font("Cambria", 11F);
+            this.baniosText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.baniosText.Location = new System.Drawing.Point(163, 216);
+            this.baniosText.Name = "baniosText";
+            this.baniosText.Size = new System.Drawing.Size(137, 25);
+            this.baniosText.TabIndex = 68;
+            this.baniosText.Text = "N° de baños";
+            // 
+            // habitacionesText
+            // 
+            this.habitacionesText.BackColor = System.Drawing.SystemColors.ControlText;
+            this.habitacionesText.Font = new System.Drawing.Font("Cambria", 11F);
+            this.habitacionesText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.habitacionesText.Location = new System.Drawing.Point(163, 168);
+            this.habitacionesText.Name = "habitacionesText";
+            this.habitacionesText.Size = new System.Drawing.Size(137, 25);
+            this.habitacionesText.TabIndex = 67;
+            this.habitacionesText.Text = "N° de habitaciones";
+            // 
+            // precioText
+            // 
+            this.precioText.BackColor = System.Drawing.SystemColors.ControlText;
+            this.precioText.Font = new System.Drawing.Font("Cambria", 11F);
+            this.precioText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.precioText.Location = new System.Drawing.Point(163, 120);
+            this.precioText.Name = "precioText";
+            this.precioText.Size = new System.Drawing.Size(137, 25);
+            this.precioText.TabIndex = 66;
+            this.precioText.Text = "Precio por dia";
+            // 
+            // personasText
+            // 
+            this.personasText.BackColor = System.Drawing.SystemColors.ControlText;
+            this.personasText.Font = new System.Drawing.Font("Cambria", 11F);
+            this.personasText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.personasText.Location = new System.Drawing.Point(163, 73);
+            this.personasText.Name = "personasText";
+            this.personasText.Size = new System.Drawing.Size(137, 25);
+            this.personasText.TabIndex = 65;
+            this.personasText.Text = "N° de personas";
             // 
             // AdmAlojamientos
             // 
@@ -245,18 +302,22 @@ namespace Agencia.Views
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton tvNo;
+        private System.Windows.Forms.RadioButton tvSi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ciudadText;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox barrioText;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox estrellasText;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox tipoAlojamientoCombo;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox precioText;
+        private System.Windows.Forms.TextBox personasText;
+        private System.Windows.Forms.TextBox habitacionesText;
+        private System.Windows.Forms.TextBox baniosText;
     }
 }

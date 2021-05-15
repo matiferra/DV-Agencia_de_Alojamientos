@@ -44,14 +44,11 @@ namespace Agencia
             if (selec == "Administrador")
             {
 
-                //1 esta?
-
-                //1 esta? Linea usuario = Contrasenia
-                if(){
+                
                     this.Hide();
                     admin = new Administrador();
                     admin.Show();
-                }
+      
 
             } else if (selec == "Cliente")
             {
