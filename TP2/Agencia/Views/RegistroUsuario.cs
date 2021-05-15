@@ -28,12 +28,15 @@ namespace Agencia.Views
             string password = txtPassword.Text;
             string DNI = txtDocu.Text;
             string email = txtEmail.Text;
-            //string tipoUsuario = seleccion.Text;
+            string esAdmin = "false";
+            string bloqueado = "false";
+
+
 
 
             string fileName = usuario + ".txt";
             string sourcePath = @"C:\plataformas";
-            string sourceFile = Path.Combine(sourcePath + @"\USER\CLIENTES", fileName);
+            string sourceFile = Path.Combine(sourcePath + @"\USER", fileName);
 
 
             if (!string.IsNullOrEmpty(usuario) || !string.IsNullOrEmpty(password) || !string.IsNullOrEmpty(DNI) || !string.IsNullOrEmpty(email))
@@ -42,10 +45,9 @@ namespace Agencia.Views
                 {
                     Directory.CreateDirectory(sourcePath);
                     Directory.CreateDirectory(sourcePath + @"\USER");
-                    Directory.CreateDirectory(sourcePath + @"\USER\CLIEN/*T*/ES");
                 }
 
-                string[] datos = { txtDocu.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text};
+                string[] datos = { txtDocu.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text, esAdmin, bloqueado };
                 if (!File.Exists(sourceFile))
                 {
                     File.WriteAllLines(sourceFile, datos);
