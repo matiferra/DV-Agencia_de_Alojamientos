@@ -88,3 +88,28 @@ E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\bin\Debug\Bussines.dll
 E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\bin\Debug\FontAwesome.Sharp.dll
 E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\bin\Debug\Bussines.pdb
 E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.csproj.CopyComplete
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe.config
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\FontAwesome.Sharp.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.BusquedaAlojamiento.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.ResultadoBusqueda.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Administrador.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmReservas.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmUsuarios.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmAlojamientos.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Cliente.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.EditUsuario.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Form1.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Login.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Properties.Resources.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.RecuperarContraseña.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.RegistroUsuario.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.GenerateResource.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.CopyComplete
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.exe
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.pdb

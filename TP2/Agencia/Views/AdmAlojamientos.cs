@@ -8,16 +8,24 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bussines;
 
 namespace Agencia.Views
 {
     public partial class AdmAlojamientos : Form
     {
+
+        private string ciudada;
+        private string barrio;
+        private string estrellas;
+        private string tipoAlojamiento;
+        private bool tv;
+
+
         public AdmAlojamientos()
         {
             InitializeComponent();
             panel1.BackColor = Color.FromArgb(60, Color.Black);
-            
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)

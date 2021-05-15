@@ -17,6 +17,10 @@ namespace Agencia
     {  
         Administrador admin;
         Cliente client;
+
+        string usuario;
+        string contrasenia;
+
         public Login()
         {
             InitializeComponent();
@@ -33,11 +37,22 @@ namespace Agencia
         private void btnLogin_Click(object sender, EventArgs e)
         {
         String selec =seleccion.SelectedItem.ToString();
-            if(selec == "Administrador")
+
+            usuario = txtUsername.Text;
+            contrasenia = txtPassword.Text;
+
+            if (selec == "Administrador")
             {
-            this.Hide();
+
+                //1 esta?
+
+                //1 esta? Linea usuario = Contrasenia
+                if(){
+                    this.Hide();
                     admin = new Administrador();
                     admin.Show();
+                }
+
             } else if (selec == "Cliente")
             {
                 this.Hide();

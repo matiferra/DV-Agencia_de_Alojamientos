@@ -75,6 +75,7 @@ namespace Agencia
             this.seleccion.Items.AddRange(new object[] {
             "Cliente",
             "Administrador"});
+            this.seleccion.SelectedItem = "Cliente";
             this.seleccion.Location = new System.Drawing.Point(297, 292);
             this.seleccion.Name = "seleccion";
             this.seleccion.Size = new System.Drawing.Size(285, 31);
