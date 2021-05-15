@@ -2,7 +2,7 @@
 namespace Agencia.Views
 {
     partial class BusquedaAlojamiento
-    {
+    { 
         /// <summary>
         /// Required designer variable.
         /// </summary>

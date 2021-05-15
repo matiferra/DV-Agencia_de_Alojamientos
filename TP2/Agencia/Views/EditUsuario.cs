@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Agencia.Views
+namespace Agencia.Views 
 {
     public partial class EditUsuario : Form
     {

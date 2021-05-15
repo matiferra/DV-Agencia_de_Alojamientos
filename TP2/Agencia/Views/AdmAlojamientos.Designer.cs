@@ -1,7 +1,7 @@
 ﻿
 namespace Agencia.Views
 {
-    partial class AdmAlojamientos
+    partial class AdmAlojamientos 
     {
         /// <summary>
         /// Required designer variable.

@@ -2,7 +2,7 @@
 namespace Agencia.Views
 {
     partial class Cliente
-    {
+    { 
         /// <summary>
         /// Required designer variable.
         /// </summary>

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+ 
 namespace Agencia.Views
 {
     public partial class AdmAlojamientos : Form

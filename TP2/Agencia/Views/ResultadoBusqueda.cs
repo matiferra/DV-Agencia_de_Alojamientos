@@ -84,6 +84,8 @@ namespace Agencia.Views
 
         Bussines.AgenciaManager ag = new Bussines.AgenciaManager(a);
 
+        ag.
+
         private void label1_Click(object sender, EventArgs e)
         {
 

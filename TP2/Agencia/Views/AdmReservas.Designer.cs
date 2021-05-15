@@ -1,7 +1,7 @@
 ﻿
 namespace Agencia.Views
 {
-    partial class AdmReservas
+    partial class AdmReservas 
     {
         /// <summary>
         /// Required designer variable.

@@ -3,7 +3,7 @@ namespace Agencia.Views
 {
     partial class Administrador
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
