@@ -55,7 +55,7 @@ namespace Agencia
                 //5 - bloqueado
 
                 string nombre;
-                int DNI;
+                string DNI;
                 string mail;
                 string password;
                 bool esAdmin;
@@ -64,12 +64,12 @@ namespace Agencia
                 for (int i = 0; i < lineas.Length; i++)
                 {
 
-                    DNI = int.Parse(lineas[i]);
+                    DNI = lineas[i];
                     nombre = lineas[i + 1];
                     mail = lineas[i + 2];
-                    password = lineas[i+3];
-                    esAdmin = bool.Parse(lineas[i+4]);
-                    bloqueado = bool.Parse(lineas[i+5]);
+                    password = lineas[i + 3];
+                    esAdmin = bool.Parse(lineas[i + 4]);
+                    bloqueado = bool.Parse(lineas[i + 5]);
 
                     try
                     {
@@ -115,7 +115,7 @@ namespace Agencia
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+
 
             String selec = seleccion.SelectedItem.ToString();
 
@@ -124,30 +124,49 @@ namespace Agencia
 
             foreach (var item in ag.misUsuarios)
             {
-                if (item.esAdmin == true)
+                if (selec == "Administrador")
                 {
-                    if (item.nombre == usuario && item.password == contrasenia)
+                    if (item.esAdmin == true)
                     {
-                        this.Hide();
-                        admin = new Administrador();
-                        admin.Show();
+                        if (item.nombre == usuario && item.password == contrasenia)
+                        {
+                            this.Hide();
+                            admin = new Administrador();
+                            admin.Show();
+                        }
                     }
                 }
                 else
                 {
-                    if (item.nombre == usuario && item.password == contrasenia)
+                    if (item.esAdmin == false)
                     {
-                        if(item.bloqueado != false)
+                        if (item.nombre == usuario && item.password == contrasenia)
                         {
-                            this.Hide();
-                            client = new Cliente();
-                            client.Show();
+                            if (item.bloqueado == false)
+                            {
+                                this.Hide();
+                                client = new Cliente();
+                                client.Show();
+                            }
+                            
                         }
-                    } else
-                    {
-                        item.intentosLogueo++;
+                        else
+                        {
+                            item.intentosLogueo++;
+                            if(item.intentosLogueo >= 3)
+                            {
+                                item.bloqueado = true;
+                            }
+                            break;
+                        }
+
                     }
+
                 }
+
+
+
+
             }
 
         }

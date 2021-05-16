@@ -136,7 +136,7 @@ namespace Bussines
             return lista;
         }
 
-        public bool reservar(int codAloj, int dniUsuario, DateTime Fdesde, DateTime Fhasta)
+        public bool reservar(int codAloj, string dniUsuario, DateTime Fdesde, DateTime Fhasta)
         {
             bool reservado = true;
             Usuario usuario = null;
@@ -236,7 +236,7 @@ namespace Bussines
             return eliminada;
         }
 
-        public bool autenticarUsuario(int DNI, string password)
+        public bool autenticarUsuario(string DNI, string password)
         {
             Usuario user = null;
             foreach (var item in misUsuarios)
@@ -270,7 +270,7 @@ namespace Bussines
             return autenticado;
         }
 
-        public bool desbloquearUsuario(int DNI)
+        public bool desbloquearUsuario(string DNI)
         {
             bool desbloqueado = false;
 
@@ -290,7 +290,7 @@ namespace Bussines
             return desbloqueado;
         }
 
-        public bool agregarUsuario(int DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado) //Parametro Datos del Usuario ¿?
+        public bool agregarUsuario(string DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado) //Parametro Datos del Usuario ¿?
         {
             Usuario usuario = new Usuario(DNI, nombre, mail, password, esAdmin, bloqueado);
 
@@ -306,7 +306,7 @@ namespace Bussines
             return modificado;
         }
 
-        public bool eliminarUsuario(int DNI)
+        public bool eliminarUsuario(string DNI)
         {
             bool eliminado = false;
 
@@ -322,7 +322,7 @@ namespace Bussines
             return eliminado;
         }
 
-        public int cambiarContrasenia(int DNI, string oldPass, string newPass1, string newPass2)
+        public int cambiarContrasenia(string DNI, string oldPass, string newPass1, string newPass2)
         {
 
             //1 = MAL PASS VIEJO
@@ -355,7 +355,7 @@ namespace Bussines
         }
 
 
-        public Usuario buscarUsuario(int DNI)
+        public Usuario buscarUsuario(string DNI)
         {
             Usuario user = null;
 

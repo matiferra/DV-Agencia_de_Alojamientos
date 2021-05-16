@@ -6,7 +6,7 @@ namespace Bussines
 {
     public class Usuario
     {
-        public int DNI { get; set; }
+        public string DNI { get; set; }
         public string nombre { get; set; }
         public string mail { get; set; }
         public string password { get; set; }
@@ -17,7 +17,7 @@ namespace Bussines
         public Usuario()
         {
         }
-        public Usuario(int DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado)
+        public Usuario(string DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado)
         {
             this.intentosLogueo = 0;
             this.DNI = DNI;

@@ -29,47 +29,48 @@ namespace Agencia.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buscarButton = new System.Windows.Forms.Button();
+            this.buscarText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.editarButton = new System.Windows.Forms.Button();
+            this.eliminarButton = new System.Windows.Forms.Button();
+            this.desbloquearButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TipoCombo = new System.Windows.Forms.ComboBox();
+            this.passText = new System.Windows.Forms.TextBox();
+            this.nombreText = new System.Windows.Forms.TextBox();
+            this.mailText = new System.Windows.Forms.TextBox();
+            this.DNIText = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnLogin
+            // buscarButton
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.FlatAppearance.BorderSize = 2;
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.ForeColor = System.Drawing.Color.Honeydew;
-            this.btnLogin.Location = new System.Drawing.Point(459, 49);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(136, 31);
-            this.btnLogin.TabIndex = 34;
-            this.btnLogin.Text = "Buscar";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.buscarButton.BackColor = System.Drawing.Color.Transparent;
+            this.buscarButton.FlatAppearance.BorderSize = 2;
+            this.buscarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.buscarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buscarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarButton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.buscarButton.ForeColor = System.Drawing.Color.Honeydew;
+            this.buscarButton.Location = new System.Drawing.Point(459, 49);
+            this.buscarButton.Name = "buscarButton";
+            this.buscarButton.Size = new System.Drawing.Size(136, 31);
+            this.buscarButton.TabIndex = 34;
+            this.buscarButton.Text = "Buscar";
+            this.buscarButton.UseVisualStyleBackColor = false;
+            this.buscarButton.Click += new System.EventHandler(this.buscarButton_Click);
             // 
-            // textBox1
+            // buscarText
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 13F);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox1.Location = new System.Drawing.Point(172, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 28);
-            this.textBox1.TabIndex = 31;
-            this.textBox1.Text = "Ingrese el DNI";
+            this.buscarText.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buscarText.Font = new System.Drawing.Font("Cambria", 13F);
+            this.buscarText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.buscarText.Location = new System.Drawing.Point(172, 51);
+            this.buscarText.Name = "buscarText";
+            this.buscarText.Size = new System.Drawing.Size(251, 28);
+            this.buscarText.TabIndex = 31;
+            this.buscarText.Text = "Ingrese el DNI";
             // 
             // label2
             // 
@@ -83,132 +84,134 @@ namespace Agencia.Views
             this.label2.TabIndex = 30;
             this.label2.Text = "Buscar Usuario";
             // 
-            // button1
+            // editarButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Honeydew;
-            this.button1.Location = new System.Drawing.Point(247, 319);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 31);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.editarButton.BackColor = System.Drawing.Color.Transparent;
+            this.editarButton.FlatAppearance.BorderSize = 2;
+            this.editarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.editarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.editarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editarButton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.editarButton.ForeColor = System.Drawing.Color.Honeydew;
+            this.editarButton.Location = new System.Drawing.Point(247, 319);
+            this.editarButton.Name = "editarButton";
+            this.editarButton.Size = new System.Drawing.Size(136, 31);
+            this.editarButton.TabIndex = 35;
+            this.editarButton.Text = "Editar";
+            this.editarButton.UseVisualStyleBackColor = false;
+            this.editarButton.Click += new System.EventHandler(this.editarButton_Click);
             // 
-            // button2
+            // eliminarButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.Honeydew;
-            this.button2.Location = new System.Drawing.Point(459, 319);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 31);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.eliminarButton.BackColor = System.Drawing.Color.Transparent;
+            this.eliminarButton.FlatAppearance.BorderSize = 2;
+            this.eliminarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.eliminarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.eliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eliminarButton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.eliminarButton.ForeColor = System.Drawing.Color.Honeydew;
+            this.eliminarButton.Location = new System.Drawing.Point(459, 319);
+            this.eliminarButton.Name = "eliminarButton";
+            this.eliminarButton.Size = new System.Drawing.Size(136, 31);
+            this.eliminarButton.TabIndex = 36;
+            this.eliminarButton.Text = "Eliminar";
+            this.eliminarButton.UseVisualStyleBackColor = false;
+            this.eliminarButton.Click += new System.EventHandler(this.eliminarButton_Click);
             // 
-            // button3
+            // desbloquearButton
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.Honeydew;
-            this.button3.Location = new System.Drawing.Point(27, 319);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 31);
-            this.button3.TabIndex = 38;
-            this.button3.Text = "Desbloquear";
-            this.button3.UseVisualStyleBackColor = false;
+            this.desbloquearButton.BackColor = System.Drawing.Color.Transparent;
+            this.desbloquearButton.FlatAppearance.BorderSize = 2;
+            this.desbloquearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.desbloquearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.desbloquearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.desbloquearButton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.desbloquearButton.ForeColor = System.Drawing.Color.Honeydew;
+            this.desbloquearButton.Location = new System.Drawing.Point(27, 319);
+            this.desbloquearButton.Name = "desbloquearButton";
+            this.desbloquearButton.Size = new System.Drawing.Size(136, 31);
+            this.desbloquearButton.TabIndex = 38;
+            this.desbloquearButton.Text = "Desbloquear";
+            this.desbloquearButton.UseVisualStyleBackColor = false;
+            this.desbloquearButton.Click += new System.EventHandler(this.desbloquearButton_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.TipoCombo);
+            this.panel1.Controls.Add(this.passText);
+            this.panel1.Controls.Add(this.nombreText);
+            this.panel1.Controls.Add(this.mailText);
+            this.panel1.Controls.Add(this.DNIText);
+            this.panel1.Controls.Add(this.desbloquearButton);
+            this.panel1.Controls.Add(this.eliminarButton);
+            this.panel1.Controls.Add(this.buscarButton);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.editarButton);
+            this.panel1.Controls.Add(this.buscarText);
             this.panel1.Location = new System.Drawing.Point(28, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(618, 389);
             this.panel1.TabIndex = 39;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // comboBox1
+            // TipoCombo
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 12F);
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.TipoCombo.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.TipoCombo.Font = new System.Drawing.Font("Cambria", 12F);
+            this.TipoCombo.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.TipoCombo.FormattingEnabled = true;
+            this.TipoCombo.Items.AddRange(new object[] {
             "Cliente",
             "Administrador"});
-            this.comboBox1.Location = new System.Drawing.Point(336, 216);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 27);
-            this.comboBox1.TabIndex = 69;
-            this.comboBox1.Text = "Tipo Usuario";
+            this.TipoCombo.Location = new System.Drawing.Point(336, 216);
+            this.TipoCombo.Name = "TipoCombo";
+            this.TipoCombo.Size = new System.Drawing.Size(139, 27);
+            this.TipoCombo.TabIndex = 69;
+            this.TipoCombo.Text = "Tipo Usuario";
             // 
-            // textBox3
+            // passText
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox3.Font = new System.Drawing.Font("Cambria", 12F);
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox3.Location = new System.Drawing.Point(136, 217);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 26);
-            this.textBox3.TabIndex = 68;
-            this.textBox3.Text = "Ingrese el password";
+            this.passText.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.passText.Font = new System.Drawing.Font("Cambria", 12F);
+            this.passText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.passText.Location = new System.Drawing.Point(136, 217);
+            this.passText.Name = "passText";
+            this.passText.Size = new System.Drawing.Size(139, 26);
+            this.passText.TabIndex = 68;
+            this.passText.Text = "Ingrese el password";
             // 
-            // textBox2
+            // nombreText
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox2.Font = new System.Drawing.Font("Cambria", 12F);
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.Location = new System.Drawing.Point(239, 158);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 26);
-            this.textBox2.TabIndex = 67;
-            this.textBox2.Text = "Ingrese Nombre";
+            this.nombreText.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.nombreText.Font = new System.Drawing.Font("Cambria", 12F);
+            this.nombreText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.nombreText.Location = new System.Drawing.Point(239, 158);
+            this.nombreText.Name = "nombreText";
+            this.nombreText.Size = new System.Drawing.Size(139, 26);
+            this.nombreText.TabIndex = 67;
+            this.nombreText.Text = "Ingrese Nombre";
             // 
-            // textBox4
+            // mailText
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox4.Font = new System.Drawing.Font("Cambria", 12F);
-            this.textBox4.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox4.Location = new System.Drawing.Point(434, 158);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(139, 26);
-            this.textBox4.TabIndex = 66;
-            this.textBox4.Text = "Ingrese Email";
+            this.mailText.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.mailText.Font = new System.Drawing.Font("Cambria", 12F);
+            this.mailText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.mailText.Location = new System.Drawing.Point(434, 158);
+            this.mailText.Name = "mailText";
+            this.mailText.Size = new System.Drawing.Size(139, 26);
+            this.mailText.TabIndex = 66;
+            this.mailText.Text = "Ingrese Email";
             // 
-            // textBox5
+            // DNIText
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox5.Font = new System.Drawing.Font("Cambria", 12F);
-            this.textBox5.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox5.Location = new System.Drawing.Point(42, 158);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(139, 26);
-            this.textBox5.TabIndex = 65;
-            this.textBox5.Text = "Ingrese el DNI";
+            this.DNIText.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.DNIText.Font = new System.Drawing.Font("Cambria", 12F);
+            this.DNIText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.DNIText.Location = new System.Drawing.Point(42, 158);
+            this.DNIText.Name = "DNIText";
+            this.DNIText.Size = new System.Drawing.Size(139, 26);
+            this.DNIText.TabIndex = 65;
+            this.DNIText.Text = "Ingrese el DNI";
             // 
             // AdmUsuarios
             // 
@@ -231,17 +234,17 @@ namespace Agencia.Views
 
         #endregion
 
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buscarButton;
+        private System.Windows.Forms.TextBox buscarText;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button editarButton;
+        private System.Windows.Forms.Button eliminarButton;
+        private System.Windows.Forms.Button desbloquearButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox TipoCombo;
+        private System.Windows.Forms.TextBox passText;
+        private System.Windows.Forms.TextBox nombreText;
+        private System.Windows.Forms.TextBox mailText;
+        private System.Windows.Forms.TextBox DNIText;
     }
 }
