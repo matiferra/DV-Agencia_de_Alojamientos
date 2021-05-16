@@ -98,12 +98,6 @@
     <Compile Include="Views\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\EditUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\EditUsuario.Designer.cs">
-      <DependentUpon>EditUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,9 +177,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\EditUsuario.resx">
-      <DependentUpon>EditUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
