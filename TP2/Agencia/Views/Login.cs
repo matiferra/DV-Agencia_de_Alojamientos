@@ -61,7 +61,7 @@ namespace Agencia
                 bool esAdmin;
                 bool bloqueado;
 
-                for (int i = 0; i < lineas.Length; i++)
+                for (int i = 0; i < lineas.Length - 1; i++)
                 {
 
                     DNI = lineas[i];
@@ -115,60 +115,95 @@ namespace Agencia
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-
             String selec = seleccion.SelectedItem.ToString();
 
             usuario = txtUsername.Text;
             contrasenia = txtPassword.Text;
-
-            foreach (var item in ag.misUsuarios)
+            int i = 0;
+            bool encontrado = false;
+            if (selec == "Administrador")
             {
-                if (selec == "Administrador")
+                while (i <= ag.misUsuarios.Count - 1 && encontrado == false)
                 {
-                    if (item.esAdmin == true)
+
+                    if (ag.misUsuarios.ElementAt(i).nombre == usuario)
                     {
-                        if (item.nombre == usuario && item.password == contrasenia)
+                        encontrado = true;
+                        if (ag.misUsuarios.ElementAt(i).password == contrasenia)
                         {
-                            this.Hide();
-                            admin = new Administrador();
-                            admin.Show();
-                        }
-                    }
-                }
-                else
-                {
-                    if (item.esAdmin == false)
-                    {
-                        if (item.nombre == usuario && item.password == contrasenia)
-                        {
-                            if (item.bloqueado == false)
+                            if (ag.misUsuarios.ElementAt(i).esAdmin == true)
                             {
                                 this.Hide();
-                                client = new Cliente();
-                                client.Show();
+                                admin = new Administrador();
+                                admin.Show();
                             }
-                            
+                            else
+                            {
+                                MessageBox.Show("Usuario o Contraseña Incorrecto");
+                            }
                         }
                         else
                         {
-                            item.intentosLogueo++;
-                            if(item.intentosLogueo >= 3)
-                            {
-                                item.bloqueado = true;
-                            }
-                            break;
+                            MessageBox.Show("Usuario o Contraseña Incorrecto");
                         }
-
                     }
-
+                    i++;
                 }
-
-
-
-
+                i = 0;
+                if (encontrado == false)
+                {
+                    MessageBox.Show("Usuario o Contraseña Incorrecto");
+                }
+                encontrado = false;
             }
-
+            else
+            {
+                while (i <= ag.misUsuarios.Count - 1 && encontrado == false)
+                {
+                    if (ag.misUsuarios.ElementAt(i).nombre == usuario)
+                    {
+                        encontrado = true;
+                        if (ag.misUsuarios.ElementAt(i).password == contrasenia)
+                        {
+                            if (ag.misUsuarios.ElementAt(i).esAdmin == false)
+                            {
+                                if (ag.misUsuarios.ElementAt(i).bloqueado == false)
+                                {
+                                    this.Hide();
+                                    client = new Cliente();
+                                    client.Show();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Este usuario esta temporalmente bloqueado");
+                                }
+                            }
+                            else
+                            {
+                                encontrado = true;
+                                MessageBox.Show("Usuario o Contraseña Incorrecto");
+                            }
+                        }
+                        else
+                        {
+                            ag.misUsuarios.ElementAt(i).intentosLogueo++;
+                            MessageBox.Show("Usuario o Contraseña Incorrecto");
+                            if (ag.misUsuarios.ElementAt(i).intentosLogueo >= 3)
+                            {
+                                MessageBox.Show("Fueron mas de 3 intentos\nSe ha bloqueado tu usuario");
+                                ag.misUsuarios.ElementAt(i).bloqueado = true;
+                            }
+                        }
+                    }
+                    i++;
+                }
+                i = 0;
+                if (encontrado == false)
+                {
+                    MessageBox.Show("Usuario o Contraseña Incorrecto");
+                }
+                encontrado = false;
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)

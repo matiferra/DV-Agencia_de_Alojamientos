@@ -82,7 +82,7 @@ namespace Agencia.Views
                 bool esAdmin;
                 bool bloqueado;
 
-                for (int i = 0; i < lineas.Length; i++)
+                for (int i = 0; i < lineas.Length - 1; i++)
                 {
 
                     DNI = lineas[i];
