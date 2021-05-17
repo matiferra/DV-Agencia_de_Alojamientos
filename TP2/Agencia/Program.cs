@@ -44,13 +44,6 @@ namespace Agencia
             {
                 File.WriteAllLines(sourceFile, datos);
             }
-            else
-            {
-                foreach (var item in datos)
-                {
-                    File.AppendAllText(sourceFile, item + Environment.NewLine);
-                }
-            }
         }
     }
 }

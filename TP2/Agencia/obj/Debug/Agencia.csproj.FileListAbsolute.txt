@@ -137,3 +137,7 @@ D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\B
 D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\FontAwesome.Sharp.dll
 D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\Bussines.pdb
 D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.CopyComplete
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe.manifest
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.application
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.exe.manifest
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.application
