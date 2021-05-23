@@ -6,7 +6,6 @@ namespace Bussines
 {
    public  class Hotel : Alojamiento 
     {
-
          
         private double precioxPersona;
 

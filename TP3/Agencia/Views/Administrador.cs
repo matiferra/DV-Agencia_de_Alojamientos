@@ -15,13 +15,23 @@ namespace Agencia.Views
     {
          private Form currentChildForm;
 
+        Form actualHijoForm;
+        public Bussines.AgenciaManager ag;
+        AdmAlojamientos admAlojamientosForm;
+        AdmReservas admReservasForm;
+        AdmUsuarios admUsuariosForm;
 
-        public Administrador()
+
+        public Administrador(AdmUsuarios admUsuariosForm, AdmAlojamientos admAlojamientosForm, AdmReservas admReservasForm, Bussines.AgenciaManager agenciaManager)
         {
             InitializeComponent();
-      
+            ag = agenciaManager;
+            this.admAlojamientosForm = admAlojamientosForm;
+            this.admUsuariosForm = admUsuariosForm;
+            this.admReservasForm = admReservasForm;
+
         }
-       
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -124,8 +134,6 @@ namespace Agencia.Views
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login l = new Login();
-            l.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

@@ -14,12 +14,23 @@ namespace Agencia.Views
     public partial class Cliente : Form
     {
         private Form currentChildForm;
-        public Cliente()
+        public Bussines.Usuario user { get; set; }
+
+        BusquedaAlojamiento busquedadAlojamientosForm;
+        RecuperarContraseña cambiarContraseniasForm;
+        ResultadoBusqueda resultadoBusquedaForm;
+        public Cliente(BusquedaAlojamiento busquedadAlojamientosForm, RecuperarContraseña cambiarContraseniasForm, ResultadoBusqueda resultadoBusquedaForm)
         {
+
             InitializeComponent();
             panel1.BackColor = Color.FromArgb(60, Color.Black);
             panel2.BackColor = Color.FromArgb(60, Color.Black);
-            OpenChildForm(new BusquedaAlojamiento());
+            this.busquedadAlojamientosForm = busquedadAlojamientosForm;
+            this.cambiarContraseniasForm = cambiarContraseniasForm;
+            this.resultadoBusquedaForm = resultadoBusquedaForm;
+            OpenChildForm(busquedadAlojamientosForm);
+            //busquedadAlojamientosForm.Show();
+
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -88,8 +99,6 @@ namespace Agencia.Views
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login l = new Login();
-            l.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

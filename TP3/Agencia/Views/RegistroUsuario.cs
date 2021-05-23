@@ -15,11 +15,12 @@ namespace Agencia.Views
 {
     public partial class RegistroUsuario : Form
     {
-        AgenciaManager ag = new AgenciaManager();
+        public AgenciaManager ag;
 
-        public RegistroUsuario()
+        public RegistroUsuario(AgenciaManager agenciaManager)
         {
             InitializeComponent();
+            this.ag = agenciaManager;
         }
 
         private void registrarse_Click(object sender, EventArgs e)
@@ -85,8 +86,6 @@ namespace Agencia.Views
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login l = new Login();
-            l.Show();
         }
     }
 }

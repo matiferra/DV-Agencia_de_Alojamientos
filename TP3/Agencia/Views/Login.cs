@@ -16,80 +16,28 @@ namespace Agencia
 {
     public partial class Login : Form
     {
-        Administrador admin;
-        Cliente client;
-        static Bussines.Agencia a = new Bussines.Agencia();
-        static Bussines.AgenciaManager ag = new Bussines.AgenciaManager(a);
+        Administrador adminForm;
+        Cliente clienteForm;
+        RegistroUsuario registroUsuarioForm;
+        AgenciaManager ag;
+        public Usuario user;
+
+
 
         string usuario;
         string contrasenia;
 
-        public Login()
+
+        public Login(Administrador adminForm, Cliente clienteForm, RegistroUsuario registroUsuarioForm, AgenciaManager agenciaManager, Usuario usuario)
         {
-            leerUsuarios();
             InitializeComponent();
+            this.ag = agenciaManager;
+            this.user = usuario;
+            this.adminForm = adminForm;
+            this.clienteForm = clienteForm;
+            this.registroUsuarioForm = registroUsuarioForm;
         }
 
-        private void leerUsuarios()
-        {
-            //LEER
-            string fileName = "usuarios.txt";
-            string sourcePath = @"C:\plataformas\USER";
-            string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
-            string contenido = String.Empty;
-
-            if (File.Exists(sourceFile))
-            {
-                contenido = File.ReadAllText(sourceFile);
-                string[] lineas = contenido.Split(new[] { Environment.NewLine },
-                                                    StringSplitOptions.None
-                );
-
-
-                //LINEAS DEL ARCHIVO
-                //0 - nombre
-                //1 - DNI
-                //2 - mail
-                //3 - password
-                //4 - esAdmin
-                //5 - bloqueado
-
-                string nombre;
-                string DNI;
-                string mail;
-                string password;
-                bool esAdmin;
-                bool bloqueado;
-
-                for (int i = 0; i < lineas.Length - 1; i++)
-                {
-
-                    DNI = lineas[i];
-                    nombre = lineas[i + 1];
-                    mail = lineas[i + 2];
-                    password = lineas[i + 3];
-                    esAdmin = bool.Parse(lineas[i + 4]);
-                    bloqueado = bool.Parse(lineas[i + 5]);
-
-                    try
-                    {
-                        //int DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado
-                        ag.agregarUsuario(DNI, nombre, mail, password, esAdmin, bloqueado);
-                        i = i + 6;
-                    }
-                    catch (Exception e)
-                    {
-
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("No existe");
-            }
-
-
-        }
 
         public void ocultarRegistro()
         {
@@ -133,9 +81,8 @@ namespace Agencia
                         {
                             if (ag.misUsuarios.ElementAt(i).esAdmin == true)
                             {
-                                this.Hide();
-                                admin = new Administrador();
-                                admin.Show();
+                                //this.Hide();
+                                adminForm.Show();
                             }
                             else
                             {
@@ -169,9 +116,10 @@ namespace Agencia
                             {
                                 if (ag.misUsuarios.ElementAt(i).bloqueado == false)
                                 {
-                                    this.Hide();
-                                    client = new Cliente();
-                                    client.Show();
+                                    //this.Hide();
+                                    this.user = ag.misUsuarios.ElementAt(i);
+                                    clienteForm.user = user;
+                                    clienteForm.Show();
                                 }
                                 else
                                 {
@@ -236,10 +184,8 @@ namespace Agencia
         }
 
         private void registro_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RegistroUsuario registroUsuario = new RegistroUsuario();
-            registroUsuario.Show();
+        { 
+            registroUsuarioForm.Show();
         }
 
         private void btnCerrar_Click_1(object sender, EventArgs e)

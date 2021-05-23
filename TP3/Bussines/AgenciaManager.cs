@@ -9,7 +9,7 @@ namespace Bussines
 
 
 
-        private Agencia miAgencia { set; get; }
+        public Agencia miAgencia { set; get; }
         public List<Usuario> misUsuarios;
         public List<Reserva> misReservas;
 

@@ -22,3 +22,9 @@ D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\
 D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
 D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.dll
 D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.pdb
