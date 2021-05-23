@@ -35,7 +35,7 @@ namespace Agencia
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.passActual = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -102,15 +102,16 @@ namespace Agencia
             this.label1.TabIndex = 24;
             this.label1.Text = " Contraseña Actual";
             // 
-            // textBox1
+            // passActual
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(360, 164);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 24);
-            this.textBox1.TabIndex = 23;
+            this.passActual.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.passActual.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passActual.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passActual.Location = new System.Drawing.Point(360, 164);
+            this.passActual.Name = "passActual";
+            this.passActual.Size = new System.Drawing.Size(197, 24);
+            this.passActual.TabIndex = 23;
+            this.passActual.TextChanged += new System.EventHandler(this.passActual_TextChanged);
             // 
             // label2
             // 
@@ -185,7 +186,7 @@ namespace Agencia
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passActual);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RecuperarContraseña";
@@ -207,7 +208,7 @@ namespace Agencia
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox passActual;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox btnCerrar;

@@ -45,13 +45,14 @@ namespace Agencia.Views
             this.barrioText = new System.Windows.Forms.TextBox();
             this.estrellasText = new System.Windows.Forms.TextBox();
             this.tipoAlojamientoCombo = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.agregarButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.baniosText = new System.Windows.Forms.TextBox();
             this.habitacionesText = new System.Windows.Forms.TextBox();
             this.precioText = new System.Windows.Forms.TextBox();
             this.personasText = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.alojamientosGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -214,22 +215,22 @@ namespace Agencia.Views
             this.tipoAlojamientoCombo.Text = "Tipo Alojamiento";
             this.tipoAlojamientoCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button4
+            // agregarButton
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(17, 173);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 31);
-            this.button4.TabIndex = 60;
-            this.button4.Text = "Agregar";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.agregarButton.BackColor = System.Drawing.Color.Transparent;
+            this.agregarButton.FlatAppearance.BorderSize = 2;
+            this.agregarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.agregarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.agregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregarButton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.agregarButton.ForeColor = System.Drawing.Color.White;
+            this.agregarButton.Location = new System.Drawing.Point(17, 173);
+            this.agregarButton.Name = "agregarButton";
+            this.agregarButton.Size = new System.Drawing.Size(122, 31);
+            this.agregarButton.TabIndex = 60;
+            this.agregarButton.Text = "Agregar";
+            this.agregarButton.UseVisualStyleBackColor = false;
+            this.agregarButton.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
@@ -244,12 +245,13 @@ namespace Agencia.Views
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.baniosText);
             this.panel1.Controls.Add(this.habitacionesText);
             this.panel1.Controls.Add(this.precioText);
             this.panel1.Controls.Add(this.personasText);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.agregarButton);
             this.panel1.Controls.Add(this.tipoAlojamientoCombo);
             this.panel1.Controls.Add(this.estrellasText);
             this.panel1.Controls.Add(this.barrioText);
@@ -307,6 +309,23 @@ namespace Agencia.Views
             this.personasText.TabIndex = 65;
             this.personasText.Text = "N° de personas";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(296, 173);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 31);
+            this.button1.TabIndex = 69;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // AdmAlojamientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,7 +358,7 @@ namespace Agencia.Views
         private System.Windows.Forms.TextBox barrioText;
         private System.Windows.Forms.TextBox estrellasText;
         private System.Windows.Forms.ComboBox tipoAlojamientoCombo;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button agregarButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox precioText;
@@ -354,5 +373,6 @@ namespace Agencia.Views
         private System.Windows.Forms.DataGridViewTextBoxColumn Estrellas_text;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.Button button1;
     }
 }

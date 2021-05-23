@@ -27,5 +27,6 @@ namespace Bussines
             this.esAdmin = esAdmin;
             this.bloqueado = bloqueado;
         }
+
     }
 }

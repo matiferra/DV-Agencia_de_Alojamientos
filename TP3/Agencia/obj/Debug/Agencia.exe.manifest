@@ -42,26 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Agencia.exe" size="1199072">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Agencia.exe" size="1200096">
       <assemblyIdentity name="Agencia" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PR7MWYq2GL5yab9DmMWPgb0bsoRdBW2iA5vVyPInNDo=</dsig:DigestValue>
+        <dsig:DigestValue>dh6jVK7mrX/dp5lc5TvmvVgMcYt7tbOlQPqpxQTiTHQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bussines.dll" size="18432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bussines.dll" size="18944">
       <assemblyIdentity name="Bussines" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6u/ZXUZ/pMmMF9u5CGfC//UptzHPzCsX0NrUI+xrQL8=</dsig:DigestValue>
+        <dsig:DigestValue>VLyZ8AZ0pK3V8kMvOA6tezTdTC3iOTOPGmQ4/6kmqcU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

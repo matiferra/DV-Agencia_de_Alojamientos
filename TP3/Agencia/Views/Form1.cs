@@ -27,7 +27,7 @@ namespace Agencia.Views
             admReservasForm.MdiParent = this;
             AdmUsuarios admUsuarios = new AdmUsuarios();
             admUsuarios.MdiParent = this;
-            Administrador adminForm = new Administrador(admUsuarios, admAlojamientosForm, admReservasForm, agenciaManager);
+            Administrador adminForm = new Administrador(admUsuarios, admAlojamientosForm, admReservasForm);
             adminForm.MdiParent = this;
             BusquedaAlojamiento busquedadAlojamientosForm = new BusquedaAlojamiento();
             busquedadAlojamientosForm.MdiParent = this;

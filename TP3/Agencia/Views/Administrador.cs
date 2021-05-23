@@ -15,17 +15,15 @@ namespace Agencia.Views
     {
          private Form currentChildForm;
 
-        Form actualHijoForm;
-        public Bussines.AgenciaManager ag;
+        public Bussines.AgenciaManager ag { get; set; }
         AdmAlojamientos admAlojamientosForm;
         AdmReservas admReservasForm;
         AdmUsuarios admUsuariosForm;
 
 
-        public Administrador(AdmUsuarios admUsuariosForm, AdmAlojamientos admAlojamientosForm, AdmReservas admReservasForm, Bussines.AgenciaManager agenciaManager)
+        public Administrador(AdmUsuarios admUsuariosForm, AdmAlojamientos admAlojamientosForm, AdmReservas admReservasForm)
         {
             InitializeComponent();
-            ag = agenciaManager;
             this.admAlojamientosForm = admAlojamientosForm;
             this.admUsuariosForm = admUsuariosForm;
             this.admReservasForm = admReservasForm;
@@ -117,7 +115,8 @@ namespace Agencia.Views
         private void button3_Click_1(object sender, EventArgs e)
 
         {
-            OpenChildForm(new AdmAlojamientos());
+            admAlojamientosForm.agencia = ag;
+            OpenChildForm(admAlojamientosForm);
         }
 
 

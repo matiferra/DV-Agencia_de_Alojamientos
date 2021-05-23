@@ -66,6 +66,46 @@ namespace Bussines
             return lista;
         }
 
+        public List<List<string>> obtenerAlojamientos()
+        {
+            List<List<string>> lista = new List<List<string>>();
+
+            List<string> alojamientos = new List<string>();
+
+            foreach (var item in miAgencia.misAlojamientos)
+            {
+                if (item is Hotel)
+                {
+                    Hotel hotel = (Hotel)item;
+                    alojamientos.Add(hotel.ciudad +
+                        hotel.barrio +
+                        hotel.estrellas +
+                        hotel.cantPersonas +
+                        hotel.getPrecio());
+                }
+
+                if (item is Cabania)
+                {
+                    Cabania cabania = (Cabania)item;
+                    alojamientos.Add(cabania.ciudad +
+                        cabania.barrio +
+                        cabania.estrellas +
+                        cabania.cantPersonas +
+                        cabania.tv +
+                        cabania.getPrecio() +
+                        cabania.habitaciones +
+                        cabania.getPrecio());
+                }
+
+            }
+
+
+            lista.Add(alojamientos);
+
+
+            return lista;
+        }
+
         public bool agregarAlojamiento(int codigoInstancia, string ciudad, string barrio, string estrellas, int cantPersonas, bool tv, double precioxDia = 0, int habitaciones = 0, int banios = 0, double precioxPersona = 0) //Parametro Datos del Alojamiento ¿?
         {
             if (precioxDia != 0)

@@ -81,7 +81,7 @@ namespace Agencia
                         {
                             if (ag.misUsuarios.ElementAt(i).esAdmin == true)
                             {
-                                //this.Hide();
+                                adminForm.ag = ag;
                                 adminForm.Show();
                             }
                             else

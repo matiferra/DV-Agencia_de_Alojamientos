@@ -65,7 +65,7 @@ namespace Agencia.Views
             //open only form
             if (currentChildForm != null)
             {
-                currentChildForm.Close();
+                currentChildForm = null;
             }
             currentChildForm = childForm;
             //End
@@ -88,7 +88,8 @@ namespace Agencia.Views
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new RecuperarContraseña());
+            cambiarContraseniasForm.usuario = user;
+            OpenChildForm(cambiarContraseniasForm);
         }
 
         private void button1_Click(object sender, EventArgs e)
