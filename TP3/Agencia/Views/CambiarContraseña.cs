@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks; 
+using System.Windows.Forms;
+
+namespace Agencia
+{
+    public partial class RecuperarContraseña : Form
+    {
+
+        public Bussines.Usuario usuario { get; set; }
+        public RecuperarContraseña()
+        {
+            InitializeComponent();
+
+            panel1.BackColor = Color.FromArgb(60, Color.Black);
+            
+        }
+
+        private void RecuperarContraseña_Load(object sender, EventArgs e)
+        {
+            passActual.Text = usuario.password;
+        }
+
+        private void passActual_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+    }
+}

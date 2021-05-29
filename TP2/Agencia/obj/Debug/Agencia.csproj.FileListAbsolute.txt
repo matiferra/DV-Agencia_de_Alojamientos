@@ -1,0 +1,171 @@
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\bin\Debug\Agencia.exe.config
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\bin\Debug\Agencia.exe
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\bin\Debug\Agencia.pdb
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\obj\Debug\Agencia.csprojAssemblyReference.cache
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\obj\Debug\Agencia.Properties.Resources.resources
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\obj\Debug\Agencia.csproj.GenerateResource.cache
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\obj\Debug\Agencia.csproj.CoreCompileInputs.cache
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\obj\Debug\Agencia.exe
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\obj\Debug\Agencia.pdb
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\obj\Debug\Agencia.Login.resources
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\obj\Debug\Agencia.Views.Administrador.resources
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\obj\Debug\Agencia.Views.Cliente.resources
+C:\Users\BGH\Desktop\PlataformasDeProgramacion\Agencia\Agencia\obj\Debug\Agencia.Views.Form1.resources
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\bin\Debug\Agencia.exe.config
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\bin\Debug\Agencia.exe
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\bin\Debug\Agencia.pdb
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.csprojAssemblyReference.cache
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Views.Administrador.resources
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Views.Cliente.resources
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Views.Form1.resources
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Login.resources
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Properties.Resources.resources
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.RecuperarContraseña.resources
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.csproj.GenerateResource.cache
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.csproj.CoreCompileInputs.cache
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.exe
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.pdb
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\bin\Debug\JMetroTextBox.dll
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\bin\Debug\JThinButton.dll
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.csproj.CopyComplete
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Views.RegistroUsuario.resources
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\BGH\Source\Repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Views.AdmUsuarios.resources
+C:\Users\BGH\Source\Repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Views.AdmReservas.resources
+C:\Users\BGH\Source\Repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Views.AdmAlojamientos.resources
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Views.EditUsuario.resources
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Views.ResultadoBusqueda.resources
+C:\Users\BGH\source\repos\Agencia-TrabajoGrupal\Agencia\Agencia\obj\Debug\Agencia.Views.BusquedaAlojamiento.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csprojAssemblyReference.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.BusquedaAlojamiento.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.ResultadoBusqueda.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Administrador.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmReservas.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmUsuarios.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmAlojamientos.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Cliente.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.EditUsuario.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Form1.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Login.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Properties.Resources.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.RecuperarContraseña.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.RegistroUsuario.resources
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.GenerateResource.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.CoreCompileInputs.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.exe
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.pdb
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe.config
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.pdb
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\bin\Debug\Bussines.dll
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\bin\Debug\JMetroTextBox.dll
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\bin\Debug\JThinButton.dll
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\bin\Debug\Bussines.pdb
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.CopyComplete
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.csprojAssemblyReference.cache
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Views.BusquedaAlojamiento.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Views.ResultadoBusqueda.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Views.Administrador.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Views.AdmReservas.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Views.AdmUsuarios.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Views.AdmAlojamientos.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Views.Cliente.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Views.EditUsuario.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Views.Form1.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Login.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Properties.Resources.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.RecuperarContraseña.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.Views.RegistroUsuario.resources
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.csproj.GenerateResource.cache
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.exe
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.pdb
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\bin\Debug\Agencia.exe.config
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\bin\Debug\Agencia.exe
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\bin\Debug\Agencia.pdb
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\bin\Debug\Bussines.dll
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\bin\Debug\FontAwesome.Sharp.dll
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\bin\Debug\Bussines.pdb
+E:\Users\work\Desktop\tpPlataformas-master\TP2\Agencia\obj\Debug\Agencia.csproj.CopyComplete
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe.config
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\FontAwesome.Sharp.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\bin\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.BusquedaAlojamiento.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.ResultadoBusqueda.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Administrador.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmReservas.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmUsuarios.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmAlojamientos.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Cliente.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.EditUsuario.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Form1.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Login.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Properties.Resources.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.RecuperarContraseña.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.RegistroUsuario.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.GenerateResource.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.CopyComplete
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.exe
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.BusquedaAlojamiento.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.ResultadoBusqueda.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Administrador.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmReservas.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmUsuarios.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmAlojamientos.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Cliente.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Form1.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Login.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Properties.Resources.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.RecuperarContraseña.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.RegistroUsuario.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.GenerateResource.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.exe
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe.config
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\FontAwesome.Sharp.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.CopyComplete
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe.manifest
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.application
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.exe.manifest
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.application
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe.config
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe.manifest
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.application
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.exe
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Debug\Agencia.pdb
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Debug\Bussines.dll
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Debug\FontAwesome.Sharp.dll
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Debug\Bussines.pdb
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csprojAssemblyReference.cache
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.BusquedaAlojamiento.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.ResultadoBusqueda.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Administrador.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmReservas.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmUsuarios.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.AdmAlojamientos.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Cliente.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.Form1.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Login.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Properties.Resources.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.RecuperarContraseña.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.Views.RegistroUsuario.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.GenerateResource.cache
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.exe.manifest
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.application
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.csproj.CopyComplete
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.exe
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Debug\Agencia.pdb

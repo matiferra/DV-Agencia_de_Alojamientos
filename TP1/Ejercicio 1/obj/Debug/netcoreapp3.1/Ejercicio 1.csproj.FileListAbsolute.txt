@@ -1,0 +1,26 @@
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.exe
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.deps.json
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.runtimeconfig.json
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.runtimeconfig.dev.json
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.dll
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.pdb
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.csprojAssemblyReference.cache
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.AssemblyInfoInputs.cache
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.AssemblyInfo.cs
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.csproj.CoreCompileInputs.cache
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.dll
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.pdb
+C:\Users\mele_\source\repos\Plataformas TP 1\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.genruntimeconfig.cache
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.exe
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.deps.json
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.runtimeconfig.json
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.runtimeconfig.dev.json
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.dll
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\bin\Debug\netcoreapp3.1\Ejercicio 1.pdb
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.csprojAssemblyReference.cache
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.AssemblyInfoInputs.cache
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.AssemblyInfo.cs
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.csproj.CoreCompileInputs.cache
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.dll
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.pdb
+D:\My Documents\GitHub\tpPlataformas\Ejercicio 1\obj\Debug\netcoreapp3.1\Ejercicio 1.genruntimeconfig.cache

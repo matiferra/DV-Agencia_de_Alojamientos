@@ -1,0 +1,6 @@
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\bin\Release\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\bin\Release\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Release\Bussines.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Release\Bussines.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Release\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Release\Bussines.pdb

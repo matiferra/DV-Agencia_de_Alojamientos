@@ -1,0 +1,24 @@
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\bin\Debug\Bussines.dll
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\bin\Debug\Bussines.pdb
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.dll
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.pdb
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.dll
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.pdb
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.dll
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.pdb

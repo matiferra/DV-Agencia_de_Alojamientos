@@ -1,0 +1,6 @@
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\DataAccess\bin\Debug\DataAccess.dll
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\DataAccess\bin\Debug\DataAccess.pdb
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\DataAccess\obj\Debug\DataAccess.dll
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\DataAccess\obj\Debug\DataAccess.pdb
