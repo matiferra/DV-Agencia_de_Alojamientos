@@ -28,3 +28,12 @@ D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\
 D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
 D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.dll
 D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.pdb
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.dll
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.pdb
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\bin\Debug\DataAccess.dll
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\bin\Debug\DataAccess.pdb
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CopyComplete
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.dll
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.pdb

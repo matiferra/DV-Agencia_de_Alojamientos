@@ -29,54 +29,43 @@ namespace Agencia.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.tvNo = new System.Windows.Forms.RadioButton();
             this.tvSi = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.ciudadText = new System.Windows.Forms.TextBox();
             this.alojamientosGrid = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Barrio_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NroHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ciudad_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estrellas_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barrio_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estrellas_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cant_Persona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tv_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tip_alojamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ciudad_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio_dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pre_persona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad_Banio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barrioText = new System.Windows.Forms.TextBox();
             this.estrellasText = new System.Windows.Forms.TextBox();
             this.tipoAlojamientoCombo = new System.Windows.Forms.ComboBox();
-            this.agregarButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Agrego_boton = new System.Windows.Forms.Button();
             this.baniosText = new System.Windows.Forms.TextBox();
             this.habitacionesText = new System.Windows.Forms.TextBox();
-            this.precioText = new System.Windows.Forms.TextBox();
             this.personasText = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.precioText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.alojamientosGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tvNo
-            // 
-            this.tvNo.AutoSize = true;
-            this.tvNo.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.tvNo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tvNo.Location = new System.Drawing.Point(460, 88);
-            this.tvNo.Margin = new System.Windows.Forms.Padding(0);
-            this.tvNo.Name = "tvNo";
-            this.tvNo.Size = new System.Drawing.Size(40, 17);
-            this.tvNo.TabIndex = 53;
-            this.tvNo.TabStop = true;
-            this.tvNo.Text = "No";
-            this.tvNo.UseVisualStyleBackColor = true;
             // 
             // tvSi
             // 
             this.tvSi.AutoSize = true;
             this.tvSi.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.tvSi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tvSi.Location = new System.Drawing.Point(415, 88);
+            this.tvSi.Location = new System.Drawing.Point(421, 88);
             this.tvSi.Margin = new System.Windows.Forms.Padding(0);
             this.tvSi.Name = "tvSi";
             this.tvSi.Size = new System.Drawing.Size(36, 17);
@@ -90,7 +79,7 @@ namespace Agencia.Views
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 10.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(293, 87);
+            this.label3.Location = new System.Drawing.Point(292, 87);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 17);
@@ -115,19 +104,37 @@ namespace Agencia.Views
             this.alojamientosGrid.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
             this.alojamientosGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.alojamientosGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Tipo_text,
-            this.Barrio_text,
-            this.NroHabitacion,
-            this.Ciudad_text,
-            this.Estrellas_text,
             this.Editar,
-            this.Eliminar});
+            this.Eliminar,
+            this.Id,
+            this.Barrio_text,
+            this.Estrellas_text,
+            this.cant_Persona,
+            this.tv_text,
+            this.tip_alojamiento,
+            this.Ciudad_text,
+            this.CantHabitacion,
+            this.Precio_dia,
+            this.pre_persona,
+            this.Cantidad_Banio});
             this.alojamientosGrid.Location = new System.Drawing.Point(17, 210);
             this.alojamientosGrid.Name = "alojamientosGrid";
             this.alojamientosGrid.Size = new System.Drawing.Size(587, 160);
             this.alojamientosGrid.TabIndex = 59;
             this.alojamientosGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.Text = "Editar";
+            this.Editar.Width = 40;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Width = 40;
             // 
             // Id
             // 
@@ -136,29 +143,11 @@ namespace Agencia.Views
             this.Id.ReadOnly = true;
             this.Id.Width = 50;
             // 
-            // Tipo_text
-            // 
-            this.Tipo_text.HeaderText = "Tipo";
-            this.Tipo_text.Name = "Tipo_text";
-            this.Tipo_text.Width = 50;
-            // 
             // Barrio_text
             // 
             this.Barrio_text.HeaderText = "Barrio";
             this.Barrio_text.Name = "Barrio_text";
             this.Barrio_text.Width = 50;
-            // 
-            // NroHabitacion
-            // 
-            this.NroHabitacion.HeaderText = "Nro Habitacion";
-            this.NroHabitacion.Name = "NroHabitacion";
-            this.NroHabitacion.Width = 50;
-            // 
-            // Ciudad_text
-            // 
-            this.Ciudad_text.HeaderText = "Ciudad";
-            this.Ciudad_text.Name = "Ciudad_text";
-            this.Ciudad_text.Width = 50;
             // 
             // Estrellas_text
             // 
@@ -166,16 +155,48 @@ namespace Agencia.Views
             this.Estrellas_text.Name = "Estrellas_text";
             this.Estrellas_text.Width = 50;
             // 
-            // Editar
+            // cant_Persona
             // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.Text = "Editar";
+            this.cant_Persona.HeaderText = "Cant.Persona";
+            this.cant_Persona.Name = "cant_Persona";
             // 
-            // Eliminar
+            // tv_text
             // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
+            this.tv_text.HeaderText = "tv";
+            this.tv_text.Name = "tv_text";
+            this.tv_text.Width = 50;
+            // 
+            // tip_alojamiento
+            // 
+            this.tip_alojamiento.HeaderText = "Tipo Alojamiento";
+            this.tip_alojamiento.Name = "tip_alojamiento";
+            // 
+            // Ciudad_text
+            // 
+            this.Ciudad_text.HeaderText = "Ciudad";
+            this.Ciudad_text.Name = "Ciudad_text";
+            this.Ciudad_text.Width = 50;
+            // 
+            // CantHabitacion
+            // 
+            this.CantHabitacion.HeaderText = "Cant Habitacion";
+            this.CantHabitacion.Name = "CantHabitacion";
+            this.CantHabitacion.Width = 50;
+            // 
+            // Precio_dia
+            // 
+            this.Precio_dia.HeaderText = "Precio por dia";
+            this.Precio_dia.Name = "Precio_dia";
+            // 
+            // pre_persona
+            // 
+            this.pre_persona.HeaderText = "Precio por Persona";
+            this.pre_persona.Name = "pre_persona";
+            // 
+            // Cantidad_Banio
+            // 
+            this.Cantidad_Banio.HeaderText = "Cant.Baño";
+            this.Cantidad_Banio.Name = "Cantidad_Banio";
             // 
             // barrioText
             // 
@@ -215,23 +236,6 @@ namespace Agencia.Views
             this.tipoAlojamientoCombo.Text = "Tipo Alojamiento";
             this.tipoAlojamientoCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // agregarButton
-            // 
-            this.agregarButton.BackColor = System.Drawing.Color.Transparent;
-            this.agregarButton.FlatAppearance.BorderSize = 2;
-            this.agregarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.agregarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.agregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregarButton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.agregarButton.ForeColor = System.Drawing.Color.White;
-            this.agregarButton.Location = new System.Drawing.Point(17, 173);
-            this.agregarButton.Name = "agregarButton";
-            this.agregarButton.Size = new System.Drawing.Size(122, 31);
-            this.agregarButton.TabIndex = 60;
-            this.agregarButton.Text = "Agregar";
-            this.agregarButton.UseVisualStyleBackColor = false;
-            this.agregarButton.Click += new System.EventHandler(this.button4_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -245,13 +249,12 @@ namespace Agencia.Views
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.precioText);
+            this.panel1.Controls.Add(this.Agrego_boton);
             this.panel1.Controls.Add(this.baniosText);
             this.panel1.Controls.Add(this.habitacionesText);
-            this.panel1.Controls.Add(this.precioText);
             this.panel1.Controls.Add(this.personasText);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.agregarButton);
             this.panel1.Controls.Add(this.tipoAlojamientoCombo);
             this.panel1.Controls.Add(this.estrellasText);
             this.panel1.Controls.Add(this.barrioText);
@@ -259,11 +262,27 @@ namespace Agencia.Views
             this.panel1.Controls.Add(this.ciudadText);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.tvSi);
-            this.panel1.Controls.Add(this.tvNo);
             this.panel1.Location = new System.Drawing.Point(28, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(618, 389);
             this.panel1.TabIndex = 65;
+            // 
+            // Agrego_boton
+            // 
+            this.Agrego_boton.BackColor = System.Drawing.Color.Transparent;
+            this.Agrego_boton.FlatAppearance.BorderSize = 2;
+            this.Agrego_boton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.Agrego_boton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Agrego_boton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Agrego_boton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.Agrego_boton.ForeColor = System.Drawing.Color.White;
+            this.Agrego_boton.Location = new System.Drawing.Point(469, 160);
+            this.Agrego_boton.Name = "Agrego_boton";
+            this.Agrego_boton.Size = new System.Drawing.Size(122, 31);
+            this.Agrego_boton.TabIndex = 69;
+            this.Agrego_boton.Text = "Agregar";
+            this.Agrego_boton.UseVisualStyleBackColor = false;
+            this.Agrego_boton.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // baniosText
             // 
@@ -287,17 +306,6 @@ namespace Agencia.Views
             this.habitacionesText.TabIndex = 67;
             this.habitacionesText.Text = "N° de habitaciones";
             // 
-            // precioText
-            // 
-            this.precioText.BackColor = System.Drawing.SystemColors.ControlText;
-            this.precioText.Font = new System.Drawing.Font("Cambria", 11F);
-            this.precioText.ForeColor = System.Drawing.SystemColors.Menu;
-            this.precioText.Location = new System.Drawing.Point(166, 79);
-            this.precioText.Name = "precioText";
-            this.precioText.Size = new System.Drawing.Size(105, 25);
-            this.precioText.TabIndex = 66;
-            this.precioText.Text = "Precio por dia";
-            // 
             // personasText
             // 
             this.personasText.BackColor = System.Drawing.SystemColors.ControlText;
@@ -309,22 +317,16 @@ namespace Agencia.Views
             this.personasText.TabIndex = 65;
             this.personasText.Text = "N° de personas";
             // 
-            // button1
+            // precioText
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(296, 173);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 31);
-            this.button1.TabIndex = 69;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.precioText.BackColor = System.Drawing.SystemColors.ControlText;
+            this.precioText.Font = new System.Drawing.Font("Cambria", 11F);
+            this.precioText.ForeColor = System.Drawing.SystemColors.Menu;
+            this.precioText.Location = new System.Drawing.Point(166, 80);
+            this.precioText.Name = "precioText";
+            this.precioText.Size = new System.Drawing.Size(105, 25);
+            this.precioText.TabIndex = 70;
+            this.precioText.Text = "Precio por dia";
             // 
             // AdmAlojamientos
             // 
@@ -349,8 +351,6 @@ namespace Agencia.Views
         }
 
         #endregion
-
-        private System.Windows.Forms.RadioButton tvNo;
         private System.Windows.Forms.RadioButton tvSi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ciudadText;
@@ -358,21 +358,25 @@ namespace Agencia.Views
         private System.Windows.Forms.TextBox barrioText;
         private System.Windows.Forms.TextBox estrellasText;
         private System.Windows.Forms.ComboBox tipoAlojamientoCombo;
-        private System.Windows.Forms.Button agregarButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox precioText;
         private System.Windows.Forms.TextBox personasText;
         private System.Windows.Forms.TextBox habitacionesText;
         private System.Windows.Forms.TextBox baniosText;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_text;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Barrio_text;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NroHabitacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad_text;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estrellas_text;
+        private System.Windows.Forms.Button Agrego_boton;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Barrio_text;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estrellas_text;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cant_Persona;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tv_text;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tip_alojamiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad_text;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantHabitacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio_dia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pre_persona;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad_Banio;
+        private System.Windows.Forms.TextBox precioText;
     }
 }

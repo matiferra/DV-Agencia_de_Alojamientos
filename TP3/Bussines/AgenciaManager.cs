@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Data;
+using DataAccess;
 
 namespace Bussines
 {
     public class AgenciaManager
     {
 
-
+        AlojamientoDA aloDA = new AlojamientoDA();
 
         public Agencia miAgencia { set; get; }
         public List<Usuario> misUsuarios;
@@ -24,100 +26,68 @@ namespace Bussines
 
         }
 
-        public List<List<string>> buscarAlojamientos(string Ciudad, DateTime Pdesde, DateTime Phasta, int cantPersonas, string tipo)
+        public DataSet buscarAlojamientos(string Ciudad, DateTime Pdesde, DateTime Phasta, string cantPersonas, string tipo )
         {
-            List<List<string>> lista = new List<List<string>>();
+            bool esHotel;
+            DataSet ds = new DataSet();
 
-            tipo.ToUpper();
-
-            List<string> alojamientos = new List<string>();
-
-            foreach (var item in miAgencia.misAlojamientos)
+            if (string.IsNullOrEmpty(cantPersonas))
             {
-                if (tipo == "HOTEL" && item is Hotel)
-                {
-                    Hotel hotel = (Hotel)item;
-                    alojamientos.Add("HOTEL: \nciudad: " + hotel.ciudad +
-                        "\nbarrio: " + hotel.barrio +
-                        "\nestellas: " + hotel.estrellas +
-                        "\ncantidad de personas: " + hotel.cantPersonas +
-                        "\nPrecio por persona: " + hotel.getPrecio());
-                }
+                cantPersonas = "0";
+            }
 
-                if (tipo == "CABANIA" && item is Cabania)
-                {
-                    Cabania cabania = (Cabania)item;
-                    alojamientos.Add("CABAÑA \nciudad: " + cabania.ciudad +
-                        "\nbarrio: " + cabania.barrio +
-                        "\nestellas: " + cabania.estrellas +
-                        "\ncantidad de personas: " + cabania.cantPersonas +
-                        "\nTV: " + cabania.tv +
-                        "\nPrecio por dia: " + cabania.getPrecio() +
-                        "\nhabitaciones: " + cabania.habitaciones +
-                        "\nbaños: " + cabania.getPrecio());
-                }
+            if (tipo == "Hotel")
+            {
+                esHotel = true;
+            }
+            else
+            {
+                esHotel = false;
+            }
+            string fechaDesde = Pdesde.ToString("yyyy-MM-dd");
+            string fechaHasta = Phasta.ToString("yyyy-MM-dd");
+            try
+            {
+                 ds = aloDA.buscoAlojamiento(fechaDesde, fechaHasta, esHotel, cantPersonas, Ciudad);
 
+            }
+            catch (Exception ex)
+            {
+               // mensajeError = "error en buscoAlojamiento" + ex.Message;
             }
 
 
-            lista.Add(alojamientos);
-
-
-            return lista;
+            return ds;
         }
 
-        public List<List<string>> obtenerAlojamientos()
+        public DataSet obtenerAlojamientos()
         {
-            List<List<string>> lista = new List<List<string>>();
-
-            List<string> alojamientos = new List<string>();
-
-            foreach (var item in miAgencia.misAlojamientos)
-            {
-                if (item is Hotel)
-                {
-                    Hotel hotel = (Hotel)item;
-                    alojamientos.Add(hotel.ciudad +
-                        hotel.barrio +
-                        hotel.estrellas +
-                        hotel.cantPersonas +
-                        hotel.getPrecio());
-                }
-
-                if (item is Cabania)
-                {
-                    Cabania cabania = (Cabania)item;
-                    alojamientos.Add(cabania.ciudad +
-                        cabania.barrio +
-                        cabania.estrellas +
-                        cabania.cantPersonas +
-                        cabania.tv +
-                        cabania.getPrecio() +
-                        cabania.habitaciones +
-                        cabania.getPrecio());
-                }
-
-            }
-
-
-            lista.Add(alojamientos);
-
-
-            return lista;
+            DataSet ds = aloDA.getAlojamientos();
+            return ds;        
         }
 
-        public bool agregarAlojamiento(int codigoInstancia, string ciudad, string barrio, string estrellas, int cantPersonas, bool tv, double precioxDia = 0, int habitaciones = 0, int banios = 0, double precioxPersona = 0) //Parametro Datos del Alojamiento ¿?
+        public bool agregarAlojamiento(string tipo, string ciudad, string barrio, string estrellas, string cantPersonas, bool tv,string precio, string habitaciones, string banios) //Parametro Datos del Alojamiento ¿?
         {
-            if (precioxDia != 0)
+            bool result;   
+            try
             {
-                miAgencia.misAlojamientos.Add(new Cabania(ciudad, barrio, estrellas, cantPersonas, tv, precioxDia, habitaciones, banios));
+                if (tipo == "Hotel")
+                {
+                    aloDA.createAlojamiento(barrio, int.Parse(estrellas), int.Parse(cantPersonas),tv,true, ciudad, null, null, double.Parse(precio), null);
+                    result = true;
+                }
+                else
+                {
+                    aloDA.createAlojamiento(barrio, int.Parse(estrellas), int.Parse(cantPersonas), tv, false, ciudad, int.Parse(habitaciones), double.Parse(precio), null, int.Parse(banios));
+                    result = true;
+                }
             }
-            else if (precioxPersona != 0)
+            catch
             {
-                miAgencia.misAlojamientos.Add(new Hotel(ciudad, barrio, estrellas, cantPersonas, tv, precioxPersona));
-            }
+                result = false;
+            }      
 
-            return true;
+            return result;
         }
 
         public bool modificarAlojamiento(int codigoInstancia, string ciudad, string barrio, string estrellas, int cantPersonas, bool tv, double precioxDia = 0, int habitaciones = 0, int banios = 0, double precioxPersona = 0)//Parametro Datos del Alojamiento ¿?
@@ -142,7 +112,7 @@ namespace Bussines
                         // COMO SERIA UN UPDATE EN BASE DE DATOS
                         quitarAlojamiento(codigo);
 
-                        agregarAlojamiento(codigo, ciudad, barrio, estrellas, cantPersonas, tv, precioxDia, habitaciones, banios);
+                    //    agregarAlojamiento(codigo, ciudad, barrio, estrellas, cantPersonas, tv, precioxDia, habitaciones, banios);
 
                     }
 
@@ -281,7 +251,7 @@ namespace Bussines
             Usuario user = null;
             foreach (var item in misUsuarios)
             {
-                if(item.DNI == DNI)
+                if (item.DNI == DNI)
                 {
                     user = item;
                 }
@@ -299,7 +269,7 @@ namespace Bussines
                 else
                 {
                     user.intentosLogueo++;
-                    if(user.intentosLogueo >= 3)
+                    if (user.intentosLogueo >= 3)
                     {
                         user.bloqueado = true;
                     }
@@ -375,16 +345,19 @@ namespace Bussines
             {
                 if (item.DNI == DNI)
                 {
-                    if(oldPass == item.password)
+                    if (oldPass == item.password)
                     {
-                        if(newPass1 == newPass2){
+                        if (newPass1 == newPass2)
+                        {
                             item.password = newPass1;
                             cambiada = 3;
-                        } else
+                        }
+                        else
                         {
                             cambiada = 2;
                         }
-                    } else
+                    }
+                    else
                     {
                         cambiada = 1;
                     }
@@ -401,7 +374,7 @@ namespace Bussines
 
             foreach (var item in misUsuarios)
             {
-                if(item.DNI == DNI)
+                if (item.DNI == DNI)
                 {
                     user = item;
                 }

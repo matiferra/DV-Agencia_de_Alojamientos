@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks; 
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bussines;
 
@@ -22,42 +22,43 @@ namespace Agencia.Views
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(text_ciudad.Text) && !string.IsNullOrEmpty(text_fechad.Text) && !string.IsNullOrEmpty(text_fechah.Text)
-              && !string.IsNullOrEmpty(text_cantidad.Text) && !string.IsNullOrEmpty(seleccion_tipo.Text))
+            if (!string.IsNullOrEmpty(seleccion_tipo.Text))
             {
-
-                var Lista = Ag.buscarAlojamientos(text_ciudad.Text, DateTime.Parse(text_fechad.Text),
-                                             DateTime.Parse(text_fechah.Text), int.Parse(text_cantidad.Text), seleccion_tipo.Text);
+                dataGridView1.Rows.Clear();
 
 
-                for (int i = 0; i < Lista.Count; i++)
+                DataSet Lista = Ag.buscarAlojamientos(text_ciudad.Text, text_fechad.Value,
+                                         text_fechah.Value, text_cantidad.Text, seleccion_tipo.Text);
+
+                int index = 0;
+                if (Lista.Tables[0] != null && Lista.Tables[0].Rows.Count > 0)
                 {
-                    //adicionamos un row
-                    dataGridView1.Rows.Add();
-                    //colocamos la info
-                    dataGridView1.Rows[i].Cells[0].Value = Lista.ToString();
+                    foreach (DataRow dr in Lista.Tables[0].Rows)
+                    {
+                        dataGridView1.Rows.Add();
+                        dataGridView1.Rows[index].Cells[0].Value = dr["barrio"].ToString();
+                        dataGridView1.Rows[index].Cells[1].Value = int.Parse(dr["estrellas"].ToString());
+                        dataGridView1.Rows[index].Cells[2].Value = dr["cantidadDePersonas"].ToString();
+                        dataGridView1.Rows[index].Cells[3].Value = dr["tv"].ToString();                       
+                        dataGridView1.Rows[index].Cells[4].Value = dr["id_ciudad"].ToString();
+                        dataGridView1.Rows[index].Cells[5].Value = dr["cantidad_de_habitaciones"].ToString();
+                        dataGridView1.Rows[index].Cells[6].Value = dr["precio_por_dia"].ToString();
+                        dataGridView1.Rows[index].Cells[7].Value = dr["precio_por_persona"].ToString();
+                        dataGridView1.Rows[index].Cells[8].Value = dr["cantidadDeBanios"].ToString();
+
+                        index++;
+
+                    }
                 }
-
-               
-
-                //limpío los campos de los filtros
-
-                //text_localidad.Text = "";
-                //text_fecha.Text = "";
-                //text_fecha.Text = "";
-                //text_cantidad.Text = "";
-                //seleccion_tipo_aloj.Text = "";
             }
             else
             {
-                //mesajeError.Visible = true;
-                //mesajeError.Text = "Todos los campos son requeridos!!";
-
+                MessageBox.Show("el campo tipo es requerido");
             }
 
-            this.Hide();
-            ResultadoBusqueda rb = new ResultadoBusqueda();
-            rb.Show();
+            //this.Hide();
+            //ResultadoBusqueda rb = new ResultadoBusqueda();
+            // rb.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -76,6 +77,11 @@ namespace Agencia.Views
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

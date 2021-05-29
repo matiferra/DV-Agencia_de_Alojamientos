@@ -29,7 +29,6 @@ namespace Agencia.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.text_fechah = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,23 +37,24 @@ namespace Agencia.Views
             this.seleccion_tipo = new System.Windows.Forms.ComboBox();
             this.text_ciudad = new System.Windows.Forms.TextBox();
             this.text_cantidad = new System.Windows.Forms.TextBox();
-            this.text_fechad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.text_fechah = new System.Windows.Forms.DateTimePicker();
+            this.text_fechad = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estrellas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // text_fechah
-            // 
-            this.text_fechah.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.text_fechah.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_fechah.Location = new System.Drawing.Point(266, 152);
-            this.text_fechah.Name = "text_fechah";
-            this.text_fechah.Size = new System.Drawing.Size(81, 31);
-            this.text_fechah.TabIndex = 55;
             // 
             // label5
             // 
@@ -141,26 +141,17 @@ namespace Agencia.Views
             this.text_ciudad.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_ciudad.Location = new System.Drawing.Point(11, 153);
             this.text_ciudad.Name = "text_ciudad";
-            this.text_ciudad.Size = new System.Drawing.Size(130, 31);
+            this.text_ciudad.Size = new System.Drawing.Size(93, 31);
             this.text_ciudad.TabIndex = 49;
             // 
             // text_cantidad
             // 
             this.text_cantidad.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.text_cantidad.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_cantidad.Location = new System.Drawing.Point(364, 153);
+            this.text_cantidad.Location = new System.Drawing.Point(386, 158);
             this.text_cantidad.Name = "text_cantidad";
-            this.text_cantidad.Size = new System.Drawing.Size(93, 31);
+            this.text_cantidad.Size = new System.Drawing.Size(71, 31);
             this.text_cantidad.TabIndex = 51;
-            // 
-            // text_fechad
-            // 
-            this.text_fechad.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.text_fechad.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_fechad.Location = new System.Drawing.Point(159, 153);
-            this.text_fechad.Name = "text_fechad";
-            this.text_fechad.Size = new System.Drawing.Size(81, 31);
-            this.text_fechad.TabIndex = 50;
             // 
             // label7
             // 
@@ -188,15 +179,15 @@ namespace Agencia.Views
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.text_fechah);
+            this.panel1.Controls.Add(this.text_fechad);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.text_fechad);
             this.panel1.Controls.Add(this.text_cantidad);
             this.panel1.Controls.Add(this.text_ciudad);
             this.panel1.Controls.Add(this.label4);
@@ -206,14 +197,104 @@ namespace Agencia.Views
             this.panel1.Size = new System.Drawing.Size(618, 389);
             this.panel1.TabIndex = 66;
             // 
+            // text_fechah
+            // 
+            this.text_fechah.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.text_fechah.Location = new System.Drawing.Point(249, 158);
+            this.text_fechah.Name = "text_fechah";
+            this.text_fechah.Size = new System.Drawing.Size(109, 20);
+            this.text_fechah.TabIndex = 59;
+            // 
+            // text_fechad
+            // 
+            this.text_fechad.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.text_fechad.Location = new System.Drawing.Point(130, 158);
+            this.text_fechad.Name = "text_fechad";
+            this.text_fechad.Size = new System.Drawing.Size(96, 20);
+            this.text_fechad.TabIndex = 58;
+            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 211);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Barrio,
+            this.estrellas,
+            this.Column3,
+            this.Column4,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10});
+            this.dataGridView1.Location = new System.Drawing.Point(21, 212);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(579, 154);
-            this.dataGridView1.TabIndex = 58;
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Barrio
+            // 
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
+            this.Barrio.ReadOnly = true;
+            // 
+            // estrellas
+            // 
+            this.estrellas.HeaderText = "estrellas";
+            this.estrellas.Name = "estrellas";
+            this.estrellas.ReadOnly = true;
+            this.estrellas.Width = 50;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "cant.Personas";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 70;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "tv";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 30;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Ciudad";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 70;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "cant.Habitaciones";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "precio x dia";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 70;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "precio x persona";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 80;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "cant.Baños";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 90;
             // 
             // BusquedaAlojamiento
             // 
@@ -235,8 +316,6 @@ namespace Agencia.Views
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox text_fechah;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
@@ -245,10 +324,20 @@ namespace Agencia.Views
         private System.Windows.Forms.ComboBox seleccion_tipo;
         private System.Windows.Forms.TextBox text_ciudad;
         private System.Windows.Forms.TextBox text_cantidad;
-        private System.Windows.Forms.TextBox text_fechad;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker text_fechad;
+        private System.Windows.Forms.DateTimePicker text_fechah;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estrellas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }
