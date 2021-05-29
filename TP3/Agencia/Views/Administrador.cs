@@ -60,6 +60,7 @@ namespace Agencia.Views
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
+                currentChildForm = null;
             }
             currentChildForm = childForm;
             //End

@@ -18,12 +18,12 @@ namespace Agencia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            cargarUsuarios();
-            cargarAlojamientos();
+            //cargarUsuarios();
+            //cargarAlojamientos();
             Application.Run(new Form1());
         }
 
-        public static void cargarUsuarios()
+       /* public static void cargarUsuarios()
         {
             string fileName = "usuarios.txt";
             string sourcePath = @"C:\PlataformasTP";
@@ -84,5 +84,5 @@ namespace Agencia
                 File.WriteAllLines(sourceFile, datos);
             }
         }
-    }
+    }*/
 }

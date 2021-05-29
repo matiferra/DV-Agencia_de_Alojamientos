@@ -19,8 +19,8 @@ namespace Agencia.Views
         public Form1()
         {
             InitializeComponent();
-            leerUsuarios();
-            leerAlojamientos();
+           // leerUsuarios();   => TRAER TABLAS
+           // leerAlojamientos();
             AdmAlojamientos admAlojamientosForm = new AdmAlojamientos();
             admAlojamientosForm.MdiParent = this;
             AdmReservas admReservasForm = new AdmReservas();
@@ -46,7 +46,7 @@ namespace Agencia.Views
         }
 
 
-        private void leerUsuarios()
+     /*   private void leerUsuarios()
         {
             string fileName = "usuarios.txt";
             string sourcePath = @"C:\PlataformasTP\Usuarios";
@@ -101,7 +101,7 @@ namespace Agencia.Views
         {
             //LEER
             string fileName = "Alojamientos.txt";
-            string sourcePath = @"C:\PlataformasTP";
+            string sourcePath = @"C:\PlataformasTP\Alojamientos";
             string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
             string contenido = String.Empty;
 
@@ -171,6 +171,6 @@ namespace Agencia.Views
                 }
             }
         }
-    }
+    }*/
 
 }
