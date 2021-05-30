@@ -11,7 +11,7 @@ namespace DataAccess
     public class ConexionDB
     {    
         //Cadena de Conexion
-        string cadena = @"Data Source = DESKTOP-ED5CATB\SQLEXPRESS;Initial Catalog = TPAgencia; User Id = sa; Password=123456";
+        string cadena = ConfigurationManager.ConnectionStrings["conectar"].ConnectionString;
         public SqlConnection Conectarbd = new SqlConnection();
         //Constructor
         public ConexionDB()

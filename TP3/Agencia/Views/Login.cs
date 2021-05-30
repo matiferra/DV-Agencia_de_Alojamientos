@@ -63,95 +63,23 @@ namespace Agencia
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            String selec = seleccion.SelectedItem.ToString();
-
-            usuario = txtUsername.Text;
-            contrasenia = txtPassword.Text;
-            int i = 0;
-            bool encontrado = false;
-            if (selec == "Administrador")
+            if (ag.login(txtUsername.Text, txtPassword.Text))
             {
-                while (i <= ag.misUsuarios.Count - 1 && encontrado == false)
+                if (ag.validoSiEsAdmin(txtUsername.Text))
                 {
+                    adminForm.Show();
+                }
+                else
+                {
+                    clienteForm.Show();
+                }
 
-                    if (ag.misUsuarios.ElementAt(i).nombre == usuario)
-                    {
-                        encontrado = true;
-                        if (ag.misUsuarios.ElementAt(i).password == contrasenia)
-                        {
-                            if (ag.misUsuarios.ElementAt(i).esAdmin == true)
-                            {
-                                adminForm.ag = ag;
-                                adminForm.Show();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Usuario o Contraseña Incorrecto");
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Usuario o Contraseña Incorrecto");
-                        }
-                    }
-                    i++;
-                }
-                i = 0;
-                if (encontrado == false)
-                {
-                    MessageBox.Show("Usuario o Contraseña Incorrecto");
-                }
-                encontrado = false;
             }
             else
             {
-                while (i <= ag.misUsuarios.Count - 1 && encontrado == false)
-                {
-                    if (ag.misUsuarios.ElementAt(i).nombre == usuario)
-                    {
-                        encontrado = true;
-                        if (ag.misUsuarios.ElementAt(i).password == contrasenia)
-                        {
-                            if (ag.misUsuarios.ElementAt(i).esAdmin == false)
-                            {
-                                if (ag.misUsuarios.ElementAt(i).bloqueado == false)
-                                {
-                                    //this.Hide();
-                                    this.user = ag.misUsuarios.ElementAt(i);
-                                    clienteForm.user = user;
-                                    clienteForm.Show();
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Este usuario esta temporalmente bloqueado");
-                                }
-                            }
-                            else
-                            {
-                                encontrado = true;
-                                MessageBox.Show("Usuario o Contraseña Incorrecto");
-                            }
-                        }
-                        else
-                        {
-                            ag.misUsuarios.ElementAt(i).intentosLogueo++;
-                            MessageBox.Show("Usuario o Contraseña Incorrecto");
-                            if (ag.misUsuarios.ElementAt(i).intentosLogueo >= 3)
-                            {
-                                MessageBox.Show("Fueron mas de 3 intentos\nSe ha bloqueado tu usuario");
-                                ag.misUsuarios.ElementAt(i).bloqueado = true;
-                            }
-                        }
-                    }
-                    i++;
-                }
-                i = 0;
-                if (encontrado == false)
-                {
-                    MessageBox.Show("Usuario o Contraseña Incorrecto");
-                }
-                encontrado = false;
+                MessageBox.Show("Usuario o Contraseña Incorrecto");
             }
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -173,8 +101,8 @@ namespace Agencia
 
         private void Login_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            //ReleaseCapture();
+            //SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
 

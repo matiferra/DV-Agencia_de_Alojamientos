@@ -55,6 +55,10 @@
       <Project>{6c21ea3f-a0ce-419e-9a88-ecec0c9cea5b}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{0b348676-6179-4236-adfa-bd5f99d823c1}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

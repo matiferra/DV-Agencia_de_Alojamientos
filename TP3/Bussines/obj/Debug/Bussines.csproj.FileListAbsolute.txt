@@ -37,3 +37,14 @@ E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\B
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CopyComplete
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.dll
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.pdb
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.dll
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.pdb
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\DataAccess.dll
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\DataAccess.pdb
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CopyComplete
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.dll
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.pdb
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\Entidades.dll
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\Entidades.pdb

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Agencia.exe" size="1203168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Agencia.exe" size="1196512">
       <assemblyIdentity name="Agencia" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>U0WVuB/fgbIP/3QYAAS+LHZWgR5/IiOsQQ3DfJeYmy4=</dsig:DigestValue>
+        <dsig:DigestValue>s2qUXKMq3uY5XKt3syh3kbVLpSkqXUpKtcLd5SMGEn0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,19 +61,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ocmjc0jRcm4oF5NVr6er3q5rtR482K3VswqOLqjAKPo=</dsig:DigestValue>
+        <dsig:DigestValue>RlqQ++OB34no2YxHNHKoEhLEkulBHLASa083L6o3Ngc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.dll" size="9728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.dll" size="14848">
       <assemblyIdentity name="DataAccess" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pbygdZlIVCfzLytsYnwbJdBi9SsrT4o/fF0j5fQVdjs=</dsig:DigestValue>
+        <dsig:DigestValue>Fn1eS9v3moE0LXZYj7jWo3oapikH3K+b8ZM1SNh0Jqg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Entidades.dll" size="9728">
+      <assemblyIdentity name="Entidades" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>YADMoIuzTWxcFfld5h6Dnz4tiGkLFtFfnaTa3oYK5Bc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -113,13 +125,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Agencia.exe.config" size="1020">
+  <file name="Agencia.exe.config" size="1263">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>UoThiRyZSJM21/S6PteKBd6dw1wbTPmkXYrNA+V5OGY=</dsig:DigestValue>
+      <dsig:DigestValue>Hno//k4TVAvMHMf4f2cNz0oAAuILMbVK20pHAg/dsbI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\all.css" size="78244">

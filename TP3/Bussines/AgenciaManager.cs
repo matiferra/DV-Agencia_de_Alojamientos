@@ -10,6 +10,8 @@ namespace Bussines
     {
 
         AlojamientoDA aloDA = new AlojamientoDA();
+        UsuarioDA usuarioDA = new UsuarioDA();
+
 
         public Agencia miAgencia { set; get; }
         public List<Usuario> misUsuarios;
@@ -382,6 +384,16 @@ namespace Bussines
 
             return user;
         }
+
+        public bool login(string usuario, string pass)
+        {
+            return usuarioDA.login(usuario, pass);
+        }
+        public bool validoSiEsAdmin(string usuario)
+        {
+            return usuarioDA.validoSiEsAdmin(usuario);
+        }
+
 
     }
 }
