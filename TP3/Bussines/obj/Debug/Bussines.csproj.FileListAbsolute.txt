@@ -1,0 +1,72 @@
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\bin\Debug\Bussines.dll
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\bin\Debug\Bussines.pdb
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.dll
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.pdb
+E:\Users\work\Desktop\PLATAFORMA DE DESA\tpPlataformas\TP2\Agencia-TrabajoGrupal\Agencia\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.dll
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.pdb
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.dll
+C:\Users\BGH\source\repos\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\bin\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Bussines\obj\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.pdb
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.dll
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.pdb
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\bin\Debug\DataAccess.dll
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\bin\Debug\DataAccess.pdb
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CopyComplete
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.dll
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.pdb
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.dll
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.pdb
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\DataAccess.dll
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\DataAccess.pdb
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CopyComplete
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.dll
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.pdb
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\Entidades.dll
+E:\Users\work\Desktop\plataforma davinci 30-5-2021\tpPlataformas\TP3\Bussines\bin\Debug\Entidades.pdb
+C:\Users\BGH\Source\Repos\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.dll
+C:\Users\BGH\Source\Repos\tpPlataformas\TP3\Bussines\bin\Debug\Bussines.pdb
+C:\Users\BGH\Source\Repos\tpPlataformas\TP3\Bussines\bin\Debug\DataAccess.dll
+C:\Users\BGH\Source\Repos\tpPlataformas\TP3\Bussines\bin\Debug\Entidades.dll
+C:\Users\BGH\Source\Repos\tpPlataformas\TP3\Bussines\bin\Debug\DataAccess.pdb
+C:\Users\BGH\Source\Repos\tpPlataformas\TP3\Bussines\bin\Debug\Entidades.pdb
+C:\Users\BGH\Source\Repos\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+C:\Users\BGH\Source\Repos\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+C:\Users\BGH\Source\Repos\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.CopyComplete
+C:\Users\BGH\Source\Repos\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.dll
+C:\Users\BGH\Source\Repos\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.pdb
+D:\Descargas\TP MEZCLA\TP3\Bussines\bin\Debug\Bussines.dll
+D:\Descargas\TP MEZCLA\TP3\Bussines\bin\Debug\Bussines.pdb
+D:\Descargas\TP MEZCLA\TP3\Bussines\bin\Debug\DataAccess.dll
+D:\Descargas\TP MEZCLA\TP3\Bussines\bin\Debug\Entidades.dll
+D:\Descargas\TP MEZCLA\TP3\Bussines\bin\Debug\DataAccess.pdb
+D:\Descargas\TP MEZCLA\TP3\Bussines\bin\Debug\Entidades.pdb
+D:\Descargas\TP MEZCLA\TP3\Bussines\obj\Debug\Bussines.csprojAssemblyReference.cache
+D:\Descargas\TP MEZCLA\TP3\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.cache
+D:\Descargas\TP MEZCLA\TP3\Bussines\obj\Debug\Bussines.csproj.CopyComplete
+D:\Descargas\TP MEZCLA\TP3\Bussines\obj\Debug\Bussines.dll
+D:\Descargas\TP MEZCLA\TP3\Bussines\obj\Debug\Bussines.pdb

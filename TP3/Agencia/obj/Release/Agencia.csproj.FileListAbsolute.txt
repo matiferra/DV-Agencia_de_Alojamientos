@@ -1,0 +1,56 @@
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Release\Agencia.exe.config
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Release\Agencia.exe.manifest
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Release\Agencia.application
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Release\Agencia.exe
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Release\Agencia.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Release\Bussines.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Release\FontAwesome.Sharp.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\bin\Release\Bussines.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.BusquedaAlojamiento.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.ResultadoBusqueda.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.Administrador.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.AdmReservas.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.AdmUsuarios.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.AdmAlojamientos.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.Cliente.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.Form1.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Login.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Properties.Resources.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.RecuperarContraseña.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.RegistroUsuario.resources
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.csproj.GenerateResource.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.exe.manifest
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.application
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.csproj.CopyComplete
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.exe
+D:\My Documents\NUEVO\GitHub\tpPlataformas\tpPlataformas\TP2\Agencia\obj\Release\Agencia.pdb
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Release\Agencia.exe.config
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Release\Agencia.exe.manifest
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Release\Agencia.application
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Release\Agencia.exe
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Release\Agencia.pdb
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Release\Bussines.dll
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Release\FontAwesome.Sharp.dll
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\bin\Release\Bussines.pdb
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.csprojAssemblyReference.cache
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.BusquedaAlojamiento.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.ResultadoBusqueda.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.Administrador.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.AdmReservas.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.AdmUsuarios.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.AdmAlojamientos.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.Cliente.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.Form1.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Login.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Properties.Resources.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.RecuperarContraseña.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.Views.RegistroUsuario.resources
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.csproj.GenerateResource.cache
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.exe.manifest
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.application
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.csproj.CopyComplete
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.exe
+E:\Users\work\Desktop\GRUPO 6 PLATAFORMA\Nueva carpeta\tpPlataformas\TP2\Agencia\obj\Release\Agencia.pdb
