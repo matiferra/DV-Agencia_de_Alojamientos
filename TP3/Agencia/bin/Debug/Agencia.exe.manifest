@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Agencia.exe" size="6261216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Agencia.exe" size="6262240">
       <assemblyIdentity name="Agencia" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8W1fxDAQUdyZlCD5dEcgRbnT0q2vUDcW1hsAAfmR6ZY=</dsig:DigestValue>
+        <dsig:DigestValue>/4+XytN08ycWo1DQAp1TnXXoTAHJUgb3IUIRNOs+hgo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kLUWVNyseTbPA1Bh4MnIOr77ymXCwGGaHZhHobBKpWQ=</dsig:DigestValue>
+        <dsig:DigestValue>1pCf17GMULUGa2QXZ5If7txthD7X91RxbNTFdwyxD2Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

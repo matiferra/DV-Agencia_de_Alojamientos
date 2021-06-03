@@ -234,5 +234,27 @@ namespace Agencia.Views
         {
 
         }
+
+        private void alojamientosGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.alojamientosGrid.Columns[e.ColumnIndex].Name == "Eliminar_aloja")
+            {
+                DialogResult dr = MessageBox.Show("Seguro que deseea eliminar?", "Alerta", MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
+               
+                if (dr == DialogResult.Yes)
+                {
+                    var id = this.alojamientosGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    Ag.quitarAlojamiento(int.Parse(id));
+                    RefresVista();
+
+                }
+             
+            }
+            else if (this.alojamientosGrid.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                MessageBox.Show("pendiente editar");
+            }
+
+        }
     }
 }

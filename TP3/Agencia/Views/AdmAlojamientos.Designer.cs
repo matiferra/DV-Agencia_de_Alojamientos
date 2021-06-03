@@ -29,27 +29,17 @@ namespace Agencia.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmAlojamientos));
             this.ciudadText = new System.Windows.Forms.TextBox();
             this.alojamientosGrid = new System.Windows.Forms.DataGridView();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Barrio_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estrellas_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cant_Persona = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tv_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tip_alojamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ciudad_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio_dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pre_persona = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad_Banio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barrioText = new System.Windows.Forms.TextBox();
             this.estrellasText = new System.Windows.Forms.TextBox();
             this.tipoAlojamientoCombo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.check_tv = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.LDiaOPer = new System.Windows.Forms.Label();
             this.LBaños = new System.Windows.Forms.Label();
@@ -64,7 +54,19 @@ namespace Agencia.Views
             this.baniosText = new System.Windows.Forms.TextBox();
             this.habitacionesText = new System.Windows.Forms.TextBox();
             this.personasText = new System.Windows.Forms.TextBox();
-            this.check_tv = new System.Windows.Forms.CheckBox();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Eliminar_aloja = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barrio_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estrellas_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cant_Persona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tv_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tip_alojamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ciudad_text = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio_dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pre_persona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad_Banio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.alojamientosGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +88,7 @@ namespace Agencia.Views
             this.alojamientosGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.alojamientosGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Editar,
-            this.Eliminar,
+            this.Eliminar_aloja,
             this.Id,
             this.Barrio_text,
             this.Estrellas_text,
@@ -103,82 +105,8 @@ namespace Agencia.Views
             this.alojamientosGrid.RowHeadersWidth = 22;
             this.alojamientosGrid.Size = new System.Drawing.Size(952, 243);
             this.alojamientosGrid.TabIndex = 59;
+            this.alojamientosGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.alojamientosGrid_CellClick);
             this.alojamientosGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.Text = "Editar";
-            this.Editar.Width = 40;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Width = 40;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 50;
-            // 
-            // Barrio_text
-            // 
-            this.Barrio_text.HeaderText = "Barrio";
-            this.Barrio_text.Name = "Barrio_text";
-            this.Barrio_text.Width = 50;
-            // 
-            // Estrellas_text
-            // 
-            this.Estrellas_text.HeaderText = "Estrella";
-            this.Estrellas_text.Name = "Estrellas_text";
-            this.Estrellas_text.Width = 50;
-            // 
-            // cant_Persona
-            // 
-            this.cant_Persona.HeaderText = "Cant.Persona";
-            this.cant_Persona.Name = "cant_Persona";
-            // 
-            // tv_text
-            // 
-            this.tv_text.HeaderText = "tv";
-            this.tv_text.Name = "tv_text";
-            this.tv_text.Width = 50;
-            // 
-            // tip_alojamiento
-            // 
-            this.tip_alojamiento.HeaderText = "Tipo Alojamiento";
-            this.tip_alojamiento.Name = "tip_alojamiento";
-            // 
-            // Ciudad_text
-            // 
-            this.Ciudad_text.HeaderText = "Ciudad";
-            this.Ciudad_text.Name = "Ciudad_text";
-            this.Ciudad_text.Width = 50;
-            // 
-            // CantHabitacion
-            // 
-            this.CantHabitacion.HeaderText = "Cant Habitacion";
-            this.CantHabitacion.Name = "CantHabitacion";
-            this.CantHabitacion.Width = 50;
-            // 
-            // Precio_dia
-            // 
-            this.Precio_dia.HeaderText = "Precio por dia";
-            this.Precio_dia.Name = "Precio_dia";
-            // 
-            // pre_persona
-            // 
-            this.pre_persona.HeaderText = "Precio por Persona";
-            this.pre_persona.Name = "pre_persona";
-            // 
-            // Cantidad_Banio
-            // 
-            this.Cantidad_Banio.HeaderText = "Cant.Baño";
-            this.Cantidad_Banio.Name = "Cantidad_Banio";
             // 
             // barrioText
             // 
@@ -254,6 +182,15 @@ namespace Agencia.Views
             this.panel1.Size = new System.Drawing.Size(969, 463);
             this.panel1.TabIndex = 65;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // check_tv
+            // 
+            this.check_tv.AutoSize = true;
+            this.check_tv.Location = new System.Drawing.Point(796, 66);
+            this.check_tv.Name = "check_tv";
+            this.check_tv.Size = new System.Drawing.Size(15, 14);
+            this.check_tv.TabIndex = 80;
+            this.check_tv.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -411,14 +348,92 @@ namespace Agencia.Views
             this.personasText.Size = new System.Drawing.Size(137, 25);
             this.personasText.TabIndex = 65;
             // 
-            // check_tv
+            // Editar
             // 
-            this.check_tv.AutoSize = true;
-            this.check_tv.Location = new System.Drawing.Point(796, 66);
-            this.check_tv.Name = "check_tv";
-            this.check_tv.Size = new System.Drawing.Size(15, 14);
-            this.check_tv.TabIndex = 80;
-            this.check_tv.UseVisualStyleBackColor = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Editar.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.Text = "Editar";
+            this.Editar.Width = 40;
+            // 
+            // Eliminar_aloja
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Maroon;
+            this.Eliminar_aloja.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Eliminar_aloja.HeaderText = "Eliminar";
+            this.Eliminar_aloja.Name = "Eliminar_aloja";
+            this.Eliminar_aloja.Width = 40;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 50;
+            // 
+            // Barrio_text
+            // 
+            this.Barrio_text.HeaderText = "Barrio";
+            this.Barrio_text.Name = "Barrio_text";
+            this.Barrio_text.Width = 50;
+            // 
+            // Estrellas_text
+            // 
+            this.Estrellas_text.HeaderText = "Estrella";
+            this.Estrellas_text.Name = "Estrellas_text";
+            this.Estrellas_text.Width = 50;
+            // 
+            // cant_Persona
+            // 
+            this.cant_Persona.HeaderText = "Cant.Persona";
+            this.cant_Persona.Name = "cant_Persona";
+            // 
+            // tv_text
+            // 
+            this.tv_text.HeaderText = "tv";
+            this.tv_text.Name = "tv_text";
+            this.tv_text.Width = 50;
+            // 
+            // tip_alojamiento
+            // 
+            this.tip_alojamiento.HeaderText = "Tipo Alojamiento";
+            this.tip_alojamiento.Name = "tip_alojamiento";
+            // 
+            // Ciudad_text
+            // 
+            this.Ciudad_text.HeaderText = "Ciudad";
+            this.Ciudad_text.Name = "Ciudad_text";
+            this.Ciudad_text.Width = 50;
+            // 
+            // CantHabitacion
+            // 
+            this.CantHabitacion.HeaderText = "Cant Habitacion";
+            this.CantHabitacion.Name = "CantHabitacion";
+            this.CantHabitacion.Width = 50;
+            // 
+            // Precio_dia
+            // 
+            this.Precio_dia.HeaderText = "Precio por dia";
+            this.Precio_dia.Name = "Precio_dia";
+            // 
+            // pre_persona
+            // 
+            this.pre_persona.HeaderText = "Precio por Persona";
+            this.pre_persona.Name = "pre_persona";
+            // 
+            // Cantidad_Banio
+            // 
+            this.Cantidad_Banio.HeaderText = "Cant.Baño";
+            this.Cantidad_Banio.Name = "Cantidad_Banio";
             // 
             // AdmAlojamientos
             // 
@@ -454,19 +469,6 @@ namespace Agencia.Views
         private System.Windows.Forms.TextBox habitacionesText;
         private System.Windows.Forms.TextBox baniosText;
         private System.Windows.Forms.Button Agrego_boton;
-        private System.Windows.Forms.DataGridViewButtonColumn Editar;
-        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Barrio_text;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estrellas_text;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cant_Persona;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tv_text;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tip_alojamiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad_text;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantHabitacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio_dia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pre_persona;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad_Banio;
         private System.Windows.Forms.TextBox precioText;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label LHabitaciones;
@@ -478,5 +480,18 @@ namespace Agencia.Views
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label LPersonas;
         private System.Windows.Forms.CheckBox check_tv;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar_aloja;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Barrio_text;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estrellas_text;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cant_Persona;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tv_text;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tip_alojamiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad_text;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantHabitacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio_dia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pre_persona;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad_Banio;
     }
 }

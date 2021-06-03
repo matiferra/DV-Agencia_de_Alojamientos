@@ -34,6 +34,7 @@ namespace Bussines
 
             return ciudades.getCiudades();
         }
+ 
 
 
         public DataSet buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo )
@@ -133,19 +134,17 @@ namespace Bussines
 
         public bool quitarAlojamiento(int codigo)
         {
-            bool eliminado = false;
-
-            foreach (var item in miAgencia.misAlojamientos)
+            bool result;
+            try
             {
-                if (item.codigoInstancia == codigo)
-                {
-                    miAgencia.misAlojamientos.Remove(item);
-                    eliminado = true;
-
-                }
+                result = aloDA.deleteAlojamiento(codigo);
+            }
+            catch (Exception ex)
+            {
+                result = false;
             }
 
-            return eliminado;
+            return result;
         }
 
         public List<List<string>> buscarReservas(int DNIusuario)
