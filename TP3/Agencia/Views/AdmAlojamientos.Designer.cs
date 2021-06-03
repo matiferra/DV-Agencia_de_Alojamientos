@@ -30,7 +30,6 @@ namespace Agencia.Views
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmAlojamientos));
-            this.tvSi = new System.Windows.Forms.RadioButton();
             this.ciudadText = new System.Windows.Forms.TextBox();
             this.alojamientosGrid = new System.Windows.Forms.DataGridView();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -65,23 +64,10 @@ namespace Agencia.Views
             this.baniosText = new System.Windows.Forms.TextBox();
             this.habitacionesText = new System.Windows.Forms.TextBox();
             this.personasText = new System.Windows.Forms.TextBox();
+            this.check_tv = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.alojamientosGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tvSi
-            // 
-            this.tvSi.AutoSize = true;
-            this.tvSi.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.tvSi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tvSi.Location = new System.Drawing.Point(796, 63);
-            this.tvSi.Margin = new System.Windows.Forms.Padding(0);
-            this.tvSi.Name = "tvSi";
-            this.tvSi.Size = new System.Drawing.Size(36, 17);
-            this.tvSi.TabIndex = 52;
-            this.tvSi.TabStop = true;
-            this.tvSi.Text = "Si";
-            this.tvSi.UseVisualStyleBackColor = true;
             // 
             // ciudadText
             // 
@@ -242,6 +228,7 @@ namespace Agencia.Views
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.check_tv);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.LDiaOPer);
             this.panel1.Controls.Add(this.LBaños);
@@ -262,7 +249,6 @@ namespace Agencia.Views
             this.panel1.Controls.Add(this.barrioText);
             this.panel1.Controls.Add(this.alojamientosGrid);
             this.panel1.Controls.Add(this.ciudadText);
-            this.panel1.Controls.Add(this.tvSi);
             this.panel1.Location = new System.Drawing.Point(28, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(969, 463);
@@ -425,6 +411,15 @@ namespace Agencia.Views
             this.personasText.Size = new System.Drawing.Size(137, 25);
             this.personasText.TabIndex = 65;
             // 
+            // check_tv
+            // 
+            this.check_tv.AutoSize = true;
+            this.check_tv.Location = new System.Drawing.Point(796, 66);
+            this.check_tv.Name = "check_tv";
+            this.check_tv.Size = new System.Drawing.Size(15, 14);
+            this.check_tv.TabIndex = 80;
+            this.check_tv.UseVisualStyleBackColor = true;
+            // 
             // AdmAlojamientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,7 +443,6 @@ namespace Agencia.Views
         }
 
         #endregion
-        private System.Windows.Forms.RadioButton tvSi;
         private System.Windows.Forms.TextBox ciudadText;
         private System.Windows.Forms.DataGridView alojamientosGrid;
         private System.Windows.Forms.TextBox barrioText;
@@ -483,5 +477,6 @@ namespace Agencia.Views
         private System.Windows.Forms.Label LBaños;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label LPersonas;
+        private System.Windows.Forms.CheckBox check_tv;
     }
 }

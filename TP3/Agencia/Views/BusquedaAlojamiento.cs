@@ -17,6 +17,9 @@ namespace Agencia.Views
         public BusquedaAlojamiento()
         {
             InitializeComponent();
+            comboBox_ciudad.DisplayMember = "nombre";
+            comboBox_ciudad.ValueMember = "id_ciudad";
+            comboBox_ciudad.DataSource = Ag.getCiudades();
             panel1.BackColor = Color.FromArgb(60, Color.Black);
         }
 
@@ -27,8 +30,8 @@ namespace Agencia.Views
                 dataGridView1.Rows.Clear();
 
 
-                DataSet Lista = Ag.buscarAlojamientos(text_ciudad.Text, text_fechad.Value,
-                                         text_fechah.Value, text_cantidad.Text, seleccion_tipo.Text);
+                DataSet Lista = Ag.buscarAlojamientos(comboBox_ciudad.SelectedValue.ToString(), Pdesde_campo.Text,
+                                         Phasta_campo.Text, text_cantidad.Text, seleccion_tipo.Text);
 
                 int index = 0;
                 if (Lista.Tables[0] != null && Lista.Tables[0].Rows.Count > 0)
@@ -87,6 +90,11 @@ namespace Agencia.Views
         }
 
         private void seleccion_tipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

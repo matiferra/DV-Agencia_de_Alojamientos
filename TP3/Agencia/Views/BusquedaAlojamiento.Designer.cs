@@ -36,13 +36,10 @@ namespace Agencia.Views
             this.btnLogin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.seleccion_tipo = new System.Windows.Forms.ComboBox();
-            this.text_ciudad = new System.Windows.Forms.TextBox();
             this.text_cantidad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.text_fechah = new System.Windows.Forms.DateTimePicker();
-            this.text_fechad = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estrellas = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +50,9 @@ namespace Agencia.Views
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox_ciudad = new System.Windows.Forms.ComboBox();
+            this.Pdesde_campo = new System.Windows.Forms.TextBox();
+            this.Phasta_campo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -138,16 +138,6 @@ namespace Agencia.Views
             this.seleccion_tipo.TabIndex = 52;
             this.seleccion_tipo.SelectedIndexChanged += new System.EventHandler(this.seleccion_tipo_SelectedIndexChanged);
             // 
-            // text_ciudad
-            // 
-            this.text_ciudad.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.text_ciudad.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_ciudad.ForeColor = System.Drawing.Color.White;
-            this.text_ciudad.Location = new System.Drawing.Point(88, 100);
-            this.text_ciudad.Name = "text_ciudad";
-            this.text_ciudad.Size = new System.Drawing.Size(181, 31);
-            this.text_ciudad.TabIndex = 49;
-            // 
             // text_cantidad
             // 
             this.text_cantidad.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -164,11 +154,11 @@ namespace Agencia.Views
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(402, 148);
+            this.label7.Location = new System.Drawing.Point(301, 149);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 19);
+            this.label7.Size = new System.Drawing.Size(96, 19);
             this.label7.TabIndex = 56;
-            this.label7.Text = "Hasta";
+            this.label7.Text = "Precio Hasta";
             // 
             // label8
             // 
@@ -178,15 +168,17 @@ namespace Agencia.Views
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(89, 149);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 19);
+            this.label8.Size = new System.Drawing.Size(100, 19);
             this.label8.TabIndex = 57;
-            this.label8.Text = "Desde";
+            this.label8.Text = "Precio Desde";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.text_fechah);
-            this.panel1.Controls.Add(this.text_fechad);
+            this.panel1.Controls.Add(this.Phasta_campo);
+            this.panel1.Controls.Add(this.Pdesde_campo);
+            this.panel1.Controls.Add(this.comboBox_ciudad);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label5);
@@ -195,31 +187,12 @@ namespace Agencia.Views
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.text_cantidad);
-            this.panel1.Controls.Add(this.text_ciudad);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.seleccion_tipo);
             this.panel1.Location = new System.Drawing.Point(28, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(969, 463);
             this.panel1.TabIndex = 66;
-            // 
-            // text_fechah
-            // 
-            this.text_fechah.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_fechah.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_fechah.Location = new System.Drawing.Point(392, 171);
-            this.text_fechah.Name = "text_fechah";
-            this.text_fechah.Size = new System.Drawing.Size(177, 26);
-            this.text_fechah.TabIndex = 59;
-            // 
-            // text_fechad
-            // 
-            this.text_fechad.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_fechad.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_fechad.Location = new System.Drawing.Point(88, 171);
-            this.text_fechad.Name = "text_fechad";
-            this.text_fechad.Size = new System.Drawing.Size(181, 26);
-            this.text_fechad.TabIndex = 58;
             // 
             // dataGridView1
             // 
@@ -243,7 +216,7 @@ namespace Agencia.Views
             this.dataGridView1.Location = new System.Drawing.Point(85, 228);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.Size = new System.Drawing.Size(758, 154);
+            this.dataGridView1.Size = new System.Drawing.Size(750, 235);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -309,6 +282,34 @@ namespace Agencia.Views
             this.Column10.ReadOnly = true;
             this.Column10.Width = 86;
             // 
+            // comboBox_ciudad
+            // 
+            this.comboBox_ciudad.FormattingEnabled = true;
+            this.comboBox_ciudad.Location = new System.Drawing.Point(88, 110);
+            this.comboBox_ciudad.Name = "comboBox_ciudad";
+            this.comboBox_ciudad.Size = new System.Drawing.Size(181, 21);
+            this.comboBox_ciudad.TabIndex = 60;
+            // 
+            // Pdesde_campo
+            // 
+            this.Pdesde_campo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Pdesde_campo.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pdesde_campo.ForeColor = System.Drawing.Color.White;
+            this.Pdesde_campo.Location = new System.Drawing.Point(96, 171);
+            this.Pdesde_campo.Name = "Pdesde_campo";
+            this.Pdesde_campo.Size = new System.Drawing.Size(173, 31);
+            this.Pdesde_campo.TabIndex = 61;
+            // 
+            // Phasta_campo
+            // 
+            this.Phasta_campo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Phasta_campo.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phasta_campo.ForeColor = System.Drawing.Color.White;
+            this.Phasta_campo.Location = new System.Drawing.Point(305, 171);
+            this.Phasta_campo.Name = "Phasta_campo";
+            this.Phasta_campo.Size = new System.Drawing.Size(187, 31);
+            this.Phasta_campo.TabIndex = 62;
+            // 
             // BusquedaAlojamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,14 +336,11 @@ namespace Agencia.Views
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox seleccion_tipo;
-        private System.Windows.Forms.TextBox text_ciudad;
         private System.Windows.Forms.TextBox text_cantidad;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker text_fechad;
-        private System.Windows.Forms.DateTimePicker text_fechah;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
         private System.Windows.Forms.DataGridViewTextBoxColumn estrellas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -352,5 +350,8 @@ namespace Agencia.Views
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.ComboBox comboBox_ciudad;
+        private System.Windows.Forms.TextBox Phasta_campo;
+        private System.Windows.Forms.TextBox Pdesde_campo;
     }
 }

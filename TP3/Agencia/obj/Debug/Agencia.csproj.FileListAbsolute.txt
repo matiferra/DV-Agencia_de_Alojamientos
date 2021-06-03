@@ -325,3 +325,5 @@ D:\Descargas\TP MEZCLA\TP3\Agencia\obj\Debug\Agencia.application
 D:\Descargas\TP MEZCLA\TP3\Agencia\obj\Debug\Agencia.csproj.CopyComplete
 D:\Descargas\TP MEZCLA\TP3\Agencia\obj\Debug\Agencia.exe
 D:\Descargas\TP MEZCLA\TP3\Agencia\obj\Debug\Agencia.pdb
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\bin\Debug\Entidades.dll
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\bin\Debug\Entidades.pdb

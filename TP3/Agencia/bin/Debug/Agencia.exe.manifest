@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LceyCbjKd+3MepEX7C4ucsYpOrCgQNaBO6K/TTqcXvY=</dsig:DigestValue>
+        <dsig:DigestValue>8W1fxDAQUdyZlCD5dEcgRbnT0q2vUDcW1hsAAfmR6ZY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PV0AYkEjhocycu2Pc8MMIXQO3nd0tbRYQZ2HQu/ZcmA=</dsig:DigestValue>
+        <dsig:DigestValue>kLUWVNyseTbPA1Bh4MnIOr77ymXCwGGaHZhHobBKpWQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.dll" size="14848">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.dll" size="17920">
       <assemblyIdentity name="DataAccess" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3J48Adk725b59+X5ndkOtLCtmSjF2rjc/JI3Yp7eLpc=</dsig:DigestValue>
+        <dsig:DigestValue>CD8eySXhKC4DBtiukK+XA4/g4yrXcSO74P5U5UdfYwQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -125,13 +125,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Agencia.exe.config" size="1263">
+  <file name="Agencia.exe.config" size="1267">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Hno//k4TVAvMHMf4f2cNz0oAAuILMbVK20pHAg/dsbI=</dsig:DigestValue>
+      <dsig:DigestValue>GuYys+dSRH6DM0duVRxcEyvKE62JQSsxXRNwa0Taw0M=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\all.css" size="78244">

@@ -159,7 +159,7 @@ namespace Agencia.Views
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (tvSi.Checked)
+            if (check_tv.Checked)
             {
                 tv = "true";
             }
@@ -209,7 +209,7 @@ namespace Agencia.Views
         {
            
             if (Ag.agregarAlojamiento(tipoAlojamientoCombo.Text, ciudadText.Text, barrioText.Text, estrellasText.Text,
-                                  personasText.Text, tvSi.Checked, precioText.Text, habitacionesText.Text, baniosText.Text))
+                                  personasText.Text, check_tv.Checked, precioText.Text, habitacionesText.Text, baniosText.Text))
             {
 
                 MessageBox.Show("Agregado con éxito");
@@ -226,6 +226,11 @@ namespace Agencia.Views
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tvSi_CheckedChanged(object sender, EventArgs e)
         {
 
         }

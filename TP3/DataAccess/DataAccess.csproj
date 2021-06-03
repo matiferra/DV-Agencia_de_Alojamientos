@@ -45,6 +45,7 @@
     <Compile Include="AgenciaDA.cs" />
     <Compile Include="AlojamientoDA.cs" />
     <Compile Include="CabaniaDA.cs" />
+    <Compile Include="CiudadesDA.cs" />
     <Compile Include="ConexionDB.cs" />
     <Compile Include="HotelDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,6 +11,7 @@ namespace Bussines
 
         AlojamientoDA aloDA = new AlojamientoDA();
         UsuarioDA usuarioDA = new UsuarioDA();
+        CiudadesDA ciudades = new CiudadesDA();
 
 
         public Agencia miAgencia { set; get; }
@@ -28,7 +29,14 @@ namespace Bussines
 
         }
 
-        public DataSet buscarAlojamientos(string Ciudad, DateTime Pdesde, DateTime Phasta, string cantPersonas, string tipo )
+        public DataTable getCiudades()
+        {
+
+            return ciudades.getCiudades();
+        }
+
+
+        public DataSet buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo )
         {
             bool esHotel;
             DataSet ds = new DataSet();
@@ -46,11 +54,10 @@ namespace Bussines
             {
                 esHotel = false;
             }
-            string fechaDesde = Pdesde.ToString("yyyy-MM-dd");
-            string fechaHasta = Phasta.ToString("yyyy-MM-dd");
+       
             try
             {
-                 ds = aloDA.buscoAlojamiento(fechaDesde, fechaHasta, esHotel, cantPersonas, Ciudad);
+                 ds = aloDA.buscoAlojamiento(Pdesde, Phasta, esHotel, cantPersonas, Ciudad);
 
             }
             catch (Exception ex)
