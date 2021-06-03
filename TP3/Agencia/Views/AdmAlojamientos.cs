@@ -42,6 +42,7 @@ namespace Agencia.Views
         }
         private void RefresVista()
         {
+            alojamientosGrid.Rows.Clear();
             DataSet Lista = Ag.obtenerAlojamientos();
             int index = 0;
             if (Lista.Tables[0] != null && Lista.Tables[0].Rows.Count > 0)
