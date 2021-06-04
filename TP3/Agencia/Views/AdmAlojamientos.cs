@@ -36,11 +36,14 @@ namespace Agencia.Views
         public AdmAlojamientos()
         {
             InitializeComponent();
+            combo_ciudadHeader.DisplayMember = "nombre";
+            combo_ciudadHeader.ValueMember = "id_ciudad";
+            combo_ciudadHeader.DataSource = Ag.getCiudades();
             panel1.BackColor = Color.FromArgb(60, Color.Black);
             RefresVista();
 
         }
-        private void RefresVista()
+        public void RefresVista()
         {
             alojamientosGrid.Rows.Clear();
             DataSet Lista = Ag.obtenerAlojamientos();
@@ -168,7 +171,7 @@ namespace Agencia.Views
             {
                 tv = "false";
             }
-            ciudad = ciudadText.Text;
+            ciudad = combo_ciudadHeader.Text;
             barrio = barrioText.Text;
             estrellas = estrellasText.Text;
             tipoAlojamiento = tipoAlojamientoCombo.Text;
@@ -209,12 +212,12 @@ namespace Agencia.Views
         private void button1_Click_2(object sender, EventArgs e)
         {
            
-            if (Ag.agregarAlojamiento(tipoAlojamientoCombo.Text, ciudadText.Text, barrioText.Text, estrellasText.Text,
+            if (Ag.agregarAlojamiento(tipoAlojamientoCombo.Text, combo_ciudadHeader.SelectedValue.ToString(), barrioText.Text, estrellasText.Text,
                                   personasText.Text, check_tv.Checked, precioText.Text, habitacionesText.Text, baniosText.Text))
             {
 
                 MessageBox.Show("Agregado con éxito");
-                alojamientosGrid.Rows.Clear();
+               // alojamientosGrid.Rows.Clear();
                 RefresVista();
             }
             else
@@ -236,6 +239,11 @@ namespace Agencia.Views
 
         }
 
+        private void edit_aloj_UpdateHadler(object sender, EditarAlojamiento.UpdateEventArgs args)
+        {
+            RefresVista();
+        }
+
         private void alojamientosGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (this.alojamientosGrid.Columns[e.ColumnIndex].Name == "Eliminar_aloja")
@@ -253,9 +261,48 @@ namespace Agencia.Views
             }
             else if (this.alojamientosGrid.Columns[e.ColumnIndex].Name == "Editar")
             {
-                MessageBox.Show("pendiente editar");
+                var tipoAlojamiento = this.alojamientosGrid.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                EditarAlojamiento editar = new EditarAlojamiento(this);
+                editar.UpdateEventArgsHandler += edit_aloj_UpdateHadler; //  metodo la cual me permite actualizar la grilla cuando termine de guardar los cambios
+                
+                editar.id_text.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+                editar.id_text.ReadOnly = true;
+                editar.id_text.Visible = false;
+                editar.label_id.Visible = false;
+                editar.barrioText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+                editar.estrellasText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[4].Value.ToString();
+                editar.personasText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[5].Value.ToString();
+                editar.check_tv.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[6].Value.ToString();            
+                editar.combo_ciudad.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[8].Value.ToString();
+                if (bool.Parse(tipoAlojamiento) == true)
+                {
+                    editar.campo_precioxpersona.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[11].Value.ToString();
+                    editar.LHabitaciones.Visible = false;
+                    editar.habitacionesText.Visible = false;
+                    editar.LDiaOPer.Visible = false;
+                    editar.precioxdiaText.Visible = false;
+                    editar.LBanios.Visible = false;
+                    editar.baniosText.Visible = false;
+                }
+                else
+                {
+                    editar.labelprexpersona.Visible = false;
+                    editar.campo_precioxpersona.Visible = false;
+                    editar.habitacionesText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[9].Value.ToString();
+                    editar.precioxdiaText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[10].Value.ToString();
+                    editar.baniosText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[12].Value.ToString();
+                }               
+
+                editar.Show();
             }
 
+
+    
+
+
         }
+
+    
     }
 }

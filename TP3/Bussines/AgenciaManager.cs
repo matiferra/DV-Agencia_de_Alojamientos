@@ -34,10 +34,48 @@ namespace Bussines
 
             return ciudades.getCiudades();
         }
- 
+
+        public DataSet getAlojamiento(int id)
+        {
+
+            DataSet ds = new DataSet();
+
+            return ds = aloDA.getAlojamientos(id);
+
+            //bool eshotel = false;
+            //DataSet ds = new DataSet();
+            //List<List<string>> lista = new List<List<string>>();
+            //ds = aloDA.getAlojamientos(id);
+
+            //if (ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0] != null)
+            //{
+            //    eshotel = bool.Parse(ds.Tables[0].Rows[0]["eshotel"].ToString());
+            //    string ciudad = ds.Tables[0].Rows[0]["ciudad"].ToString();
+            //    string estrellas = ds.Tables[0].Rows[0]["estrellas"].ToString();
+            //    string nroPersona = ds.Tables[0].Rows[0]["nroPersona"].ToString();
+            //    string barrio = ds.Tables[0].Rows[0]["barrio"].ToString();
+            //    double precioxDia = double.Parse(ds.Tables[0].Rows[0]["precioxDia"].ToString());
+            //    double precioxPresona = double.Parse(ds.Tables[0].Rows[0]["precioxDia"].ToString());
+            //    int nroBanio = int.Parse(ds.Tables[0].Rows[0]["nroBanio"].ToString());
+            //    bool  tv = bool.Parse(ds.Tables[0].Rows[0]["tv"].ToString());
+            //    int nroHabitacion =int.Parse(ds.Tables[0].Rows[0]["nroHabitacion"].ToString());
+            //    if (eshotel)
+            //    {
+            //        lista.Add(new List<string>() { ciudad.ToString(), barrio.ToString(), estrellas.ToString(), nroPersona.ToString(), tv.ToString(), precioxPresona.ToString()});
+            //    }
+            //    else
+            //    {
+            //        lista.Add(new List<string>() { ciudad,barrio,estrellas,nroPersona,tv.ToString(),precioxDia.ToString(),nroHabitacion.ToString(),nroBanio.ToString() });
+            //    }
 
 
-        public DataSet buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo )
+            //    }
+
+
+
+        }
+
+        public DataSet buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo)
         {
             bool esHotel;
             DataSet ds = new DataSet();
@@ -55,15 +93,15 @@ namespace Bussines
             {
                 esHotel = false;
             }
-       
+
             try
             {
-                 ds = aloDA.buscoAlojamiento(Pdesde, Phasta, esHotel, cantPersonas, Ciudad);
+                ds = aloDA.buscoAlojamiento(Pdesde, Phasta, esHotel, cantPersonas, Ciudad);
 
             }
             catch (Exception ex)
             {
-               // mensajeError = "error en buscoAlojamiento" + ex.Message;
+                // mensajeError = "error en buscoAlojamiento" + ex.Message;
             }
 
 
@@ -73,17 +111,17 @@ namespace Bussines
         public DataSet obtenerAlojamientos()
         {
             DataSet ds = aloDA.getAlojamientos();
-            return ds;        
+            return ds;
         }
 
-        public bool agregarAlojamiento(string tipo, string ciudad, string barrio, string estrellas, string cantPersonas, bool tv,string precio, string habitaciones, string banios) //Parametro Datos del Alojamiento ¿?
+        public bool agregarAlojamiento(string tipo, string ciudad, string barrio, string estrellas, string cantPersonas, bool tv, string precio, string habitaciones, string banios) //Parametro Datos del Alojamiento ¿?
         {
-            bool result;   
+            bool result;
             try
             {
                 if (tipo == "Hotel")
                 {
-                    aloDA.createAlojamiento(barrio, int.Parse(estrellas), int.Parse(cantPersonas),tv,true, ciudad, null, null, double.Parse(precio), null);
+                    aloDA.createAlojamiento(barrio, int.Parse(estrellas), int.Parse(cantPersonas), tv, true, ciudad, null, null, double.Parse(precio), null);
                     result = true;
                 }
                 else
@@ -95,41 +133,48 @@ namespace Bussines
             catch
             {
                 result = false;
-            }      
+            }
 
             return result;
         }
 
-        public bool modificarAlojamiento(int codigoInstancia, string ciudad, string barrio, string estrellas, int cantPersonas, bool tv, double precioxDia = 0, int habitaciones = 0, int banios = 0, double precioxPersona = 0)//Parametro Datos del Alojamiento ¿?
+        public bool modificarAlojamiento(string codigoInstancia, string ciudad, string barrio, string estrellas, string cantPersonas, bool tv, string precioxDia , 
+                                         string habitaciones , string banios , string precioxPersona)
         {
-            for (int i = 0; i < miAgencia.misAlojamientos.Count; i++)
+            bool result;
+            if (string.IsNullOrEmpty(precioxDia))
             {
-                if (codigoInstancia == miAgencia.misAlojamientos[i].codigoInstancia)
-                {
-                    if (miAgencia.misAlojamientos[i] is Hotel)
-                    {
-                        Hotel hotel = new Hotel(ciudad, barrio, estrellas, cantPersonas, tv, precioxPersona);
-
-                        hotel.codigoInstancia = miAgencia.misAlojamientos[i].codigoInstancia;
-
-                        miAgencia.misAlojamientos[i] = hotel;
-
-                    }
-                    if (miAgencia.misAlojamientos[i] is Cabania)
-                    {
-                        int codigo = miAgencia.misAlojamientos[i].codigoInstancia;
-
-                        // COMO SERIA UN UPDATE EN BASE DE DATOS
-                        quitarAlojamiento(codigo);
-
-                    //    agregarAlojamiento(codigo, ciudad, barrio, estrellas, cantPersonas, tv, precioxDia, habitaciones, banios);
-
-                    }
-
-                }
+                precioxDia = "0";
+            }
+            if (string.IsNullOrEmpty(habitaciones))
+            {
+                habitaciones = "0";
+            }
+            if (string.IsNullOrEmpty(banios))
+            {
+                banios = "0";
+            }
+            if (string.IsNullOrEmpty(precioxPersona))
+            {
+                precioxPersona = "0";
             }
 
-            return true;
+
+            try
+            {
+                aloDA.updateAlojamiento(int.Parse(codigoInstancia), barrio, estrellas, int.Parse(cantPersonas), tv, ciudad, int.Parse(habitaciones), 
+                                       double.Parse(precioxDia), double.Parse(precioxPersona), int.Parse(banios));
+                result = true;
+            }
+            catch (Exception)
+            {
+
+                result = false;
+            } 
+                 
+
+
+            return result;
         }
 
         public bool quitarAlojamiento(int codigo)

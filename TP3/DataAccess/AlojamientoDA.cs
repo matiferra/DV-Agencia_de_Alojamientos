@@ -20,7 +20,7 @@ namespace DataAccess
             queryString += "then 'No'";
             queryString += "when tv = 1 ";
             queryString += "then 'si'";
-            queryString += "end) tv,";     
+            queryString += "end) tv,";
             queryString += "id_alojamiento,eshotel";
             queryString += ",Ciudades.nombre id_ciudad,cantidad_de_habitaciones,";
             queryString += " cantidadDeBanios,precio_por_dia,precio_por_persona";
@@ -34,18 +34,45 @@ namespace DataAccess
             return ds;
         }
 
-        public bool updateAlojamiento(int id , string barrio, string estrellas, string cantidadDePersonas,
-                                      string tv, string id_tipoAlojamiento, string id_ciudad, string cantidad_de_habitaciones,
-                                      string precio_por_dia, string precio_por_persona, string cantidadDeBanios)
+
+        public DataSet getAlojamientos(int id)
         {
-                     
+
+            DataSet ds = new DataSet();
+            string queryString = "select";
+            queryString += " barrio,estrellas,cantidadDePersonas,";
+            queryString += "(case when tv = 0";
+            queryString += "then 'No'";
+            queryString += "when tv = 1 ";
+            queryString += "then 'si'";
+            queryString += "end) tv,";
+            queryString += "id_alojamiento,eshotel";
+            queryString += ",Ciudades.nombre id_ciudad,cantidad_de_habitaciones,";
+            queryString += " cantidadDeBanios,precio_por_dia,precio_por_persona";
+            queryString += " from alojamientos as alojamientos";
+            queryString += " INNER JOIN Ciudades Ciudades ON Ciudades.id_ciudad = alojamientos.id_ciudad";
+            queryString += " WHERE alojamientos.id_alojamiento = " + id;
+            ConexionDB _conn = new ConexionDB();
+            _conn.abrir();
+            SqlDataAdapter da = new SqlDataAdapter(queryString, _conn.Conectarbd);
+            da.Fill(ds);
+            _conn.cerrar();
+            return ds;
+
+        }
+
+
+        public bool updateAlojamiento(int id, string barrio, string estrellas, int cantidadDePersonas,
+                                      bool tv, string id_ciudad, int cantidad_de_habitaciones,
+                                      double precio_por_dia, double precio_por_persona, int cantidadDeBanios)
+        {
+
             int resultadoQuery;
             string queryString = "UPDATE [dbo].[Alojamientos] SET   " +
                                 "  barrio = @barrio , " +
                                 " estrellas = @estrellas ," +
                                 " cantidadDePersonas = @cantidadDePersonas ," +
-                                " tv= @tv ," +
-                                " id_tipoAlojamiento= @id_tipoAlojamiento ," +
+                                " tv= @tv ," +                              
                                 " id_ciudad= @id_ciudad ," +
                                 " cantidad_de_habitaciones= @cantidad_de_habitaciones ," +
                                 " precio_por_dia= @precio_por_dia ," +
@@ -57,27 +84,26 @@ namespace DataAccess
             command.Parameters.Add(new SqlParameter("@id_alojamiento", SqlDbType.Int));
             command.Parameters.Add(new SqlParameter("@barrio", SqlDbType.VarChar));
             command.Parameters.Add(new SqlParameter("@estrellas", SqlDbType.VarChar));
-            command.Parameters.Add(new SqlParameter("@cantidadDePersonas", SqlDbType.VarChar));
-            command.Parameters.Add(new SqlParameter("@tv", SqlDbType.Char));
-          //  command.Parameters.Add(new SqlParameter("@id_tipoAlojamiento", SqlDbType.VarChar));
+            command.Parameters.Add(new SqlParameter("@cantidadDePersonas", SqlDbType.Int));
+            command.Parameters.Add(new SqlParameter("@tv", SqlDbType.Bit));
+     
             command.Parameters.Add(new SqlParameter("@cantidad_de_habitaciones", SqlDbType.Int));
             command.Parameters.Add(new SqlParameter("@precio_por_persona", SqlDbType.Decimal));
             command.Parameters.Add(new SqlParameter("@precio_por_dia", SqlDbType.Decimal));
             command.Parameters.Add(new SqlParameter("@id_ciudad", SqlDbType.VarChar));
             command.Parameters.Add(new SqlParameter("@cantidadDeBanios", SqlDbType.Int));
 
-            command.Parameters["@id_alojamiento"].Value = id;        
-            command.Parameters["@barrio"].Value = barrio;     
-            command.Parameters["@estrellas"].Value = estrellas;         
-            command.Parameters["@cantidadDePersonas"].Value = cantidadDePersonas;        
-            command.Parameters["@tv"].Value = tv;          
-            command.Parameters["@id_tipoAlojamiento"].Value = id_tipoAlojamiento;        
-            command.Parameters["@id_ciudad"].Value = id_ciudad;           
-            command.Parameters["@cantidad_de_habitaciones"].Value = cantidad_de_habitaciones;           
-            command.Parameters["@precio_por_dia"].Value = precio_por_dia;      
-            command.Parameters["@precio_por_persona"].Value = precio_por_persona;           
+            command.Parameters["@id_alojamiento"].Value = id;
+            command.Parameters["@barrio"].Value = barrio;
+            command.Parameters["@estrellas"].Value = estrellas;
+            command.Parameters["@cantidadDePersonas"].Value = cantidadDePersonas;
+            command.Parameters["@tv"].Value = tv;        
+            command.Parameters["@id_ciudad"].Value = id_ciudad;
+            command.Parameters["@cantidad_de_habitaciones"].Value = cantidad_de_habitaciones;
+            command.Parameters["@precio_por_dia"].Value = precio_por_dia;
+            command.Parameters["@precio_por_persona"].Value = precio_por_persona;
             command.Parameters["@cantidadDeBanios"].Value = cantidadDeBanios;
-           
+
             try
             {
                 con.abrir();
@@ -122,10 +148,10 @@ namespace DataAccess
                                       bool tv, bool eshotel, string id_ciudad, int? cantidad_de_habitaciones,
                                       double? precio_por_dia, double? precio_por_persona, int? cantidadDeBanios)
         {
-       
-            DataSet ds = new DataSet();  
+
+            DataSet ds = new DataSet();
             ConexionDB _conn = new ConexionDB();
-         
+
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "INSERT_ALOJAMIENTO";
@@ -139,18 +165,18 @@ namespace DataAccess
             command.Parameters.Add("@precio_por_dia", SqlDbType.VarChar).Value = precio_por_dia.ToString();
             command.Parameters.Add("@precio_por_persona", SqlDbType.VarChar).Value = precio_por_persona.ToString();
             command.Parameters.Add("@cantidadDeBanios", SqlDbType.VarChar).Value = cantidadDeBanios.ToString();
-            command.Connection = _conn.Conectarbd;     
+            command.Connection = _conn.Conectarbd;
 
             try
             {
                 _conn.abrir();
-                command.ExecuteNonQuery();              
-                _conn.cerrar();     
+                command.ExecuteNonQuery();
+                _conn.cerrar();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-            }           
+            }
         }
 
         public DataSet buscoAlojamiento(string Pdesde, string Phasta, bool esHotel, string cant, string ciudad)

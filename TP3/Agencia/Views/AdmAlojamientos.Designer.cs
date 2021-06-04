@@ -32,7 +32,6 @@ namespace Agencia.Views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmAlojamientos));
-            this.ciudadText = new System.Windows.Forms.TextBox();
             this.alojamientosGrid = new System.Windows.Forms.DataGridView();
             this.barrioText = new System.Windows.Forms.TextBox();
             this.estrellasText = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@ namespace Agencia.Views
             this.baniosText = new System.Windows.Forms.TextBox();
             this.habitacionesText = new System.Windows.Forms.TextBox();
             this.personasText = new System.Windows.Forms.TextBox();
+            this.combo_ciudadHeader = new System.Windows.Forms.ComboBox();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar_aloja = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,17 +70,6 @@ namespace Agencia.Views
             ((System.ComponentModel.ISupportInitialize)(this.alojamientosGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ciudadText
-            // 
-            this.ciudadText.BackColor = System.Drawing.SystemColors.ControlText;
-            this.ciudadText.Font = new System.Drawing.Font("Cambria", 11F);
-            this.ciudadText.ForeColor = System.Drawing.SystemColors.Menu;
-            this.ciudadText.Location = new System.Drawing.Point(20, 59);
-            this.ciudadText.Name = "ciudadText";
-            this.ciudadText.Size = new System.Drawing.Size(137, 25);
-            this.ciudadText.TabIndex = 56;
-            this.ciudadText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // alojamientosGrid
             // 
@@ -113,7 +102,7 @@ namespace Agencia.Views
             this.barrioText.BackColor = System.Drawing.SystemColors.ControlText;
             this.barrioText.Font = new System.Drawing.Font("Cambria", 11F);
             this.barrioText.ForeColor = System.Drawing.SystemColors.Menu;
-            this.barrioText.Location = new System.Drawing.Point(20, 121);
+            this.barrioText.Location = new System.Drawing.Point(196, 125);
             this.barrioText.Name = "barrioText";
             this.barrioText.Size = new System.Drawing.Size(137, 25);
             this.barrioText.TabIndex = 61;
@@ -137,7 +126,7 @@ namespace Agencia.Views
             this.tipoAlojamientoCombo.Items.AddRange(new object[] {
             "Hotel",
             "Cabaña"});
-            this.tipoAlojamientoCombo.Location = new System.Drawing.Point(198, 121);
+            this.tipoAlojamientoCombo.Location = new System.Drawing.Point(26, 59);
             this.tipoAlojamientoCombo.Name = "tipoAlojamientoCombo";
             this.tipoAlojamientoCombo.Size = new System.Drawing.Size(136, 25);
             this.tipoAlojamientoCombo.TabIndex = 63;
@@ -156,6 +145,7 @@ namespace Agencia.Views
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.combo_ciudadHeader);
             this.panel1.Controls.Add(this.check_tv);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.LDiaOPer);
@@ -176,7 +166,6 @@ namespace Agencia.Views
             this.panel1.Controls.Add(this.estrellasText);
             this.panel1.Controls.Add(this.barrioText);
             this.panel1.Controls.Add(this.alojamientosGrid);
-            this.panel1.Controls.Add(this.ciudadText);
             this.panel1.Location = new System.Drawing.Point(28, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(969, 463);
@@ -230,7 +219,7 @@ namespace Agencia.Views
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(193, 101);
+            this.label8.Location = new System.Drawing.Point(21, 39);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(132, 16);
             this.label8.TabIndex = 76;
@@ -274,7 +263,7 @@ namespace Agencia.Views
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(18, 101);
+            this.label4.Location = new System.Drawing.Point(208, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 16);
             this.label4.TabIndex = 72;
@@ -285,7 +274,7 @@ namespace Agencia.Views
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(18, 38);
+            this.label2.Location = new System.Drawing.Point(38, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 16);
             this.label2.TabIndex = 71;
@@ -348,6 +337,14 @@ namespace Agencia.Views
             this.personasText.Size = new System.Drawing.Size(137, 25);
             this.personasText.TabIndex = 65;
             // 
+            // combo_ciudadHeader
+            // 
+            this.combo_ciudadHeader.FormattingEnabled = true;
+            this.combo_ciudadHeader.Location = new System.Drawing.Point(25, 125);
+            this.combo_ciudadHeader.Name = "combo_ciudadHeader";
+            this.combo_ciudadHeader.Size = new System.Drawing.Size(137, 21);
+            this.combo_ciudadHeader.TabIndex = 103;
+            // 
             // Editar
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -371,7 +368,7 @@ namespace Agencia.Views
             this.Eliminar_aloja.DefaultCellStyle = dataGridViewCellStyle2;
             this.Eliminar_aloja.HeaderText = "Eliminar";
             this.Eliminar_aloja.Name = "Eliminar_aloja";
-            this.Eliminar_aloja.Width = 40;
+            this.Eliminar_aloja.Width = 50;
             // 
             // Id
             // 
@@ -384,7 +381,7 @@ namespace Agencia.Views
             // 
             this.Barrio_text.HeaderText = "Barrio";
             this.Barrio_text.Name = "Barrio_text";
-            this.Barrio_text.Width = 50;
+            this.Barrio_text.Width = 60;
             // 
             // Estrellas_text
             // 
@@ -394,7 +391,7 @@ namespace Agencia.Views
             // 
             // cant_Persona
             // 
-            this.cant_Persona.HeaderText = "Cant.Persona";
+            this.cant_Persona.HeaderText = "Nro.Persona";
             this.cant_Persona.Name = "cant_Persona";
             // 
             // tv_text
@@ -412,11 +409,11 @@ namespace Agencia.Views
             // 
             this.Ciudad_text.HeaderText = "Ciudad";
             this.Ciudad_text.Name = "Ciudad_text";
-            this.Ciudad_text.Width = 50;
+            this.Ciudad_text.Width = 60;
             // 
             // CantHabitacion
             // 
-            this.CantHabitacion.HeaderText = "Cant Habitacion";
+            this.CantHabitacion.HeaderText = "Nro Habitacion";
             this.CantHabitacion.Name = "CantHabitacion";
             this.CantHabitacion.Width = 50;
             // 
@@ -432,7 +429,7 @@ namespace Agencia.Views
             // 
             // Cantidad_Banio
             // 
-            this.Cantidad_Banio.HeaderText = "Cant.Baño";
+            this.Cantidad_Banio.HeaderText = "Nro.Baños";
             this.Cantidad_Banio.Name = "Cantidad_Banio";
             // 
             // AdmAlojamientos
@@ -458,7 +455,6 @@ namespace Agencia.Views
         }
 
         #endregion
-        private System.Windows.Forms.TextBox ciudadText;
         private System.Windows.Forms.DataGridView alojamientosGrid;
         private System.Windows.Forms.TextBox barrioText;
         private System.Windows.Forms.TextBox estrellasText;
@@ -480,6 +476,7 @@ namespace Agencia.Views
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label LPersonas;
         private System.Windows.Forms.CheckBox check_tv;
+        public System.Windows.Forms.ComboBox combo_ciudadHeader;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar_aloja;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;

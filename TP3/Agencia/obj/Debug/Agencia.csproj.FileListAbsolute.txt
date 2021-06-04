@@ -207,7 +207,6 @@ E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\bin\Debug\Fo
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\bin\Debug\DataAccess.dll
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\bin\Debug\Bussines.pdb
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\bin\Debug\DataAccess.pdb
-E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\obj\Debug\Agencia.csprojAssemblyReference.cache
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\obj\Debug\Agencia.Views.BusquedaAlojamiento.resources
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\obj\Debug\Agencia.Views.ResultadoBusqueda.resources
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\obj\Debug\Agencia.Views.Administrador.resources
@@ -327,3 +326,5 @@ D:\Descargas\TP MEZCLA\TP3\Agencia\obj\Debug\Agencia.exe
 D:\Descargas\TP MEZCLA\TP3\Agencia\obj\Debug\Agencia.pdb
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\bin\Debug\Entidades.dll
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\bin\Debug\Entidades.pdb
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\obj\Debug\Agencia.Views.EditarAlojamiento.resources
+E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Agencia\obj\Debug\Agencia.csproj.AssemblyReference.cache
