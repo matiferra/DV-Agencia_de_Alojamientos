@@ -12,8 +12,8 @@ namespace Agencia.Views
 {
     public partial class EditarUsuario : Form
     {
-        static Bussines.Agencia a = new Bussines.Agencia();
-        static Bussines.AgenciaManager ag = new Bussines.AgenciaManager(a);
+        //static Bussines.Agencia a = new Bussines.Agencia();
+        static Bussines.AgenciaManager ag = new Bussines.AgenciaManager();
         public EditarUsuario(AdmUsuarios admUsuarios)
         {
             InitializeComponent();
@@ -48,6 +48,11 @@ namespace Agencia.Views
             {
                 MessageBox.Show("No se pudo Modificar el Usuario");
             }
+
+        }
+
+        private void EditarUsuario_Load(object sender, EventArgs e)
+        {
 
         }
     }

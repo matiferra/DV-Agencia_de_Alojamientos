@@ -10,9 +10,7 @@ namespace DataAccess
 {
     public class ConexionDB
     {
-        //Cadena de Conexion
-        //string cadena = @"Data Source = DESKTOP-ED5CATB\SQLEXPRESS;Initial Catalog = TPAgencia; User Id = sa; Password=123456";
-        //string cadena = @"Data Source = basedv.ddns.net\DVTN;Initial Catalog = TPAgencia; User Id = matias.ferrario@davinci.edu.ar; Password=Dv2021";
+        //Cadena de Conexion     
         string cadena = ConfigurationManager.ConnectionStrings["conectar"].ConnectionString;
         public SqlConnection Conectarbd = new SqlConnection();
         //Constructor

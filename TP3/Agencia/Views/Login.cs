@@ -42,17 +42,21 @@ namespace Agencia
         {
             if (ag.login(txtUsername.Text, txtPassword.Text))
             {
+                Global.GlobalSessionNombre = txtUsername.Text;//creo clase "Global" con el propisto de poder almacenar el nombre del usuario y poder identificar a la hora de cambiar contraseña.
+                Global.GlobalSessionPass = txtPassword.Text;
                 if (ag.validoSiEsAdmin(txtUsername.Text))
                 {
+                   
                     adminForm.Dock = DockStyle.Fill;
                     adminForm.Show();
                 }
                 else
-                {
+                {                 
                     clienteForm.Dock = DockStyle.Fill;
                     clienteForm.Show();
                 }
-
+                txtUsername.Text = "";
+                txtPassword.Text = "";
             }
             else
             {

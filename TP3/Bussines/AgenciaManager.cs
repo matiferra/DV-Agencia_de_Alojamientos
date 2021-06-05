@@ -349,7 +349,17 @@ namespace Bussines
             return desbloqueado;
         }
 
+        public string recuperoDni(string usuario, string contraseña)
+        {
+            string resultado = "";
+            DataSet ds = usuarioDA.obtenerUsuarios(usuario, contraseña);
+            if (ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
+            {
+                resultado = ds.Tables[0].Rows[0]["dni"].ToString();
+            }
 
+            return resultado;
+        }
 
         public string cambiarContrasenia(string DNI, string oldPass, string newPass1, string newPass2)
         {
@@ -359,9 +369,9 @@ namespace Bussines
             //Si es incorrecto mensaje de alerta avisando el asunto.
             //si pasa  lo proximo hacer es machear la contraseña nueva con la reigresar contraseña y verificar si son iguales
             string mensaje = "";
-           DataSet ds = usuarioDA.obtenerUsuarios(int.Parse(DNI));
+            DataSet ds = usuarioDA.obtenerUsuarios(int.Parse(DNI));
 
-            if (ds.Tables[0] != null && ds.Tables[0].Rows.Count >0)
+            if (ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
             {
                 string contrasenia = ds.Tables[0].Rows[0]["pass"].ToString();
                 if (contrasenia.Trim() == oldPass.Trim())
@@ -381,7 +391,7 @@ namespace Bussines
                     mensaje = "la contraseña no coincide con la original";
                 }
             }
-           
+
             return mensaje;
         }
 

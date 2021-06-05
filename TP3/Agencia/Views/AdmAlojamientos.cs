@@ -15,23 +15,9 @@ namespace Agencia.Views
 {
     public partial class AdmAlojamientos : Form
     {
+
         AgenciaManager Ag = new AgenciaManager();
-        public Bussines.AgenciaManager agencia { get; set; }
-
-        static string fileName = "alojamientos.txt";
-        static string sourcePath = @"C:\plataformas";
-        string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
-
-        string tv;
-        string ciudad;
-        string barrio;
-        string estrellas;
-        string tipoAlojamiento;
-        string personas;
-        string precio;
-        string habitaciones;
-        string banios;
-
+        public AgenciaManager agencia { get; set; }
 
         public AdmAlojamientos()
         {
@@ -121,10 +107,10 @@ namespace Agencia.Views
         }
 
 
-     
+
         private void AdmAlojamientos_MouseDown(object sender, MouseEventArgs e)
         {
-         
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -157,42 +143,51 @@ namespace Agencia.Views
 
             }
 
+        }
 
+        public void limpioEncabezado()
+        {
+            estrellasText.Text = "";
+            personasText.Text = "";
+            barrioText.Text = "";
+            precioText.Text = "";
+            habitacionesText.Text = "";
+            baniosText.Text = "";
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (check_tv.Checked)
-            {
-                tv = "true";
-            }
-            else
-            {
-                tv = "false";
-            }
-            ciudad = combo_ciudadHeader.Text;
-            barrio = barrioText.Text;
-            estrellas = estrellasText.Text;
-            tipoAlojamiento = tipoAlojamientoCombo.Text;
-            personas = personasText.Text;
-            precio = precioText.Text;
-            habitaciones = habitacionesText.Text;
-            banios = baniosText.Text;
+            //if (check_tv.Checked)
+            //{
+            //    tv = "true";
+            //}
+            //else
+            //{
+            //    tv = "false";
+            //}
+            //ciudad = combo_ciudadHeader.Text;
+            //barrio = barrioText.Text;
+            //estrellas = estrellasText.Text;
+            //tipoAlojamiento = tipoAlojamientoCombo.Text;
+            //personas = personasText.Text;
+            //precio = precioText.Text;
+            //habitaciones = habitacionesText.Text;
+            //banios = baniosText.Text;
 
 
-            string[] datos = { tipoAlojamiento, ciudad, barrio, estrellas, personas, tv, precio, habitaciones, banios, " " };
-            if (!File.Exists(sourceFile))
-            {
-                File.WriteAllLines(sourceFile, datos);
-            }
-            else
-            {
-                foreach (var item in datos)
-                {
-                    File.AppendAllText(sourceFile, item + Environment.NewLine);
-                }
-            }
+            //string[] datos = { tipoAlojamiento, ciudad, barrio, estrellas, personas, tv, precio, habitaciones, banios, " " };
+            //if (!File.Exists(sourceFile))
+            //{
+            //    File.WriteAllLines(sourceFile, datos);
+            //}
+            //else
+            //{
+            //    foreach (var item in datos)
+            //    {
+            //        File.AppendAllText(sourceFile, item + Environment.NewLine);
+            //    }
+            //}
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -211,13 +206,13 @@ namespace Agencia.Views
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-           
+
             if (Ag.agregarAlojamiento(tipoAlojamientoCombo.Text, combo_ciudadHeader.SelectedValue.ToString(), barrioText.Text, estrellasText.Text,
                                   personasText.Text, check_tv.Checked, precioText.Text, habitacionesText.Text, baniosText.Text))
             {
 
-                MessageBox.Show("Agregado con éxito");
-               // alojamientosGrid.Rows.Clear();
+                MessageBox.Show("Agregado con éxito");              
+                limpioEncabezado();
                 RefresVista();
             }
             else
@@ -248,8 +243,8 @@ namespace Agencia.Views
         {
             if (this.alojamientosGrid.Columns[e.ColumnIndex].Name == "Eliminar_aloja")
             {
-                DialogResult dr = MessageBox.Show("Seguro que deseea eliminar?", "Alerta", MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
-               
+                DialogResult dr = MessageBox.Show("Seguro que deseea eliminar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
                 if (dr == DialogResult.Yes)
                 {
                     var id = this.alojamientosGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -257,7 +252,7 @@ namespace Agencia.Views
                     RefresVista();
 
                 }
-             
+
             }
             else if (this.alojamientosGrid.Columns[e.ColumnIndex].Name == "Editar")
             {
@@ -265,7 +260,7 @@ namespace Agencia.Views
 
                 EditarAlojamiento editar = new EditarAlojamiento(this);
                 editar.UpdateEventArgsHandler += edit_aloj_UpdateHadler; //  metodo la cual me permite actualizar la grilla cuando termine de guardar los cambios
-                
+
                 editar.id_text.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
                 editar.id_text.ReadOnly = true;
                 editar.id_text.Visible = false;
@@ -299,17 +294,17 @@ namespace Agencia.Views
                     editar.habitacionesText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[9].Value.ToString();
                     editar.precioxdiaText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[10].Value.ToString();
                     editar.baniosText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[12].Value.ToString();
-                }               
+                }
 
                 editar.Show();
             }
 
 
-    
+
 
 
         }
 
-    
+
     }
 }

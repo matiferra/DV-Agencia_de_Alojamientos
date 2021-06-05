@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Bussines;
 using System.IO;
 
 namespace Agencia.Views
@@ -15,10 +14,8 @@ namespace Agencia.Views
 {
     public partial class AdmUsuarios : Form
     {
-        static Bussines.Agencia a = new Bussines.Agencia();
-        static Bussines.AgenciaManager ag = new Bussines.AgenciaManager(a);
-
-
+        //static Bussines.Agencia a = new Bussines.Agencia();
+        static Bussines.AgenciaManager ag = new Bussines.AgenciaManager();
         // Usuario usuario = null;
 
         private Form currentChildForm;
@@ -100,7 +97,7 @@ namespace Agencia.Views
 
                 editar.text_nombre.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[6].Value.ToString();
                 editar.textBox_contras.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[8].Value.ToString();
-                editar.textBox_dni.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString();
+               editar.textBox_dni.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString(); // dni lo tomamos como pk de la tabla no es valido poder modificarlo
                 editar.textBox_mail.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[4].Value.ToString();
                 editar.check_esadmin.Checked = bool.Parse(this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[7].Value.ToString());
 

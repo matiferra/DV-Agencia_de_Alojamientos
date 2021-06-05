@@ -12,50 +12,6 @@ namespace DataAccess
 {
     public class UsuarioDA
     {
-        //  private List<Entidades.Usuario> misUsuarios;
-
-        //public UsuarioDA()
-        //{
-        //    //  misUsuarios = new List<Entidades.Usuario>();
-        //    inicializarAtributos();
-        //}
-
-        //private void inicializarAtributos()
-        //{
-        //    //Cargo la cadena de conexión desde el archivo de properties
-        //    string connectionString = ConfigurationManager.ConnectionStrings["conectar"].ConnectionString;
-
-        //    //Defino el string con la consulta que quiero realizar
-        //    string queryString = "SELECT  dni,nombre,mail,pass,esAdmin,bloqueado  from dbo.Usuarios";
-
-        //    // Creo una conexión SQL con un Using, de modo que al finalizar, la conexión se cierra y se liberan recursos
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        // Defino el comando a enviar al motor SQL con la consulta y la conexión
-        //        SqlCommand command = new SqlCommand(queryString, connection);
-
-        //        try
-        //        {
-        //            //Abro la conexión
-        //            connection.Open();
-        //            //mi objecto DataReader va a obtener los resultados de la consulta, notar que a comando se le pide ExecuteReader()
-        //            SqlDataReader reader = command.ExecuteReader();
-        //            // Entidades.Usuario aux;
-        //            //mientras haya registros/filas en mi DataReader, sigo leyendo
-        //            while (reader.Read())
-        //            {
-        //                //aux = new Entidades.Usuario(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetBoolean(4), reader.GetBoolean(5));
-        //                //misUsuarios.Add(aux);
-        //            }
-        //            //En este punto ya recorrí todas las filas del resultado de la query
-        //            reader.Close();
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            Console.WriteLine(ex.Message);
-        //        }
-        //    }
-        //}
 
         public DataSet obtenerUsuarios()
         {
@@ -79,8 +35,25 @@ namespace DataAccess
             queryString += " FROM Usuarios ";
             if (dni != 0)
             {
-                queryString += " where dni like '%" + dni + "%'";
+                queryString += " where dni = '" + dni + "'";
             }
+
+            ConexionDB _conn = new ConexionDB();
+            _conn.abrir();
+            SqlDataAdapter da = new SqlDataAdapter(queryString, _conn.Conectarbd);
+            da.Fill(ds);
+            _conn.cerrar();
+            return ds;
+        }
+
+        public DataSet obtenerUsuarios(string usuario,string contrasenia){
+            DataSet ds = new DataSet();
+            string queryString = "select top 1 ";
+            queryString += " dni, mail, pass, bloqueado, intentosLogeo, nombre, esAdmin ";
+            queryString += " FROM Usuarios ";          
+            queryString += " where nombre = '" + usuario+"'";
+            queryString += " and  pass = '" + contrasenia+"'";
+
 
             ConexionDB _conn = new ConexionDB();
             _conn.abrir();
@@ -198,6 +171,7 @@ namespace DataAccess
                     adapter.Fill(ds);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
+                        string guardoDNI = ds.Tables[0].Rows[0]["dni"].ToString();
                         return true;
                     }
                     else

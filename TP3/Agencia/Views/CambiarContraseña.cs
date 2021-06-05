@@ -34,10 +34,19 @@ namespace Agencia
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string respuesta = Ag.cambiarContrasenia("99999", pass_old.Text, pass_new.Text, pass_reingrese.Text);
+            string dni = Ag.recuperoDni(Global.GlobalSessionNombre, Global.GlobalSessionPass);
+            string respuesta = Ag.cambiarContrasenia(dni, pass_old.Text, pass_new.Text, pass_reingrese.Text);
 
             MessageBox.Show(respuesta);
+            LimpioCampos();
 
+        }
+
+        private void LimpioCampos()
+        {
+            pass_old.Text = "";
+            pass_new.Text = "";
+            pass_reingrese.Text = "";
         }
     }
 }
