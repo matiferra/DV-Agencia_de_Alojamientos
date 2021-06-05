@@ -31,11 +31,11 @@ namespace Agencia
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecuperarContraseña));
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pass_reingrese = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pass_new = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pass_old = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,15 +54,15 @@ namespace Agencia
             this.label4.TabIndex = 28;
             this.label4.Text = "Reingrese su contraseña nueva";
             // 
-            // textBox3
+            // pass_reingrese
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Cambria", 18F);
-            this.textBox3.Location = new System.Drawing.Point(500, 269);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(278, 29);
-            this.textBox3.TabIndex = 27;
+            this.pass_reingrese.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pass_reingrese.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pass_reingrese.Font = new System.Drawing.Font("Cambria", 18F);
+            this.pass_reingrese.Location = new System.Drawing.Point(500, 269);
+            this.pass_reingrese.Name = "pass_reingrese";
+            this.pass_reingrese.Size = new System.Drawing.Size(278, 29);
+            this.pass_reingrese.TabIndex = 27;
             // 
             // label3
             // 
@@ -76,16 +76,16 @@ namespace Agencia
             this.label3.TabIndex = 26;
             this.label3.Text = "Contraseña nueva";
             // 
-            // textBox2
+            // pass_new
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Cambria", 18F);
-            this.textBox2.Location = new System.Drawing.Point(500, 217);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(278, 29);
-            this.textBox2.TabIndex = 25;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.pass_new.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pass_new.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pass_new.Font = new System.Drawing.Font("Cambria", 18F);
+            this.pass_new.Location = new System.Drawing.Point(500, 217);
+            this.pass_new.Name = "pass_new";
+            this.pass_new.Size = new System.Drawing.Size(278, 29);
+            this.pass_new.TabIndex = 25;
+            this.pass_new.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label1
             // 
@@ -99,15 +99,15 @@ namespace Agencia
             this.label1.TabIndex = 24;
             this.label1.Text = " Contraseña Actual";
             // 
-            // textBox1
+            // pass_old
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 18F);
-            this.textBox1.Location = new System.Drawing.Point(500, 167);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 29);
-            this.textBox1.TabIndex = 23;
+            this.pass_old.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pass_old.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pass_old.Font = new System.Drawing.Font("Cambria", 18F);
+            this.pass_old.Location = new System.Drawing.Point(500, 167);
+            this.pass_old.Name = "pass_old";
+            this.pass_old.Size = new System.Drawing.Size(278, 29);
+            this.pass_old.TabIndex = 23;
             // 
             // label2
             // 
@@ -136,18 +136,19 @@ namespace Agencia
             this.btnLogin.TabIndex = 29;
             this.btnLogin.Text = "Aceptar";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.pass_old);
+            this.panel1.Controls.Add(this.pass_new);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.pass_reingrese);
             this.panel1.Location = new System.Drawing.Point(28, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(969, 463);
@@ -173,11 +174,11 @@ namespace Agencia
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox pass_reingrese;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox pass_new;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox pass_old;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel1;

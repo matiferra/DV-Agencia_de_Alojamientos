@@ -251,6 +251,52 @@ namespace DataAccess
 
         }
 
+        public bool  desbloquearUsuario(int Dni)
+        {
+            ConexionDB connection = new ConexionDB();
+            string queryString = "UPDATE [dbo].[Usuarios] SET bloqueado = 0  WHERE dni=@dni;";
+
+            SqlCommand command = new SqlCommand(queryString, connection.Conectarbd);
+            command.Parameters.Add(new SqlParameter("@dni", SqlDbType.Int));
+            command.Parameters["@dni"].Value = Dni;
+            try
+            {
+                connection.abrir();
+                command.ExecuteNonQuery();
+                connection.cerrar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+
+        }
+
+        public void cambiarContraseña(string pass , int dni)
+        {
+            ConexionDB connection = new ConexionDB();
+            string queryString = "UPDATE [dbo].[Usuarios] SET pass = @pass  WHERE dni=@dni;";
+
+            SqlCommand command = new SqlCommand(queryString, connection.Conectarbd);
+            command.Parameters.Add(new SqlParameter("@dni", SqlDbType.Int));
+            command.Parameters.Add(new SqlParameter("@pass", SqlDbType.VarChar));
+            command.Parameters["@dni"].Value = dni;
+            command.Parameters["@pass"].Value = pass;
+            try
+            {
+                connection.abrir();
+                command.ExecuteNonQuery();
+                connection.cerrar();
+               // return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+               // return false;
+            }
+        }
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bussines;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace Agencia
 {
     public partial class RecuperarContraseña : Form
     {
-       
+        AgenciaManager Ag = new AgenciaManager();
         public Bussines.Usuario usuario { get; set; }
         public RecuperarContraseña()
         {
@@ -25,7 +26,17 @@ namespace Agencia
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+           //string respuesta = Ag.cambiarContrasenia("99999", pass_old.Text, pass_new.Text, pass_reingrese.Text); 
 
+           // MessageBox.Show(respuesta);
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string respuesta = Ag.cambiarContrasenia("99999", pass_old.Text, pass_new.Text, pass_reingrese.Text);
+
+            MessageBox.Show(respuesta);
 
         }
     }

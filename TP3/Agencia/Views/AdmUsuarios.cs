@@ -17,9 +17,9 @@ namespace Agencia.Views
     {
         static Bussines.Agencia a = new Bussines.Agencia();
         static Bussines.AgenciaManager ag = new Bussines.AgenciaManager(a);
-    
 
-       // Usuario usuario = null;
+
+        // Usuario usuario = null;
 
         private Form currentChildForm;
 
@@ -41,7 +41,7 @@ namespace Agencia.Views
                 foreach (DataRow dr in Lista.Tables[0].Rows)
                 {
                     dataGridViewUsuarios.Rows.Add();
-                  
+
                     dataGridViewUsuarios.Rows[index].Cells[3].Value = dr["dni"].ToString();
                     dataGridViewUsuarios.Rows[index].Cells[4].Value = dr["mail"].ToString();
                     dataGridViewUsuarios.Rows[index].Cells[5].Value = dr["bloqueado"].ToString();
@@ -83,7 +83,7 @@ namespace Agencia.Views
 
             if (this.dataGridViewUsuarios.Columns[e.ColumnIndex].Name == "boton_eliminar")
             {
-                DialogResult dr = MessageBox.Show("Seguro que deseea eliminar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                DialogResult dr = MessageBox.Show("Seguro que desea eliminar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
                 if (dr == DialogResult.Yes)
                 {
@@ -106,13 +106,25 @@ namespace Agencia.Views
 
                 editar.Show();
             }
+            else if (this.dataGridViewUsuarios.Columns[e.ColumnIndex].Name == "boton_desbloquear")
+            {
+                DialogResult dr = MessageBox.Show("Seguro que desea Desbloquear?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                if (dr == DialogResult.Yes)
+                {
+                    var id = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    ag.desbloquearUsuario(id);
+                    RefresVista();
+                }
+
+            }
         }
 
         private void buscarButton_Click(object sender, EventArgs e)
         {
             dataGridViewUsuarios.Rows.Clear();
 
-            DataSet Lista = ag.getUsuario(buscarText.Text);
+            DataSet Lista = ag.buscarUsuario(buscarText.Text);
 
             int index = 0;
             if (Lista.Tables[0] != null && Lista.Tables[0].Rows.Count > 0)
@@ -147,14 +159,14 @@ namespace Agencia.Views
 
         //}
 
-    
+
 
         //private void pictureBox1_Click(object sender, EventArgs e)
         //{
 
         //}
 
-       
+
 
         //private void desbloquearButton_Click(object sender, EventArgs e)
         //{
@@ -168,7 +180,7 @@ namespace Agencia.Views
         //        }
         //    }*/
         //}
-            
+
 
         //private void editarButton_Click(object sender, EventArgs e)
         //{
@@ -193,6 +205,6 @@ namespace Agencia.Views
         //{
 
         //}
-      
+
     }
 }
