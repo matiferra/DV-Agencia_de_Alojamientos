@@ -1,6 +1,0 @@
-E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Entidades\bin\Debug\Entidades.dll
-E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Entidades\bin\Debug\Entidades.pdb
-E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
-E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
-E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Entidades\obj\Debug\Entidades.dll
-E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Entidades\obj\Debug\Entidades.pdb
