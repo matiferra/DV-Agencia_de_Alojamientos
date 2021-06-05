@@ -35,6 +35,23 @@ namespace Agencia.Views
             UpdateEventArgs args = new UpdateEventArgs();
             UpdateEventArgsHandler.Invoke(this, args);
         }
+        private void Agrego_boton_Click(object sender, EventArgs e)
+        {
+
+            if (Ag.modificarAlojamiento(id_text.Text, combo_ciudad.SelectedValue.ToString(), barrioText.Text, estrellasText.Text, personasText.Text, check_tv.Checked,
+                                    precioxdiaText.Text, habitacionesText.Text, baniosText.Text, campo_precioxpersona.Text))
+            {
+                MessageBox.Show("Agregado con éxito");
+                agregar();
+                this.Close();
+                this.Dispose();
+
+            }
+            else
+            {
+                MessageBox.Show("No se pudo Modificar el alojamiento");
+            }
+        }
 
 
         private void EditarAlojamiento_Load(object sender, EventArgs e)
@@ -52,22 +69,6 @@ namespace Agencia.Views
 
         }
 
-        private void Agrego_boton_Click(object sender, EventArgs e)
-        {
 
-            if (Ag.modificarAlojamiento(id_text.Text, combo_ciudad.SelectedValue.ToString(), barrioText.Text, estrellasText.Text, personasText.Text,check_tv.Checked,
-                                    precioxdiaText.Text,habitacionesText.Text,baniosText.Text, campo_precioxpersona.Text))
-            {
-                MessageBox.Show("Agregado con éxito");
-                agregar();
-                this.Close();
-                this.Dispose();
-            
-            }
-            else
-            {
-                MessageBox.Show("No se pudo Modificar el alojamiento");
-            }
-        }
     }
 }

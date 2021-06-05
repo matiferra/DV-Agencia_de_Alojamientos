@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks; 
 using System.Windows.Forms;
 
+
 namespace Agencia
 {
     public partial class RecuperarContraseña : Form
     {
-
+       
         public Bussines.Usuario usuario { get; set; }
         public RecuperarContraseña()
         {

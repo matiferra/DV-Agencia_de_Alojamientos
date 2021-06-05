@@ -33,14 +33,20 @@ namespace Agencia.Views
             this.buscarButton = new System.Windows.Forms.Button();
             this.buscarText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.editarButton = new System.Windows.Forms.Button();
-            this.eliminarButton = new System.Windows.Forms.Button();
-            this.desbloquearButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewUsuarios = new System.Windows.Forms.DataGridView();
+            this.boton_desbloquear = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.boton_Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.boton_eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Col_dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_bloqueado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_esadmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // buscarButton
@@ -82,73 +88,19 @@ namespace Agencia.Views
             this.label2.TabIndex = 30;
             this.label2.Text = "Buscar Usuario";
             // 
-            // editarButton
-            // 
-            this.editarButton.BackColor = System.Drawing.Color.Transparent;
-            this.editarButton.FlatAppearance.BorderSize = 2;
-            this.editarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.editarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.editarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editarButton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.editarButton.ForeColor = System.Drawing.Color.Honeydew;
-            this.editarButton.Location = new System.Drawing.Point(635, 395);
-            this.editarButton.Name = "editarButton";
-            this.editarButton.Size = new System.Drawing.Size(136, 31);
-            this.editarButton.TabIndex = 35;
-            this.editarButton.Text = "Editar";
-            this.editarButton.UseVisualStyleBackColor = false;
-            this.editarButton.Click += new System.EventHandler(this.editarButton_Click);
-            // 
-            // eliminarButton
-            // 
-            this.eliminarButton.BackColor = System.Drawing.Color.Transparent;
-            this.eliminarButton.FlatAppearance.BorderSize = 2;
-            this.eliminarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.eliminarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.eliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.eliminarButton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.eliminarButton.ForeColor = System.Drawing.Color.Honeydew;
-            this.eliminarButton.Location = new System.Drawing.Point(787, 395);
-            this.eliminarButton.Name = "eliminarButton";
-            this.eliminarButton.Size = new System.Drawing.Size(136, 31);
-            this.eliminarButton.TabIndex = 36;
-            this.eliminarButton.Text = "Eliminar";
-            this.eliminarButton.UseVisualStyleBackColor = false;
-            this.eliminarButton.Click += new System.EventHandler(this.eliminarButton_Click);
-            // 
-            // desbloquearButton
-            // 
-            this.desbloquearButton.BackColor = System.Drawing.Color.Transparent;
-            this.desbloquearButton.FlatAppearance.BorderSize = 2;
-            this.desbloquearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.desbloquearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.desbloquearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.desbloquearButton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.desbloquearButton.ForeColor = System.Drawing.Color.Honeydew;
-            this.desbloquearButton.Location = new System.Drawing.Point(483, 395);
-            this.desbloquearButton.Name = "desbloquearButton";
-            this.desbloquearButton.Size = new System.Drawing.Size(136, 31);
-            this.desbloquearButton.TabIndex = 38;
-            this.desbloquearButton.Text = "Desbloquear";
-            this.desbloquearButton.UseVisualStyleBackColor = false;
-            this.desbloquearButton.Click += new System.EventHandler(this.desbloquearButton_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.desbloquearButton);
-            this.panel1.Controls.Add(this.eliminarButton);
+            this.panel1.Controls.Add(this.dataGridViewUsuarios);
             this.panel1.Controls.Add(this.buscarButton);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.editarButton);
             this.panel1.Controls.Add(this.buscarText);
             this.panel1.Location = new System.Drawing.Point(28, 39);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(969, 463);
             this.panel1.TabIndex = 39;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+          //  this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -162,14 +114,83 @@ namespace Agencia.Views
             this.label1.TabIndex = 40;
             this.label1.Text = "Ingresar Documento";
             // 
-            // dataGridView1
+            // dataGridViewUsuarios
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 111);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(873, 259);
-            this.dataGridView1.TabIndex = 39;
+            this.dataGridViewUsuarios.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.boton_desbloquear,
+            this.boton_Editar,
+            this.boton_eliminar,
+            this.Col_dni,
+            this.col_mail,
+            this.Col_bloqueado,
+            this.Col_nombre,
+            this.Col_esadmin,
+            this.Col_pass});
+            this.dataGridViewUsuarios.Location = new System.Drawing.Point(50, 111);
+            this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
+            this.dataGridViewUsuarios.Size = new System.Drawing.Size(873, 335);
+            this.dataGridViewUsuarios.TabIndex = 39;
+            this.dataGridViewUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuarios_CellClick);
+            // 
+            // boton_desbloquear
+            // 
+            this.boton_desbloquear.HeaderText = "Desbloquear";
+            this.boton_desbloquear.Name = "boton_desbloquear";
+            this.boton_desbloquear.Width = 65;
+            // 
+            // boton_Editar
+            // 
+            this.boton_Editar.HeaderText = "Editar";
+            this.boton_Editar.Name = "boton_Editar";
+            this.boton_Editar.Width = 60;
+            // 
+            // boton_eliminar
+            // 
+            this.boton_eliminar.HeaderText = "Eliminar";
+            this.boton_eliminar.Name = "boton_eliminar";
+            this.boton_eliminar.Width = 60;
+            // 
+            // Col_dni
+            // 
+            this.Col_dni.HeaderText = "DNI";
+            this.Col_dni.Name = "Col_dni";
+            this.Col_dni.ReadOnly = true;
+            // 
+            // col_mail
+            // 
+            this.col_mail.HeaderText = "Mail";
+            this.col_mail.Name = "col_mail";
+            this.col_mail.ReadOnly = true;
+            this.col_mail.Width = 150;
+            // 
+            // Col_bloqueado
+            // 
+            this.Col_bloqueado.HeaderText = "Bloqueado";
+            this.Col_bloqueado.Name = "Col_bloqueado";
+            this.Col_bloqueado.ReadOnly = true;
+            // 
+            // Col_nombre
+            // 
+            this.Col_nombre.HeaderText = "nombre";
+            this.Col_nombre.Name = "Col_nombre";
+            this.Col_nombre.ReadOnly = true;
+            this.Col_nombre.Width = 150;
+            // 
+            // Col_esadmin
+            // 
+            this.Col_esadmin.HeaderText = "Es Admin";
+            this.Col_esadmin.Name = "Col_esadmin";
+            this.Col_esadmin.ReadOnly = true;
+            // 
+            // Col_pass
+            // 
+            this.Col_pass.HeaderText = "Contraseña";
+            this.Col_pass.Name = "Col_pass";
+            this.Col_pass.ReadOnly = true;
+            this.Col_pass.Visible = false;
+            this.Col_pass.Width = 30;
             // 
             // AdmUsuarios
             // 
@@ -186,7 +207,7 @@ namespace Agencia.Views
             this.Load += new System.EventHandler(this.AdmUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,11 +217,17 @@ namespace Agencia.Views
         private System.Windows.Forms.Button buscarButton;
         private System.Windows.Forms.TextBox buscarText;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button editarButton;
-        private System.Windows.Forms.Button eliminarButton;
-        private System.Windows.Forms.Button desbloquearButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewUsuarios;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewButtonColumn boton_desbloquear;
+        private System.Windows.Forms.DataGridViewButtonColumn boton_Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn boton_eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_dni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_mail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_bloqueado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_esadmin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_pass;
     }
 }

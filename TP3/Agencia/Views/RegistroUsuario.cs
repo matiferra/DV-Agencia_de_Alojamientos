@@ -23,48 +23,43 @@ namespace Agencia.Views
             this.ag = agenciaManager;
         }
 
+
+
         private void registrarse_Click(object sender, EventArgs e)
         {
             string usuario = txtUsername.Text;
             string password = txtPassword.Text;
             string DNI = txtDocu.Text;
             string email = txtEmail.Text;
-            string esAdmin = "false";
-            string bloqueado = "false";
 
-
-
-
-            string fileName = "usuarios.txt";
-            string sourcePath = @"C:\plataformas";
-            string sourceFile = Path.Combine(sourcePath + @"\USER", fileName);
-
-
-            if (!string.IsNullOrEmpty(usuario) || !string.IsNullOrEmpty(password) || !string.IsNullOrEmpty(DNI) || !string.IsNullOrEmpty(email))
+            if (!string.IsNullOrEmpty(usuario) && !string.IsNullOrEmpty(password) && 
+                !string.IsNullOrEmpty(DNI) && !string.IsNullOrEmpty(email))
             {
-                if (!Directory.Exists(sourcePath))
+                if (ag.agregarUsuario(DNI, usuario, email, password, false, false))
                 {
-                    Directory.CreateDirectory(sourcePath);
-                    Directory.CreateDirectory(sourcePath + @"\USER");
-                }
+                    MessageBox.Show("Sas ingreso con exito");
 
-                string[] datos = { txtDocu.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text, esAdmin, bloqueado, " " };
-                if (!File.Exists(sourceFile))
-                {
-                    File.WriteAllLines(sourceFile, datos);
+                    limpioCampos();
                 }
                 else
                 {
-                    foreach (var item in datos)
-                    {
-                        File.AppendAllText(sourceFile, item + Environment.NewLine);
-                    }
+                    MessageBox.Show("error al registrar usuario");
                 }
             }
+            else
+            {
+                MessageBox.Show("todos los campos son requeridos");
+            }
 
+        
+        }
 
-            MessageBox.Show("Sas ingreso con exito");
-
+        private void limpioCampos()
+        {
+            txtUsername.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+            txtDocu.Text =string.Empty;
+            txtEmail.Text = string.Empty;
 
         }
 

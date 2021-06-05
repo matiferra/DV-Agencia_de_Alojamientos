@@ -69,6 +69,4 @@ D:\Descargas\TP MEZCLA\TP3\Bussines\obj\Debug\Bussines.csproj.CoreCompileInputs.
 D:\Descargas\TP MEZCLA\TP3\Bussines\obj\Debug\Bussines.csproj.CopyComplete
 D:\Descargas\TP MEZCLA\TP3\Bussines\obj\Debug\Bussines.dll
 D:\Descargas\TP MEZCLA\TP3\Bussines\obj\Debug\Bussines.pdb
-E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\bin\Debug\Entidades.dll
-E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\bin\Debug\Entidades.pdb
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\Bussines\obj\Debug\Bussines.csproj.AssemblyReference.cache

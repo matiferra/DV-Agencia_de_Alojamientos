@@ -42,50 +42,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Agencia.exe" size="6269920">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Agencia.exe" size="5753824">
       <assemblyIdentity name="Agencia" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>04RuVawZ6lpRsyT3oE0/ZdyB/ADMuLVEK3v0Mron4qs=</dsig:DigestValue>
+        <dsig:DigestValue>hAm5Q6PQfeYCPCL92hYVHwCCHov0Cwfqkp19uEskCPw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bussines.dll" size="18432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bussines.dll" size="18944">
       <assemblyIdentity name="Bussines" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>f44RL0fj5IfR9aKtT5Zi8nHqYXrC+AMfGoWLzf0zwVU=</dsig:DigestValue>
+        <dsig:DigestValue>ka+LE5+J5epAvpLsJrcqhN9hA3O/DH8c+YjS6Nkcmr4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.dll" size="17920">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.dll" size="16896">
       <assemblyIdentity name="DataAccess" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Eqy58DyJmH/gSsGe3T0AwfmeU8f/lAGzfGNMIXA+i+c=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Entidades.dll" size="9728">
-      <assemblyIdentity name="Entidades" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YADMoIuzTWxcFfld5h6Dnz4tiGkLFtFfnaTa3oYK5Bc=</dsig:DigestValue>
+        <dsig:DigestValue>ZqgRKZPws0nDtAhpE6HSZLaGEyS38wqbFoefSRBC+DM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

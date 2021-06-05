@@ -37,42 +37,22 @@ namespace Bussines
 
         public DataSet getAlojamiento(int id)
         {
-
             DataSet ds = new DataSet();
-
             return ds = aloDA.getAlojamientos(id);
+        }
 
-            //bool eshotel = false;
-            //DataSet ds = new DataSet();
-            //List<List<string>> lista = new List<List<string>>();
-            //ds = aloDA.getAlojamientos(id);
+        public DataSet getUsuario()
+        {
+          return usuarioDA.obtenerUsuarios();
+        }
 
-            //if (ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0] != null)
-            //{
-            //    eshotel = bool.Parse(ds.Tables[0].Rows[0]["eshotel"].ToString());
-            //    string ciudad = ds.Tables[0].Rows[0]["ciudad"].ToString();
-            //    string estrellas = ds.Tables[0].Rows[0]["estrellas"].ToString();
-            //    string nroPersona = ds.Tables[0].Rows[0]["nroPersona"].ToString();
-            //    string barrio = ds.Tables[0].Rows[0]["barrio"].ToString();
-            //    double precioxDia = double.Parse(ds.Tables[0].Rows[0]["precioxDia"].ToString());
-            //    double precioxPresona = double.Parse(ds.Tables[0].Rows[0]["precioxDia"].ToString());
-            //    int nroBanio = int.Parse(ds.Tables[0].Rows[0]["nroBanio"].ToString());
-            //    bool  tv = bool.Parse(ds.Tables[0].Rows[0]["tv"].ToString());
-            //    int nroHabitacion =int.Parse(ds.Tables[0].Rows[0]["nroHabitacion"].ToString());
-            //    if (eshotel)
-            //    {
-            //        lista.Add(new List<string>() { ciudad.ToString(), barrio.ToString(), estrellas.ToString(), nroPersona.ToString(), tv.ToString(), precioxPresona.ToString()});
-            //    }
-            //    else
-            //    {
-            //        lista.Add(new List<string>() { ciudad,barrio,estrellas,nroPersona,tv.ToString(),precioxDia.ToString(),nroHabitacion.ToString(),nroBanio.ToString() });
-            //    }
-
-
-            //    }
-
-
-
+        public DataSet getUsuario(string dni)
+        {           
+            if (string.IsNullOrEmpty(dni))
+            {
+                dni = "0";
+            }
+            return usuarioDA.obtenerUsuarios(int.Parse(dni));
         }
 
         public DataSet buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo)
@@ -353,36 +333,54 @@ namespace Bussines
             return desbloqueado;
         }
 
-        public bool agregarUsuario(string DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado) //Parametro Datos del Usuario ¿?
+        public bool agregarUsuario(string DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado) 
         {
-            Usuario usuario = new Usuario(DNI, nombre, mail, password, esAdmin, bloqueado);
+            bool result;
+            try
+            {
+                usuarioDA.agregarUsuario(int.Parse(DNI),nombre,mail,password,esAdmin,bloqueado);
+                result = true;
+            }
+            catch
+            {
+                result = false;
+            }
 
-            misUsuarios.Add(usuario);
-
-            return true;
+            return result;
         }
 
-        public bool modificarUsuario(int DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado) //Parametro Datos del Usuario ¿?
+        public bool modificarUsuario(int DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado) 
         {
-            bool modificado = false;
+            bool result;
+            try
+            {
+                usuarioDA.modificarUsuario(DNI, nombre, mail, password, esAdmin, bloqueado);
+               
+                result = true;
+            }
+            catch
+            {
+                result = false;
+            }
 
-            return modificado;
+            return result;
         }
 
         public bool eliminarUsuario(string DNI)
         {
-            bool eliminado = false;
-
-            foreach (var item in misUsuarios)
+            bool result;
+            try
             {
-                if (item.DNI == DNI)
-                {
-                    misUsuarios.Remove(item);
-                    eliminado = true;
-                }
+                usuarioDA.eliminarUsuario(int.Parse(DNI));
+                result = true;
+            }
+            catch
+            {
+                result = false;
+           
             }
 
-            return eliminado;
+            return result;
         }
 
         public int cambiarContrasenia(string DNI, string oldPass, string newPass1, string newPass2)

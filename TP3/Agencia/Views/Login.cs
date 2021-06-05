@@ -23,20 +23,14 @@ namespace Agencia
         public Usuario user;
 
         public Login(Administrador adminForm, Cliente clienteForm, RegistroUsuario registroUsuarioForm, AgenciaManager agenciaManager, Usuario usuario)
-        {
-          
+        {          
             InitializeComponent();
             this.ag = agenciaManager;
             this.user = usuario;
             this.adminForm = adminForm;
             this.clienteForm = clienteForm;
             this.registroUsuarioForm = registroUsuarioForm;
-        }
-
-
-        
-
-        
+        }   
 
 
         private void txtUsername_TextChanged(object sender, EventArgs e)

@@ -273,7 +273,14 @@ namespace Agencia.Views
                 editar.barrioText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
                 editar.estrellasText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[4].Value.ToString();
                 editar.personasText.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[5].Value.ToString();
-                editar.check_tv.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[6].Value.ToString();            
+                if (this.alojamientosGrid.Rows[e.RowIndex].Cells[6].Value.ToString() == "si")
+                {
+                    editar.check_tv.Checked = true;
+                }
+                else
+                {
+                    editar.check_tv.Checked = false;
+                }
                 editar.combo_ciudad.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[8].Value.ToString();
                 if (bool.Parse(tipoAlojamiento) == true)
                 {

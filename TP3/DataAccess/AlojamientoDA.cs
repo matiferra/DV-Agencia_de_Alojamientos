@@ -120,9 +120,7 @@ namespace DataAccess
         }
 
         public bool deleteAlojamiento(int id)
-        {
-            //primero me aseguro que lo pueda agregar a la base
-            int resultadoQuery;
+        {          
             string queryString = "DELETE FROM [dbo].[Alojamientos] WHERE id_alojamiento = @id_alojamiento;";
             ConexionDB connection = new ConexionDB();
             SqlCommand command = new SqlCommand(queryString, connection.Conectarbd);
@@ -132,7 +130,7 @@ namespace DataAccess
             try
             {
                 connection.abrir();
-                resultadoQuery = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
                 connection.cerrar();
                 return true;
             }
