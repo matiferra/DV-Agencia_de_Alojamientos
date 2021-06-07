@@ -14,6 +14,35 @@ namespace DataAccess
     public class ReservaDA
     {
 
+
+        public DataSet buscarReservas(string dni, string desdeFecha, string hastaFecha)
+        {
+
+            DataSet ds = new DataSet();
+            string queryString = "select";
+            queryString += " fdesde, fhasta, Ciudades.nombre as ciudad, precio, Alojamientos.id_alojamiento as alojamiento, id_reserva";
+            queryString += " from reservas as Reservas, Ciudades, Usuarios, Alojamientos";
+            queryString += " WHERE Ciudades.id_ciudad = Alojamientos.id_ciudad";
+            queryString += " AND Usuarios.dni = Reservas.id_usuario";
+            queryString += " AND Reservas.id_alojamiento = Alojamientos.id_alojamiento";
+            queryString += " AND Usuarios.dni = @dni";
+            queryString += " AND Reservas.fhasta = @desdeFecha";
+            queryString += " AND Reservas.fdesde = @hastaFecha";
+
+            ConexionDB _conn = new ConexionDB();
+            _conn.abrir();
+            SqlDataAdapter da = new SqlDataAdapter(queryString, _conn.Conectarbd);
+            da.SelectCommand.Parameters.Add("@desdeFecha", SqlDbType.DateTime).Value = desdeFecha;
+            da.SelectCommand.Parameters.Add("@hastaFecha", SqlDbType.DateTime).Value = hastaFecha;
+            da.SelectCommand.Parameters.Add("@dni", SqlDbType.Int).Value = dni;
+            da.Fill(ds);
+            _conn.cerrar();
+            return ds;
+
+        }
+        
+
+
         public DataSet getTodasLasReservas()//PARA ADMIN
         {
             DataSet ds = new DataSet();
@@ -48,7 +77,11 @@ namespace DataAccess
             _conn.abrir();
             SqlDataAdapter da = new SqlDataAdapter(queryString, _conn.Conectarbd);
             da.SelectCommand.Parameters.Add("@dni", SqlDbType.Int).Value = dni;
+            if(da != null)
+            {
+
             da.Fill(ds);
+            }
             _conn.cerrar();
             return ds;
 
@@ -97,12 +130,11 @@ namespace DataAccess
 
         public bool deleteReserva(int id)
         {
-            string queryString = "DELETE FROM [dbo].[Reservas] WHERE id_reserva = @id_reserva;";
+            string queryString = "DELETE FROM [dbo].[Reservas] WHERE id_reserva = "+ id;
             ConexionDB connection = new ConexionDB();
             SqlCommand command = new SqlCommand(queryString, connection.Conectarbd);
-            command.Parameters.Add(new SqlParameter("@id_reserva", SqlDbType.Int));
-            command.Parameters["@id_reserva"].Value = id;
-
+           //command.Parameters.Add(new SqlParameter("@id_reserva", SqlDbType.Int));
+           // c/ ommand.Parameters["@id_reserva"].Value = id;
             try
             {
                 connection.abrir();

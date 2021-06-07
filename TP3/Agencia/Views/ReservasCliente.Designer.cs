@@ -37,7 +37,7 @@ namespace Agencia
             this.hastaFecha = new System.Windows.Forms.DateTimePicker();
             this.desdeFecha = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewReservas = new System.Windows.Forms.DataGridView();
-            this.Eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.FDesde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FHasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +77,7 @@ namespace Agencia
             this.btnLogin.TabIndex = 71;
             this.btnLogin.Text = "Buscar";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label3
             // 
@@ -145,11 +146,14 @@ namespace Agencia
             this.dataGridViewReservas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewReservas.Size = new System.Drawing.Size(554, 186);
             this.dataGridViewReservas.TabIndex = 106;
+            this.dataGridViewReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReservas_CellClick);
             // 
             // Eliminar
             // 
             this.Eliminar.HeaderText = "Eliminar";
             this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Eliminar.ToolTipText = "Eliminar";
             this.Eliminar.Width = 68;
             // 
@@ -219,7 +223,7 @@ namespace Agencia
         private System.Windows.Forms.DateTimePicker desdeFecha;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.DataGridView dataGridViewReservas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Eliminar;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn FDesde;
         private System.Windows.Forms.DataGridViewTextBoxColumn FHasta;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudad;

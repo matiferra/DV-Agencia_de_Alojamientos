@@ -29,11 +29,17 @@ namespace Agencia.Views
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmUsuarios));
             this.buscarButton = new System.Windows.Forms.Button();
             this.buscarText = new System.Windows.Forms.TextBox();
@@ -120,6 +126,7 @@ namespace Agencia.Views
             // 
             // dataGridViewUsuarios
             // 
+            this.dataGridViewUsuarios.AllowUserToAddRows = false;
             this.dataGridViewUsuarios.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -132,24 +139,24 @@ namespace Agencia.Views
             this.Col_nombre,
             this.Col_esadmin,
             this.Col_pass});
-            this.dataGridViewUsuarios.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dataGridViewUsuarios.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewUsuarios.Location = new System.Drawing.Point(40, 111);
             this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
             this.dataGridViewUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewUsuarios.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridViewUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewUsuarios.Size = new System.Drawing.Size(795, 335);
             this.dataGridViewUsuarios.TabIndex = 39;
             this.dataGridViewUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuarios_CellClick);
@@ -194,12 +201,16 @@ namespace Agencia.Views
             // 
             // Col_dni
             // 
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.Col_dni.DefaultCellStyle = dataGridViewCellStyle4;
             this.Col_dni.HeaderText = "DNI";
             this.Col_dni.Name = "Col_dni";
             this.Col_dni.ReadOnly = true;
             // 
             // col_mail
             // 
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            this.col_mail.DefaultCellStyle = dataGridViewCellStyle5;
             this.col_mail.HeaderText = "Mail";
             this.col_mail.Name = "col_mail";
             this.col_mail.ReadOnly = true;
@@ -207,12 +218,16 @@ namespace Agencia.Views
             // 
             // Col_bloqueado
             // 
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            this.Col_bloqueado.DefaultCellStyle = dataGridViewCellStyle6;
             this.Col_bloqueado.HeaderText = "Bloqueado";
             this.Col_bloqueado.Name = "Col_bloqueado";
             this.Col_bloqueado.ReadOnly = true;
             // 
             // Col_nombre
             // 
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            this.Col_nombre.DefaultCellStyle = dataGridViewCellStyle7;
             this.Col_nombre.HeaderText = "nombre";
             this.Col_nombre.Name = "Col_nombre";
             this.Col_nombre.ReadOnly = true;
@@ -220,12 +235,16 @@ namespace Agencia.Views
             // 
             // Col_esadmin
             // 
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            this.Col_esadmin.DefaultCellStyle = dataGridViewCellStyle8;
             this.Col_esadmin.HeaderText = "Es Admin";
             this.Col_esadmin.Name = "Col_esadmin";
             this.Col_esadmin.ReadOnly = true;
             // 
             // Col_pass
             // 
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            this.Col_pass.DefaultCellStyle = dataGridViewCellStyle9;
             this.Col_pass.HeaderText = "Contraseña";
             this.Col_pass.Name = "Col_pass";
             this.Col_pass.ReadOnly = true;

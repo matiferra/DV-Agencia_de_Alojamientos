@@ -20,6 +20,27 @@ namespace Agencia.Views
             panel1.BackColor = Color.FromArgb(60, Color.Black);
         }
 
+
+        public void RefresVista()
+        {
+            dataGridViewReservas.Rows.Clear();
+            DataSet Lista = Ag.getReservasPorCliente(Ag.recuperoDni(Global.GlobalSessionNombre, Global.GlobalSessionPass));
+            int index = 0;
+            if (Lista.Tables[0] != null && Lista.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow dr in Lista.Tables[0].Rows)
+                {
+                    dataGridViewReservas.Rows.Add();
+                    dataGridViewReservas.Rows[index].Cells[2].Value = dr["usuario"].ToString();
+                    dataGridViewReservas.Rows[index].Cells[3].Value = dr["fhasta"].ToString();
+                    dataGridViewReservas.Rows[index].Cells[4].Value = dr["fdesde"].ToString();
+                    dataGridViewReservas.Rows[index].Cells[5].Value = dr["precio"].ToString();
+                    dataGridViewReservas.Rows[index].Cells[6].Value = dr["id_reserva"].ToString();
+                    index++;
+
+                }
+            }
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -59,7 +80,8 @@ namespace Agencia.Views
         }
 
 
-        private void alojamientosGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dataGridViewReservas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (this.dataGridViewReservas.Columns[e.ColumnIndex].Name == "Eliminar")
             {
@@ -67,20 +89,17 @@ namespace Agencia.Views
 
                 if (dr == DialogResult.Yes)
                 {
-                    int id = int.Parse(this.dataGridViewReservas.Rows[e.RowIndex].Cells[7].Value.ToString());
+                    int id = int.Parse(this.dataGridViewReservas.Rows[e.RowIndex].Cells[6].Value.ToString());
                     if (Ag.eliminarReserva(id))
                     {
-                        MessageBox.Show("Cada vez cerca");
+                        MessageBox.Show("RESERVA ELIMINADA");
                     }
-                    //RefrescarVista();
+                    RefresVista();
 
                 }
-
             }
             /*else if (this.dataGridViewReservas.Columns[e.ColumnIndex].Name == "Editar")
             {
-                var tipoAlojamiento = this.dataGridViewReservas.Rows[e.RowIndex].Cells[7].Value.ToString();
-
                 EditarAlojamiento editar = new EditarAlojamiento(this);
                 editar.UpdateEventArgsHandler += edit_aloj_UpddataGridViewReservasateHadler; //  metodo la cual me permite actualizar la grilla cuando termine de guardar los cambios
 
@@ -122,11 +141,6 @@ namespace Agencia.Views
                 editar.Show();
             }*/
 
-
-
-
-
         }
-
     }
 }

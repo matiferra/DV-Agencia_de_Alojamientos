@@ -31,14 +31,14 @@ namespace Agencia.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmReservas));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TODAS = new System.Windows.Forms.Button();
             this.dataGridViewReservas = new System.Windows.Forms.DataGridView();
             this.combo_ciudadHeader = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.TODAS = new System.Windows.Forms.Button();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FDesde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FHasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +63,23 @@ namespace Agencia.Views
             this.panel1.TabIndex = 40;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // TODAS
+            // 
+            this.TODAS.BackColor = System.Drawing.Color.Transparent;
+            this.TODAS.FlatAppearance.BorderSize = 2;
+            this.TODAS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.TODAS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TODAS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TODAS.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.TODAS.ForeColor = System.Drawing.Color.Honeydew;
+            this.TODAS.Location = new System.Drawing.Point(653, 87);
+            this.TODAS.Name = "TODAS";
+            this.TODAS.Size = new System.Drawing.Size(136, 31);
+            this.TODAS.TabIndex = 106;
+            this.TODAS.Text = "Mostrar Todas";
+            this.TODAS.UseVisualStyleBackColor = false;
+            this.TODAS.Click += new System.EventHandler(this.button1_Click);
+            // 
             // dataGridViewReservas
             // 
             this.dataGridViewReservas.AllowUserToAddRows = false;
@@ -85,6 +102,7 @@ namespace Agencia.Views
             this.dataGridViewReservas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewReservas.Size = new System.Drawing.Size(501, 186);
             this.dataGridViewReservas.TabIndex = 105;
+            this.dataGridViewReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReservas_CellClick);
             // 
             // combo_ciudadHeader
             // 
@@ -138,23 +156,6 @@ namespace Agencia.Views
             this.label2.Text = "Buscar Reservas";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // TODAS
-            // 
-            this.TODAS.BackColor = System.Drawing.Color.Transparent;
-            this.TODAS.FlatAppearance.BorderSize = 2;
-            this.TODAS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.TODAS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TODAS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TODAS.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.TODAS.ForeColor = System.Drawing.Color.Honeydew;
-            this.TODAS.Location = new System.Drawing.Point(653, 87);
-            this.TODAS.Name = "TODAS";
-            this.TODAS.Size = new System.Drawing.Size(136, 31);
-            this.TODAS.TabIndex = 106;
-            this.TODAS.Text = "Mostrar Todas";
-            this.TODAS.UseVisualStyleBackColor = false;
-            this.TODAS.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Editar
             // 
             this.Editar.HeaderText = "Editar";
@@ -167,6 +168,8 @@ namespace Agencia.Views
             // 
             this.Eliminar.HeaderText = "Eliminar";
             this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Eliminar.ToolTipText = "Eliminar";
             this.Eliminar.Width = 68;
             // 
@@ -233,7 +236,7 @@ namespace Agencia.Views
         private System.Windows.Forms.DataGridView dataGridViewReservas;
         private System.Windows.Forms.Button TODAS;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Eliminar;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn FDesde;
         private System.Windows.Forms.DataGridViewTextBoxColumn FHasta;

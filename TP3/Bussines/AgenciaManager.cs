@@ -453,13 +453,9 @@ namespace Bussines
 
 
 
-        public List<List<string>> buscarReservas(int DNIusuario)
+        public DataSet buscarReservas(string dni, string fdesde, string fhasta)
         {
-
-            //PENDIENTE
-            List<List<string>> lista = null;
-
-            return lista;
+            return reservasDA.buscarReservas(dni, fdesde, fhasta);
         }
 
         public bool reservar(int codAloj, string dniUsuario, DateTime Fdesde, DateTime Fhasta)
