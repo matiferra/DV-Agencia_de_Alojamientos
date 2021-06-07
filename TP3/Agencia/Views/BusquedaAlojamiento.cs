@@ -39,6 +39,11 @@ namespace Agencia.Views
                     foreach (DataRow dr in Lista.Tables[0].Rows)
                     {
                         dataGridView1.Rows.Add();
+                       /* DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+                        btn.HeaderText = "Reservar";
+                        btn.Text = "reservar";
+                        btn.UseColumnTextForButtonValue = true;
+                        */
                         dataGridView1.Rows[index].Cells[0].Value = dr["barrio"].ToString();
                         dataGridView1.Rows[index].Cells[1].Value = int.Parse(dr["estrellas"].ToString());
                         dataGridView1.Rows[index].Cells[2].Value = dr["cantidadDePersonas"].ToString();
@@ -48,7 +53,7 @@ namespace Agencia.Views
                         dataGridView1.Rows[index].Cells[6].Value = dr["precio_por_dia"].ToString();
                         dataGridView1.Rows[index].Cells[7].Value = dr["precio_por_persona"].ToString();
                         dataGridView1.Rows[index].Cells[8].Value = dr["cantidadDeBanios"].ToString();
-
+                        //dataGridView1.Rows[index].Cells[9].Value = btn;
                         index++;
 
                     }

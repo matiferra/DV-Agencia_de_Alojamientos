@@ -25,6 +25,7 @@ namespace Agencia.Views
             InitializeComponent();
             panel1.BackColor = Color.FromArgb(60, Color.Black);
             RefresVista();
+            dataGridViewUsuarios.Columns[2].DefaultCellStyle.BackColor = Color.Red;
 
         }
 
@@ -38,7 +39,7 @@ namespace Agencia.Views
                 foreach (DataRow dr in Lista.Tables[0].Rows)
                 {
                     dataGridViewUsuarios.Rows.Add();
-
+                    
                     dataGridViewUsuarios.Rows[index].Cells[3].Value = dr["dni"].ToString();
                     dataGridViewUsuarios.Rows[index].Cells[4].Value = dr["mail"].ToString();
                     dataGridViewUsuarios.Rows[index].Cells[5].Value = dr["bloqueado"].ToString();
@@ -148,7 +149,22 @@ namespace Agencia.Views
 
         private void AdmUsuarios_Load(object sender, EventArgs e)
         {
+           
+        }
 
+        private void dataGridViewUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewUsuarios_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            
+        }
+
+        private void dataGridViewUsuarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+           
         }
 
         //private void panel1_Paint(object sender, PaintEventArgs e)

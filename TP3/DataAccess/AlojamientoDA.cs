@@ -34,6 +34,33 @@ namespace DataAccess
             return ds;
         }
 
+        public DataSet getAlojamientosAdmin(string ciudad)
+        {
+            
+            DataSet ds = new DataSet();
+            string queryString = "select";
+            queryString += " barrio,estrellas,cantidadDePersonas,";
+            queryString += "(case when tv = 0";
+            queryString += "then 'No'";
+            queryString += "when tv = 1 ";
+            queryString += "then 'si'";
+            queryString += "end) tv,";
+            queryString += "id_alojamiento,eshotel";
+            queryString += ",Ciudades.nombre id_ciudad,cantidad_de_habitaciones,";
+            queryString += " cantidadDeBanios,precio_por_dia,precio_por_persona";
+            queryString += " from alojamientos as alojamientos";
+            queryString += " INNER JOIN Ciudades Ciudades ON Ciudades.id_ciudad = alojamientos.id_ciudad";
+            queryString += " WHERE Ciudades.nombre = @ciudad";
+            ConexionDB _conn = new ConexionDB();
+            _conn.abrir();
+            SqlDataAdapter da = new SqlDataAdapter(queryString, _conn.Conectarbd);
+            da.SelectCommand.Parameters.Add("@ciudad", SqlDbType.VarChar).Value = ciudad;
+            da.Fill(ds);
+            _conn.cerrar();
+            return ds;
+        }
+        
+
 
         public DataSet getAlojamientos(int id)
         {

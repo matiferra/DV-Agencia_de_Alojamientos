@@ -86,6 +86,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.cs" />
+    <Compile Include="Views\ReservasCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReservasCliente.Designer.cs">
+      <DependentUpon>ReservasCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdmReservas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     <Content Include="Content\svg-with-js.min.css" />
     <Content Include="Content\v4-shims.css" />
     <Content Include="Content\v4-shims.min.css" />
+    <EmbeddedResource Include="Views\ReservasCliente.resx">
+      <DependentUpon>ReservasCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\BusquedaAlojamiento.resx">
       <DependentUpon>BusquedaAlojamiento.cs</DependentUpon>
     </EmbeddedResource>

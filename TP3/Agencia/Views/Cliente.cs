@@ -94,7 +94,7 @@ namespace Agencia.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AdmReservas());
+            OpenChildForm(new ReservasCliente());
         }
 
         private void button3_Click(object sender, EventArgs e)

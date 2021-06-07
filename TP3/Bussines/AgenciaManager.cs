@@ -12,6 +12,7 @@ namespace Bussines
         AlojamientoDA aloDA = new AlojamientoDA();
         UsuarioDA usuarioDA = new UsuarioDA();
         CiudadesDA ciudades = new CiudadesDA();
+        ReservaDA reservasDA = new ReservaDA();
 
 
         public Agencia miAgencia { set; get; }
@@ -58,6 +59,12 @@ namespace Bussines
         /// <param name="cantPersonas"></param>
         /// <param name="tipo"></param>
         /// <returns></returns>
+        /// 
+        public DataSet obtenerAlojamientos(string ciudad)
+        {
+            return aloDA.getAlojamientosAdmin(ciudad);
+        }
+
         public DataSet buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo)
         {
             bool esHotel;
@@ -232,6 +239,27 @@ namespace Bussines
             }
             return usuarioDA.obtenerUsuarios(int.Parse(dni));
         }
+        public DataSet buscarUsuarioxNombre(string nombre)
+        {
+            if (string.IsNullOrEmpty(nombre))
+            {
+                return null;
+            }
+            return usuarioDA.obtenerUsuariosxNombre(nombre);
+        }
+
+
+        public bool sumarIntentosDeLogeo(int contadorIntentos, string dni)
+        {
+            return usuarioDA.sumarIntentosDeLogeo(contadorIntentos, dni);
+        }
+
+        public bool bloquearUsuario(string dni)
+        {
+            return usuarioDA.bloquearUsuario(dni);
+        }
+
+
 
         /// <summary>
         /// Permite agregar usuario como administardor
@@ -412,7 +440,16 @@ namespace Bussines
         }
 
 
+        public DataSet getTodasLasReservas()
+        {
+            return reservasDA.getTodasLasReservas();
+        }
+        public DataSet getReservasPorCliente(String dni)
+        {
+            return reservasDA.getReservasPorCliente(dni);
+        }
 
+        
 
 
 
@@ -440,13 +477,12 @@ namespace Bussines
             return modificada;
         }
 
-        public bool eliminarReserva(int codigo)
+        public bool eliminarReserva(int id)
         {
-            bool eliminada = false;
+            return reservasDA.deleteReserva(id);
 
             //PENDIENTE
 
-            return eliminada;
         }
 
     }

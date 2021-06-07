@@ -46,6 +46,71 @@ namespace DataAccess
             return ds;
         }
 
+        public DataSet obtenerUsuariosxNombre(string nombre)
+        {
+            DataSet ds = new DataSet();
+            string queryString = "select ";
+            queryString += " dni, mail, pass, bloqueado, intentosLogeo, nombre, esAdmin ";
+            queryString += " FROM Usuarios ";
+            queryString += " where nombre = '" + nombre + "'";
+            
+            ConexionDB _conn = new ConexionDB();
+            _conn.abrir();
+            SqlDataAdapter da = new SqlDataAdapter(queryString, _conn.Conectarbd);
+            da.Fill(ds);
+            _conn.cerrar();
+            return ds;
+        }
+
+        public bool sumarIntentosDeLogeo(int contadorIntentos, string dni)
+        {
+            ConexionDB connection = new ConexionDB();
+            string queryString = "UPDATE [dbo].[Usuarios] SET intentosLogeo = @contadorIntentos WHERE dni=@dni;";
+
+            SqlCommand command = new SqlCommand(queryString, connection.Conectarbd);
+            command.Parameters.Add(new SqlParameter("@dni", SqlDbType.Int));
+            command.Parameters["@dni"].Value = dni;
+            command.Parameters.Add(new SqlParameter("@contadorIntentos", SqlDbType.Int));
+            command.Parameters["@contadorIntentos"].Value = contadorIntentos;
+
+            try
+            {
+                connection.abrir();
+                command.ExecuteNonQuery();
+                connection.cerrar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+
+        }
+        public bool bloquearUsuario(string dni)
+        {
+            ConexionDB connection = new ConexionDB();
+            string queryString = "UPDATE [dbo].[Usuarios] SET bloqueado = 1, intentosLogeo = 0 WHERE dni=@dni";
+
+            SqlCommand command = new SqlCommand(queryString, connection.Conectarbd);
+            command.Parameters.Add(new SqlParameter("@dni", SqlDbType.Int));
+            command.Parameters["@dni"].Value = dni;
+
+            try
+            {
+                connection.abrir();
+                command.ExecuteNonQuery();
+                connection.cerrar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+
+        }
+
         public DataSet obtenerUsuarios(string usuario,string contrasenia){
             DataSet ds = new DataSet();
             string queryString = "select top 1 ";

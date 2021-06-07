@@ -30,7 +30,10 @@ namespace Agencia.Views
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmAlojamientos));
             this.alojamientosGrid = new System.Windows.Forms.DataGridView();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -73,8 +76,19 @@ namespace Agencia.Views
             // 
             // alojamientosGrid
             // 
-            this.alojamientosGrid.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.alojamientosGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.alojamientosGrid.AllowUserToAddRows = false;
+            this.alojamientosGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.alojamientosGrid.BackgroundColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.alojamientosGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.alojamientosGrid.ColumnHeadersHeight = 37;
+            this.alojamientosGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.alojamientosGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Editar,
             this.Eliminar_aloja,
@@ -89,38 +103,65 @@ namespace Agencia.Views
             this.Precio_dia,
             this.pre_persona,
             this.Cantidad_Banio});
-            this.alojamientosGrid.Location = new System.Drawing.Point(7, 229);
+            this.alojamientosGrid.EnableHeadersVisualStyles = false;
+            this.alojamientosGrid.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.alojamientosGrid.Location = new System.Drawing.Point(14, 231);
             this.alojamientosGrid.Name = "alojamientosGrid";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.alojamientosGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.alojamientosGrid.RowHeadersVisible = false;
             this.alojamientosGrid.RowHeadersWidth = 22;
-            this.alojamientosGrid.Size = new System.Drawing.Size(952, 243);
+            this.alojamientosGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.alojamientosGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.alojamientosGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.alojamientosGrid.Size = new System.Drawing.Size(943, 243);
             this.alojamientosGrid.TabIndex = 59;
             this.alojamientosGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.alojamientosGrid_CellClick);
             this.alojamientosGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Editar
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Editar.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Editar.HeaderText = "Editar";
+            this.Editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Editar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Editar.HeaderText = "";
+            this.Editar.MinimumWidth = 10;
             this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
             this.Editar.Text = "Editar";
-            this.Editar.Width = 40;
+            this.Editar.UseColumnTextForButtonValue = true;
+            this.Editar.Width = 60;
             // 
             // Eliminar_aloja
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Maroon;
-            this.Eliminar_aloja.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Eliminar_aloja.HeaderText = "Eliminar";
+            this.Eliminar_aloja.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Maroon;
+            this.Eliminar_aloja.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Eliminar_aloja.HeaderText = "";
             this.Eliminar_aloja.Name = "Eliminar_aloja";
-            this.Eliminar_aloja.Width = 50;
+            this.Eliminar_aloja.Text = "Eliminar";
+            this.Eliminar_aloja.UseColumnTextForButtonValue = true;
+            this.Eliminar_aloja.Width = 60;
             // 
             // Id
             // 
@@ -189,7 +230,7 @@ namespace Agencia.Views
             this.barrioText.BackColor = System.Drawing.SystemColors.ControlText;
             this.barrioText.Font = new System.Drawing.Font("Cambria", 11F);
             this.barrioText.ForeColor = System.Drawing.SystemColors.Menu;
-            this.barrioText.Location = new System.Drawing.Point(29, 128);
+            this.barrioText.Location = new System.Drawing.Point(151, 129);
             this.barrioText.Name = "barrioText";
             this.barrioText.Size = new System.Drawing.Size(137, 25);
             this.barrioText.TabIndex = 61;
@@ -199,7 +240,7 @@ namespace Agencia.Views
             this.estrellasText.BackColor = System.Drawing.SystemColors.ControlText;
             this.estrellasText.Font = new System.Drawing.Font("Cambria", 11F);
             this.estrellasText.ForeColor = System.Drawing.SystemColors.Menu;
-            this.estrellasText.Location = new System.Drawing.Point(196, 59);
+            this.estrellasText.Location = new System.Drawing.Point(318, 60);
             this.estrellasText.Name = "estrellasText";
             this.estrellasText.Size = new System.Drawing.Size(137, 25);
             this.estrellasText.TabIndex = 62;
@@ -213,7 +254,7 @@ namespace Agencia.Views
             this.tipoAlojamientoCombo.Items.AddRange(new object[] {
             "Hotel",
             "Cabaña"});
-            this.tipoAlojamientoCombo.Location = new System.Drawing.Point(26, 59);
+            this.tipoAlojamientoCombo.Location = new System.Drawing.Point(148, 60);
             this.tipoAlojamientoCombo.Name = "tipoAlojamientoCombo";
             this.tipoAlojamientoCombo.Size = new System.Drawing.Size(136, 25);
             this.tipoAlojamientoCombo.TabIndex = 63;
@@ -261,16 +302,19 @@ namespace Agencia.Views
             // 
             // combo_ciudadHeader
             // 
+            this.combo_ciudadHeader.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.combo_ciudadHeader.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_ciudadHeader.ForeColor = System.Drawing.Color.White;
             this.combo_ciudadHeader.FormattingEnabled = true;
-            this.combo_ciudadHeader.Location = new System.Drawing.Point(556, 64);
+            this.combo_ciudadHeader.Location = new System.Drawing.Point(678, 60);
             this.combo_ciudadHeader.Name = "combo_ciudadHeader";
-            this.combo_ciudadHeader.Size = new System.Drawing.Size(137, 21);
+            this.combo_ciudadHeader.Size = new System.Drawing.Size(137, 25);
             this.combo_ciudadHeader.TabIndex = 103;
             // 
             // check_tv
             // 
             this.check_tv.AutoSize = true;
-            this.check_tv.Location = new System.Drawing.Point(67, 200);
+            this.check_tv.Location = new System.Drawing.Point(189, 201);
             this.check_tv.Name = "check_tv";
             this.check_tv.Size = new System.Drawing.Size(15, 14);
             this.check_tv.TabIndex = 80;
@@ -281,7 +325,7 @@ namespace Agencia.Views
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 10.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(30, 172);
+            this.label3.Location = new System.Drawing.Point(152, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 17);
             this.label3.TabIndex = 79;
@@ -292,7 +336,7 @@ namespace Agencia.Views
             this.LDiaOPer.AutoSize = true;
             this.LDiaOPer.Font = new System.Drawing.Font("Cambria", 10.75F, System.Drawing.FontStyle.Bold);
             this.LDiaOPer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LDiaOPer.Location = new System.Drawing.Point(207, 101);
+            this.LDiaOPer.Location = new System.Drawing.Point(319, 108);
             this.LDiaOPer.Name = "LDiaOPer";
             this.LDiaOPer.Size = new System.Drawing.Size(106, 17);
             this.LDiaOPer.TabIndex = 78;
@@ -303,7 +347,7 @@ namespace Agencia.Views
             this.LBaños.AutoSize = true;
             this.LBaños.Font = new System.Drawing.Font("Cambria", 10.75F, System.Drawing.FontStyle.Bold);
             this.LBaños.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LBaños.Location = new System.Drawing.Point(553, 104);
+            this.LBaños.Location = new System.Drawing.Point(675, 105);
             this.LBaños.Name = "LBaños";
             this.LBaños.Size = new System.Drawing.Size(90, 17);
             this.LBaños.TabIndex = 77;
@@ -314,7 +358,7 @@ namespace Agencia.Views
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(21, 39);
+            this.label8.Location = new System.Drawing.Point(147, 40);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(132, 16);
             this.label8.TabIndex = 76;
@@ -325,7 +369,7 @@ namespace Agencia.Views
             this.LPersonas.AutoSize = true;
             this.LPersonas.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold);
             this.LPersonas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LPersonas.Location = new System.Drawing.Point(374, 38);
+            this.LPersonas.Location = new System.Drawing.Point(496, 39);
             this.LPersonas.Name = "LPersonas";
             this.LPersonas.Size = new System.Drawing.Size(83, 16);
             this.LPersonas.TabIndex = 75;
@@ -336,7 +380,7 @@ namespace Agencia.Views
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(193, 39);
+            this.label6.Location = new System.Drawing.Point(318, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 16);
             this.label6.TabIndex = 74;
@@ -347,7 +391,7 @@ namespace Agencia.Views
             this.LHabitaciones.AutoSize = true;
             this.LHabitaciones.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold);
             this.LHabitaciones.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LHabitaciones.Location = new System.Drawing.Point(385, 104);
+            this.LHabitaciones.Location = new System.Drawing.Point(499, 109);
             this.LHabitaciones.Name = "LHabitaciones";
             this.LHabitaciones.Size = new System.Drawing.Size(106, 16);
             this.LHabitaciones.TabIndex = 73;
@@ -358,7 +402,7 @@ namespace Agencia.Views
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(41, 104);
+            this.label4.Location = new System.Drawing.Point(150, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 16);
             this.label4.TabIndex = 72;
@@ -369,7 +413,7 @@ namespace Agencia.Views
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(569, 38);
+            this.label2.Location = new System.Drawing.Point(680, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 16);
             this.label2.TabIndex = 71;
@@ -380,7 +424,7 @@ namespace Agencia.Views
             this.precioText.BackColor = System.Drawing.SystemColors.ControlText;
             this.precioText.Font = new System.Drawing.Font("Cambria", 11F);
             this.precioText.ForeColor = System.Drawing.SystemColors.Menu;
-            this.precioText.Location = new System.Drawing.Point(210, 128);
+            this.precioText.Location = new System.Drawing.Point(318, 129);
             this.precioText.Name = "precioText";
             this.precioText.Size = new System.Drawing.Size(137, 25);
             this.precioText.TabIndex = 70;
@@ -394,9 +438,9 @@ namespace Agencia.Views
             this.Agrego_boton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Agrego_boton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
             this.Agrego_boton.ForeColor = System.Drawing.Color.White;
-            this.Agrego_boton.Location = new System.Drawing.Point(774, 149);
+            this.Agrego_boton.Location = new System.Drawing.Point(711, 173);
             this.Agrego_boton.Name = "Agrego_boton";
-            this.Agrego_boton.Size = new System.Drawing.Size(157, 60);
+            this.Agrego_boton.Size = new System.Drawing.Size(104, 36);
             this.Agrego_boton.TabIndex = 69;
             this.Agrego_boton.Text = "Agregar";
             this.Agrego_boton.UseVisualStyleBackColor = false;
@@ -407,7 +451,7 @@ namespace Agencia.Views
             this.baniosText.BackColor = System.Drawing.SystemColors.ControlText;
             this.baniosText.Font = new System.Drawing.Font("Cambria", 11F);
             this.baniosText.ForeColor = System.Drawing.SystemColors.Menu;
-            this.baniosText.Location = new System.Drawing.Point(556, 125);
+            this.baniosText.Location = new System.Drawing.Point(678, 126);
             this.baniosText.Name = "baniosText";
             this.baniosText.Size = new System.Drawing.Size(137, 25);
             this.baniosText.TabIndex = 68;
@@ -417,7 +461,7 @@ namespace Agencia.Views
             this.habitacionesText.BackColor = System.Drawing.SystemColors.ControlText;
             this.habitacionesText.Font = new System.Drawing.Font("Cambria", 11F);
             this.habitacionesText.ForeColor = System.Drawing.SystemColors.Menu;
-            this.habitacionesText.Location = new System.Drawing.Point(388, 128);
+            this.habitacionesText.Location = new System.Drawing.Point(499, 129);
             this.habitacionesText.Name = "habitacionesText";
             this.habitacionesText.Size = new System.Drawing.Size(137, 25);
             this.habitacionesText.TabIndex = 67;
@@ -427,7 +471,7 @@ namespace Agencia.Views
             this.personasText.BackColor = System.Drawing.SystemColors.ControlText;
             this.personasText.Font = new System.Drawing.Font("Cambria", 11F);
             this.personasText.ForeColor = System.Drawing.SystemColors.Menu;
-            this.personasText.Location = new System.Drawing.Point(377, 59);
+            this.personasText.Location = new System.Drawing.Point(499, 60);
             this.personasText.Name = "personasText";
             this.personasText.Size = new System.Drawing.Size(137, 25);
             this.personasText.TabIndex = 65;

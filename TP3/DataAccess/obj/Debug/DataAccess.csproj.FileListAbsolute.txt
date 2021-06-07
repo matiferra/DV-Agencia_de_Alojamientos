@@ -4,3 +4,9 @@ E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\DataAccess\obj\Debug
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\DataAccess\obj\Debug\DataAccess.dll
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\DataAccess\obj\Debug\DataAccess.pdb
 E:\Users\work\Desktop\plataformas davinci\tpPlataformas\TP3\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP3\DataAccess\bin\Debug\DataAccess.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP3\DataAccess\bin\Debug\DataAccess.pdb
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP3\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP3\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP3\DataAccess\obj\Debug\DataAccess.dll
+D:\My Documents\NUEVO\GitHub\tpPlataformas\TP3\DataAccess\obj\Debug\DataAccess.pdb

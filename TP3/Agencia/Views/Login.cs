@@ -44,23 +44,65 @@ namespace Agencia
             {
                 Global.GlobalSessionNombre = txtUsername.Text;//creo clase "Global" con el propisto de poder almacenar el nombre del usuario y poder identificar a la hora de cambiar contraseña.
                 Global.GlobalSessionPass = txtPassword.Text;
+                DataSet usuario = ag.buscarUsuarioxNombre(txtUsername.Text);
+                bool bloqueado = bool.Parse(usuario.Tables[0].Rows[0]["bloqueado"].ToString());
                 if (ag.validoSiEsAdmin(txtUsername.Text))
                 {
-                   
-                    adminForm.Dock = DockStyle.Fill;
-                    adminForm.Show();
+                    if (!bloqueado)
+                    {
+                        adminForm.Dock = DockStyle.Fill;
+                        adminForm.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El usuario esta bloqueado");
+                    }
                 }
                 else
-                {                 
-                    clienteForm.Dock = DockStyle.Fill;
-                    clienteForm.Show();
+                {
+                    if (!bloqueado)
+                    {
+                        clienteForm.Dock = DockStyle.Fill;
+                        clienteForm.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El usuario esta bloqueado");
+                    }
                 }
                 txtUsername.Text = "";
                 txtPassword.Text = "";
             }
             else
             {
-                MessageBox.Show("Usuario o Contraseña Incorrecto");
+                DataSet usuario = ag.buscarUsuarioxNombre(txtUsername.Text);
+                int contadorIntentos = 0;
+                if (usuario != null)
+                {
+
+                    contadorIntentos = int.Parse(usuario.Tables[0].Rows[0]["intentosLogeo"].ToString());
+
+                    string dni = usuario.Tables[0].Rows[0]["dni"].ToString();
+                    if (contadorIntentos >= 3)
+                    {
+                        ag.bloquearUsuario(dni);
+                        MessageBox.Show("BLOQUEADO");
+                    }
+                    else
+                    {
+                        contadorIntentos++;
+                        if (ag.sumarIntentosDeLogeo(contadorIntentos, dni))
+                        {
+                            MessageBox.Show("Le quedan " + (4 - contadorIntentos) + "intentos de logueo");
+
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o Contraseña Incorrecto");
+                }
             }
 
         }

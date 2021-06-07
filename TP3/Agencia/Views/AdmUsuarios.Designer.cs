@@ -29,6 +29,11 @@ namespace Agencia.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmUsuarios));
             this.buscarButton = new System.Windows.Forms.Button();
             this.buscarText = new System.Windows.Forms.TextBox();
@@ -100,7 +105,6 @@ namespace Agencia.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(969, 463);
             this.panel1.TabIndex = 39;
-          //  this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -128,28 +132,64 @@ namespace Agencia.Views
             this.Col_nombre,
             this.Col_esadmin,
             this.Col_pass});
-            this.dataGridViewUsuarios.Location = new System.Drawing.Point(50, 111);
+            this.dataGridViewUsuarios.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dataGridViewUsuarios.Location = new System.Drawing.Point(40, 111);
             this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
-            this.dataGridViewUsuarios.Size = new System.Drawing.Size(873, 335);
+            this.dataGridViewUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewUsuarios.RowHeadersVisible = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewUsuarios.Size = new System.Drawing.Size(795, 335);
             this.dataGridViewUsuarios.TabIndex = 39;
             this.dataGridViewUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuarios_CellClick);
+            this.dataGridViewUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuarios_CellContentClick);
+            this.dataGridViewUsuarios.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewUsuarios_CellFormatting);
+            this.dataGridViewUsuarios.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridViewUsuarios_RowPrePaint);
             // 
             // boton_desbloquear
             // 
-            this.boton_desbloquear.HeaderText = "Desbloquear";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.boton_desbloquear.DefaultCellStyle = dataGridViewCellStyle1;
+            this.boton_desbloquear.HeaderText = "";
             this.boton_desbloquear.Name = "boton_desbloquear";
-            this.boton_desbloquear.Width = 65;
+            this.boton_desbloquear.Text = "Desbloquear";
+            this.boton_desbloquear.UseColumnTextForButtonValue = true;
+            this.boton_desbloquear.Width = 70;
             // 
             // boton_Editar
             // 
-            this.boton_Editar.HeaderText = "Editar";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.boton_Editar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.boton_Editar.HeaderText = "";
             this.boton_Editar.Name = "boton_Editar";
+            this.boton_Editar.Text = "Editar";
+            this.boton_Editar.UseColumnTextForButtonValue = true;
             this.boton_Editar.Width = 60;
             // 
             // boton_eliminar
             // 
-            this.boton_eliminar.HeaderText = "Eliminar";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.boton_eliminar.DefaultCellStyle = dataGridViewCellStyle3;
+            this.boton_eliminar.HeaderText = "";
             this.boton_eliminar.Name = "boton_eliminar";
+            this.boton_eliminar.Text = "Eliminar";
+            this.boton_eliminar.UseColumnTextForButtonValue = true;
             this.boton_eliminar.Width = 60;
             // 
             // Col_dni

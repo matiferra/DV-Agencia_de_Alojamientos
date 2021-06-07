@@ -49,6 +49,7 @@
     <Compile Include="ConexionDB.cs" />
     <Compile Include="HotelDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservaDA.cs" />
     <Compile Include="UsuarioDA.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

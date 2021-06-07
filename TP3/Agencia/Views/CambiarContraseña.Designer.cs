@@ -59,8 +59,10 @@ namespace Agencia
             this.pass_reingrese.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pass_reingrese.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pass_reingrese.Font = new System.Drawing.Font("Cambria", 18F);
+            this.pass_reingrese.ForeColor = System.Drawing.Color.White;
             this.pass_reingrese.Location = new System.Drawing.Point(500, 269);
             this.pass_reingrese.Name = "pass_reingrese";
+            this.pass_reingrese.PasswordChar = '*';
             this.pass_reingrese.Size = new System.Drawing.Size(278, 29);
             this.pass_reingrese.TabIndex = 27;
             // 
@@ -81,8 +83,10 @@ namespace Agencia
             this.pass_new.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pass_new.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pass_new.Font = new System.Drawing.Font("Cambria", 18F);
+            this.pass_new.ForeColor = System.Drawing.Color.White;
             this.pass_new.Location = new System.Drawing.Point(500, 217);
             this.pass_new.Name = "pass_new";
+            this.pass_new.PasswordChar = '*';
             this.pass_new.Size = new System.Drawing.Size(278, 29);
             this.pass_new.TabIndex = 25;
             this.pass_new.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -104,8 +108,10 @@ namespace Agencia
             this.pass_old.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pass_old.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pass_old.Font = new System.Drawing.Font("Cambria", 18F);
+            this.pass_old.ForeColor = System.Drawing.Color.White;
             this.pass_old.Location = new System.Drawing.Point(500, 167);
             this.pass_old.Name = "pass_old";
+            this.pass_old.PasswordChar = '*';
             this.pass_old.Size = new System.Drawing.Size(278, 29);
             this.pass_old.TabIndex = 23;
             // 
