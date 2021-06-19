@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
+
     public class Usuario
     {
         public int id { get; set; }
@@ -21,6 +22,15 @@ namespace DataAccess
         public bool bloqueado { get; set; }
         public int intentosLogueo { get; set; }
 
+        public Usuario(int Dni, string Nombre, string Mail, string Password, bool EsADM, bool Bloqueado)
+        {
+            DNI = Dni;
+            nombre = Nombre;
+            mail = Mail;
+            password = Password;
+            esAdmin = EsADM;
+            bloqueado = Bloqueado;
+        }
 
     }
 }
