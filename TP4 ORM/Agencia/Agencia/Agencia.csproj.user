@@ -1,8 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <ItemGroup>
-        <Compile Update="Form1.cs">
-            <SubType>Form</SubType>
-        </Compile>
-    </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\AdmAlojamientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\AdmReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\AdmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\BusquedaAlojamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\CambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\EditarAlojamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\EditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\RegistroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ReservasCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ResultadoBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>

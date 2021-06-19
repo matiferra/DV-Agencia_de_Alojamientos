@@ -6,6 +6,16 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
+      "Font.Awesome/5.15.3": {},
+      "FontAwesome/4.7.0": {},
+      "FontAwesome.Sharp/5.15.3": {
+        "runtime": {
+          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {
+            "assemblyVersion": "5.15.3.0",
+            "fileVersion": "5.15.3.0"
+          }
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -1368,6 +1378,27 @@
     }
   },
   "libraries": {
+    "Font.Awesome/5.15.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+kgVBRzhi03ruJ5p2NLcWWMaNCbq2YFgAV3rMHCK6lvxOt7bI1mPZoTYDb4/HDYTj0XjKSKmeN4B5pmknLo9SQ==",
+      "path": "font.awesome/5.15.3",
+      "hashPath": "font.awesome.5.15.3.nupkg.sha512"
+    },
+    "FontAwesome/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n4H/brfszElyoZ4kmGh8E75uqvLzLvFr3h2PFVdPH1LwUmWIpeqdaW2pcC4oZAhg7sESyObh0IZpAI8COCNeUg==",
+      "path": "fontawesome/4.7.0",
+      "hashPath": "fontawesome.4.7.0.nupkg.sha512"
+    },
+    "FontAwesome.Sharp/5.15.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b72giuP5i2aR2W+u1gdYfYnTRkMIvI78idSDgrgcSV0aSE/nwJcMoh3sItxugMqOcNeIHxveGxAxcrcTYmwlHA==",
+      "path": "fontawesome.sharp/5.15.3",
+      "hashPath": "fontawesome.sharp.5.15.3.nupkg.sha512"
+    },
     "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,

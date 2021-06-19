@@ -2,6 +2,24 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
+      "Font.Awesome/5.15.3": {
+        "type": "package"
+      },
+      "FontAwesome/4.7.0": {
+        "type": "package"
+      },
+      "FontAwesome.Sharp/5.15.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -1550,6 +1568,97 @@
     }
   },
   "libraries": {
+    "Font.Awesome/5.15.3": {
+      "sha512": "+kgVBRzhi03ruJ5p2NLcWWMaNCbq2YFgAV3rMHCK6lvxOt7bI1mPZoTYDb4/HDYTj0XjKSKmeN4B5pmknLo9SQ==",
+      "type": "package",
+      "path": "font.awesome/5.15.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Content/all.css",
+        "Content/Content/all.min.css",
+        "Content/Content/brands.css",
+        "Content/Content/brands.min.css",
+        "Content/Content/fontawesome.css",
+        "Content/Content/fontawesome.min.css",
+        "Content/Content/regular.css",
+        "Content/Content/regular.min.css",
+        "Content/Content/solid.css",
+        "Content/Content/solid.min.css",
+        "Content/Content/svg-with-js.css",
+        "Content/Content/svg-with-js.min.css",
+        "Content/Content/v4-shims.css",
+        "Content/Content/v4-shims.min.css",
+        "Content/Scripts/fontawesome/all.js",
+        "Content/Scripts/fontawesome/all.min.js",
+        "Content/Scripts/fontawesome/brands.js",
+        "Content/Scripts/fontawesome/brands.min.js",
+        "Content/Scripts/fontawesome/conflict-detection.js",
+        "Content/Scripts/fontawesome/conflict-detection.min.js",
+        "Content/Scripts/fontawesome/fontawesome.js",
+        "Content/Scripts/fontawesome/fontawesome.min.js",
+        "Content/Scripts/fontawesome/regular.js",
+        "Content/Scripts/fontawesome/regular.min.js",
+        "Content/Scripts/fontawesome/solid.js",
+        "Content/Scripts/fontawesome/solid.min.js",
+        "Content/Scripts/fontawesome/v4-shims.js",
+        "Content/Scripts/fontawesome/v4-shims.min.js",
+        "Content/webfonts/fa-brands-400.eot",
+        "Content/webfonts/fa-brands-400.svg",
+        "Content/webfonts/fa-brands-400.ttf",
+        "Content/webfonts/fa-brands-400.woff",
+        "Content/webfonts/fa-brands-400.woff2",
+        "Content/webfonts/fa-regular-400.eot",
+        "Content/webfonts/fa-regular-400.svg",
+        "Content/webfonts/fa-regular-400.ttf",
+        "Content/webfonts/fa-regular-400.woff",
+        "Content/webfonts/fa-regular-400.woff2",
+        "Content/webfonts/fa-solid-900.eot",
+        "Content/webfonts/fa-solid-900.svg",
+        "Content/webfonts/fa-solid-900.ttf",
+        "Content/webfonts/fa-solid-900.woff",
+        "Content/webfonts/fa-solid-900.woff2",
+        "font.awesome.5.15.3.nupkg.sha512",
+        "font.awesome.nuspec"
+      ]
+    },
+    "FontAwesome/4.7.0": {
+      "sha512": "n4H/brfszElyoZ4kmGh8E75uqvLzLvFr3h2PFVdPH1LwUmWIpeqdaW2pcC4oZAhg7sESyObh0IZpAI8COCNeUg==",
+      "type": "package",
+      "path": "fontawesome/4.7.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Content/font-awesome.css",
+        "Content/Content/font-awesome.min.css",
+        "Content/fonts/FontAwesome.otf",
+        "Content/fonts/fontawesome-webfont.eot",
+        "Content/fonts/fontawesome-webfont.svg",
+        "Content/fonts/fontawesome-webfont.ttf",
+        "Content/fonts/fontawesome-webfont.woff",
+        "Content/fonts/fontawesome-webfont.woff2",
+        "fontawesome.4.7.0.nupkg.sha512",
+        "fontawesome.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "FontAwesome.Sharp/5.15.3": {
+      "sha512": "b72giuP5i2aR2W+u1gdYfYnTRkMIvI78idSDgrgcSV0aSE/nwJcMoh3sItxugMqOcNeIHxveGxAxcrcTYmwlHA==",
+      "type": "package",
+      "path": "fontawesome.sharp/5.15.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fontawesome.sharp.5.15.3.nupkg.sha512",
+        "fontawesome.sharp.nuspec",
+        "lib/net40/FontAwesome.Sharp.dll",
+        "lib/net45/FontAwesome.Sharp.dll",
+        "lib/net472/FontAwesome.Sharp.dll",
+        "lib/net48/FontAwesome.Sharp.dll",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -5829,24 +5938,26 @@
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
       "Bussines >= 1.0.0",
-      "DataAccess >= 1.0.0",
+      "Font.Awesome >= 5.15.3",
+      "FontAwesome >= 4.7.0",
+      "FontAwesome.Sharp >= 5.15.3",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.7"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabo\\.nuget\\packages\\": {}
+    "C:\\Users\\work\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\Agencia\\Agencia.csproj",
+      "projectUniqueName": "E:\\Users\\work\\Desktop\\la posta\\tpPlataformas\\TP4 ORM\\Agencia\\Agencia\\Agencia.csproj",
       "projectName": "Agencia",
-      "projectPath": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\Agencia\\Agencia.csproj",
-      "packagesPath": "C:\\Users\\Gabo\\.nuget\\packages\\",
-      "outputPath": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\Agencia\\obj\\",
+      "projectPath": "E:\\Users\\work\\Desktop\\la posta\\tpPlataformas\\TP4 ORM\\Agencia\\Agencia\\Agencia.csproj",
+      "packagesPath": "C:\\Users\\work\\.nuget\\packages\\",
+      "outputPath": "E:\\Users\\work\\Desktop\\la posta\\tpPlataformas\\TP4 ORM\\Agencia\\Agencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\work\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5860,11 +5971,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {
-              "projectPath": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj"
-            },
-            "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj"
+            "E:\\Users\\work\\Desktop\\la posta\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {
+              "projectPath": "E:\\Users\\work\\Desktop\\la posta\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj"
             }
           }
         }
@@ -5879,6 +5987,18 @@
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
         "dependencies": {
+          "Font.Awesome": {
+            "target": "Package",
+            "version": "[5.15.3, )"
+          },
+          "FontAwesome": {
+            "target": "Package",
+            "version": "[4.7.0, )"
+          },
+          "FontAwesome.Sharp": {
+            "target": "Package",
+            "version": "[5.15.3, )"
+          },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -5904,7 +6024,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
