@@ -12,3 +12,18 @@ E:\Users\work\Desktop\lpalalalal\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\De
 E:\Users\work\Desktop\lpalalalal\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 E:\Users\work\Desktop\lpalalalal\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.pdb
 E:\Users\work\Desktop\lpalalalal\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.json
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.dev.json
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.dll
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.csprojAssemblyReference.cache
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.dll
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache

@@ -4,14 +4,16 @@ using DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(MyContext))]
-    partial class MyContextModelSnapshot : ModelSnapshot
+    [Migration("20210619162626_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,12 +31,10 @@ namespace DataAccess.Migrations
                     b.Property<int>("cantAlojamientos")
                         .HasColumnType("int");
 
-                    b.Property<int?>("id_alojamientoid")
+                    b.Property<int>("id_alojamiento")
                         .HasColumnType("int");
 
                     b.HasKey("id");
-
-                    b.HasIndex("id_alojamientoid");
 
                     b.ToTable("Agencia");
                 });
@@ -46,22 +46,16 @@ namespace DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("id_agenciaid")
+                    b.Property<int>("id_agencia")
                         .HasColumnType("int");
 
-                    b.Property<int?>("id_reservaid")
+                    b.Property<int>("id_reserva")
                         .HasColumnType("int");
 
-                    b.Property<int?>("id_usuarioid")
+                    b.Property<int>("id_usuario")
                         .HasColumnType("int");
 
                     b.HasKey("id");
-
-                    b.HasIndex("id_agenciaid");
-
-                    b.HasIndex("id_reservaid");
-
-                    b.HasIndex("id_usuarioid");
 
                     b.ToTable("AgenciaManager");
                 });
@@ -88,7 +82,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("estrellas")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("id_ciudadid")
+                    b.Property<int>("id_ciudad")
                         .HasColumnType("int");
 
                     b.Property<double>("precio_por_dia")
@@ -101,8 +95,6 @@ namespace DataAccess.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("id");
-
-                    b.HasIndex("id_ciudadid");
 
                     b.ToTable("Alojamiento");
                 });
@@ -123,12 +115,10 @@ namespace DataAccess.Migrations
                     b.Property<double>("habitaciones")
                         .HasColumnType("float");
 
-                    b.Property<int?>("id_alojamientoid")
+                    b.Property<int>("id_alojamiento")
                         .HasColumnType("int");
 
                     b.HasKey("id");
-
-                    b.HasIndex("id_alojamientoid");
 
                     b.ToTable("Cabania");
                 });
@@ -155,15 +145,13 @@ namespace DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("id_alojamientoid")
+                    b.Property<int>("id_alojamiento")
                         .HasColumnType("int");
 
                     b.Property<double>("precio_por_persona")
                         .HasColumnType("float");
 
                     b.HasKey("id");
-
-                    b.HasIndex("id_alojamientoid");
 
                     b.ToTable("Hotel");
                 });
@@ -184,20 +172,16 @@ namespace DataAccess.Migrations
                     b.Property<int>("contador")
                         .HasColumnType("int");
 
-                    b.Property<int?>("id_alojamientoid")
+                    b.Property<int>("id_alojamiento")
                         .HasColumnType("int");
 
-                    b.Property<int?>("id_usuarioid")
+                    b.Property<int>("id_usuario")
                         .HasColumnType("int");
 
                     b.Property<float>("precio")
                         .HasColumnType("real");
 
                     b.HasKey("id");
-
-                    b.HasIndex("id_alojamientoid");
-
-                    b.HasIndex("id_usuarioid");
 
                     b.ToTable("Reserva");
                 });
@@ -233,78 +217,6 @@ namespace DataAccess.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Usuario");
-                });
-
-            modelBuilder.Entity("DataAccess.Agencia", b =>
-                {
-                    b.HasOne("DataAccess.Alojamiento", "id_alojamiento")
-                        .WithMany()
-                        .HasForeignKey("id_alojamientoid");
-
-                    b.Navigation("id_alojamiento");
-                });
-
-            modelBuilder.Entity("DataAccess.AgenciaManager", b =>
-                {
-                    b.HasOne("DataAccess.Agencia", "id_agencia")
-                        .WithMany()
-                        .HasForeignKey("id_agenciaid");
-
-                    b.HasOne("DataAccess.Reserva", "id_reserva")
-                        .WithMany()
-                        .HasForeignKey("id_reservaid");
-
-                    b.HasOne("DataAccess.Usuario", "id_usuario")
-                        .WithMany()
-                        .HasForeignKey("id_usuarioid");
-
-                    b.Navigation("id_agencia");
-
-                    b.Navigation("id_reserva");
-
-                    b.Navigation("id_usuario");
-                });
-
-            modelBuilder.Entity("DataAccess.Alojamiento", b =>
-                {
-                    b.HasOne("DataAccess.Ciudades", "id_ciudad")
-                        .WithMany()
-                        .HasForeignKey("id_ciudadid");
-
-                    b.Navigation("id_ciudad");
-                });
-
-            modelBuilder.Entity("DataAccess.Cabania", b =>
-                {
-                    b.HasOne("DataAccess.Alojamiento", "id_alojamiento")
-                        .WithMany()
-                        .HasForeignKey("id_alojamientoid");
-
-                    b.Navigation("id_alojamiento");
-                });
-
-            modelBuilder.Entity("DataAccess.Hotel", b =>
-                {
-                    b.HasOne("DataAccess.Alojamiento", "id_alojamiento")
-                        .WithMany()
-                        .HasForeignKey("id_alojamientoid");
-
-                    b.Navigation("id_alojamiento");
-                });
-
-            modelBuilder.Entity("DataAccess.Reserva", b =>
-                {
-                    b.HasOne("DataAccess.Alojamiento", "id_alojamiento")
-                        .WithMany()
-                        .HasForeignKey("id_alojamientoid");
-
-                    b.HasOne("DataAccess.Usuario", "id_usuario")
-                        .WithMany()
-                        .HasForeignKey("id_usuarioid");
-
-                    b.Navigation("id_alojamiento");
-
-                    b.Navigation("id_usuario");
                 });
 #pragma warning restore 612, 618
         }

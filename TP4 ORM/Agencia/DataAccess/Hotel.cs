@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    class Hotel
+    public class Hotel
     {
+        public int id { get; set; }
+        public double precio_por_persona { get; set; }
+        public Alojamiento id_alojamiento { get; set; }
+
 
     }
 }

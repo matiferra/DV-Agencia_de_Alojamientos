@@ -10,7 +10,8 @@ namespace DataAccess
 {
     public class Ciudades
     {
-       
+        public int id { get; set; }
+        public string nombre { get; set; }
 
     }
 }
