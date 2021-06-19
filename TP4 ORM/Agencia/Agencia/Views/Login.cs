@@ -9,7 +9,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using System.IO;
 
 namespace Agencia
@@ -25,12 +24,12 @@ namespace Agencia
         public Login(Administrador adminForm, Cliente clienteForm, RegistroUsuario registroUsuarioForm)
         {          
             InitializeComponent();
-          /*  this.ag = agenciaManager;
-            this.user = usuario;
+          //this.ag = agenciaManager;
+          //  this.user = usuario;
             this.adminForm = adminForm;
             this.clienteForm = clienteForm;
             this.registroUsuarioForm = registroUsuarioForm;
-          */
+         
         }   
 
 

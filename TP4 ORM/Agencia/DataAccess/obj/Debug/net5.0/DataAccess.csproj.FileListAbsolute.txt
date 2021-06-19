@@ -41,3 +41,18 @@ E:\Users\work\Desktop\la posta\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debu
 E:\Users\work\Desktop\la posta\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 E:\Users\work\Desktop\la posta\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.pdb
 E:\Users\work\Desktop\la posta\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.json
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.dev.json
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.dll
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.csprojAssemblyReference.cache
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.dll
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache
