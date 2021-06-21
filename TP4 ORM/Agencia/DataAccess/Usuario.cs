@@ -17,17 +17,21 @@ namespace DataAccess
         public int DNI { get; set; }
         public string nombre { get; set; }
         public string mail { get; set; }
-        public string password { get; set; }
+        public string pass { get; set; }
         public bool esAdmin { get; set; }
         public bool bloqueado { get; set; }
         public int intentosLogueo { get; set; }
 
+        public Usuario()
+        {
+
+        }
         public Usuario(int Dni, string Nombre, string Mail, string Password, bool EsADM, bool Bloqueado)
         {
             DNI = Dni;
             nombre = Nombre;
             mail = Mail;
-            password = Password;
+            pass = Password;
             esAdmin = EsADM;
             bloqueado = Bloqueado;
         }

@@ -18,7 +18,7 @@ namespace Agencia
         Administrador adminForm;
         Cliente clienteForm;
         RegistroUsuario registroUsuarioForm;
-        //AgenciaManager ag;
+        Bussines.AgenciaManager ag = new Bussines.AgenciaManager();
         //public Usuario user;
 
         public Login(Administrador adminForm, Cliente clienteForm, RegistroUsuario registroUsuarioForm)
@@ -40,12 +40,12 @@ namespace Agencia
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            /*if (ag.login(txtUsername.Text, txtPassword.Text))
+            if (ag.autenticar(txtUsername.Text, txtPassword.Text))
             {
                 Global.GlobalSessionNombre = txtUsername.Text;//creo clase "Global" con el propisto de poder almacenar el nombre del usuario y poder identificar a la hora de cambiar contraseña.
                 Global.GlobalSessionPass = txtPassword.Text;
-                //DataSet usuario = ag.buscarUsuarioxNombre(txtUsername.Text);
-                bool bloqueado = bool.Parse(usuario.Tables[0].Rows[0]["bloqueado"].ToString());
+                List<string> usuario = ag.buscarUsuarioxNombre(txtUsername.Text);
+                bool bloqueado = bool.Parse(usuario.ElementAt(5));
                 if (ag.validoSiEsAdmin(txtUsername.Text))
                 {
                     if (!bloqueado)
@@ -73,38 +73,6 @@ namespace Agencia
                 txtUsername.Text = "";
                 txtPassword.Text = "";
             }
-            else
-            {
-                DataSet usuario = ag.buscarUsuarioxNombre(txtUsername.Text);
-                int contadorIntentos = 0;
-                if (usuario != null)
-                {
-
-                    contadorIntentos = int.Parse(usuario.Tables[0].Rows[0]["intentosLogeo"].ToString());
-
-                    string dni = usuario.Tables[0].Rows[0]["dni"].ToString();
-                    if (contadorIntentos >= 3)
-                    {
-                        ag.bloquearUsuario(dni);
-                        MessageBox.Show("BLOQUEADO");
-                    }
-                    else
-                    {
-                        contadorIntentos++;
-                        if (ag.sumarIntentosDeLogeo(contadorIntentos, dni))
-                        {
-                            MessageBox.Show("Le quedan " + (4 - contadorIntentos) + "intentos de logueo");
-
-                        }
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o Contraseña Incorrecto");
-                }
-            }
-                */
         }
 
         private void label2_Click(object sender, EventArgs e)

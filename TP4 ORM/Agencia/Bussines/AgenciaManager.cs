@@ -9,6 +9,8 @@ namespace Bussines
     public class AgenciaManager
     {
         private DbSet<Usuario> misUsuarios;
+        private DbSet<Alojamiento> alojamientos;
+        private DbSet<Reserva> reservas;
         private MyContext contexto;
 
         public AgenciaManager()
@@ -16,7 +18,7 @@ namespace Bussines
             inicializarAtributos();
         }
 
-        
+
 
         private void inicializarAtributos()
         {
@@ -26,58 +28,36 @@ namespace Bussines
                 contexto = new MyContext();
                 //cargo los usuarios
                 contexto.Usuario.Load();
+                //contexto.Alojamiento.Load();
+                //contexto.Reserva.Load();
                 misUsuarios = contexto.Usuario;
+                //alojamientos = contexto.Alojamiento;
+                //reservas = contexto.Reserva;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-            }
-        }
-
-
-
-        public List<Usuario> getUsuario()
-        {
-            using (var con = new MyContext())
-            {
-                return con.Usuario.ToList();
-            }
-        }
-
-
-        public List<List<string>> obtenerUsuarios()
-        {
-            List<List<string>> salida = new List<List<string>>();
-            foreach (Usuario u in contexto.Usuario)
-                salida.Add(new List<string> { u.DNI.ToString(), u.nombre, u.mail, u.password, u.esAdmin.ToString(), u.bloqueado.ToString() });
-            return salida;
-        }
-
-        public bool agregarUsuario(int Dni, string Nombre, string Mail, string Password, bool EsADM, bool Bloqueado)
-        {
-            try
-            {
-                Usuario nuevo = new Usuario(Dni, Nombre, Mail, Password, EsADM, Bloqueado);
-                //contexto.usuarios.Add(nuevo);
-                misUsuarios.Add(nuevo);
-                contexto.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
+                Console.WriteLine(e);
             }
         }
 
 
 
 
-        public DataSet obtenerAlojamientos(string ciudad)
+
+
+        // ----------------------- METODOS ALOJAMIENTOS -----------------------
+
+        public List<List<string>> obtenerAlojamientos(string ciudad)
         {
             return null;
         }
 
-        public DataSet buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo)
+        public List<string> obtenerAlojamientos()
+        {
+            return null;
+        }
+
+       /* public List<string> buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo)
         {
 
 
@@ -98,7 +78,7 @@ namespace Bussines
 
             try
             {
-               
+
 
             }
             catch (Exception ex)
@@ -109,11 +89,8 @@ namespace Bussines
 
             return ds;
         }
+       */
 
-        public DataSet obtenerAlojamientos()
-        {
-            return ds;
-        }
 
         public bool agregarAlojamiento(string tipo, string ciudad, string barrio, string estrellas, string cantPersonas, bool tv, string precio, string habitaciones, string banios) //Parametro Datos del Alojamiento ¿?
         {
@@ -161,7 +138,7 @@ namespace Bussines
 
             try
             {
-              
+
                 result = true;
             }
             catch (Exception)
@@ -191,114 +168,241 @@ namespace Bussines
         }
 
 
-        /// <summary>
-        /// recupero todos los usaurios
-        /// </summary>
-        /// <returns></returns>
-        public DataSet getUsuario()
+        // ----------------------- METODOS RESERVAS -----------------------
+        public List<List<string>> buscarReservas(string dni, string fdesde, string fhasta)
         {
             return null;
         }
+
+
+
+        public List<List<string>> getTodasLasReservas()
+        {
+            return null;
+        }
+        public List<List<string>> getReservasPorCliente(String dni)
+        {
+            return null;
+        }
+
+        public bool reservar(int codAloj, string dniUsuario, DateTime Fdesde, DateTime Fhasta)
+        {
+            //PENDIENTE
+
+            return false;
+        }
+
+        public bool modificarReserva(int ID, DateTime FDesde, DateTime FHasta, Alojamiento propiedad, Usuario persona, float precio)//Parametro Datos de Reserva ¿?
+        {
+            bool modificada = false;
+            //PENDIENTE
+
+            return modificada;
+        }
+
+        public bool eliminarReserva(int id)
+        {
+            //PENDIENTE
+            return false;
+        }
+
+
+        // ----------------------- METODOS USUARIOS -----------------------
+
         /// <summary>
         /// recupero UN usuario
         /// </summary>
         /// <param name="dni"></param>
         /// <returns></returns>
-        public DataSet buscarUsuario(string dni)
+        public List<string> buscarUsuario(string dni)
         {
+            List<string> usuario = null;
+
             if (string.IsNullOrEmpty(dni))
             {
                 dni = "0";
             }
-            return null;
+
+            foreach (Usuario u in contexto.Usuario)
+            {
+                if (dni == u.DNI.ToString())
+                {
+                    usuario.Add(u.DNI.ToString());
+                    usuario.Add(u.nombre);
+                    usuario.Add(u.mail);
+                    usuario.Add(u.pass.ToString());
+                    usuario.Add(u.bloqueado.ToString());
+                    usuario.Add(u.intentosLogueo.ToString());
+                }
+            }
+
+            return usuario;
         }
-        public DataSet buscarUsuarioxNombre(string nombre)
+        public List<string> buscarUsuarioxNombre(string nombre)
         {
+            List<string> usuario = null;
+
             if (string.IsNullOrEmpty(nombre))
             {
-                return null;
+                nombre = "";
             }
-            return null;
+
+            foreach (Usuario u in contexto.Usuario)
+            {
+                if (nombre == u.nombre)
+                {
+                    usuario.Add(u.DNI.ToString());
+                    usuario.Add(u.nombre);
+                    usuario.Add(u.mail);
+                    usuario.Add(u.pass.ToString());
+                    usuario.Add(u.bloqueado.ToString());
+                    usuario.Add(u.intentosLogueo.ToString());
+                }
+            }
+
+            return usuario;
         }
 
-
-        public bool sumarIntentosDeLogeo(int contadorIntentos, string dni)
+        public List<List<string>> obtenerUsuarios()
         {
-            return false;
+            List<List<string>> usuarios = new List<List<string>>();
+            foreach (Usuario u in contexto.Usuario)
+                usuarios.Add(new List<string> { u.DNI.ToString(), u.nombre, u.mail, u.pass, u.esAdmin.ToString(), u.bloqueado.ToString(), u.intentosLogueo.ToString() });
+            return usuarios;
         }
+
+
 
         public bool bloquearUsuario(string dni)
         {
-            return false;
+            bool bloqueado = false;
+            foreach (Usuario u in contexto.Usuario)
+            {
+                if (dni == u.DNI.ToString())
+                {
+                    if (u.bloqueado == false)
+                    {
+                        u.bloqueado = true;
+                        bloqueado = true;
+                    }
+                }
+            }
+
+            return bloqueado;
         }
 
-        public bool agregarUsuario(string DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado)
+        public bool agregarUsuario(int DNI, string nombre, string mail, string pass, bool esAdmin, bool bloqueado)
+        {
+            try
+            {
+                Usuario usuario = new Usuario(DNI, nombre,  mail, pass, esAdmin, bloqueado);
+                misUsuarios.Add(usuario);
+                contexto.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        
+        public bool modificarUsuario(int dni, string nombre, string mail, string pass, bool esAdmin, bool bloqueado)
+        {
+            bool salida = false;
+            foreach (Usuario u in contexto.Usuario)
+                if (u.DNI == dni)
+                {
+                    u.nombre = nombre;
+                    u.mail = mail;
+                    u.pass = pass;
+                    u.esAdmin = esAdmin;
+                    u.bloqueado = bloqueado;
+                    contexto.Usuario.Update(u);
+                    salida = true;
+                }
+            if (salida)
+            {
+                contexto.SaveChanges();
+            }
+            return salida;
+        }
+
+            public bool eliminarUsuario(string DNI)
         {
             bool result;
             try
             {
+
                 result = true;
             }
             catch
             {
                 result = false;
-            }
-
-            return result;
-        }
-
-        public bool modificarUsuario(int DNI, string nombre, string mail, string password, bool esAdmin, bool bloqueado)
-        {
-            bool result;
-            try
-            {
-                result = true;
-            }
-            catch
-            {
-                result = false;
-            }
-
-            return result;
-        }
-
-        public bool eliminarUsuario(string DNI)
-        {
-            bool result;
-            try
-            {
-               
-                result = true;
-            }
-            catch
-            {
-                result = false;
 
             }
 
             return result;
         }
 
-        public bool login(string usuario, string pass)
-        {
-            return false;
-        }
 
-        public bool validoSiEsAdmin(string usuario)
+        public bool autenticar(string dni, string password)
         {
-            return false;
-        }
+            bool respuesta = false;
 
-        public bool desbloquearUsuario(string DNI)
-        {
-            bool desbloqueado;
-            try
+            foreach (Usuario u in misUsuarios)
             {
-                desbloqueado = true;
+                if(dni == u.DNI.ToString())
+                {
+                    if(password == u.pass)
+                    {
+                        respuesta = true;
+                    } else
+                    {
+                        u.intentosLogueo++;
+                        if (u.intentosLogueo >= 3)
+                        {
+                            u.bloqueado = true;
+                        }
+                        contexto.Usuario.Update(u);
+                    }
+                }
             }
-            catch
+         
+            return respuesta;
+        }
+
+        public bool validoSiEsAdmin(string dni)
+        {
+            bool respuesta = false;
+            
+            foreach (Usuario u in contexto.Usuario)
             {
-                desbloqueado = false;
+                if (dni == u.DNI.ToString())
+                {
+                    if (u.esAdmin == true)
+                    {
+                        respuesta = true;
+                    }
+                }
+            }
+
+            return respuesta;
+        }
+
+        public bool desbloquearUsuario(string dni)
+        {
+            bool desbloqueado = false;
+            foreach (Usuario u in contexto.Usuario)
+            {
+                if (dni == u.DNI.ToString())
+                {
+                    if (u.bloqueado == true)
+                    {
+                        u.bloqueado = false;
+                        desbloqueado = true;
+                    }
+                }
             }
 
             return desbloqueado;
@@ -332,43 +436,65 @@ namespace Bussines
         }
 
 
-        public DataSet getTodasLasReservas()
+
+        // LO DEL PROFE
+
+
+        public List<Usuario> getUsuario()
         {
-            return null;
+            using (var con = new MyContext())
+            {
+                return con.Usuario.ToList();
+            }
         }
-        public DataSet getReservasPorCliente(String dni)
+        
+
+        
+        /*public bool eliminarUsuario(int Dni, string Nombre, string Mail, string Password, bool EsADM, bool Bloqueado)
         {
-            return null;
+            try
+            {
+                bool salida = false;
+                foreach (Usuario u in contexto.usuarios)
+                    if (u.dni == Dni)
+                    {
+                        contexto.usuarios.Remove(u);
+                        salida = true;
+                    }
+                if (salida)
+                    contexto.SaveChanges();
+                return salida;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
-
-
-
-
-
-        public DataSet buscarReservas(string dni, string fdesde, string fhasta)
+        public bool modificarUsuario(int Dni, string Nombre, string Mail, string Password, bool EsADM, bool Bloqueado)
         {
-            return null;
+            bool salida = false;
+            foreach (Usuario u in contexto.usuarios)
+                if (u.dni == Dni)
+                {
+                    u.nombre = Nombre;
+                    u.mail = Mail;
+                    u.password = Password;
+                    u.esADM = EsADM;
+                    u.bloqueado = Bloqueado;
+                    contexto.usuarios.Update(u);
+                    salida = true;
+                }
+            if (salida)
+                contexto.SaveChanges();
+            return salida;
         }
-
-        public bool reservar(int codAloj, string dniUsuario, DateTime Fdesde, DateTime Fhasta)
+        */
+        public void cerrar()
         {
-            //PENDIENTE
-
-            return false;
+            contexto.Dispose();
         }
 
-        public bool modificarReserva(int ID, DateTime FDesde, DateTime FHasta, Alojamiento propiedad, Usuario persona, float precio)//Parametro Datos de Reserva ¿?
-        {
-            bool modificada = false;
-            //PENDIENTE
-
-            return modificada;
-        }
-
-        public bool eliminarReserva(int id)
-        {
-            //PENDIENTE
-
-        }
     }
+
+
 }

@@ -13,7 +13,5 @@ namespace DataAccess
         public Alojamiento id_alojamiento { get; set; }
         public int cantAlojamientos { get; set; }
 
-
-
     }
 }

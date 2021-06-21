@@ -227,7 +227,7 @@ namespace DataAccess.Migrations
                     b.Property<string>("nombre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("password")
+                    b.Property<string>("pass")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
