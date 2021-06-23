@@ -28,3 +28,18 @@ C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Bussines
 C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.dll
 C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\ref\Bussines.dll
 C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.pdb
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\Bussines.deps.json
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\Bussines.dll
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\ref\Bussines.dll
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\Bussines.pdb
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\DataAccess.dll
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\DataAccess.pdb
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.csproj.AssemblyReference.cache
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.GeneratedMSBuildEditorConfig.editorconfig
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.AssemblyInfoInputs.cache
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.AssemblyInfo.cs
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.csproj.CopyComplete
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.dll
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\ref\Bussines.dll
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.pdb

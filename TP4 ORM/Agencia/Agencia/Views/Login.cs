@@ -46,7 +46,7 @@ namespace Agencia
                 Global.GlobalSessionPass = txtPassword.Text;
                 List<string> usuario = ag.buscarUsuarioxNombre(txtUsername.Text);
                 bool bloqueado = bool.Parse(usuario.ElementAt(5));
-                if (ag.validoSiEsAdmin(txtUsername.Text))
+                if (bool.Parse(usuario.ElementAt(4)) == true)
                 {
                     if (!bloqueado)
                     {

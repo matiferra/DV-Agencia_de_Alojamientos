@@ -6,6 +6,8 @@ using System.Linq;
 
 namespace Bussines
 {
+    
+
     public class AgenciaManager
     {
         private DbSet<Usuario> misUsuarios;
@@ -29,10 +31,10 @@ namespace Bussines
                 //cargo los usuarios
                 contexto.Usuario.Load();
                 //contexto.Alojamiento.Load();
-                //contexto.Reserva.Load();
+                contexto.Reserva.Load();
                 misUsuarios = contexto.Usuario;
                 //alojamientos = contexto.Alojamiento;
-                //reservas = contexto.Reserva;
+                reservas = contexto.Reserva;
             }
             catch (Exception e)
             {
@@ -41,6 +43,19 @@ namespace Bussines
         }
 
 
+        public void prueba(int dni)
+        {
+            var query = from resr in reservas
+                        join user in misUsuarios
+                        on resr.id_usuario.id equals user.id
+                        select new custom
+                        {
+                            nombreReserva = resr.precio.ToString(),
+                            nombreUser = user.nombre
+
+                        };
+
+        }
 
 
 
@@ -240,7 +255,7 @@ namespace Bussines
         }
         public List<string> buscarUsuarioxNombre(string nombre)
         {
-            List<string> usuario = null;
+            List<string> usuario = new List<string>();
 
             if (string.IsNullOrEmpty(nombre))
             {
@@ -255,8 +270,10 @@ namespace Bussines
                     usuario.Add(u.nombre);
                     usuario.Add(u.mail);
                     usuario.Add(u.pass.ToString());
+                    usuario.Add(u.esAdmin.ToString());
                     usuario.Add(u.bloqueado.ToString());
                     usuario.Add(u.intentosLogueo.ToString());
+                  
                 }
             }
 
@@ -349,28 +366,36 @@ namespace Bussines
         public bool autenticar(string dni, string password)
         {
             bool respuesta = false;
-
-            foreach (Usuario u in misUsuarios)
+            if (misUsuarios != null)
             {
-                if(dni == u.DNI.ToString())
+                foreach (Usuario u in misUsuarios)
                 {
-                    if(password == u.pass)
+                    if (dni == u.nombre.ToString())
                     {
-                        respuesta = true;
-                    } else
-                    {
-                        u.intentosLogueo++;
-                        if (u.intentosLogueo >= 3)
+                        if (password == u.pass)
                         {
-                            u.bloqueado = true;
+                            respuesta = true;
                         }
-                        contexto.Usuario.Update(u);
+                        else
+                        {
+                            u.intentosLogueo++;
+                            if (u.intentosLogueo >= 3)
+                            {
+                                u.bloqueado = true;
+                            }
+                            contexto.Usuario.Update(u);
+                        }
                     }
                 }
             }
+            else
+            {
+                Console.WriteLine("no paso");
+            }
+           
          
             return respuesta;
-        }
+       }
 
         public bool validoSiEsAdmin(string dni)
         {

@@ -233,6 +233,30 @@ namespace DataAccess.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Usuario");
+
+                    b.HasData(
+                        new
+                        {
+                            id = 1,
+                            DNI = 12345678,
+                            bloqueado = false,
+                            esAdmin = true,
+                            intentosLogueo = 0,
+                            mail = "soporte@gmail.com",
+                            nombre = "admin",
+                            pass = "123"
+                        },
+                        new
+                        {
+                            id = 2,
+                            DNI = 12345678,
+                            bloqueado = false,
+                            esAdmin = false,
+                            intentosLogueo = 0,
+                            mail = "soporte@gmail.com",
+                            nombre = "gianpool",
+                            pass = "123"
+                        });
                 });
 
             modelBuilder.Entity("DataAccess.Agencia", b =>

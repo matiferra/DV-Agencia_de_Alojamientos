@@ -13,10 +13,10 @@ namespace Agencia.Views
 {
     public partial class Form1 : Form
     {
-        /*static Bussines.Agencia agencia = new Bussines.Agencia();
-        static Bussines.AgenciaManager agenciaManager = new Bussines.AgenciaManager(agencia);
-        static Bussines.Usuario usuario = new Bussines.Usuario();
-        */
+       // static Bussines. agencia = new Bussines.Agencia();
+        static Bussines.AgenciaManager agenciaManager = new Bussines.AgenciaManager();
+       // static Bussines.Usuario usuario = new Bussines.Usuario();
+        
         public Form1()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace Agencia.Views
             resultadoBusquedaForm.MdiParent = this;
             Cliente clienteForm = new Cliente(busquedadAlojamientosForm, cambiarContraseniasForm, resultadoBusquedaForm);
             clienteForm.MdiParent = this;
-            RegistroUsuario registroUsuarioForm = new RegistroUsuario();
+            RegistroUsuario registroUsuarioForm = new RegistroUsuario(agenciaManager);
             registroUsuarioForm.MdiParent = this;
 
             Login loginForm = new Login(adminForm, clienteForm, registroUsuarioForm);

@@ -56,3 +56,18 @@ C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAcce
 C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.pdb
 C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.json
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.dev.json
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.dll
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.dll
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache

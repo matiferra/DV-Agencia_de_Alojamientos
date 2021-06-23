@@ -9,21 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.IO;
-
+using Bussines;
 
 namespace Agencia.Views
 {
     public partial class RegistroUsuario : Form
     {
-      
 
-        public RegistroUsuario()
+        public AgenciaManager ag;
+        public RegistroUsuario(AgenciaManager agenciaManager)
         {
             InitializeComponent();
-          
+            this.ag = agenciaManager;
         }
-
-
 
         private void registrarse_Click(object sender, EventArgs e)
         {
@@ -32,10 +30,10 @@ namespace Agencia.Views
             string DNI = txtDocu.Text;
             string email = txtEmail.Text;
 
-           /* if (!string.IsNullOrEmpty(usuario) && !string.IsNullOrEmpty(password) && 
+            if (!string.IsNullOrEmpty(usuario) && !string.IsNullOrEmpty(password) && 
                 !string.IsNullOrEmpty(DNI) && !string.IsNullOrEmpty(email))
             {
-                if (ag.agregarUsuario(DNI, usuario, email, password, false, false))
+                if (ag.agregarUsuario(int.Parse(DNI), usuario, email, password, false, false))
                 {
                     MessageBox.Show("Sas ingreso con exito");
 
@@ -51,7 +49,7 @@ namespace Agencia.Views
                 MessageBox.Show("todos los campos son requeridos");
             }
 
-        */
+      
         }
 
         private void limpioCampos()
