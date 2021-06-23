@@ -103,7 +103,6 @@ D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Prac
 D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\bin\Debug\net5.0-windows\DataAccess.dll
 D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\bin\Debug\net5.0-windows\DataAccess.pdb
 D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.csprojAssemblyReference.cache
-D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Form1.resources
 D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.csproj.GenerateResource.cache
 D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.GeneratedMSBuildEditorConfig.editorconfig
 D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.AssemblyInfoInputs.cache
@@ -336,3 +335,20 @@ E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\De
 E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\ref\Agencia.dll
 E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.pdb
 E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.genruntimeconfig.cache
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\bin\Debug\net5.0-windows\FontAwesome.Sharp.dll
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\bin\Debug\net5.0-windows\Bussines.dll
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\bin\Debug\net5.0-windows\Bussines.pdb
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.AdmAlojamientos.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.Administrador.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.AdmReservas.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.AdmUsuarios.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.BusquedaAlojamiento.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.RecuperarContraseña.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.Cliente.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.EditarAlojamiento.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.EditarUsuario.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.Form1.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Login.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.RegistroUsuario.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.ReservasCliente.resources
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.ResultadoBusqueda.resources

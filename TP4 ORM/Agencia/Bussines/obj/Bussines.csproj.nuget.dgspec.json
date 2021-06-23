@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Users\\work\\Desktop\\entrega final\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {}
+    "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {}
   },
   "projects": {
-    "E:\\Users\\work\\Desktop\\entrega final\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {
+    "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\work\\Desktop\\entrega final\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj",
+        "projectUniqueName": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj",
         "projectName": "Bussines",
-        "projectPath": "E:\\Users\\work\\Desktop\\entrega final\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj",
-        "packagesPath": "C:\\Users\\work\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\work\\Desktop\\entrega final\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\obj\\",
+        "projectPath": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj",
+        "packagesPath": "C:\\Users\\Gabo\\.nuget\\packages\\",
+        "outputPath": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\work\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Users\\work\\Desktop\\entrega final\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "E:\\Users\\work\\Desktop\\entrega final\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj"
+              "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -58,21 +58,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\work\\Desktop\\entrega final\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj": {
+    "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\work\\Desktop\\entrega final\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "E:\\Users\\work\\Desktop\\entrega final\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\work\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\work\\Desktop\\entrega final\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\obj\\",
+        "projectPath": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Gabo\\.nuget\\packages\\",
+        "outputPath": "D:\\Gabo\\Facultad\\Davinci\\4to Cuatrimestre\\Plataformas de Desarrollo\\Trabajo Practico Nro4\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\work\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

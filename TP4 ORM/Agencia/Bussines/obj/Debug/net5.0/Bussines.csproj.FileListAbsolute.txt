@@ -43,3 +43,18 @@ E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\D
 E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.dll
 E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\ref\Bussines.dll
 E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.pdb
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\Bussines.deps.json
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\Bussines.dll
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\ref\Bussines.dll
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\Bussines.pdb
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\DataAccess.dll
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\DataAccess.pdb
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.csprojAssemblyReference.cache
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.GeneratedMSBuildEditorConfig.editorconfig
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.AssemblyInfoInputs.cache
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.AssemblyInfo.cs
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.csproj.CoreCompileInputs.cache
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.csproj.CopyComplete
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.dll
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\ref\Bussines.dll
+D:\Gabo\Facultad\Davinci\4to Cuatrimestre\Plataformas de Desarrollo\Trabajo Practico Nro4\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.pdb
