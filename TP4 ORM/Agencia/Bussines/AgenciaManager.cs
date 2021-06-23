@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace Bussines
 {
     
@@ -345,23 +346,41 @@ namespace Bussines
             return salida;
         }
 
-            public bool eliminarUsuario(string DNI)
-        {
-            bool result;
-            try
+        public Usuario recuperarUsuarioObjeto(int DNI) {
+            Usuario user = null;
+            int i = 0;
+
+            while (user == null && i < misUsuarios.Count())
             {
+                if(DNI == misUsuarios.ElementAt(i).DNI)
+                {
+                    user = misUsuarios.ElementAt(i);
+                }
 
-                result = true;
+                i++;
             }
-            catch
-            {
-                result = false;
-
-            }
-
-            return result;
+            return user;
         }
 
+        public bool eliminarUsuario(int Dni)
+        {
+            Usuario usuario = new Usuario();
+
+            try
+            {
+                usuario = recuperarUsuarioObjeto(Dni);
+                if(usuario!= null)
+                { 
+                    contexto.Usuario.Remove(usuario);
+                    contexto.SaveChanges();
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
         public bool autenticar(string dni, string password)
         {
@@ -397,24 +416,7 @@ namespace Bussines
             return respuesta;
        }
 
-        public bool validoSiEsAdmin(string dni)
-        {
-            bool respuesta = false;
-            
-            foreach (Usuario u in contexto.Usuario)
-            {
-                if (dni == u.DNI.ToString())
-                {
-                    if (u.esAdmin == true)
-                    {
-                        respuesta = true;
-                    }
-                }
-            }
-
-            return respuesta;
-        }
-
+      
         public bool desbloquearUsuario(string dni)
         {
             bool desbloqueado = false;
@@ -433,87 +435,58 @@ namespace Bussines
             return desbloqueado;
         }
 
-        public string recuperoDni(string usuario, string contraseña)
+        public int recuperoDni(string usuario, string contrasenia)
         {
-            string resultado = "";
+            int resultado = 0;
+
+            foreach (Usuario user in misUsuarios)
+            {
+                if(usuario == user.nombre && contrasenia == user.pass)
+                {
+                    resultado = user.DNI;
+                }
+            }
             return resultado;
         }
 
-        public string cambiarContrasenia(string DNI, string oldPass, string newPass1, string newPass2)
+        public string cambiarContrasenia(int DNI, string oldPass, string newPass1, string newPass2)
         {
-            //completen todos los campos y pulsen guardar
-            //recupero contraseña actual de mi dataset
-            //macheo si mi contraseña coincide con el campo de contra actual
-            //Si es incorrecto mensaje de alerta avisando el asunto.
-            //si pasa  lo proximo hacer es machear la contraseña nueva con la reigresar contraseña y verificar si son iguales
-            return null;
-        }
-
-
-
-        public bool autenticarUsuario(string DNI, string password)
-        {
-            //LO DIVIDI EN DOS PARTES UNA EN EL METODO login Y OTRO validoSiEsAdmin  QUEDA PENDIENTE QUE LO BLOQUEE SI INTENTIO LOGEARSE 3 VECES
-
-            bool autenticado = false;
-
-            return autenticado;
-        }
-
-
-
-        // LO DEL PROFE
-
-
-        public List<Usuario> getUsuario()
-        {
-            using (var con = new MyContext())
+            
+            bool respuesta = false;
+            bool encontrado = false;
+            int i = 0;
+            
+            string mensaje = "";
+            while ( encontrado == false && i < misUsuarios.Count())
             {
-                return con.Usuario.ToList();
-            }
-        }
-        
-
-        
-        /*public bool eliminarUsuario(int Dni, string Nombre, string Mail, string Password, bool EsADM, bool Bloqueado)
-        {
-            try
-            {
-                bool salida = false;
-                foreach (Usuario u in contexto.usuarios)
-                    if (u.dni == Dni)
-                    {
-                        contexto.usuarios.Remove(u);
-                        salida = true;
-                    }
-                if (salida)
-                    contexto.SaveChanges();
-                return salida;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-        public bool modificarUsuario(int Dni, string Nombre, string Mail, string Password, bool EsADM, bool Bloqueado)
-        {
-            bool salida = false;
-            foreach (Usuario u in contexto.usuarios)
-                if (u.dni == Dni)
+                Usuario u = misUsuarios.First;
+               if (u.DNI == DNI)
                 {
-                    u.nombre = Nombre;
-                    u.mail = Mail;
-                    u.password = Password;
-                    u.esADM = EsADM;
-                    u.bloqueado = Bloqueado;
-                    contexto.usuarios.Update(u);
-                    salida = true;
+                    if(u.pass == oldPass)
+                    {
+                        if(newPass1 == newPass2)
+                        {
+                            u.pass = newPass1;
+                            contexto.Usuario.Update(u);
+                            respuesta = true;
+                            mensaje = "La contraseña ha sido modificada con exito";
+                        } else {
+                            mensaje = "Las contraseñas ingresadas no coinciden ";
+                        }
+                    }else { 
+                        mensaje = "La contraseña ingresada es incorrecta ";
+                    } 
                 }
-            if (salida)
+            }
+            if (respuesta)
+            {
                 contexto.SaveChanges();
-            return salida;
+            }
+
+            return mensaje;
         }
-        */
+
+
         public void cerrar()
         {
             contexto.Dispose();
