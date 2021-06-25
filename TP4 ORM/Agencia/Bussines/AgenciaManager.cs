@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Bussines
 {
-    
+
 
     public class AgenciaManager
     {
@@ -27,14 +27,14 @@ namespace Bussines
         {
             try
             {
-                //creo un contexto
                 contexto = new MyContext();
-                //cargo los usuarios
+
                 contexto.Usuario.Load();
-                //contexto.Alojamiento.Load();
+                contexto.Alojamiento.Load();
                 contexto.Reserva.Load();
+                
                 misUsuarios = contexto.Usuario;
-                //alojamientos = contexto.Alojamiento;
+                alojamientos = contexto.Alojamiento;
                 reservas = contexto.Reserva;
             }
             catch (Exception e)
@@ -65,7 +65,15 @@ namespace Bussines
 
         public List<List<string>> obtenerAlojamientos(string ciudad)
         {
-            return null;
+            /*var query = from alojamientosDB in alojamientos
+                        select alojamientosDB;
+                        where
+            
+            List<List<string>> alojamientos = new List<List<string>>();
+            foreach (Usuario u in query)
+                alojamientos.Add(new List<string> { u.DNI.ToString(), u.nombre, u.mail, u.pass, u.esAdmin.ToString(), u.bloqueado.ToString(), u.intentosLogueo.ToString() });
+            return alojamientos;*/
+            return null
         }
 
         public List<string> obtenerAlojamientos()
@@ -73,39 +81,39 @@ namespace Bussines
             return null;
         }
 
-       /* public List<string> buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo)
-        {
+        /* public List<string> buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo)
+         {
 
 
 
-            if (string.IsNullOrEmpty(cantPersonas))
-            {
-                cantPersonas = "0";
-            }
+             if (string.IsNullOrEmpty(cantPersonas))
+             {
+                 cantPersonas = "0";
+             }
 
-            if (tipo == "Hotel")
-            {
-                esHotel = true;
-            }
-            else
-            {
-                esHotel = false;
-            }
+             if (tipo == "Hotel")
+             {
+                 esHotel = true;
+             }
+             else
+             {
+                 esHotel = false;
+             }
 
-            try
-            {
-
-
-            }
-            catch (Exception ex)
-            {
-                // mensajeError = "error en buscoAlojamiento" + ex.Message;
-            }
+             try
+             {
 
 
-            return ds;
-        }
-       */
+             }
+             catch (Exception ex)
+             {
+                 // mensajeError = "error en buscoAlojamiento" + ex.Message;
+             }
+
+
+             return ds;
+         }
+        */
 
 
         public bool agregarAlojamiento(string tipo, string ciudad, string barrio, string estrellas, string cantPersonas, bool tv, string precio, string habitaciones, string banios) //Parametro Datos del Alojamiento ¿?
@@ -225,57 +233,52 @@ namespace Bussines
 
         // ----------------------- METODOS USUARIOS -----------------------
 
-        /// <summary>
-        /// recupero UN usuario
-        /// </summary>
-        /// <param name="dni"></param>
-        /// <returns></returns>
-        public List<string> buscarUsuario(string dni)
+
+        public List<string> buscarUsuario(int dni)
         {
+
+            var query = from usuarioDB in misUsuarios
+                        where usuarioDB.DNI == dni
+                        select usuarioDB;
+
             List<string> usuario = null;
 
-            if (string.IsNullOrEmpty(dni))
-            {
-                dni = "0";
-            }
 
             foreach (Usuario u in contexto.Usuario)
             {
-                if (dni == u.DNI.ToString())
-                {
-                    usuario.Add(u.DNI.ToString());
-                    usuario.Add(u.nombre);
-                    usuario.Add(u.mail);
-                    usuario.Add(u.pass.ToString());
-                    usuario.Add(u.bloqueado.ToString());
-                    usuario.Add(u.intentosLogueo.ToString());
-                }
+                usuario.Add(u.DNI.ToString());
+                usuario.Add(u.nombre);
+                usuario.Add(u.mail);
+                usuario.Add(u.pass.ToString());
+                usuario.Add(u.bloqueado.ToString());
+                usuario.Add(u.intentosLogueo.ToString());
             }
 
             return usuario;
         }
         public List<string> buscarUsuarioxNombre(string nombre)
         {
-            List<string> usuario = new List<string>();
 
             if (string.IsNullOrEmpty(nombre))
             {
                 nombre = "";
             }
 
-            foreach (Usuario u in contexto.Usuario)
+            var query = from usuarioDB in misUsuarios
+                        where usuarioDB.nombre == nombre
+                        select usuarioDB;
+
+            List<string> usuario = new List<string>();
+
+            foreach (Usuario u in query)
             {
-                if (nombre == u.nombre)
-                {
-                    usuario.Add(u.DNI.ToString());
-                    usuario.Add(u.nombre);
-                    usuario.Add(u.mail);
-                    usuario.Add(u.pass.ToString());
-                    usuario.Add(u.esAdmin.ToString());
-                    usuario.Add(u.bloqueado.ToString());
-                    usuario.Add(u.intentosLogueo.ToString());
-                  
-                }
+                usuario.Add(u.DNI.ToString());
+                usuario.Add(u.nombre);
+                usuario.Add(u.mail);
+                usuario.Add(u.pass.ToString());
+                usuario.Add(u.esAdmin.ToString());
+                usuario.Add(u.bloqueado.ToString());
+                usuario.Add(u.intentosLogueo.ToString());
             }
 
             return usuario;
@@ -283,37 +286,22 @@ namespace Bussines
 
         public List<List<string>> obtenerUsuarios()
         {
+            var query = from usuariosDB in misUsuarios
+                        select usuariosDB;
+
             List<List<string>> usuarios = new List<List<string>>();
-            foreach (Usuario u in contexto.Usuario)
+            foreach (Usuario u in query)
                 usuarios.Add(new List<string> { u.DNI.ToString(), u.nombre, u.mail, u.pass, u.esAdmin.ToString(), u.bloqueado.ToString(), u.intentosLogueo.ToString() });
             return usuarios;
         }
 
 
-
-        public bool bloquearUsuario(string dni)
-        {
-            bool bloqueado = false;
-            foreach (Usuario u in contexto.Usuario)
-            {
-                if (dni == u.DNI.ToString())
-                {
-                    if (u.bloqueado == false)
-                    {
-                        u.bloqueado = true;
-                        bloqueado = true;
-                    }
-                }
-            }
-
-            return bloqueado;
-        }
-
         public bool agregarUsuario(int DNI, string nombre, string mail, string pass, bool esAdmin, bool bloqueado)
         {
+
             try
             {
-                Usuario usuario = new Usuario(DNI, nombre,  mail, pass, esAdmin, bloqueado);
+                Usuario usuario = new Usuario(DNI, nombre, mail, pass, esAdmin, bloqueado);
                 misUsuarios.Add(usuario);
                 contexto.SaveChanges();
                 return true;
@@ -324,112 +312,104 @@ namespace Bussines
             }
         }
 
-        
+
         public bool modificarUsuario(int dni, string nombre, string mail, string pass, bool esAdmin, bool bloqueado)
         {
-            bool salida = false;
-            foreach (Usuario u in contexto.Usuario)
-                if (u.DNI == dni)
-                {
+            bool respuesta = false;
+
+            var query = from usuarioDB in misUsuarios
+                        where usuarioDB.DNI == dni
+                        select usuarioDB;
+
+            foreach (Usuario u in query) { 
                     u.nombre = nombre;
                     u.mail = mail;
                     u.pass = pass;
                     u.esAdmin = esAdmin;
                     u.bloqueado = bloqueado;
                     contexto.Usuario.Update(u);
-                    salida = true;
+                    respuesta = true;
                 }
-            if (salida)
+            if (respuesta)
             {
                 contexto.SaveChanges();
             }
-            return salida;
+            return respuesta;
         }
 
-        public Usuario recuperarUsuarioObjeto(int DNI) {
-            Usuario user = null;
-            int i = 0;
-
-            while (user == null && i < misUsuarios.Count())
-            {
-                if(DNI == misUsuarios.ElementAt(i).DNI)
-                {
-                    user = misUsuarios.ElementAt(i);
-                }
-
-                i++;
-            }
-            return user;
-        }
-
-        public bool eliminarUsuario(int Dni)
+        public bool eliminarUsuario(int dni)
         {
-            Usuario usuario = new Usuario();
+            bool respuesta = false;
+            var query = from usuarioDB in misUsuarios
+                        where usuarioDB.DNI == dni
+                        select usuarioDB;
 
             try
             {
-                usuario = recuperarUsuarioObjeto(Dni);
-                if(usuario!= null)
-                { 
+                foreach (Usuario usuario in query)
+                {
                     contexto.Usuario.Remove(usuario);
                     contexto.SaveChanges();
                 }
-                return true;
+                
+                return respuesta;
             }
             catch (Exception)
             {
-                return false;
+                return respuesta;
             }
         }
 
-        public bool autenticar(string dni, string password)
+        public bool autenticar(string nombre, string password)
         {
             bool respuesta = false;
+            var query = from usuarioDB in misUsuarios
+                        where usuarioDB.nombre == nombre
+                        select usuarioDB;
+
             if (misUsuarios != null)
             {
-                foreach (Usuario u in misUsuarios)
+                foreach (Usuario u in query)
                 {
-                    if (dni == u.nombre.ToString())
+                    if (password == u.pass)
                     {
-                        if (password == u.pass)
+                        respuesta = true;
+                    }
+                    else
+                    {
+                        u.intentosLogueo++;
+                        if (u.intentosLogueo >= 3)
                         {
-                            respuesta = true;
+                            u.bloqueado = true;
                         }
-                        else
-                        {
-                            u.intentosLogueo++;
-                            if (u.intentosLogueo >= 3)
-                            {
-                                u.bloqueado = true;
-                            }
-                            contexto.Usuario.Update(u);
-                        }
+                        contexto.Usuario.Update(u);
                     }
                 }
             }
-            else
-            {
-                Console.WriteLine("no paso");
-            }
-           
-         
-            return respuesta;
-       }
 
-      
-        public bool desbloquearUsuario(string dni)
+            return respuesta;
+        }
+
+
+        public bool desbloquearUsuario(int dni)
         {
             bool desbloqueado = false;
-            foreach (Usuario u in contexto.Usuario)
-            {
-                if (dni == u.DNI.ToString())
+            var query = from usuario in misUsuarios
+                        where usuario.DNI == dni
+                        select usuario;
+
+            foreach (Usuario u in query)
+            {  
+                
+                if (u.bloqueado == true)
                 {
-                    if (u.bloqueado == true)
-                    {
-                        u.bloqueado = false;
-                        desbloqueado = true;
-                    }
+                    u.bloqueado = false;
+                    desbloqueado = true;
                 }
+            }
+            if (desbloqueado)
+            {
+                contexto.SaveChanges();
             }
 
             return desbloqueado;
@@ -437,45 +417,58 @@ namespace Bussines
 
         public int recuperoDni(string usuario, string contrasenia)
         {
-            int resultado = 0;
 
-            foreach (Usuario user in misUsuarios)
+            // VER DONDE SE USA
+
+            int resultado = 0;
+            var query = from usuarioDB in misUsuarios
+                        where usuarioDB.nombre == usuario
+                        select usuarioDB;
+            
+            foreach (Usuario user in query)
             {
-                if(usuario == user.nombre && contrasenia == user.pass)
+                if (contrasenia == user.pass)
                 {
                     resultado = user.DNI;
                 }
             }
+
             return resultado;
         }
 
         public string cambiarContrasenia(int DNI, string oldPass, string newPass1, string newPass2)
         {
-            
+
+            //REVISAR EL FOREACH
+
             bool respuesta = false;
-            bool encontrado = false;
-            int i = 0;
-            
             string mensaje = "";
-            while ( encontrado == false && i < misUsuarios.Count())
+            var query = from usuario in misUsuarios
+                        where usuario.DNI == DNI
+                        select usuario;
+
+            //Usuario asd = query.First<>; ALA LA LA
+
+            foreach (Usuario u in query)
             {
-                Usuario u = misUsuarios.First;
-               if (u.DNI == DNI)
+                if (u.pass == oldPass)
                 {
-                    if(u.pass == oldPass)
+                    if (newPass1 == newPass2)
                     {
-                        if(newPass1 == newPass2)
-                        {
-                            u.pass = newPass1;
-                            contexto.Usuario.Update(u);
-                            respuesta = true;
-                            mensaje = "La contraseña ha sido modificada con exito";
-                        } else {
-                            mensaje = "Las contraseñas ingresadas no coinciden ";
-                        }
-                    }else { 
-                        mensaje = "La contraseña ingresada es incorrecta ";
-                    } 
+                        u.pass = newPass1;
+                        contexto.Usuario.Update(u);
+                        respuesta = true;
+                        mensaje = "La contraseña ha sido modificada con exito";
+
+                    }
+                    else
+                    {
+                        mensaje = "Las contraseñas ingresadas no coinciden ";
+                    }
+                }
+                else
+                {
+                    mensaje = "La contraseña ingresada es incorrecta ";
                 }
             }
             if (respuesta)
@@ -485,14 +478,18 @@ namespace Bussines
 
             return mensaje;
         }
+    
 
 
-        public void cerrar()
-        {
-            contexto.Dispose();
-        }
 
+
+
+    public void cerrar()
+    {
+        contexto.Dispose();
     }
+
+}
 
 
 }

@@ -99,7 +99,7 @@ namespace Agencia.Views
 
                 editar.text_nombre.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[6].Value.ToString();
                 editar.textBox_contras.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[8].Value.ToString();
-               editar.textBox_dni.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString(); // dni lo tomamos como pk de la tabla no es valido poder modificarlo
+                editar.textBox_dni.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString(); // dni lo tomamos como pk de la tabla no es valido poder modificarlo
                 editar.textBox_mail.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[4].Value.ToString();
                 editar.check_esadmin.Checked = bool.Parse(this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[7].Value.ToString());
 
