@@ -57,9 +57,10 @@ namespace Agencia.Views
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(28, 30);
+            this.panel1.Location = new System.Drawing.Point(33, 39);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(969, 463);
+            this.panel1.Size = new System.Drawing.Size(926, 452);
             this.panel1.TabIndex = 40;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -70,11 +71,12 @@ namespace Agencia.Views
             this.TODAS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.TODAS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TODAS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TODAS.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.TODAS.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TODAS.ForeColor = System.Drawing.Color.Honeydew;
-            this.TODAS.Location = new System.Drawing.Point(653, 87);
+            this.TODAS.Location = new System.Drawing.Point(672, 394);
+            this.TODAS.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TODAS.Name = "TODAS";
-            this.TODAS.Size = new System.Drawing.Size(136, 31);
+            this.TODAS.Size = new System.Drawing.Size(159, 32);
             this.TODAS.TabIndex = 106;
             this.TODAS.Text = "Mostrar Todas";
             this.TODAS.UseVisualStyleBackColor = false;
@@ -96,32 +98,35 @@ namespace Agencia.Views
             this.Precio,
             this.id_reserva});
             this.dataGridViewReservas.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridViewReservas.Location = new System.Drawing.Point(178, 199);
+            this.dataGridViewReservas.Location = new System.Drawing.Point(128, 164);
+            this.dataGridViewReservas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewReservas.Name = "dataGridViewReservas";
             this.dataGridViewReservas.RowHeadersVisible = false;
             this.dataGridViewReservas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewReservas.Size = new System.Drawing.Size(501, 186);
+            this.dataGridViewReservas.Size = new System.Drawing.Size(703, 215);
             this.dataGridViewReservas.TabIndex = 105;
             this.dataGridViewReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReservas_CellClick);
             // 
             // combo_ciudadHeader
             // 
             this.combo_ciudadHeader.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.combo_ciudadHeader.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_ciudadHeader.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.combo_ciudadHeader.ForeColor = System.Drawing.Color.White;
             this.combo_ciudadHeader.FormattingEnabled = true;
-            this.combo_ciudadHeader.Location = new System.Drawing.Point(260, 91);
+            this.combo_ciudadHeader.Location = new System.Drawing.Point(128, 119);
+            this.combo_ciudadHeader.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.combo_ciudadHeader.Name = "combo_ciudadHeader";
-            this.combo_ciudadHeader.Size = new System.Drawing.Size(192, 25);
+            this.combo_ciudadHeader.Size = new System.Drawing.Size(223, 25);
             this.combo_ciudadHeader.TabIndex = 104;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(257, 65);
+            this.label1.Location = new System.Drawing.Point(128, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 19);
             this.label1.TabIndex = 38;
@@ -134,11 +139,12 @@ namespace Agencia.Views
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.Color.Honeydew;
-            this.btnLogin.Location = new System.Drawing.Point(477, 87);
+            this.btnLogin.Location = new System.Drawing.Point(377, 112);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(136, 31);
+            this.btnLogin.Size = new System.Drawing.Size(133, 32);
             this.btnLogin.TabIndex = 34;
             this.btnLogin.Text = "Buscar";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -147,75 +153,78 @@ namespace Agencia.Views
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Verdana", 12.25F);
+            this.label2.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(97, 93);
+            this.label2.Location = new System.Drawing.Point(354, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 20);
+            this.label2.Size = new System.Drawing.Size(229, 25);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Buscar Reservas";
+            this.label2.Text = "BUSCAR RESERVAS";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Editar
             // 
+            this.Editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Editar.HeaderText = "Editar";
             this.Editar.Name = "Editar";
             this.Editar.Text = "Editar";
             this.Editar.ToolTipText = "Editar";
-            this.Editar.Width = 40;
             // 
             // Eliminar
             // 
+            this.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Eliminar.HeaderText = "Eliminar";
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Eliminar.ToolTipText = "Eliminar";
-            this.Eliminar.Width = 68;
             // 
             // id_usuario
             // 
+            this.id_usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.id_usuario.HeaderText = "Usuario";
             this.id_usuario.Name = "id_usuario";
             this.id_usuario.ReadOnly = true;
-            this.id_usuario.Width = 68;
             // 
             // FDesde
             // 
+            this.FDesde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.FDesde.HeaderText = "Fecha Desde";
             this.FDesde.Name = "FDesde";
             this.FDesde.ReadOnly = true;
-            this.FDesde.Width = 88;
             // 
             // FHasta
             // 
+            this.FHasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.FHasta.HeaderText = "Fecha Hasta";
             this.FHasta.Name = "FHasta";
             this.FHasta.ReadOnly = true;
-            this.FHasta.Width = 86;
             // 
             // Precio
             // 
+            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
-            this.Precio.Width = 62;
             // 
             // id_reserva
             // 
+            this.id_reserva.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.id_reserva.HeaderText = "ID - Reserva";
             this.id_reserva.Name = "id_reserva";
-            this.id_reserva.Width = 85;
             // 
             // AdmReservas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1025, 530);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(998, 528);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "AdmReservas";
             this.Text = "AdmReservas";
             this.Load += new System.EventHandler(this.AdmReservas_Load);

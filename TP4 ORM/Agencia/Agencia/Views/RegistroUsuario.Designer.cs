@@ -46,42 +46,46 @@ namespace Agencia.Views
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtPassword.Font = new System.Drawing.Font("Cambria", 15F);
+            this.txtPassword.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(474, 219);
+            this.txtPassword.Location = new System.Drawing.Point(438, 213);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(285, 31);
+            this.txtPassword.Size = new System.Drawing.Size(332, 31);
             this.txtPassword.TabIndex = 6;
             // 
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtUsername.Font = new System.Drawing.Font("Cambria", 15F);
+            this.txtUsername.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(474, 158);
+            this.txtUsername.Location = new System.Drawing.Point(438, 145);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(285, 31);
+            this.txtUsername.Size = new System.Drawing.Size(332, 31);
             this.txtUsername.TabIndex = 5;
             // 
             // txtDocu
             // 
             this.txtDocu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtDocu.Font = new System.Drawing.Font("Cambria", 15F);
+            this.txtDocu.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDocu.ForeColor = System.Drawing.Color.White;
-            this.txtDocu.Location = new System.Drawing.Point(474, 284);
+            this.txtDocu.Location = new System.Drawing.Point(438, 277);
+            this.txtDocu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDocu.Name = "txtDocu";
-            this.txtDocu.Size = new System.Drawing.Size(285, 31);
+            this.txtDocu.Size = new System.Drawing.Size(332, 31);
             this.txtDocu.TabIndex = 8;
             // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtEmail.Font = new System.Drawing.Font("Cambria", 15F);
+            this.txtEmail.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(474, 355);
+            this.txtEmail.Location = new System.Drawing.Point(437, 345);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(285, 31);
+            this.txtEmail.Size = new System.Drawing.Size(332, 31);
             this.txtEmail.TabIndex = 9;
             // 
             // registrarse
@@ -91,11 +95,12 @@ namespace Agencia.Views
             this.registrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.registrarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.registrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registrarse.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registrarse.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.registrarse.ForeColor = System.Drawing.Color.White;
-            this.registrarse.Location = new System.Drawing.Point(628, 422);
+            this.registrarse.Location = new System.Drawing.Point(616, 399);
+            this.registrarse.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.registrarse.Name = "registrarse";
-            this.registrarse.Size = new System.Drawing.Size(131, 45);
+            this.registrarse.Size = new System.Drawing.Size(153, 41);
             this.registrarse.TabIndex = 19;
             this.registrarse.Text = "Registrarse";
             this.registrarse.UseVisualStyleBackColor = false;
@@ -105,13 +110,14 @@ namespace Agencia.Views
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(492, 88);
+            this.label2.Location = new System.Drawing.Point(465, 54);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(241, 33);
+            this.label2.Size = new System.Drawing.Size(284, 23);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Registrate al sistema";
+            this.label2.Text = "REGISTRATE AL SISTEMA";
             // 
             // button1
             // 
@@ -120,11 +126,12 @@ namespace Agencia.Views
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(474, 422);
+            this.button1.Location = new System.Drawing.Point(436, 399);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 45);
+            this.button1.Size = new System.Drawing.Size(153, 41);
             this.button1.TabIndex = 25;
             this.button1.Text = "Volver";
             this.button1.UseVisualStyleBackColor = false;
@@ -134,11 +141,12 @@ namespace Agencia.Views
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(511, 331);
+            this.label1.Location = new System.Drawing.Point(500, 326);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 19);
+            this.label1.Size = new System.Drawing.Size(201, 14);
             this.label1.TabIndex = 26;
             this.label1.Text = "Ingrese su correo electronico";
             // 
@@ -146,11 +154,12 @@ namespace Agencia.Views
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(514, 262);
+            this.label3.Location = new System.Drawing.Point(501, 259);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 19);
+            this.label3.Size = new System.Drawing.Size(194, 14);
             this.label3.TabIndex = 27;
             this.label3.Text = "Ingrese su Nº de documento";
             // 
@@ -158,11 +167,12 @@ namespace Agencia.Views
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(507, 197);
+            this.label4.Location = new System.Drawing.Point(500, 195);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 19);
+            this.label4.Size = new System.Drawing.Size(198, 14);
             this.label4.TabIndex = 28;
             this.label4.Text = "Ingrese su contraseña nueva";
             // 
@@ -170,20 +180,22 @@ namespace Agencia.Views
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(518, 133);
+            this.label5.Location = new System.Drawing.Point(512, 128);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 19);
+            this.label5.Size = new System.Drawing.Size(175, 14);
             this.label5.TabIndex = 29;
             this.label5.Text = "Ingrese un usuario nuevo";
             // 
             // RegistroUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1207, 536);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1208, 528);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -196,6 +208,7 @@ namespace Agencia.Views
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "RegistroUsuario";
             this.Text = "RegistroUsuario";
             this.Load += new System.EventHandler(this.RegistroUsuario_Load);

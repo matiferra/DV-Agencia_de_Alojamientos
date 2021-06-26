@@ -31,12 +31,12 @@ namespace Agencia
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReservasCliente));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridViewReservas = new System.Windows.Forms.DataGridView();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.hastaFecha = new System.Windows.Forms.DateTimePicker();
             this.desdeFecha = new System.Windows.Forms.DateTimePicker();
-            this.dataGridViewReservas = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.FDesde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FHasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +44,7 @@ namespace Agencia
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_alojamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservas)).BeginInit();
             this.SuspendLayout();
@@ -51,78 +52,18 @@ namespace Agencia
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dataGridViewReservas);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.hastaFecha);
             this.panel1.Controls.Add(this.desdeFecha);
-            this.panel1.Location = new System.Drawing.Point(28, 34);
+            this.panel1.Location = new System.Drawing.Point(33, 39);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(969, 463);
+            this.panel1.Size = new System.Drawing.Size(926, 452);
             this.panel1.TabIndex = 40;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.FlatAppearance.BorderSize = 2;
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(651, 64);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(131, 33);
-            this.btnLogin.TabIndex = 71;
-            this.btnLogin.Text = "Buscar";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(446, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 19);
-            this.label3.TabIndex = 70;
-            this.label3.Text = "Fecha Hasta";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(234, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 19);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "Fecha Desde";
-            // 
-            // hastaFecha
-            // 
-            this.hastaFecha.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaptionText;
-            this.hastaFecha.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hastaFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.hastaFecha.Location = new System.Drawing.Point(447, 66);
-            this.hastaFecha.Name = "hastaFecha";
-            this.hastaFecha.Size = new System.Drawing.Size(177, 31);
-            this.hastaFecha.TabIndex = 68;
-            // 
-            // desdeFecha
-            // 
-            this.desdeFecha.CalendarFont = new System.Drawing.Font("Cambria", 11F);
-            this.desdeFecha.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaptionText;
-            this.desdeFecha.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.desdeFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.desdeFecha.Location = new System.Drawing.Point(235, 64);
-            this.desdeFecha.Name = "desdeFecha";
-            this.desdeFecha.Size = new System.Drawing.Size(176, 31);
-            this.desdeFecha.TabIndex = 67;
             // 
             // dataGridViewReservas
             // 
@@ -140,13 +81,81 @@ namespace Agencia
             this.id_alojamiento,
             this.id_reserva});
             this.dataGridViewReservas.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridViewReservas.Location = new System.Drawing.Point(192, 152);
+            this.dataGridViewReservas.Location = new System.Drawing.Point(121, 190);
+            this.dataGridViewReservas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewReservas.Name = "dataGridViewReservas";
             this.dataGridViewReservas.RowHeadersVisible = false;
             this.dataGridViewReservas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewReservas.Size = new System.Drawing.Size(554, 186);
+            this.dataGridViewReservas.Size = new System.Drawing.Size(698, 215);
             this.dataGridViewReservas.TabIndex = 106;
             this.dataGridViewReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReservas_CellClick);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.FlatAppearance.BorderSize = 2;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Cambria", 11.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(635, 115);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(153, 31);
+            this.btnLogin.TabIndex = 71;
+            this.btnLogin.Text = "Buscar";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(396, 87);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 19);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "Fecha Hasta";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(149, 87);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 19);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "Fecha Desde";
+            // 
+            // hastaFecha
+            // 
+            this.hastaFecha.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaptionText;
+            this.hastaFecha.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.hastaFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.hastaFecha.Location = new System.Drawing.Point(398, 115);
+            this.hastaFecha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.hastaFecha.Name = "hastaFecha";
+            this.hastaFecha.Size = new System.Drawing.Size(206, 31);
+            this.hastaFecha.TabIndex = 68;
+            // 
+            // desdeFecha
+            // 
+            this.desdeFecha.CalendarFont = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.desdeFecha.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaptionText;
+            this.desdeFecha.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.desdeFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.desdeFecha.Location = new System.Drawing.Point(150, 113);
+            this.desdeFecha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.desdeFecha.Name = "desdeFecha";
+            this.desdeFecha.Size = new System.Drawing.Size(205, 31);
+            this.desdeFecha.TabIndex = 67;
             // 
             // Eliminar
             // 
@@ -155,55 +164,72 @@ namespace Agencia
             this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Eliminar.ToolTipText = "Eliminar";
-            this.Eliminar.Width = 68;
+            this.Eliminar.Width = 75;
             // 
             // FDesde
             // 
+            this.FDesde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.FDesde.HeaderText = "Fecha Desde";
             this.FDesde.Name = "FDesde";
             this.FDesde.ReadOnly = true;
-            this.FDesde.Width = 88;
             // 
             // FHasta
             // 
+            this.FHasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.FHasta.HeaderText = "Fecha Hasta";
             this.FHasta.Name = "FHasta";
             this.FHasta.ReadOnly = true;
-            this.FHasta.Width = 86;
             // 
             // ciudad
             // 
+            this.ciudad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ciudad.HeaderText = "Ciudad";
             this.ciudad.Name = "ciudad";
-            this.ciudad.Width = 65;
             // 
             // Precio
             // 
+            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
-            this.Precio.Width = 62;
             // 
             // id_alojamiento
             // 
+            this.id_alojamiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.id_alojamiento.HeaderText = "ID - Alojamiento";
             this.id_alojamiento.Name = "id_alojamiento";
-            this.id_alojamiento.Width = 97;
+            this.id_alojamiento.Width = 120;
             // 
             // id_reserva
             // 
+            this.id_reserva.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.id_reserva.HeaderText = "ID - Reserva";
             this.id_reserva.Name = "id_reserva";
-            this.id_reserva.Width = 85;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(359, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(245, 23);
+            this.label1.TabIndex = 107;
+            this.label1.Text = "REALIZA TU RESERVA";
             // 
             // ReservasCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1025, 530);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(998, 528);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ReservasCliente";
             this.Text = "ReservasCliente";
             this.Load += new System.EventHandler(this.ReservasCliente_Load);
@@ -223,6 +249,7 @@ namespace Agencia
         private System.Windows.Forms.DateTimePicker desdeFecha;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.DataGridView dataGridViewReservas;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn FDesde;
         private System.Windows.Forms.DataGridViewTextBoxColumn FHasta;

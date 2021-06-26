@@ -73,7 +73,7 @@ namespace Bussines
             foreach (Usuario u in query)
                 alojamientos.Add(new List<string> { u.DNI.ToString(), u.nombre, u.mail, u.pass, u.esAdmin.ToString(), u.bloqueado.ToString(), u.intentosLogueo.ToString() });
             return alojamientos;*/
-            return null
+            return null;
         }
 
         public List<string> obtenerAlojamientos()

@@ -122,7 +122,7 @@ namespace Agencia.Views
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserLock;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.Control;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 91;
+            this.iconPictureBox1.IconSize = 106;
             resources.ApplyResources(this.iconPictureBox1, "iconPictureBox1");
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.TabStop = false;

@@ -67,11 +67,12 @@ namespace Agencia.Views
             this.buscarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.buscarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buscarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buscarButton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.buscarButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buscarButton.ForeColor = System.Drawing.Color.Honeydew;
-            this.buscarButton.Location = new System.Drawing.Point(497, 59);
+            this.buscarButton.Location = new System.Drawing.Point(522, 71);
+            this.buscarButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buscarButton.Name = "buscarButton";
-            this.buscarButton.Size = new System.Drawing.Size(136, 36);
+            this.buscarButton.Size = new System.Drawing.Size(133, 28);
             this.buscarButton.TabIndex = 34;
             this.buscarButton.Text = "Buscar";
             this.buscarButton.UseVisualStyleBackColor = false;
@@ -80,20 +81,22 @@ namespace Agencia.Views
             // buscarText
             // 
             this.buscarText.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buscarText.Font = new System.Drawing.Font("Cambria", 13F);
+            this.buscarText.Font = new System.Drawing.Font("Cambria", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buscarText.ForeColor = System.Drawing.SystemColors.Menu;
-            this.buscarText.Location = new System.Drawing.Point(210, 67);
+            this.buscarText.Location = new System.Drawing.Point(208, 71);
+            this.buscarText.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buscarText.Name = "buscarText";
-            this.buscarText.Size = new System.Drawing.Size(251, 28);
+            this.buscarText.Size = new System.Drawing.Size(292, 28);
             this.buscarText.TabIndex = 31;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(47, 71);
+            this.label2.Location = new System.Drawing.Point(60, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 18);
             this.label2.TabIndex = 30;
@@ -107,18 +110,20 @@ namespace Agencia.Views
             this.panel1.Controls.Add(this.buscarButton);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.buscarText);
-            this.panel1.Location = new System.Drawing.Point(28, 39);
+            this.panel1.Location = new System.Drawing.Point(33, 39);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(969, 463);
+            this.panel1.Size = new System.Drawing.Size(926, 452);
             this.panel1.TabIndex = 39;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(210, 42);
+            this.label1.Location = new System.Drawing.Point(208, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 19);
             this.label1.TabIndex = 40;
@@ -140,12 +145,13 @@ namespace Agencia.Views
             this.Col_esadmin,
             this.Col_pass});
             this.dataGridViewUsuarios.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewUsuarios.Location = new System.Drawing.Point(40, 111);
+            this.dataGridViewUsuarios.Location = new System.Drawing.Point(60, 120);
+            this.dataGridViewUsuarios.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
             this.dataGridViewUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -153,11 +159,11 @@ namespace Agencia.Views
             this.dataGridViewUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewUsuarios.RowHeadersVisible = false;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridViewUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridViewUsuarios.Size = new System.Drawing.Size(795, 335);
+            this.dataGridViewUsuarios.Size = new System.Drawing.Size(793, 313);
             this.dataGridViewUsuarios.TabIndex = 39;
             this.dataGridViewUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuarios_CellClick);
             this.dataGridViewUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuarios_CellContentClick);
@@ -178,7 +184,7 @@ namespace Agencia.Views
             // boton_Editar
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             this.boton_Editar.DefaultCellStyle = dataGridViewCellStyle2;
             this.boton_Editar.HeaderText = "";
@@ -190,7 +196,7 @@ namespace Agencia.Views
             // boton_eliminar
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             this.boton_eliminar.DefaultCellStyle = dataGridViewCellStyle3;
             this.boton_eliminar.HeaderText = "";
@@ -253,13 +259,15 @@ namespace Agencia.Views
             // 
             // AdmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1025, 530);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(998, 528);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "AdmUsuarios";
             this.Text = "AdmUsuarios";
             this.TransparencyKey = System.Drawing.Color.Transparent;
