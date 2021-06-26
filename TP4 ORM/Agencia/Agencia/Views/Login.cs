@@ -22,15 +22,15 @@ namespace Agencia
         //public Usuario user;
 
         public Login(Administrador adminForm, Cliente clienteForm, RegistroUsuario registroUsuarioForm)
-        {          
+        {
             InitializeComponent();
-          //this.ag = agenciaManager;
-          //  this.user = usuario;
+            //this.ag = agenciaManager;
+            //  this.user = usuario;
             this.adminForm = adminForm;
             this.clienteForm = clienteForm;
             this.registroUsuarioForm = registroUsuarioForm;
-         
-        }   
+
+        }
 
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace Agencia
         }
 
         private void registro_Click(object sender, EventArgs e)
-        { 
+        {
             registroUsuarioForm.Show();
         }
 
@@ -121,7 +121,7 @@ namespace Agencia
 
         private void seleccion_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
 
     }

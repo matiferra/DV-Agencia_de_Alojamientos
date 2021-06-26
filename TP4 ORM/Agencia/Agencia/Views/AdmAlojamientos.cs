@@ -16,15 +16,15 @@ namespace Agencia.Views
     public partial class AdmAlojamientos : Form
     {
 
-//        AgenciaManager Ag = new AgenciaManager();
-  //      public AgenciaManager agencia { get; set; }
+        Bussines.AgenciaManager Ag = new Bussines.AgenciaManager();
+        //  public AgenciaManager agencia { get; set; }
 
         public AdmAlojamientos()
         {
             InitializeComponent();
             combo_ciudadHeader.DisplayMember = "nombre";
-            combo_ciudadHeader.ValueMember = "id_ciudad";
-           // combo_ciudadHeader.DataSource = Ag.getCiudades();
+            combo_ciudadHeader.ValueMember = "id";
+            combo_ciudadHeader.DataSource = Ag.getCiudades();
             panel1.BackColor = Color.FromArgb(60, Color.Black);
             RefresVista();
 
@@ -32,31 +32,14 @@ namespace Agencia.Views
         public void RefresVista()
         {
             alojamientosGrid.Rows.Clear();
-           // DataSet Lista = Ag.obtenerAlojamientos();
-            int index = 0;
-        /*    if (Lista.Tables[0] != null && Lista.Tables[0].Rows.Count > 0)
-            {
-                foreach (DataRow dr in Lista.Tables[0].Rows)
-                {
-                    alojamientosGrid.Rows.Add();
-                    alojamientosGrid.Rows[index].Cells[2].Value = dr["id_alojamiento"].ToString();
-                    alojamientosGrid.Rows[index].Cells[3].Value = dr["barrio"].ToString();
-                    alojamientosGrid.Rows[index].Cells[4].Value = int.Parse(dr["estrellas"].ToString());
-                    alojamientosGrid.Rows[index].Cells[5].Value = dr["cantidadDePersonas"].ToString();
-                    alojamientosGrid.Rows[index].Cells[6].Value = dr["tv"].ToString();
-                    alojamientosGrid.Rows[index].Cells[7].Value = dr["eshotel"].ToString();
-                    alojamientosGrid.Rows[index].Cells[8].Value = dr["id_ciudad"].ToString();
-                    alojamientosGrid.Rows[index].Cells[9].Value = dr["cantidad_de_habitaciones"].ToString();
-                    alojamientosGrid.Rows[index].Cells[10].Value = dr["precio_por_dia"].ToString();
-                    alojamientosGrid.Rows[index].Cells[11].Value = dr["precio_por_persona"].ToString();
-                    alojamientosGrid.Rows[index].Cells[12].Value = dr["cantidadDeBanios"].ToString();
+            Bussines.AgenciaManager agc = new Bussines.AgenciaManager();
+            alojamientosGrid.Rows.Clear();
+            List<List<string>> lista = new List<List<string>>();
+            lista = agc.obtenerAlojamientos();
+            foreach (List<string> usuario in lista)
+                alojamientosGrid.Rows.Add(usuario.ToArray());
 
-                    index++;
-
-                }
-            }
-        */
-            }
+        }
 
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
@@ -208,11 +191,11 @@ namespace Agencia.Views
         private void button1_Click_2(object sender, EventArgs e)
         {
 
-           /* if (Ag.agregarAlojamiento(tipoAlojamientoCombo.Text, combo_ciudadHeader.SelectedValue.ToString(), barrioText.Text, estrellasText.Text,
-                                  personasText.Text, check_tv.Checked, precioText.Text, habitacionesText.Text, baniosText.Text))
+            if (Ag.agregarAlojamiento(tipoAlojamientoCombo.Text, combo_ciudadHeader.SelectedValue.ToString(), barrioText.Text, estrellasText.Text,
+                                   personasText.Text, check_tv.Checked, precioText.Text, habitacionesText.Text, baniosText.Text))
             {
 
-                MessageBox.Show("Agregado con éxito");              
+                MessageBox.Show("Agregado con éxito");
                 limpioEncabezado();
                 RefresVista();
             }
@@ -221,7 +204,7 @@ namespace Agencia.Views
                 MessageBox.Show("No se pudo agregar el alojamiento");
             }
 
-            */
+
 
         }
 
@@ -249,7 +232,7 @@ namespace Agencia.Views
                 if (dr == DialogResult.Yes)
                 {
                     var id = this.alojamientosGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
-                   // Ag.quitarAlojamiento(int.Parse(id));
+                    // Ag.quitarAlojamiento(int.Parse(id));
                     RefresVista();
 
                 }
@@ -262,6 +245,7 @@ namespace Agencia.Views
                 EditarAlojamiento editar = new EditarAlojamiento(this);
                 editar.UpdateEventArgsHandler += edit_aloj_UpdateHadler; //  metodo la cual me permite actualizar la grilla cuando termine de guardar los cambios
 
+                editar.combo_ciudad.SelectedIndex = this.alojamientosGrid.Rows[e.RowIndex].Cells[8].RowIndex;
                 editar.id_text.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
                 editar.id_text.ReadOnly = true;
                 editar.id_text.Visible = false;
@@ -306,6 +290,9 @@ namespace Agencia.Views
 
         }
 
+        private void combo_ciudadHeader_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

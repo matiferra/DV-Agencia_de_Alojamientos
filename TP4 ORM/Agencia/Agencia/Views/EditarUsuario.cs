@@ -13,7 +13,7 @@ namespace Agencia.Views
     public partial class EditarUsuario : Form
     {
         //static Bussines.Agencia a = new Bussines.Agencia();
-      //  static Bussines.AgenciaManager ag = new Bussines.AgenciaManager();
+        static Bussines.AgenciaManager ag = new Bussines.AgenciaManager();
         public EditarUsuario(AdmUsuarios admUsuarios)
         {
             InitializeComponent();
@@ -36,8 +36,7 @@ namespace Agencia.Views
 
         private void Agrego_botonUsuario_Click(object sender, EventArgs e)
         {
-
-            /*if (ag.modificarUsuario(int.Parse(textBox_dni.Text),text_nombre.Text,textBox_mail.Text,textBox_contras.Text,check_esadmin.Checked,false))
+            if (ag.modificarUsuario(int.Parse(textBox_dni.Text), text_nombre.Text, textBox_mail.Text, textBox_contras.Text, check_esadmin.Checked, false))
             {
                 MessageBox.Show("Agregado con éxito");
                 agregar();
@@ -48,7 +47,7 @@ namespace Agencia.Views
             {
                 MessageBox.Show("No se pudo Modificar el Usuario");
             }
-            */
+
         }
 
         private void EditarUsuario_Load(object sender, EventArgs e)

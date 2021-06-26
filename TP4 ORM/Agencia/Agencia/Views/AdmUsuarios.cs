@@ -15,7 +15,7 @@ namespace Agencia.Views
     public partial class AdmUsuarios : Form
     {
         //static Bussines.Agencia a = new Bussines.Agencia();
-        //static Bussines.AgenciaManager ag = new Bussines.AgenciaManager();
+        private Bussines.AgenciaManager ag = new Bussines.AgenciaManager();
         // Usuario usuario = null;
 
         private Form currentChildForm;
@@ -31,27 +31,14 @@ namespace Agencia.Views
 
         public void RefresVista()
         {
+            Bussines.AgenciaManager agc = new Bussines.AgenciaManager();
             dataGridViewUsuarios.Rows.Clear();
-            //DataSet Lista = ag.getUsuario();
-            int index = 0;
-            /*if (Lista.Tables[0] != null && Lista.Tables[0].Rows.Count > 0)
-            {
-                foreach (DataRow dr in Lista.Tables[0].Rows)
-                {
-                    dataGridViewUsuarios.Rows.Add();
-                    
-                    dataGridViewUsuarios.Rows[index].Cells[3].Value = dr["dni"].ToString();
-                    dataGridViewUsuarios.Rows[index].Cells[4].Value = dr["mail"].ToString();
-                    dataGridViewUsuarios.Rows[index].Cells[5].Value = dr["bloqueado"].ToString();
-                    dataGridViewUsuarios.Rows[index].Cells[6].Value = dr["nombre"].ToString();
-                    dataGridViewUsuarios.Rows[index].Cells[7].Value = dr["esAdmin"].ToString();
-                    dataGridViewUsuarios.Rows[index].Cells[8].Value = dr["pass"].ToString();
+            List<List<string>> lista = new List<List<string>>();
+            lista = agc.obtenerUsuarios();
+            foreach (List<string> usuario in lista)
+                dataGridViewUsuarios.Rows.Add(usuario.ToArray());
 
-                    index++;
-                }
-            }
-        */
-            }
+        }
 
         private void OpenChildForm(Form childForm)
         {
@@ -86,8 +73,8 @@ namespace Agencia.Views
 
                 if (dr == DialogResult.Yes)
                 {
-                    var id = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString();
-                   // ag.eliminarUsuario(id);
+                    var id = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[9].Value.ToString();
+                    ag.eliminarUsuario(int.Parse(id));
                     RefresVista();
                 }
 
@@ -111,8 +98,9 @@ namespace Agencia.Views
 
                 if (dr == DialogResult.Yes)
                 {
-                    var id = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString();
-                    //ag.desbloquearUsuario(id);
+                    int id = int.Parse(this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[9].Value.ToString());
+                    bool esBloqueado = bool.Parse(this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[5].Value.ToString());
+                    ag.desbloquearUsuario(id, esBloqueado);
                     RefresVista();
                 }
 
@@ -123,27 +111,29 @@ namespace Agencia.Views
         {
             dataGridViewUsuarios.Rows.Clear();
 
-            //DataSet Lista = ag.buscarUsuario(buscarText.Text);
+            //List<Entities.Usuario> Lista = ag.buscarUsuario(12345678);
 
-            int index = 0;
-            /*if (Lista.Tables[0] != null && Lista.Tables[0].Rows.Count > 0)
-            {
-                foreach (DataRow dr in Lista.Tables[0].Rows)
-                {
-                    dataGridViewUsuarios.Rows.Add();
-                    dataGridViewUsuarios.Rows[index].Cells[3].Value = dr["dni"].ToString();
-                    dataGridViewUsuarios.Rows[index].Cells[4].Value = dr["mail"].ToString();
-                    dataGridViewUsuarios.Rows[index].Cells[5].Value = dr["bloqueado"].ToString();
-                    dataGridViewUsuarios.Rows[index].Cells[6].Value = dr["nombre"].ToString();
-                    dataGridViewUsuarios.Rows[index].Cells[7].Value = dr["esAdmin"].ToString();
-                    dataGridViewUsuarios.Rows[index].Cells[8].Value = dr["pass"].ToString();
 
-                    index++;
 
-                }
-            }
-        */
-            }
+            //int index = 0;
+
+            //    foreach (var dr in Lista)
+            //    {
+            //    dataGridViewUsuarios.Rows.Add();
+            //    dataGridViewUsuarios.Rows[index].Cells[3].Value = dr.DNI;
+            //    dataGridViewUsuarios.Rows[index].Cells[4].Value = dr.mail;
+            //    dataGridViewUsuarios.Rows[index].Cells[5].Value = dr.bloqueado;
+            //    dataGridViewUsuarios.Rows[index].Cells[6].Value = dr.nombre;
+            //    dataGridViewUsuarios.Rows[index].Cells[7].Value = dr.esAdmin;
+            //    dataGridViewUsuarios.Rows[index].Cells[8].Value = dr.pass;
+
+            //    index++;
+
+            //    }
+
+
+
+        }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -151,7 +141,7 @@ namespace Agencia.Views
 
         private void AdmUsuarios_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void dataGridViewUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -161,12 +151,12 @@ namespace Agencia.Views
 
         private void dataGridViewUsuarios_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
-            
+
         }
 
         private void dataGridViewUsuarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-           
+
         }
 
         //private void panel1_Paint(object sender, PaintEventArgs e)

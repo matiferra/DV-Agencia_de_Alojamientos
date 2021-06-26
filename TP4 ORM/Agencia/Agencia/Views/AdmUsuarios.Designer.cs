@@ -56,6 +56,7 @@ namespace Agencia.Views
             this.Col_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col_esadmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col_pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -143,7 +144,8 @@ namespace Agencia.Views
             this.Col_bloqueado,
             this.Col_nombre,
             this.Col_esadmin,
-            this.Col_pass});
+            this.Col_pass,
+            this.id});
             this.dataGridViewUsuarios.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewUsuarios.Location = new System.Drawing.Point(60, 120);
             this.dataGridViewUsuarios.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -257,6 +259,12 @@ namespace Agencia.Views
             this.Col_pass.Visible = false;
             this.Col_pass.Width = 30;
             // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
             // AdmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -296,5 +304,6 @@ namespace Agencia.Views
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_esadmin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_pass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
     }
 }

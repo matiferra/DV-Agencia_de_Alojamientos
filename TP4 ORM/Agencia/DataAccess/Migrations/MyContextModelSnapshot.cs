@@ -19,7 +19,7 @@ namespace DataAccess.Migrations
                 .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("DataAccess.Agencia", b =>
+            modelBuilder.Entity("Entities.Agencia", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Agencia");
                 });
 
-            modelBuilder.Entity("DataAccess.AgenciaManager", b =>
+            modelBuilder.Entity("Entities.AgenciaManager", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -66,7 +66,7 @@ namespace DataAccess.Migrations
                     b.ToTable("AgenciaManager");
                 });
 
-            modelBuilder.Entity("DataAccess.Alojamiento", b =>
+            modelBuilder.Entity("Entities.Alojamiento", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -85,10 +85,16 @@ namespace DataAccess.Migrations
                     b.Property<int>("cantidad_de_habitaciones")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ciudadid")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("esHotel")
+                        .HasColumnType("bit");
+
                     b.Property<string>("estrellas")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("id_ciudadid")
+                    b.Property<int>("id_ciudad")
                         .HasColumnType("int");
 
                     b.Property<double>("precio_por_dia")
@@ -102,12 +108,42 @@ namespace DataAccess.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("id_ciudadid");
+                    b.HasIndex("ciudadid");
 
                     b.ToTable("Alojamiento");
+
+                    b.HasData(
+                        new
+                        {
+                            id = 1,
+                            barrio = "belgrano",
+                            cantidadDeBanios = 0,
+                            cantidadDePersonas = 2,
+                            cantidad_de_habitaciones = 0,
+                            esHotel = true,
+                            estrellas = "5",
+                            id_ciudad = 1,
+                            precio_por_dia = 0.0,
+                            precio_por_persona = 2500.0,
+                            tv = true
+                        },
+                        new
+                        {
+                            id = 2,
+                            barrio = "matadeores",
+                            cantidadDeBanios = 2,
+                            cantidadDePersonas = 2,
+                            cantidad_de_habitaciones = 1,
+                            esHotel = false,
+                            estrellas = "4",
+                            id_ciudad = 1,
+                            precio_por_dia = 50100.0,
+                            precio_por_persona = 0.0,
+                            tv = true
+                        });
                 });
 
-            modelBuilder.Entity("DataAccess.Cabania", b =>
+            modelBuilder.Entity("Entities.Cabania", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -133,7 +169,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Cabania");
                 });
 
-            modelBuilder.Entity("DataAccess.Ciudades", b =>
+            modelBuilder.Entity("Entities.Ciudades", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -146,9 +182,36 @@ namespace DataAccess.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Ciudades");
+
+                    b.HasData(
+                        new
+                        {
+                            id = 1,
+                            nombre = "buenos aires"
+                        },
+                        new
+                        {
+                            id = 2,
+                            nombre = "rio negro"
+                        },
+                        new
+                        {
+                            id = 3,
+                            nombre = "la plata"
+                        },
+                        new
+                        {
+                            id = 4,
+                            nombre = "bariloche"
+                        },
+                        new
+                        {
+                            id = 5,
+                            nombre = "lujan"
+                        });
                 });
 
-            modelBuilder.Entity("DataAccess.Hotel", b =>
+            modelBuilder.Entity("Entities.Hotel", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -168,7 +231,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Hotel");
                 });
 
-            modelBuilder.Entity("DataAccess.Reserva", b =>
+            modelBuilder.Entity("Entities.Reserva", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -202,7 +265,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Reserva");
                 });
 
-            modelBuilder.Entity("DataAccess.Usuario", b =>
+            modelBuilder.Entity("Entities.Usuario", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -238,7 +301,7 @@ namespace DataAccess.Migrations
                         new
                         {
                             id = 1,
-                            DNI = 12345678,
+                            DNI = 101010,
                             bloqueado = false,
                             esAdmin = true,
                             intentosLogueo = 0,
@@ -249,7 +312,7 @@ namespace DataAccess.Migrations
                         new
                         {
                             id = 2,
-                            DNI = 12345678,
+                            DNI = 54594166,
                             bloqueado = false,
                             esAdmin = false,
                             intentosLogueo = 0,
@@ -259,26 +322,26 @@ namespace DataAccess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("DataAccess.Agencia", b =>
+            modelBuilder.Entity("Entities.Agencia", b =>
                 {
-                    b.HasOne("DataAccess.Alojamiento", "id_alojamiento")
+                    b.HasOne("Entities.Alojamiento", "id_alojamiento")
                         .WithMany()
                         .HasForeignKey("id_alojamientoid");
 
                     b.Navigation("id_alojamiento");
                 });
 
-            modelBuilder.Entity("DataAccess.AgenciaManager", b =>
+            modelBuilder.Entity("Entities.AgenciaManager", b =>
                 {
-                    b.HasOne("DataAccess.Agencia", "id_agencia")
+                    b.HasOne("Entities.Agencia", "id_agencia")
                         .WithMany()
                         .HasForeignKey("id_agenciaid");
 
-                    b.HasOne("DataAccess.Reserva", "id_reserva")
+                    b.HasOne("Entities.Reserva", "id_reserva")
                         .WithMany()
                         .HasForeignKey("id_reservaid");
 
-                    b.HasOne("DataAccess.Usuario", "id_usuario")
+                    b.HasOne("Entities.Usuario", "id_usuario")
                         .WithMany()
                         .HasForeignKey("id_usuarioid");
 
@@ -289,40 +352,40 @@ namespace DataAccess.Migrations
                     b.Navigation("id_usuario");
                 });
 
-            modelBuilder.Entity("DataAccess.Alojamiento", b =>
+            modelBuilder.Entity("Entities.Alojamiento", b =>
                 {
-                    b.HasOne("DataAccess.Ciudades", "id_ciudad")
+                    b.HasOne("Entities.Ciudades", "ciudad")
                         .WithMany()
-                        .HasForeignKey("id_ciudadid");
+                        .HasForeignKey("ciudadid");
 
-                    b.Navigation("id_ciudad");
+                    b.Navigation("ciudad");
                 });
 
-            modelBuilder.Entity("DataAccess.Cabania", b =>
+            modelBuilder.Entity("Entities.Cabania", b =>
                 {
-                    b.HasOne("DataAccess.Alojamiento", "id_alojamiento")
+                    b.HasOne("Entities.Alojamiento", "id_alojamiento")
                         .WithMany()
                         .HasForeignKey("id_alojamientoid");
 
                     b.Navigation("id_alojamiento");
                 });
 
-            modelBuilder.Entity("DataAccess.Hotel", b =>
+            modelBuilder.Entity("Entities.Hotel", b =>
                 {
-                    b.HasOne("DataAccess.Alojamiento", "id_alojamiento")
+                    b.HasOne("Entities.Alojamiento", "id_alojamiento")
                         .WithMany()
                         .HasForeignKey("id_alojamientoid");
 
                     b.Navigation("id_alojamiento");
                 });
 
-            modelBuilder.Entity("DataAccess.Reserva", b =>
+            modelBuilder.Entity("Entities.Reserva", b =>
                 {
-                    b.HasOne("DataAccess.Alojamiento", "id_alojamiento")
+                    b.HasOne("Entities.Alojamiento", "id_alojamiento")
                         .WithMany()
                         .HasForeignKey("id_alojamientoid");
 
-                    b.HasOne("DataAccess.Usuario", "id_usuario")
+                    b.HasOne("Entities.Usuario", "id_usuario")
                         .WithMany()
                         .HasForeignKey("id_usuarioid");
 

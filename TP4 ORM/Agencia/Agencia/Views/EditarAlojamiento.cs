@@ -13,13 +13,13 @@ namespace Agencia.Views
 {
     public partial class EditarAlojamiento : Form
     {
-     //   AgenciaManager Ag = new AgenciaManager();
+        Bussines.AgenciaManager Ag = new Bussines.AgenciaManager();
         public EditarAlojamiento(AdmAlojamientos alojaPadre)
         {
             InitializeComponent();
             combo_ciudad.DisplayMember = "nombre";
-            combo_ciudad.ValueMember = "id_ciudad";
-            //combo_ciudad.DataSource = Ag.getCiudades();
+            combo_ciudad.ValueMember = "id";
+            combo_ciudad.DataSource = Ag.getCiudades();
         }
 
         public delegate void UpdateDelegate(object serder, UpdateEventArgs args);
@@ -37,7 +37,7 @@ namespace Agencia.Views
         }
         private void Agrego_boton_Click(object sender, EventArgs e)
         {
-            /*
+
             if (Ag.modificarAlojamiento(id_text.Text, combo_ciudad.SelectedValue.ToString(), barrioText.Text, estrellasText.Text, personasText.Text, check_tv.Checked,
                                     precioxdiaText.Text, habitacionesText.Text, baniosText.Text, campo_precioxpersona.Text))
             {
@@ -51,8 +51,8 @@ namespace Agencia.Views
             {
                 MessageBox.Show("No se pudo Modificar el alojamiento");
             }
-        */
-            }
+
+        }
 
 
         private void EditarAlojamiento_Load(object sender, EventArgs e)
