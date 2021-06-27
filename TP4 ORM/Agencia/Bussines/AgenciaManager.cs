@@ -47,23 +47,36 @@ namespace Bussines
 
         // ----------------------- METODOS ALOJAMIENTOS -----------------------
 
-        public List<List<string>> obtenerAlojamientos(string ciudad)
-        {
-            /*var query = from alojamientosDB in alojamientos
-                        select alojamientosDB;
-                        where
-            
-            List<List<string>> alojamientos = new List<List<string>>();
-            foreach (Usuario u in query)
-                alojamientos.Add(new List<string> { u.DNI.ToString(), u.nombre, u.mail, u.pass, u.esAdmin.ToString(), u.bloqueado.ToString(), u.intentosLogueo.ToString() });
-            return alojamientos;*/
+        //public List<List<string>> obtenerAlojamientos(string ciudad)
+        //{
+        //    var query = from alojamientosDB in alojamientos
+        //                select alojamientosDB;
 
-            return null;
-        }
+
+        //    List<List<string>> alojamientos = new List<List<string>>();
+        //    foreach (Usuario u in query)
+        //        alojamientos.Add(new List<string> { u.DNI.ToString(), u.nombre, u.mail, u.pass, u.esAdmin.ToString(), u.bloqueado.ToString(), u.intentosLogueo.ToString() });
+        //    return alojamientos;
+
+        //    return null;
+        //}
 
         public List<List<string>> obtenerAlojamientos()
         {
             List<List<string>> salida = new List<List<string>>();
+            /* var query = from alojamiento in alojamientos
+                         select alojamineto
+
+             if(query != null)
+              {
+                  foreach (Entities.Alojamiento u in query)
+                  {
+                      salida.Add(new List<string> {null, null, u.id.ToString(), u.barrio, u.estrellas.ToString(), u.cantidadDePersonas.ToString(),
+                                                u.tv.ToString(), u.esHotel.ToString(), u.id_ciudad.ToString(),u.cantidad_de_habitaciones.ToString(),
+                                                u.precio_por_dia.ToString(), u.precio_por_persona.ToString(), u.cantidadDeBanios.ToString()});
+                  }
+              }
+             */
             if (alojamientos.Count() > 0 || alojamientos != null)
             {
                 foreach (Entities.Alojamiento u in alojamientos)
@@ -75,39 +88,34 @@ namespace Bussines
             return salida;
         }
 
-        /* public List<string> buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo)
-         {
+        public List<List<string>> buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo)
+        {
 
+            List<List<string>> alojamientosReturn = new List<List<string>>();
 
+            if (string.IsNullOrEmpty(cantPersonas))
+            {
+                cantPersonas = "0";
+            }
 
-             if (string.IsNullOrEmpty(cantPersonas))
-             {
-                 cantPersonas = "0";
-             }
+            var query = from alojamiento in alojamientos
+                       /* where alojamiento.precio_por_persona <= double.Parse(Phasta)
+                        && alojamiento.precio_por_persona >= double.Parse(Pdesde)
+                        || alojamiento.precio_por_dia <= double.Parse(Phasta)
+                        || alojamiento.precio_por_dia >= double.Parse(Pdesde)
+                        || alojamiento.cantidadDePersonas >= int.Parse(cantPersonas)
+                        */select alojamiento;
 
-             if (tipo == "Hotel")
-             {
-                 esHotel = true;
-             }
-             else
-             {
-                 esHotel = false;
-             }
+            foreach (Entities.Alojamiento u in query)
+            {
+                alojamientosReturn.Add(new List<string> {null, null, u.id.ToString(), u.barrio, u.estrellas.ToString(), u.cantidadDePersonas.ToString(),
+                                                  u.tv.ToString(), u.esHotel.ToString(), u.id_ciudad.ToString(),u.cantidad_de_habitaciones.ToString(),
+                                                  u.precio_por_dia.ToString(), u.precio_por_persona.ToString(), u.cantidadDeBanios.ToString()});
+            }
 
-             try
-             {
+            return alojamientosReturn;
 
-
-             }
-             catch (Exception ex)
-             {
-                 // mensajeError = "error en buscoAlojamiento" + ex.Message;
-             }
-
-
-             return ds;
-         }
-        */
+        }
 
         public List<Entities.Ciudades> getCiudades()
         {
@@ -184,7 +192,7 @@ namespace Bussines
                     alojamiento.cantidadDeBanios = int.Parse(banios);
                     alojamiento.precio_por_dia = double.Parse(precioxDia);
                     alojamiento.cantidad_de_habitaciones = int.Parse(habitaciones);
-                }                             
+                }
 
                 contexto.Alojamiento.Update(alojamiento);
                 contexto.SaveChanges();
@@ -202,12 +210,21 @@ namespace Bussines
 
         public bool quitarAlojamiento(int codigo)
         {
-            bool result;
-            try
+            bool result = false;
+
+            var query = from alojamiento in alojamientos
+                        where alojamiento.id == codigo
+                        select alojamiento;
+
+            if (query != null)
             {
+                Entities.Alojamiento alojamiento = query.FirstOrDefault();
+
+                contexto.Alojamiento.Remove(alojamiento);
+                contexto.SaveChanges();
                 result = true;
             }
-            catch (Exception ex)
+            else
             {
                 result = false;
             }
@@ -217,21 +234,50 @@ namespace Bussines
 
 
         // ----------------------- METODOS RESERVAS -----------------------
-        public List<List<string>> buscarReservas(string dni, string fdesde, string fhasta)
-        {
-            return null;
-        }
+        //public List<List<string>> buscarReservas(string dni, string fdesde, string fhasta)
+
+        //{
+        //    List<List<string>> resultado = new List<List<string>>();
+        //    var query = from reservaDB in reservas
+        //                where reservaDB.usuario.DNI == dni
+        //                && reservaDB.FDesde >= DateTime.Parse(fdesde)
+        //                && reservaDB.FHasta <= DateTime.Parse(fhasta)
+        //                select reservaDB;
+        //    foreach (Entities.Reserva reservas in query)
+        //    {
+        //        resultado.Add(new List<string> { reservas.FDesde.ToString(), reservas.FHasta.ToString(),
+        //            reservas.tipoAlojamiento.nombre, reservas.usuario.DNI.ToString(), reservas.precio.ToString()});
+        //    }
+        //    return resultado;
+        //}
+
+        //public List<List<string>> getTodasLasReservas()
+        //{
+        //    List<List<string>> resultado = new List<List<string>>();
+        //    var query = from reservaDB in reservas
+        //                select reservaDB;
+        //    foreach (Entities.Reserva reservas in query)
+        //    {
+        //        resultado.Add(new List<string> { reservas.FDesde.ToString(), reservas.FHasta.ToString(),
+        //            reservas.tipoAlojamiento.nombre, reservas.usuario.DNI.ToString(), reservas.precio.ToString()});
+        //    }
+        //    return resultado;
+        //}
 
 
-
-        public List<List<string>> getTodasLasReservas()
-        {
-            return null;
-        }
-        public List<List<string>> getReservasPorCliente(String dni)
-        {
-            return null;
-        }
+        //public List<List<string>> getReservasPorCliente(String dni)
+        //{
+        //    List<List<string>> resultado = new List<List<string>>();
+        //    var query = from reservaDB in reservas
+        //                where reservaDB.usuario.DNI == dni
+        //                select reservaDB;
+        //    foreach (Entities.Reserva reservas in query)
+        //    {
+        //        resultado.Add(new List<string> { reservas.FDesde.ToString(), reservas.FHasta.ToString(),
+        //            reservas.tipoAlojamiento.nombre, reservas.usuario.DNI.ToString(), reservas.precio.ToString()});
+        //    }
+        //    return resultado;
+        //}
 
         public bool reservar(int codAloj, string dniUsuario, DateTime Fdesde, DateTime Fhasta)
         {
@@ -243,17 +289,39 @@ namespace Bussines
         public bool modificarReserva(int ID, DateTime FDesde, DateTime FHasta, Entities.Alojamiento propiedad, Entities.Usuario persona, float precio)//Parametro Datos de Reserva ¿?
         {
             bool modificada = false;
-            //PENDIENTE
-
+            var query = from reservaDB in reservas
+                        where reservaDB.id == ID
+                        select reservaDB;
+            Entities.Reserva reserva = query.FirstOrDefault();
+            if (reserva != null)
+            {
+            }
             return modificada;
         }
 
+
         public bool eliminarReserva(int id)
         {
-            //PENDIENTE
-            return false;
+            bool result = false;
+            var query = from reservaDB in reservas
+                        where reservaDB.id == id
+                        select reservaDB;
+            if (query != null)
+            {
+                Entities.Reserva reserva = query.FirstOrDefault();
+                if (reserva != null)
+                {
+                    contexto.Reserva.Remove(reserva);
+                    contexto.SaveChanges();
+                    result = true;
+                }
+            }
+            else
+            {
+                result = false;
+            }
+            return result;
         }
-
 
         // ----------------------- METODOS USUARIOS -----------------------
 
@@ -266,6 +334,22 @@ namespace Bussines
             return salida;
         }
 
+        public List<List<string>> obtenerUsuarios(string dni)
+        {
+         
+            List<List<string>> salida = new List<List<string>>();
+            var query = (from user in misUsuarios                        
+                        select user);
+            if (!string.IsNullOrEmpty(dni))
+            {
+               query = query.Where(d => d.DNI == int.Parse(dni));
+            }
+
+
+            foreach (Entities.Usuario u in query)
+                salida.Add(new List<string> { null, null, null, u.DNI.ToString(), u.mail, u.bloqueado.ToString(), u.nombre, u.esAdmin.ToString(), u.pass, u.id.ToString() });
+            return salida;
+        }
 
         public List<string> buscarUsuarioxNombre(string nombre)
         {
@@ -293,9 +377,6 @@ namespace Bussines
 
             return usuario;
         }
-
-
-
 
         public bool agregarUsuario(int DNI, string nombre, string mail, string pass, bool esAdmin, bool bloqueado)
         {

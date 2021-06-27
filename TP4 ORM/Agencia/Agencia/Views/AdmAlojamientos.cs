@@ -36,8 +36,8 @@ namespace Agencia.Views
             alojamientosGrid.Rows.Clear();
             List<List<string>> lista = new List<List<string>>();
             lista = agc.obtenerAlojamientos();
-            foreach (List<string> usuario in lista)
-                alojamientosGrid.Rows.Add(usuario.ToArray());
+            foreach (List<string> aloj in lista)
+                alojamientosGrid.Rows.Add(aloj.ToArray());
 
         }
 
@@ -232,7 +232,7 @@ namespace Agencia.Views
                 if (dr == DialogResult.Yes)
                 {
                     var id = this.alojamientosGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    // Ag.quitarAlojamiento(int.Parse(id));
+                    Ag.quitarAlojamiento(int.Parse(id));
                     RefresVista();
 
                 }

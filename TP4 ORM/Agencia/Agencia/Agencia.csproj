@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\ReservasCliente.cs~RF3041552.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Font.Awesome" Version="5.15.3" />
     <PackageReference Include="FontAwesome" Version="4.7.0" />
     <PackageReference Include="FontAwesome.Sharp" Version="5.15.3" />

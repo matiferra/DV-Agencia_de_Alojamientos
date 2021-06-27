@@ -110,15 +110,16 @@ namespace Agencia.Views
         private void buscarButton_Click(object sender, EventArgs e)
         {
             dataGridViewUsuarios.Rows.Clear();
-
-            //List<Entities.Usuario> Lista = ag.buscarUsuario(12345678);
-
+            string dni = buscarText.Text;
+            var Lista = ag.obtenerUsuarios(dni);
+            foreach (List<string> aloj in Lista)
+                dataGridViewUsuarios.Rows.Add(aloj.ToArray());
 
 
             //int index = 0;
 
-            //    foreach (var dr in Lista)
-            //    {
+            //foreach (var dr in Lista)
+            //{
             //    dataGridViewUsuarios.Rows.Add();
             //    dataGridViewUsuarios.Rows[index].Cells[3].Value = dr.DNI;
             //    dataGridViewUsuarios.Rows[index].Cells[4].Value = dr.mail;
@@ -129,7 +130,7 @@ namespace Agencia.Views
 
             //    index++;
 
-            //    }
+            //}
 
 
 

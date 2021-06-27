@@ -31,12 +31,8 @@ namespace Agencia
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReservasCliente));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewReservas = new System.Windows.Forms.DataGridView();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.hastaFecha = new System.Windows.Forms.DateTimePicker();
-            this.desdeFecha = new System.Windows.Forms.DateTimePicker();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.FDesde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FHasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +40,11 @@ namespace Agencia
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_alojamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.hastaFecha = new System.Windows.Forms.DateTimePicker();
+            this.desdeFecha = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservas)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,20 @@ namespace Agencia
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(926, 452);
             this.panel1.TabIndex = 40;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(359, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(223, 23);
+            this.label1.TabIndex = 107;
+            this.label1.Text = "VER MIS RESERVAS";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridViewReservas
             // 
@@ -89,6 +103,55 @@ namespace Agencia
             this.dataGridViewReservas.Size = new System.Drawing.Size(698, 215);
             this.dataGridViewReservas.TabIndex = 106;
             this.dataGridViewReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReservas_CellClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Eliminar.ToolTipText = "Eliminar";
+            this.Eliminar.Width = 75;
+            // 
+            // FDesde
+            // 
+            this.FDesde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.FDesde.HeaderText = "Fecha Desde";
+            this.FDesde.Name = "FDesde";
+            this.FDesde.ReadOnly = true;
+            // 
+            // FHasta
+            // 
+            this.FHasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.FHasta.HeaderText = "Fecha Hasta";
+            this.FHasta.Name = "FHasta";
+            this.FHasta.ReadOnly = true;
+            // 
+            // ciudad
+            // 
+            this.ciudad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ciudad.HeaderText = "Ciudad";
+            this.ciudad.Name = "ciudad";
+            // 
+            // Precio
+            // 
+            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // id_alojamiento
+            // 
+            this.id_alojamiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.id_alojamiento.HeaderText = "ID - Alojamiento";
+            this.id_alojamiento.Name = "id_alojamiento";
+            this.id_alojamiento.Width = 120;
+            // 
+            // id_reserva
+            // 
+            this.id_reserva.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.id_reserva.HeaderText = "ID - Reserva";
+            this.id_reserva.Name = "id_reserva";
             // 
             // btnLogin
             // 
@@ -156,68 +219,6 @@ namespace Agencia
             this.desdeFecha.Name = "desdeFecha";
             this.desdeFecha.Size = new System.Drawing.Size(205, 31);
             this.desdeFecha.TabIndex = 67;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Eliminar.ToolTipText = "Eliminar";
-            this.Eliminar.Width = 75;
-            // 
-            // FDesde
-            // 
-            this.FDesde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.FDesde.HeaderText = "Fecha Desde";
-            this.FDesde.Name = "FDesde";
-            this.FDesde.ReadOnly = true;
-            // 
-            // FHasta
-            // 
-            this.FHasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.FHasta.HeaderText = "Fecha Hasta";
-            this.FHasta.Name = "FHasta";
-            this.FHasta.ReadOnly = true;
-            // 
-            // ciudad
-            // 
-            this.ciudad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ciudad.HeaderText = "Ciudad";
-            this.ciudad.Name = "ciudad";
-            // 
-            // Precio
-            // 
-            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // id_alojamiento
-            // 
-            this.id_alojamiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id_alojamiento.HeaderText = "ID - Alojamiento";
-            this.id_alojamiento.Name = "id_alojamiento";
-            this.id_alojamiento.Width = 120;
-            // 
-            // id_reserva
-            // 
-            this.id_reserva.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id_reserva.HeaderText = "ID - Reserva";
-            this.id_reserva.Name = "id_reserva";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(359, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 23);
-            this.label1.TabIndex = 107;
-            this.label1.Text = "REALIZA TU RESERVA";
             // 
             // ReservasCliente
             // 
