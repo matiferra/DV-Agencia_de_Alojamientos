@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq; 
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,16 +22,16 @@ namespace Agencia.Views
             panel1.BackColor = Color.FromArgb(60, Color.Black);
         }
 
-
         public void RefresVista()
         {
             dataGridViewReservas.Rows.Clear();
-
-            List<List<string>> reservas = Ag.getTodasLasReservasAdmin(combo_ciudadHeader.Text);
+            List<List<string>> reservas = Ag.getTodasLasReservas(combo_ciudadHeader.Text);
 
             foreach (List<string> lista in reservas)
                 dataGridViewReservas.Rows.Add(lista.ToArray());
+
         }
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -50,26 +50,11 @@ namespace Agencia.Views
         private void button1_Click(object sender, EventArgs e) // MOSTRAR TODAS
         {
             dataGridViewReservas.Rows.Clear();
-           // DataSet Reservas = Ag.getTodasLasReservas();
-            int index = 0;
+            List<List<string>> reservas = Ag.getTodasLasReservasAdminxCiudad(combo_ciudadHeader.Text);
 
-          /*  if (Reservas.Tables[0] != null && Reservas.Tables[0].Rows.Count > 0)
-            {
-
-                foreach (DataRow dr in Reservas.Tables[0].Rows)
-                {
-                    dataGridViewReservas.Rows.Add();
-                    dataGridViewReservas.Rows[index].Cells[2].Value = dr["usuario"].ToString();
-                    dataGridViewReservas.Rows[index].Cells[3].Value = dr["fhasta"].ToString();
-                    dataGridViewReservas.Rows[index].Cells[4].Value = dr["fdesde"].ToString();
-                    dataGridViewReservas.Rows[index].Cells[5].Value = dr["precio"].ToString();
-                    dataGridViewReservas.Rows[index].Cells[6].Value = dr["id_reserva"].ToString();
-                    index++;
-
-                }
-            }
-        */
-            }
+            foreach (List<string> lista in reservas)
+                dataGridViewReservas.Rows.Add(lista.ToArray());
+        }
 
 
 
@@ -82,12 +67,12 @@ namespace Agencia.Views
                 if (dr == DialogResult.Yes)
                 {
                     int id = int.Parse(this.dataGridViewReservas.Rows[e.RowIndex].Cells[6].Value.ToString());
-                  /*  if (Ag.eliminarReserva(id))
-                    {
-                        MessageBox.Show("RESERVA ELIMINADA");
-                    }
-                    RefresVista();
-                  */
+                    if (Ag.eliminarReserva(id))
+                      {
+                          MessageBox.Show("RESERVA ELIMINADA");
+                      }
+                      RefresVista();
+                    
                 }
             }
             /*else if (this.dataGridViewReservas.Columns[e.ColumnIndex].Name == "Editar")
