@@ -107,7 +107,6 @@ namespace Bussines
 
 
 
-
             //REVISAR
 
 
@@ -195,7 +194,7 @@ namespace Bussines
                 resultadoBusqueda.Add(new List<string>{ "", alojamiento.barrio, alojamiento.estrellas, alojamiento.cantidadDePersonas.ToString(),
                 alojamiento.tv.ToString(), alojamiento.id_ciudad.ToString(), alojamiento.cantidad_de_habitaciones.ToString(),
                 alojamiento.precio_por_dia.ToString(),  alojamiento.precio_por_persona.ToString(),
-                alojamiento.cantidadDeBanios.ToString()});
+                alojamiento.cantidadDeBanios.ToString(),alojamiento.id.ToString()});
             }
 
             return resultadoBusqueda;
@@ -238,6 +237,18 @@ namespace Bussines
             return result;
         }
 
+        public Entities.Alojamiento buscarAlojamientoxID(int codigo)
+        {
+
+            var query = from alojamientoDB in alojamientos
+                        where alojamientoDB.id == codigo
+                        select alojamientoDB;
+
+            Entities.Alojamiento alojamiento = query.FirstOrDefault();
+
+
+            return alojamiento;
+        }
         public bool modificarAlojamiento(string codigoInstancia, string ciudad, string barrio, string estrellas, string cantPersonas, bool tv, string precioxDia,
                                          string habitaciones, string banios, string precioxPersona)
         {

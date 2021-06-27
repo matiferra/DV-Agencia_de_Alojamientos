@@ -29,11 +29,11 @@ namespace Agencia.Views
 
             if (!string.IsNullOrEmpty(seleccion_tipo.Text))
             {
-              
 
 
-               var Lista = Ag.buscarAlojamientos(comboBox_ciudad.SelectedValue.ToString(), Pdesde_campo.Text,
-                                         Phasta_campo.Text, text_cantidad.Text, seleccion_tipo.Text, desdeFecha.Text, hastaFecha.Text);
+
+                var Lista = Ag.buscarAlojamientos(comboBox_ciudad.SelectedValue.ToString(), Pdesde_campo.Text,
+                                          Phasta_campo.Text, text_cantidad.Text, seleccion_tipo.Text, desdeFecha.Text, hastaFecha.Text);
 
                 foreach (List<string> aloja in Lista)
                     dataGridView1.Rows.Add(aloja.ToArray());
@@ -71,8 +71,8 @@ namespace Agencia.Views
             //this.Hide();
             //ResultadoBusqueda rb = new ResultadoBusqueda();
             // rb.Show();
-            
-            }
+
+        }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -107,19 +107,27 @@ namespace Agencia.Views
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-             else if (this.dataGridView1.Columns[e.ColumnIndex].Name == "Reservar")
+            if (this.dataGridView1.Columns[e.ColumnIndex].Name == "Reservar")
             {
-                EditarUsuario editar = new EditarUsuario(this);
-                editar.UpdateEventArgsHandler += edit_usuario_UpdateHadler; //  metodo la cual me permite actualizar la grilla cuando termine de guardar los cambios
+                ComfirmarReserva reservar = new ComfirmarReserva(this);
+                reservar.UpdateEventArgsHandler += comf_reserva_UpdateHadler; //  metodo la cual me permite actualizar la grilla cuando termine de guardar los cambios
 
-                editar.text_nombre.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[6].Value.ToString();
-                editar.textBox_contras.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[8].Value.ToString();
-                editar.textBox_dni.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString(); // dni lo tomamos como pk de la tabla no es valido poder modificarlo
-                editar.textBox_mail.Text = this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[4].Value.ToString();
-                editar.check_esadmin.Checked = bool.Parse(this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[7].Value.ToString());
+                reservar.Id_text.Text = this.dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+                reservar.desdeFecha.Text = this.desdeFecha.Text;
+                reservar.hastaFecha.Text = this.hastaFecha.Text; // dni lo tomamos como pk de la tabla no es valido poder modificarlo
+            
 
-                editar.Show();
+                reservar.Show();
             }
         }
+
+        private void comf_reserva_UpdateHadler(object sender, ComfirmarReserva.UpdateEventArgs args)
+        {
+            //RefresVista();
+        }
+
+
+
+
     }
 }
