@@ -422,7 +422,7 @@ namespace Bussines
             {
                 resultado.Add(new List<string> { "", "", reservas.id_usuario.nombre.ToString(),
                     reservas.FDesde.ToString(), reservas.FHasta.ToString(),
-                    reservas.precio.ToString(), reservas.id_alojamiento.id.ToString(), reservas.id.ToString()});
+                    reservas.precio.ToString(), reservas.id.ToString()});
             }
             return resultado;
         }

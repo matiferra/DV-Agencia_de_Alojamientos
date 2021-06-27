@@ -50,7 +50,7 @@ namespace Agencia.Views
         private void button1_Click(object sender, EventArgs e) // MOSTRAR TODAS
         {
             dataGridViewReservas.Rows.Clear();
-            List<List<string>> reservas = Ag.getTodasLasReservasxCiudad(combo_ciudadHeader.Text);
+            List<List<string>> reservas = Ag.getTodasLasReservas();
 
             foreach (List<string> lista in reservas)
                 dataGridViewReservas.Rows.Add(lista.ToArray());
@@ -118,6 +118,15 @@ namespace Agencia.Views
                 editar.Show();
             }*/
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            dataGridViewReservas.Rows.Clear();
+            List<List<string>> reservas = Ag.getTodasLasReservasxCiudad(combo_ciudadHeader.Text);
+
+            foreach (List<string> lista in reservas)
+                dataGridViewReservas.Rows.Add(lista.ToArray());
         }
     }
 }
