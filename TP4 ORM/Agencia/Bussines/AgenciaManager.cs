@@ -412,7 +412,21 @@ namespace Bussines
             }
             return resultado;
         }
-        public List<List<string>> getTodasLasReservasAdmin(string ciudad)
+        
+            public List<List<string>> getTodasLasReservas()
+        {
+            List<List<string>> resultado = new List<List<string>>();
+            var query = from reservaDB in reservas
+                        select reservaDB;
+            foreach (Entities.Reserva reservas in query)
+            {
+                resultado.Add(new List<string> { "", "", reservas.id_usuario.nombre.ToString(),
+                    reservas.FDesde.ToString(), reservas.FHasta.ToString(),
+                    reservas.precio.ToString(), reservas.id_alojamiento.id.ToString(), reservas.id.ToString()});
+            }
+            return resultado;
+        }
+        public List<List<string>> getTodasLasReservasxCiudad(string ciudad)
         {
             List<List<string>> resultado = new List<List<string>>();
             var query = from reservaDB in reservas
