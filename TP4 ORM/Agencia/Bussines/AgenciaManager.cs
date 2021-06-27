@@ -88,32 +88,79 @@ namespace Bussines
             return salida;
         }
 
-        public List<List<string>> buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo)
+        public List<List<string>> buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo, string fDesde, string fHasta)
         {
 
-            List<List<string>> alojamientosReturn = new List<List<string>>();
+            List<List<string>> resultadoBusqueda = new List<List<string>>();
+
+            List<Entities.Alojamiento> alojamientosFiltrados = new List<Entities.Alojamiento>();
+
+            var queryReservas = from reserva in reservas
+                                select reserva;
+
+            List<List<string>> alojamientosReservados = new List<List<string>>();
 
             if (string.IsNullOrEmpty(cantPersonas))
             {
                 cantPersonas = "0";
             }
 
-            var query = from alojamiento in alojamientos
-                       /* where alojamiento.precio_por_persona <= double.Parse(Phasta)
-                        && alojamiento.precio_por_persona >= double.Parse(Pdesde)
-                        || alojamiento.precio_por_dia <= double.Parse(Phasta)
-                        || alojamiento.precio_por_dia >= double.Parse(Pdesde)
-                        || alojamiento.cantidadDePersonas >= int.Parse(cantPersonas)
-                        */select alojamiento;
 
-            foreach (Entities.Alojamiento u in query)
+            //REVISAR
+            var queryAlojamientos = from alojamiento in alojamientos
+                                    where alojamiento.precio_por_persona <= double.Parse(Phasta)
+                                    || alojamiento.precio_por_persona >= double.Parse(Pdesde)
+                                    || alojamiento.precio_por_dia <= double.Parse(Phasta)
+                                    || alojamiento.precio_por_dia >= double.Parse(Pdesde)
+                                    || alojamiento.cantidadDePersonas >= int.Parse(cantPersonas)
+                                    select alojamiento;
+
+
+            foreach (Entities.Alojamiento a in queryAlojamientos)
             {
-                alojamientosReturn.Add(new List<string> {null, null, u.id.ToString(), u.barrio, u.estrellas.ToString(), u.cantidadDePersonas.ToString(),
-                                                  u.tv.ToString(), u.esHotel.ToString(), u.id_ciudad.ToString(),u.cantidad_de_habitaciones.ToString(),
-                                                  u.precio_por_dia.ToString(), u.precio_por_persona.ToString(), u.cantidadDeBanios.ToString()});
+                alojamientosFiltrados.Add(a);
             }
 
-            return alojamientosReturn;
+            foreach (Entities.Alojamiento u in alojamientosFiltrados)
+            {
+                foreach (Entities.Reserva r in queryReservas)
+                {
+                    if (u.id == r.id_alojamiento.id)
+                    {
+                        alojamientosReservados.Add(new List<string> { u.id.ToString(), r.FDesde.ToString(), r.FHasta.ToString() });
+                        alojamientosFiltrados.Remove(u);
+                    }
+                }
+            }
+
+            foreach (List<string> alojamiento in alojamientosReservados)
+            {
+                if (DateTime.Parse(fDesde) >= DateTime.Parse(alojamiento.ElementAt(1)) && DateTime.Parse(alojamiento.ElementAt(2)) <= DateTime.Parse(fHasta))
+                {
+                    alojamientosReservados.Remove(alojamiento);
+                }
+            }
+
+
+            resultadoBusqueda = alojamientosReservados;
+            List<string> alojamientoTrial = new List<string>();
+
+            foreach (Entities.Alojamiento alojamiento in alojamientosFiltrados)
+            {
+                alojamientoTrial.Add(alojamiento.id_ciudad.ToString());
+                alojamientoTrial.Add(alojamiento.barrio);
+                alojamientoTrial.Add(alojamiento.estrellas);
+                alojamientoTrial.Add(alojamiento.tv.ToString());
+                alojamientoTrial.Add(alojamiento.precio_por_persona.ToString());
+                alojamientoTrial.Add(alojamiento.cantidadDeBanios.ToString());
+                alojamientoTrial.Add(alojamiento.precio_por_dia.ToString());
+                alojamientoTrial.Add(alojamiento.cantidad_de_habitaciones.ToString());
+                
+                resultadoBusqueda.Add(alojamientoTrial);
+
+            }
+
+            return resultadoBusqueda;
 
         }
 
@@ -336,13 +383,13 @@ namespace Bussines
 
         public List<List<string>> obtenerUsuarios(string dni)
         {
-         
+
             List<List<string>> salida = new List<List<string>>();
-            var query = (from user in misUsuarios                        
-                        select user);
+            var query = (from user in misUsuarios
+                         select user);
             if (!string.IsNullOrEmpty(dni))
             {
-               query = query.Where(d => d.DNI == int.Parse(dni));
+                query = query.Where(d => d.DNI == int.Parse(dni));
             }
 
 
