@@ -13,10 +13,12 @@ namespace Agencia.Views
     public partial class AdmReservas : Form
     {
 
-       // Bussines.AgenciaManager Ag = new Bussines.AgenciaManager();
+        Bussines.AgenciaManager Ag = new Bussines.AgenciaManager();
         public AdmReservas()
         {
             InitializeComponent();
+
+
             panel1.BackColor = Color.FromArgb(60, Color.Black);
         }
 
@@ -24,23 +26,11 @@ namespace Agencia.Views
         public void RefresVista()
         {
             dataGridViewReservas.Rows.Clear();
-          //  DataSet Lista = Ag.getReservasPorCliente(Ag.recuperoDni(Global.GlobalSessionNombre, Global.GlobalSessionPass));
-            int index = 0;
-         /*   if (Lista.Tables[0] != null && Lista.Tables[0].Rows.Count > 0)
-            {
-                foreach (DataRow dr in Lista.Tables[0].Rows)
-                {
-                    dataGridViewReservas.Rows.Add();
-                    dataGridViewReservas.Rows[index].Cells[2].Value = dr["usuario"].ToString();
-                    dataGridViewReservas.Rows[index].Cells[3].Value = dr["fhasta"].ToString();
-                    dataGridViewReservas.Rows[index].Cells[4].Value = dr["fdesde"].ToString();
-                    dataGridViewReservas.Rows[index].Cells[5].Value = dr["precio"].ToString();
-                    dataGridViewReservas.Rows[index].Cells[6].Value = dr["id_reserva"].ToString();
-                    index++;
 
-                }
-            }
-         */
+            List<List<string>> reservas = Ag.getTodasLasReservasAdmin(combo_ciudadHeader.Text);
+
+            foreach (List<string> lista in reservas)
+                dataGridViewReservas.Rows.Add(lista.ToArray());
         }
         private void label2_Click(object sender, EventArgs e)
         {

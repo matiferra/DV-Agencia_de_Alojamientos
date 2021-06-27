@@ -94,9 +94,6 @@ namespace DataAccess.Migrations
                     b.Property<string>("estrellas")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("id_ciudad")
-                        .HasColumnType("int");
-
                     b.Property<double>("precio_por_dia")
                         .HasColumnType("float");
 
@@ -111,62 +108,6 @@ namespace DataAccess.Migrations
                     b.HasIndex("ciudadid");
 
                     b.ToTable("Alojamiento");
-
-                    b.HasData(
-                        new
-                        {
-                            id = 1,
-                            barrio = "belgrano",
-                            cantidadDeBanios = 0,
-                            cantidadDePersonas = 2,
-                            cantidad_de_habitaciones = 0,
-                            esHotel = true,
-                            estrellas = "5",
-                            id_ciudad = 1,
-                            precio_por_dia = 0.0,
-                            precio_por_persona = 2500.0,
-                            tv = true
-                        },
-                        new
-                        {
-                            id = 2,
-                            barrio = "matadeores",
-                            cantidadDeBanios = 2,
-                            cantidadDePersonas = 2,
-                            cantidad_de_habitaciones = 1,
-                            esHotel = false,
-                            estrellas = "4",
-                            id_ciudad = 1,
-                            precio_por_dia = 50100.0,
-                            precio_por_persona = 0.0,
-                            tv = true
-                        });
-                });
-
-            modelBuilder.Entity("Entities.Cabania", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("banios")
-                        .HasColumnType("int");
-
-                    b.Property<string>("barrios")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("habitaciones")
-                        .HasColumnType("float");
-
-                    b.Property<int?>("id_alojamientoid")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("id_alojamientoid");
-
-                    b.ToTable("Cabania");
                 });
 
             modelBuilder.Entity("Entities.Ciudades", b =>
@@ -209,26 +150,6 @@ namespace DataAccess.Migrations
                             id = 5,
                             nombre = "lujan"
                         });
-                });
-
-            modelBuilder.Entity("Entities.Hotel", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("id_alojamientoid")
-                        .HasColumnType("int");
-
-                    b.Property<double>("precio_por_persona")
-                        .HasColumnType("float");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("id_alojamientoid");
-
-                    b.ToTable("Hotel");
                 });
 
             modelBuilder.Entity("Entities.Reserva", b =>
@@ -301,23 +222,67 @@ namespace DataAccess.Migrations
                         new
                         {
                             id = 1,
-                            DNI = 101010,
+                            DNI = 0,
                             bloqueado = false,
                             esAdmin = true,
                             intentosLogueo = 0,
                             mail = "soporte@gmail.com",
-                            nombre = "admin",
+                            nombre = "fede",
                             pass = "123"
                         },
                         new
                         {
                             id = 2,
-                            DNI = 54594166,
+                            DNI = 111111,
                             bloqueado = false,
                             esAdmin = false,
                             intentosLogueo = 0,
                             mail = "soporte@gmail.com",
                             nombre = "gianpool",
+                            pass = "123"
+                        },
+                        new
+                        {
+                            id = 3,
+                            DNI = 222222,
+                            bloqueado = false,
+                            esAdmin = false,
+                            intentosLogueo = 0,
+                            mail = "soporte@gmail.com",
+                            nombre = "matiferra",
+                            pass = "123"
+                        },
+                        new
+                        {
+                            id = 4,
+                            DNI = 333333,
+                            bloqueado = true,
+                            esAdmin = false,
+                            intentosLogueo = 0,
+                            mail = "soporte@gmail.com",
+                            nombre = "gabo",
+                            pass = "123"
+                        },
+                        new
+                        {
+                            id = 5,
+                            DNI = 444444,
+                            bloqueado = false,
+                            esAdmin = true,
+                            intentosLogueo = 0,
+                            mail = "soporte@gmail.com",
+                            nombre = "dino",
+                            pass = "123"
+                        },
+                        new
+                        {
+                            id = 6,
+                            DNI = 555555,
+                            bloqueado = false,
+                            esAdmin = false,
+                            intentosLogueo = 0,
+                            mail = "soporte@gmail.com",
+                            nombre = "fran",
                             pass = "123"
                         });
                 });
@@ -359,24 +324,6 @@ namespace DataAccess.Migrations
                         .HasForeignKey("ciudadid");
 
                     b.Navigation("ciudad");
-                });
-
-            modelBuilder.Entity("Entities.Cabania", b =>
-                {
-                    b.HasOne("Entities.Alojamiento", "id_alojamiento")
-                        .WithMany()
-                        .HasForeignKey("id_alojamientoid");
-
-                    b.Navigation("id_alojamiento");
-                });
-
-            modelBuilder.Entity("Entities.Hotel", b =>
-                {
-                    b.HasOne("Entities.Alojamiento", "id_alojamiento")
-                        .WithMany()
-                        .HasForeignKey("id_alojamientoid");
-
-                    b.Navigation("id_alojamiento");
                 });
 
             modelBuilder.Entity("Entities.Reserva", b =>

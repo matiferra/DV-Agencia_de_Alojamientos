@@ -581,3 +581,4 @@ E:\Users\work\Desktop\Nueva carpeta (3)\tpPlataformas\TP4 ORM\Agencia\Agencia\bi
 E:\Users\work\Desktop\Nueva carpeta (3)\tpPlataformas\TP4 ORM\Agencia\Agencia\bin\Debug\net5.0-windows\Entities.pdb
 E:\Users\work\Desktop\Nueva carpeta (3)\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.csproj.CopyComplete
 E:\Users\work\Desktop\Nueva carpeta (3)\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.genruntimeconfig.cache
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.Views.ComfirmarReserva.resources

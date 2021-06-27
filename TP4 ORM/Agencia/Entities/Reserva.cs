@@ -18,7 +18,6 @@ namespace Entities
         public DateTime FDesde { get; set; }
         public DateTime FHasta { get; set; }
         public Alojamiento id_alojamiento { get; set; }
-
         public Usuario id_usuario { get; set; }
         public float precio { get; set; }
 

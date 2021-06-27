@@ -15,7 +15,6 @@ namespace Entities
         public string estrellas { get; set; }
         public int cantidadDePersonas { get; set; }
         public bool tv { get; set; }
-        public int id_ciudad { get; set; }
         public Ciudades ciudad { get; set; }
         public int cantidad_de_habitaciones { get; set; }
         public double precio_por_dia { get; set; }
@@ -31,7 +30,7 @@ namespace Entities
         }
 
         public Alojamiento(string barrio, string estrellas, int cantidadDePersonas,
-                           bool tv, int id_ciudad, int cantidad_de_habitaciones, double precio_por_dia, 
+                           bool tv, Ciudades ciudad, int cantidad_de_habitaciones, double precio_por_dia, 
                            double precio_por_persona, int cantidadDeBanios, bool esHotel)
 
         {
@@ -40,7 +39,7 @@ namespace Entities
             this.estrellas = estrellas;
             this.cantidadDePersonas = cantidadDePersonas;
             this.tv = tv;
-            this.id_ciudad = id_ciudad;            
+            this.ciudad = ciudad;            
             this.cantidad_de_habitaciones = cantidad_de_habitaciones;
             this.precio_por_dia = precio_por_dia;
             this.precio_por_persona = precio_por_persona;

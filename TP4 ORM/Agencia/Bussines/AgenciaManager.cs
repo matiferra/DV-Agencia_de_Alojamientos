@@ -14,6 +14,7 @@ namespace Bussines
         private DbSet<Entities.Usuario> misUsuarios;
         private DbSet<Entities.Alojamiento> alojamientos;
         private DbSet<Entities.Reserva> reservas;
+        private DbSet<Entities.Ciudades> ciudades;
         private MyContext contexto;
 
         public AgenciaManager()
@@ -32,10 +33,12 @@ namespace Bussines
                 contexto.Usuario.Load();
                 contexto.Alojamiento.Load();
                 contexto.Reserva.Load();
+                contexto.Ciudades.Load();
 
                 misUsuarios = contexto.Usuario;
                 alojamientos = contexto.Alojamiento;
                 reservas = contexto.Reserva;
+                ciudades = contexto.Ciudades;
             }
             catch (Exception e)
             {
@@ -81,7 +84,7 @@ namespace Bussines
             {
                 foreach (Entities.Alojamiento u in alojamientos)
                     salida.Add(new List<string> {null, null, u.id.ToString(), u.barrio, u.estrellas.ToString(), u.cantidadDePersonas.ToString(),
-                                              u.tv.ToString(), u.esHotel.ToString(), u.id_ciudad.ToString(),u.cantidad_de_habitaciones.ToString(),
+                                              u.tv.ToString(), u.esHotel.ToString(), u.ciudad.nombre.ToString(),u.cantidad_de_habitaciones.ToString(),
                                               u.precio_por_dia.ToString(), u.precio_por_persona.ToString(), u.cantidadDeBanios.ToString()});
             }
 
@@ -166,7 +169,7 @@ namespace Bussines
                 alojamientosFiltrados.Add(a);
             }
 
-            foreach (Entities.Alojamiento u in alojamientosFiltrados)
+            foreach (Entities.Alojamiento u in alojamientosFiltrados.ToList())
             {
                 foreach (Entities.Reserva r in queryReservas)
                 {
@@ -178,21 +181,50 @@ namespace Bussines
                 }
             }
 
-            foreach (List<string> alojamiento in alojamientosReservados)
+            foreach (List<string> alojamiento in alojamientosReservados.ToList())
             {
-                if (DateTime.Parse(fDesde) >= DateTime.Parse(alojamiento.ElementAt(1)) && DateTime.Parse(alojamiento.ElementAt(2)) <= DateTime.Parse(fHasta))
+
+                if (DateTime.Parse(fDesde) >= DateTime.Parse(alojamiento.ElementAt(1)) && DateTime.Parse(fHasta) <= DateTime.Parse(alojamiento.ElementAt(2)))
                 {
+                    //X ------------------- ENTRE FECHAS
                     alojamientosReservados.Remove(alojamiento);
                 }
+                if (DateTime.Parse(fHasta) >= DateTime.Parse(alojamiento.ElementAt(1)) && DateTime.Parse(fHasta) <= DateTime.Parse(alojamiento.ElementAt(2)))
+                {
+                    //X -------------------COMIENZO y ENTRE FECHAS
+                    alojamientosReservados.Remove(alojamiento);
+                }
+                if (DateTime.Parse(fDesde) <= DateTime.Parse(alojamiento.ElementAt(1)) && DateTime.Parse(fDesde) >= DateTime.Parse(alojamiento.ElementAt(1)) && DateTime.Parse(fHasta) <= DateTime.Parse(alojamiento.ElementAt(2)) && DateTime.Parse(fDesde) >= DateTime.Parse(alojamiento.ElementAt(1)))
+                {
+                    //COMIENTO ANTERIOS y ENTRE FECHAS y FIN DESPUES
+                    alojamientosReservados.Remove(alojamiento);
+                }
+                if (DateTime.Parse(fDesde) >= DateTime.Parse(alojamiento.ElementAt(1)) && DateTime.Parse(fDesde) <= DateTime.Parse(alojamiento.ElementAt(2)))
+                {
+                    //ENTRE FECHAS y FIN
+                    alojamientosReservados.Remove(alojamiento);
+                }
+               
+
             }
 
 
-            resultadoBusqueda = alojamientosReservados;
-
-            foreach (Entities.Alojamiento alojamiento in alojamientosFiltrados)
+            foreach (Entities.Alojamiento alojamiento in alojamientosFiltrados.ToList())
             {
                 resultadoBusqueda.Add(new List<string>{ "", alojamiento.barrio, alojamiento.estrellas, alojamiento.cantidadDePersonas.ToString(),
-                alojamiento.tv.ToString(), alojamiento.id_ciudad.ToString(), alojamiento.cantidad_de_habitaciones.ToString(),
+                alojamiento.tv.ToString(), alojamiento.ciudad.nombre.ToString(), alojamiento.cantidad_de_habitaciones.ToString(),
+                alojamiento.precio_por_dia.ToString(),  alojamiento.precio_por_persona.ToString(),
+                alojamiento.cantidadDeBanios.ToString(),alojamiento.id.ToString()});
+            }
+
+
+            foreach (List<string> aloja in alojamientosReservados.ToList())
+            {
+
+                Entities.Alojamiento alojamiento = buscarAlojamientoxID(int.Parse(aloja.ElementAt(0)));
+
+                resultadoBusqueda.Add(new List<string>{ "", alojamiento.barrio, alojamiento.estrellas, alojamiento.cantidadDePersonas.ToString(),
+                alojamiento.tv.ToString(), alojamiento.ciudad.nombre.ToString(), alojamiento.cantidad_de_habitaciones.ToString(),
                 alojamiento.precio_por_dia.ToString(),  alojamiento.precio_por_persona.ToString(),
                 alojamiento.cantidadDeBanios.ToString(),alojamiento.id.ToString()});
             }
@@ -206,15 +238,33 @@ namespace Bussines
             var ciudades = contexto.Ciudades.ToList();
             return ciudades;
         }
+
+        public Entities.Ciudades getCiudadesxID(int id)
+        {
+            Entities.Ciudades ciudad = new Entities.Ciudades();
+
+            var query = from ciudadDB in ciudades
+                        where ciudadDB.id == id
+                        select ciudadDB;
+
+            ciudad = query.FirstOrDefault();
+
+            return ciudad;
+        }
+
+
         public bool agregarAlojamiento(string tipo, string ciudad, string barrio, string estrellas, string cantPersonas, bool tv, string precio, string habitaciones, string banios) //Parametro Datos del Alojamiento ¿?
         {
             bool result;
+
+            Entities.Ciudades ciudadObjeto =new Entities.Ciudades();
+            ciudadObjeto = getCiudadesxID(int.Parse(ciudad));
             try
             {
                 if (tipo == "Hotel")
                 {
                     Entities.Alojamiento Alojamiento = new Entities.Alojamiento(
-                    barrio, estrellas, int.Parse(cantPersonas), tv, int.Parse(ciudad), 0,
+                    barrio, estrellas, int.Parse(cantPersonas), tv, ciudadObjeto, 0,
                     0, double.Parse(precio), 1, true);
                     alojamientos.Add(Alojamiento);
                     contexto.SaveChanges();
@@ -222,7 +272,7 @@ namespace Bussines
                 else
                 {
                     Entities.Alojamiento Alojamiento = new Entities.Alojamiento(
-                    barrio, estrellas, int.Parse(cantPersonas), tv, int.Parse(ciudad), int.Parse(habitaciones),
+                    barrio, estrellas, int.Parse(cantPersonas), tv, ciudadObjeto, int.Parse(habitaciones),
                     double.Parse(precio), 0, int.Parse(banios), false);
                     alojamientos.Add(Alojamiento);
                     contexto.SaveChanges();
@@ -252,6 +302,9 @@ namespace Bussines
         public bool modificarAlojamiento(string codigoInstancia, string ciudad, string barrio, string estrellas, string cantPersonas, bool tv, string precioxDia,
                                          string habitaciones, string banios, string precioxPersona)
         {
+
+            Entities.Ciudades ciudadObjeto = getCiudadesxID(int.Parse(ciudad));
+
             bool result;
             if (string.IsNullOrEmpty(precioxDia))
             {
@@ -274,7 +327,7 @@ namespace Bussines
             try
             {
                 var alojamiento = contexto.Alojamiento.Find(int.Parse(codigoInstancia));
-                alojamiento.id_ciudad = int.Parse(ciudad);
+                alojamiento.ciudad = ciudadObjeto;
                 alojamiento.barrio = barrio;
                 alojamiento.estrellas = estrellas;
                 alojamiento.tv = tv;
@@ -347,19 +400,32 @@ namespace Bussines
         //    return resultado;
         //}
 
-        //public List<List<string>> getTodasLasReservas()
-        //{
-        //    List<List<string>> resultado = new List<List<string>>();
-        //    var query = from reservaDB in reservas
-        //                select reservaDB;
-        //    foreach (Entities.Reserva reservas in query)
-        //    {
-        //        resultado.Add(new List<string> { reservas.FDesde.ToString(), reservas.FHasta.ToString(),
-        //            reservas.tipoAlojamiento.nombre, reservas.usuario.DNI.ToString(), reservas.precio.ToString()});
-        //    }
-        //    return resultado;
-        //}
-
+        public List<List<string>> getTodasLasReservasCliente()
+        {
+            List<List<string>> resultado = new List<List<string>>();
+            var query = from reservaDB in reservas
+                        select reservaDB;
+            foreach (Entities.Reserva reservas in query)
+            {
+                resultado.Add(new List<string> { "", reservas.FDesde.ToString(), reservas.FHasta.ToString(),
+                    reservas.id_alojamiento.ciudad.nombre.ToString(), reservas.precio.ToString(), reservas.id_alojamiento.id.ToString(), reservas.id.ToString()});
+            }
+            return resultado;
+        }
+        public List<List<string>> getTodasLasReservasAdmin(string ciudad)
+        {
+            List<List<string>> resultado = new List<List<string>>();
+            var query = from reservaDB in reservas
+                        where reservaDB.id_alojamiento.ciudad.nombre == ciudad
+                        select reservaDB;
+            foreach (Entities.Reserva reservas in query)
+            {
+                resultado.Add(new List<string> { "", "", reservas.id_usuario.nombre.ToString(),
+                    reservas.FDesde.ToString(), reservas.FHasta.ToString(),
+                    reservas.precio.ToString(), reservas.id_alojamiento.id.ToString(), reservas.id.ToString()});
+            }
+            return resultado;
+        }
 
         //public List<List<string>> getReservasPorCliente(String dni)
         //{

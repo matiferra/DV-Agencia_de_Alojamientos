@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Users\\work\\Desktop\\Nueva carpeta (3)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj": {}
+    "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "E:\\Users\\work\\Desktop\\Nueva carpeta (3)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj": {
+    "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\work\\Desktop\\Nueva carpeta (3)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (3)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\work\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (3)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\mele_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\work\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mele_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

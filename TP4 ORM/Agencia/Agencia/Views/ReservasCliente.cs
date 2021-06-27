@@ -13,7 +13,7 @@ namespace Agencia
     public partial class ReservasCliente : Form
     {
 
-        //Bussines.AgenciaManager Ag = new Bussines.AgenciaManager();
+        Bussines.AgenciaManager Ag = new Bussines.AgenciaManager();
         public ReservasCliente()
         {
             InitializeComponent();
@@ -23,10 +23,15 @@ namespace Agencia
 
         public void RefresVista()
         {
+           
             dataGridViewReservas.Rows.Clear();
+            List<List<string>> reservas = Ag.getTodasLasReservasCliente(); 
+
+            foreach (List<string> lista in reservas)
+                dataGridViewReservas.Rows.Add(lista.ToArray());
+
             //string dni = Ag.recuperoDni(Global.GlobalSessionNombre, Global.GlobalSessionPass);
             //DataSet Lista = Ag.getReservasPorCliente(dni);
-            int index = 0;
            /* if (Lista.Tables[0] != null && Lista.Tables[0].Rows.Count > 0)
             {
                 foreach (DataRow dr in Lista.Tables[0].Rows)
@@ -51,46 +56,6 @@ namespace Agencia
 
         }
 
-        /*private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if
-
-        }
-*/
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(desdeFecha.Text) && !string.IsNullOrEmpty(hastaFecha.Text))
-            {
-                dataGridViewReservas.Rows.Clear();
-
-               /* string dni = Ag.recuperoDni(Global.GlobalSessionNombre, Global.GlobalSessionPass);
-                DataSet Lista = Ag.buscarReservas(dni, desdeFecha.Text, hastaFecha.Text);
-
-                int index = 0;
-                if (Lista.Tables[0] != null && Lista.Tables[0].Rows.Count > 0)
-                {
-                    foreach (DataRow dr in Lista.Tables[0].Rows)
-                    {
-                        dataGridViewReservas.Rows.Add();
-
-                        dataGridViewReservas.Rows[index].Cells[1].Value = dr["fhasta"].ToString();
-                        dataGridViewReservas.Rows[index].Cells[2].Value = dr["fdesde"].ToString();
-                        dataGridViewReservas.Rows[index].Cells[3].Value = dr["ciudad"].ToString();
-                        dataGridViewReservas.Rows[index].Cells[4].Value = dr["precio"].ToString();
-                        dataGridViewReservas.Rows[index].Cells[5].Value = dr["alojamiento"].ToString();
-                        dataGridViewReservas.Rows[index].Cells[6].Value = dr["id_reserva"].ToString();
-                        index++;
-
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("el campo tipo es requerido");
-            }
-        */
-                }
-        }
 
         private void dataGridViewReservas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -102,10 +67,13 @@ namespace Agencia
                 if (dr == DialogResult.Yes)
                 {
                     int id = int.Parse(this.dataGridViewReservas.Rows[e.RowIndex].Cells[6].Value.ToString());
-                    /*if (Ag.eliminarReserva(id))
+                    if (Ag.eliminarReserva(id))
                     {
                         MessageBox.Show("RESERVA ELIMINADA");
-                    }*/
+                    } else
+                    {
+                        MessageBox.Show("Segui participando");
+                    }
                     RefresVista();
 
                 }

@@ -5962,19 +5962,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\work\\.nuget\\packages\\": {}
+    "C:\\Users\\mele_\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Users\\work\\Desktop\\Nueva carpeta (3)\\tpPlataformas\\TP4 ORM\\Agencia\\Agencia\\Agencia.csproj",
+      "projectUniqueName": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Agencia\\Agencia.csproj",
       "projectName": "Agencia",
-      "projectPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (3)\\tpPlataformas\\TP4 ORM\\Agencia\\Agencia\\Agencia.csproj",
-      "packagesPath": "C:\\Users\\work\\.nuget\\packages\\",
-      "outputPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (3)\\tpPlataformas\\TP4 ORM\\Agencia\\Agencia\\obj\\",
+      "projectPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Agencia\\Agencia.csproj",
+      "packagesPath": "C:\\Users\\mele_\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Agencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\work\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mele_\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5988,8 +5988,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "E:\\Users\\work\\Desktop\\Nueva carpeta (3)\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {
-              "projectPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (3)\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj"
+            "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {
+              "projectPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj"
             }
           }
         }
@@ -6041,7 +6041,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

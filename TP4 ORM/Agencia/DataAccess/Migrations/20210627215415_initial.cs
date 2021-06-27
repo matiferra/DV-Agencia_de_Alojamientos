@@ -49,7 +49,6 @@ namespace DataAccess.Migrations
                     estrellas = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     cantidadDePersonas = table.Column<int>(type: "int", nullable: false),
                     tv = table.Column<bool>(type: "bit", nullable: false),
-                    id_ciudad = table.Column<int>(type: "int", nullable: false),
                     ciudadid = table.Column<int>(type: "int", nullable: true),
                     cantidad_de_habitaciones = table.Column<int>(type: "int", nullable: false),
                     precio_por_dia = table.Column<double>(type: "float", nullable: false),
@@ -82,48 +81,6 @@ namespace DataAccess.Migrations
                     table.PrimaryKey("PK_Agencia", x => x.id);
                     table.ForeignKey(
                         name: "FK_Agencia_Alojamiento_id_alojamientoid",
-                        column: x => x.id_alojamientoid,
-                        principalTable: "Alojamiento",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Cabania",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    habitaciones = table.Column<double>(type: "float", nullable: false),
-                    barrios = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    banios = table.Column<int>(type: "int", nullable: false),
-                    id_alojamientoid = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cabania", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Cabania_Alojamiento_id_alojamientoid",
-                        column: x => x.id_alojamientoid,
-                        principalTable: "Alojamiento",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Hotel",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    precio_por_persona = table.Column<double>(type: "float", nullable: false),
-                    id_alojamientoid = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Hotel", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Hotel_Alojamiento_id_alojamientoid",
                         column: x => x.id_alojamientoid,
                         principalTable: "Alojamiento",
                         principalColumn: "id",
@@ -194,15 +151,6 @@ namespace DataAccess.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Alojamiento",
-                columns: new[] { "id", "barrio", "cantidadDeBanios", "cantidadDePersonas", "cantidad_de_habitaciones", "ciudadid", "esHotel", "estrellas", "id_ciudad", "precio_por_dia", "precio_por_persona", "tv" },
-                values: new object[,]
-                {
-                    { 1, "belgrano", 0, 2, 0, null, true, "5", 1, 0.0, 2500.0, true },
-                    { 2, "matadeores", 2, 2, 1, null, false, "4", 1, 50100.0, 0.0, true }
-                });
-
-            migrationBuilder.InsertData(
                 table: "Ciudades",
                 columns: new[] { "id", "nombre" },
                 values: new object[,]
@@ -219,8 +167,12 @@ namespace DataAccess.Migrations
                 columns: new[] { "id", "DNI", "bloqueado", "esAdmin", "intentosLogueo", "mail", "nombre", "pass" },
                 values: new object[,]
                 {
-                    { 1, 101010, false, true, 0, "soporte@gmail.com", "admin", "123" },
-                    { 2, 54594166, false, false, 0, "soporte@gmail.com", "gianpool", "123" }
+                    { 1, 0, false, true, 0, "soporte@gmail.com", "fede", "123" },
+                    { 2, 111111, false, false, 0, "soporte@gmail.com", "gianpool", "123" },
+                    { 3, 222222, false, false, 0, "soporte@gmail.com", "matiferra", "123" },
+                    { 4, 333333, true, false, 0, "soporte@gmail.com", "gabo", "123" },
+                    { 5, 444444, false, true, 0, "soporte@gmail.com", "dino", "123" },
+                    { 6, 555555, false, false, 0, "soporte@gmail.com", "fran", "123" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -249,16 +201,6 @@ namespace DataAccess.Migrations
                 column: "ciudadid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cabania_id_alojamientoid",
-                table: "Cabania",
-                column: "id_alojamientoid");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Hotel_id_alojamientoid",
-                table: "Hotel",
-                column: "id_alojamientoid");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Reserva_id_alojamientoid",
                 table: "Reserva",
                 column: "id_alojamientoid");
@@ -273,12 +215,6 @@ namespace DataAccess.Migrations
         {
             migrationBuilder.DropTable(
                 name: "AgenciaManager");
-
-            migrationBuilder.DropTable(
-                name: "Cabania");
-
-            migrationBuilder.DropTable(
-                name: "Hotel");
 
             migrationBuilder.DropTable(
                 name: "Agencia");

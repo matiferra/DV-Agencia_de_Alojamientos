@@ -14,8 +14,6 @@ namespace DataAccess
         public MyContext() { }
         public DbSet<Entities.Alojamiento> Alojamiento { get; set; }
         public DbSet<Entities.Agencia> Agencia { get; set; }
-        public DbSet<Entities.Cabania> Cabania { get; set; }
-        public DbSet<Entities.Hotel> Hotel { get; set; }
         public DbSet<Entities.Reserva> Reserva { get; set; }
         public DbSet<Entities.Usuario> Usuario { get; set; }
         public DbSet<Entities.Ciudades> Ciudades { get; set; }
@@ -26,7 +24,7 @@ namespace DataAccess
         {
             try
             {
-                optionsBuilder.UseSqlServer(@"Data Source = basedv.ddns.net\DVTN;Initial Catalog =testTp4; User Id = matias.ferrario@davinci.edu.ar; Password=Dv2021");
+                optionsBuilder.UseSqlServer(@"Data Source = basedv.ddns.net\DVTN;Initial Catalog =tpPlataformas; User Id = matias.ferrario@davinci.edu.ar; Password=Dv2021");
             }
             catch (Exception e)
             {
@@ -41,8 +39,12 @@ namespace DataAccess
 
             modelBuilder.Entity<Entities.Usuario>().HasData(
 
-                 new Entities.Usuario { id = 1, DNI = 101010, nombre = "admin", pass = "123", esAdmin = true, mail = "soporte@gmail.com", bloqueado = false, intentosLogueo = 0 },
-                 new Entities.Usuario { id = 2, DNI = 54594166, nombre = "gianpool", pass = "123", esAdmin = false, mail = "soporte@gmail.com", bloqueado = false, intentosLogueo = 0 }
+                 new Entities.Usuario { id = 1, DNI = 000000, nombre = "fede", pass = "123", esAdmin = true, mail = "soporte@gmail.com", bloqueado = false, intentosLogueo = 0 },
+                 new Entities.Usuario { id = 2, DNI = 111111, nombre = "gianpool", pass = "123", esAdmin = false, mail = "soporte@gmail.com", bloqueado = false, intentosLogueo = 0 },
+                 new Entities.Usuario { id = 3, DNI = 222222, nombre = "matiferra", pass = "123", esAdmin = false, mail = "soporte@gmail.com", bloqueado = false, intentosLogueo = 0 },
+                 new Entities.Usuario { id = 4, DNI = 333333, nombre = "gabo", pass = "123", esAdmin = false, mail = "soporte@gmail.com", bloqueado = true, intentosLogueo = 0 },
+                 new Entities.Usuario { id = 5, DNI = 444444, nombre = "dino", pass = "123", esAdmin = true, mail = "soporte@gmail.com", bloqueado = false, intentosLogueo = 0 },
+                 new Entities.Usuario { id = 6, DNI = 555555, nombre = "fran", pass = "123", esAdmin = false, mail = "soporte@gmail.com", bloqueado = false, intentosLogueo = 0 }
 
                 );
 
@@ -55,42 +57,6 @@ namespace DataAccess
                 new Entities.Ciudades { id = 5, nombre = "lujan" }
 
                );
-
-            modelBuilder.Entity<Entities.Alojamiento>().HasData(
-
-                new Entities.Alojamiento
-                {
-                    id = 1,
-                    barrio = "belgrano",
-                    estrellas = "5",
-                    cantidadDePersonas = 2,
-                    tv = true,
-                    id_ciudad = 1,
-                    cantidad_de_habitaciones = 0,
-                    precio_por_dia = 0,
-                    precio_por_persona = 2500,
-                    cantidadDeBanios = 0,
-                    esHotel = true
-                },
-
-                new Entities.Alojamiento
-                {
-                    id = 2,
-                    barrio = "matadeores",
-                    estrellas = "4",
-                    cantidadDePersonas = 2,
-                    tv = true,
-                    id_ciudad = 1,
-                    cantidad_de_habitaciones = 1,
-                    precio_por_dia = 50100,
-                    precio_por_persona = 0,
-                    cantidadDeBanios = 2,
-                    esHotel = false
-                }
-
-
-               );
-
 
 
         }
