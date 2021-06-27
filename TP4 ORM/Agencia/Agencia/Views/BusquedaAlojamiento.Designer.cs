@@ -192,6 +192,7 @@ namespace Agencia.Views
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.hastaFecha);
@@ -199,7 +200,6 @@ namespace Agencia.Views
             this.panel1.Controls.Add(this.Phasta_campo);
             this.panel1.Controls.Add(this.Pdesde_campo);
             this.panel1.Controls.Add(this.comboBox_ciudad);
-            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label8);
@@ -331,7 +331,7 @@ namespace Agencia.Views
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.Size = new System.Drawing.Size(798, 165);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Reservar
             // 

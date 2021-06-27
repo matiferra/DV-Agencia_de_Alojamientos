@@ -77,3 +77,5 @@ E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\Bussines\o
 E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.dll
 E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\ref\Bussines.dll
 E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\Bussines\obj\Debug\net5.0\Bussines.pdb
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\Entities.dll
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Bussines\bin\Debug\net5.0\Entities.pdb

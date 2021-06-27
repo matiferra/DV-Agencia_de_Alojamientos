@@ -92,3 +92,6 @@ E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\DataAccess
 E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.pdb
 E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\Entities.dll
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\bin\Debug\net5.0\Entities.pdb
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CopyComplete

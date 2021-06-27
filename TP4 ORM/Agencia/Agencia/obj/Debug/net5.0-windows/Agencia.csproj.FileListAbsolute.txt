@@ -502,3 +502,5 @@ E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\Agencia\ob
 E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\Agencia\obj\Debug\net5.0-windows\Agencia.genruntimeconfig.cache
 E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\Agencia\bin\Debug\net5.0-windows\Entities.dll
 E:\Users\work\Desktop\Nueva carpeta (2)\tpPlataformas\TP4 ORM\Agencia\Agencia\bin\Debug\net5.0-windows\Entities.pdb
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Agencia\bin\Debug\net5.0-windows\Entities.dll
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Agencia\bin\Debug\net5.0-windows\Entities.pdb

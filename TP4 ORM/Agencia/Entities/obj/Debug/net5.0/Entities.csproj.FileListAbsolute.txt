@@ -10,3 +10,15 @@ E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Entities\obj\D
 E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\ref\Entities.dll
 E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.pdb
 E:\Users\work\Desktop\entrega final\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\bin\Debug\net5.0\Entities.dll
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\bin\Debug\net5.0\ref\Entities.dll
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.csprojAssemblyReference.cache
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.dll
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\ref\Entities.dll
+C:\Users\mele_\OneDrive\Documents\GitHub\tp4Plataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.pdb

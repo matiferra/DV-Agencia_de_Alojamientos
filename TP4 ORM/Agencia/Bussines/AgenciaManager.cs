@@ -106,14 +106,60 @@ namespace Bussines
             }
 
 
+
+
             //REVISAR
-            var queryAlojamientos = from alojamiento in alojamientos
+
+
+            /*if(tipo == "Hotel")
+            {
+                queryLala = queryLala.where(d=> d.precio_por_persona == double.Parse(Phasta))
+            }
+            if (tipo == "cabania")
+            {
+            }                queryLala = queryLala.where(d => d.precio_por_dia == double.Parse(Phasta))
+            */
+
+            IEnumerable<Entities.Alojamiento> queryAlojamientos = null;
+
+
+            if (tipo == "Hotel")
+            {
+                queryAlojamientos = from alojamiento in alojamientos
                                     where alojamiento.precio_por_persona <= double.Parse(Phasta)
-                                    || alojamiento.precio_por_persona >= double.Parse(Pdesde)
-                                    || alojamiento.precio_por_dia <= double.Parse(Phasta)
-                                    || alojamiento.precio_por_dia >= double.Parse(Pdesde)
-                                    || alojamiento.cantidadDePersonas >= int.Parse(cantPersonas)
+                                    && alojamiento.precio_por_persona >= double.Parse(Pdesde)
+                                    && alojamiento.cantidadDePersonas >= int.Parse(cantPersonas)
+                                    && alojamiento.esHotel == true
                                     select alojamiento;
+            }
+            else
+            {
+                queryAlojamientos = from alojamiento in alojamientos
+                                    where alojamiento.precio_por_dia <= double.Parse(Phasta)
+                                    && alojamiento.precio_por_dia >= double.Parse(Pdesde)
+                                    && alojamiento.cantidadDePersonas >= int.Parse(cantPersonas)
+                                    && alojamiento.esHotel == false
+                                    select alojamiento;
+            }
+
+
+
+            /* var queryAlojamientos = from alojamiento in alojamientos
+                                    where alojamiento.precio_por_persona <= double.Parse(Phasta)
+                                    && alojamiento.precio_por_persona >= double.Parse(Pdesde)
+                                    && alojamiento.precio_por_dia <= double.Parse(Phasta)
+                                    && alojamiento.precio_por_dia >= double.Parse(Pdesde)
+                                    && alojamiento.cantidadDePersonas >= int.Parse(cantPersonas)
+                                    select alojamiento;
+            */
+            //var estan = queryLala.Where(x => x.precio_por_dia == 0);
+
+
+            //if (Phasta != null)
+            //{
+            //    queryAlojamientos = queryAlojamientos.Where(d => d.precio_por_persona == Phasta);
+            //}
+
 
 
             foreach (Entities.Alojamiento a in queryAlojamientos)
@@ -143,21 +189,13 @@ namespace Bussines
 
 
             resultadoBusqueda = alojamientosReservados;
-            List<string> alojamientoTrial = new List<string>();
 
             foreach (Entities.Alojamiento alojamiento in alojamientosFiltrados)
             {
-                alojamientoTrial.Add(alojamiento.id_ciudad.ToString());
-                alojamientoTrial.Add(alojamiento.barrio);
-                alojamientoTrial.Add(alojamiento.estrellas);
-                alojamientoTrial.Add(alojamiento.tv.ToString());
-                alojamientoTrial.Add(alojamiento.precio_por_persona.ToString());
-                alojamientoTrial.Add(alojamiento.cantidadDeBanios.ToString());
-                alojamientoTrial.Add(alojamiento.precio_por_dia.ToString());
-                alojamientoTrial.Add(alojamiento.cantidad_de_habitaciones.ToString());
-                
-                resultadoBusqueda.Add(alojamientoTrial);
-
+                resultadoBusqueda.Add(new List<string>{ "", alojamiento.barrio, alojamiento.estrellas, alojamiento.cantidadDePersonas.ToString(),
+                alojamiento.tv.ToString(), alojamiento.id_ciudad.ToString(), alojamiento.cantidad_de_habitaciones.ToString(),
+                alojamiento.precio_por_dia.ToString(),  alojamiento.precio_por_persona.ToString(),
+                alojamiento.cantidadDeBanios.ToString()});
             }
 
             return resultadoBusqueda;
@@ -328,9 +366,40 @@ namespace Bussines
 
         public bool reservar(int codAloj, string dniUsuario, DateTime Fdesde, DateTime Fhasta)
         {
-            //PENDIENTE
+            Entities.Usuario usuario = new Entities.Usuario();
+            usuario = buscarUsuarioxDNI(int.Parse(dniUsuario));
 
-            return false;
+            bool result = false;
+
+            var queryAlojamiento = from alojamientoDB in alojamientos
+                                   where alojamientoDB.id == codAloj
+                                   select alojamientoDB;
+
+            if (queryAlojamiento != null)
+            {
+                Entities.Alojamiento alojamiento = queryAlojamiento.FirstOrDefault();
+
+                if (alojamiento != null)
+                {
+                    Entities.Reserva reservita = new Entities.Reserva();
+                    reservita.FDesde = Fdesde;
+                    reservita.FHasta = Fhasta;
+                    reservita.id_usuario = usuario;
+                    reservita.id_alojamiento = alojamiento;
+
+
+                    contexto.Reserva.Add(reservita);
+                    contexto.SaveChanges();
+                    result = true;
+                }
+
+                else
+                {
+                    result = false;
+                }
+
+            }
+            return result;
         }
 
         public bool modificarReserva(int ID, DateTime FDesde, DateTime FHasta, Entities.Alojamiento propiedad, Entities.Usuario persona, float precio)//Parametro Datos de Reserva ¿?
@@ -420,6 +489,22 @@ namespace Bussines
                 usuario.Add(u.esAdmin.ToString());
                 usuario.Add(u.bloqueado.ToString());
                 usuario.Add(u.intentosLogueo.ToString());
+            }
+
+            return usuario;
+        }
+
+        public Entities.Usuario buscarUsuarioxDNI(int dni)
+        {
+            var query = from usuarioDB in misUsuarios
+                        where usuarioDB.DNI == dni
+                        select usuarioDB;
+
+            Entities.Usuario usuario = null;
+
+            if (query != null)
+            {
+                usuario = query.FirstOrDefault();
             }
 
             return usuario;
