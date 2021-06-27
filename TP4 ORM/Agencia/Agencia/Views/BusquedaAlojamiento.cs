@@ -32,7 +32,7 @@ namespace Agencia.Views
 
 
 
-                var Lista = Ag.buscarAlojamientos(comboBox_ciudad.SelectedValue.ToString(), Pdesde_campo.Text,
+                var Lista = Ag.buscarAlojamientos(comboBox_ciudad.Text.ToString(), Pdesde_campo.Text,
                                           Phasta_campo.Text, text_cantidad.Text, seleccion_tipo.Text, desdeFecha.Text, hastaFecha.Text);
 
                 foreach (List<string> aloja in Lista)

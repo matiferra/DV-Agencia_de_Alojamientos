@@ -245,7 +245,7 @@ namespace Agencia.Views
                 EditarAlojamiento editar = new EditarAlojamiento(this);
                 editar.UpdateEventArgsHandler += edit_aloj_UpdateHadler; //  metodo la cual me permite actualizar la grilla cuando termine de guardar los cambios
 
-                editar.combo_ciudad.SelectedIndex = this.alojamientosGrid.Rows[e.RowIndex].Cells[8].RowIndex;
+               
                 editar.id_text.Text = this.alojamientosGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
                 editar.id_text.ReadOnly = true;
                 editar.id_text.Visible = false;

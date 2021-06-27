@@ -33,17 +33,16 @@ namespace Agencia.Views
             this.panel1 = new System.Windows.Forms.Panel();
             this.TODAS = new System.Windows.Forms.Button();
             this.dataGridViewReservas = new System.Windows.Forms.DataGridView();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.combo_ciudadHeader = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FDesde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FHasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.combo_ciudadHeader = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservas)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +89,6 @@ namespace Agencia.Views
             this.dataGridViewReservas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewReservas.ColumnHeadersHeight = 39;
             this.dataGridViewReservas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Editar,
             this.Eliminar,
             this.id_usuario,
             this.FDesde,
@@ -103,60 +101,9 @@ namespace Agencia.Views
             this.dataGridViewReservas.Name = "dataGridViewReservas";
             this.dataGridViewReservas.RowHeadersVisible = false;
             this.dataGridViewReservas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewReservas.Size = new System.Drawing.Size(703, 215);
+            this.dataGridViewReservas.Size = new System.Drawing.Size(604, 215);
             this.dataGridViewReservas.TabIndex = 105;
             this.dataGridViewReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReservas_CellClick);
-            // 
-            // Editar
-            // 
-            this.Editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.Text = "Editar";
-            this.Editar.ToolTipText = "Editar";
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Eliminar.ToolTipText = "Eliminar";
-            // 
-            // id_usuario
-            // 
-            this.id_usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id_usuario.HeaderText = "Usuario";
-            this.id_usuario.Name = "id_usuario";
-            this.id_usuario.ReadOnly = true;
-            // 
-            // FDesde
-            // 
-            this.FDesde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.FDesde.HeaderText = "Fecha Desde";
-            this.FDesde.Name = "FDesde";
-            this.FDesde.ReadOnly = true;
-            // 
-            // FHasta
-            // 
-            this.FHasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.FHasta.HeaderText = "Fecha Hasta";
-            this.FHasta.Name = "FHasta";
-            this.FHasta.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // id_reserva
-            // 
-            this.id_reserva.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id_reserva.HeaderText = "ID - Reserva";
-            this.id_reserva.Name = "id_reserva";
             // 
             // combo_ciudadHeader
             // 
@@ -215,6 +162,49 @@ namespace Agencia.Views
             this.label2.Text = "BUSCAR RESERVAS";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // Eliminar
+            // 
+            this.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Eliminar.ToolTipText = "Eliminar";
+            // 
+            // id_usuario
+            // 
+            this.id_usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.id_usuario.HeaderText = "Usuario";
+            this.id_usuario.Name = "id_usuario";
+            this.id_usuario.ReadOnly = true;
+            // 
+            // FDesde
+            // 
+            this.FDesde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.FDesde.HeaderText = "Fecha Desde";
+            this.FDesde.Name = "FDesde";
+            this.FDesde.ReadOnly = true;
+            // 
+            // FHasta
+            // 
+            this.FHasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.FHasta.HeaderText = "Fecha Hasta";
+            this.FHasta.Name = "FHasta";
+            this.FHasta.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // id_reserva
+            // 
+            this.id_reserva.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.id_reserva.HeaderText = "ID - Reserva";
+            this.id_reserva.Name = "id_reserva";
+            // 
             // AdmReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -245,7 +235,6 @@ namespace Agencia.Views
         public System.Windows.Forms.ComboBox combo_ciudadHeader;
         private System.Windows.Forms.DataGridView dataGridViewReservas;
         private System.Windows.Forms.Button TODAS;
-        private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn FDesde;

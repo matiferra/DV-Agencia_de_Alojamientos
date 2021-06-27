@@ -91,7 +91,7 @@ namespace Bussines
             return salida;
         }
 
-        public List<List<string>> buscarAlojamientos(string Ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo, string fDesde, string fHasta)
+        public List<List<string>> buscarAlojamientos(string ciudad, string Pdesde, string Phasta, string cantPersonas, string tipo, string fDesde, string fHasta)
         {
 
             List<List<string>> resultadoBusqueda = new List<List<string>>();
@@ -132,6 +132,7 @@ namespace Bussines
                                     && alojamiento.precio_por_persona >= double.Parse(Pdesde)
                                     && alojamiento.cantidadDePersonas >= int.Parse(cantPersonas)
                                     && alojamiento.esHotel == true
+                                    && alojamiento.ciudad.nombre == ciudad
                                     select alojamiento;
             }
             else
@@ -141,28 +142,9 @@ namespace Bussines
                                     && alojamiento.precio_por_dia >= double.Parse(Pdesde)
                                     && alojamiento.cantidadDePersonas >= int.Parse(cantPersonas)
                                     && alojamiento.esHotel == false
+                                    && alojamiento.ciudad.nombre == ciudad
                                     select alojamiento;
             }
-
-
-
-            /* var queryAlojamientos = from alojamiento in alojamientos
-                                    where alojamiento.precio_por_persona <= double.Parse(Phasta)
-                                    && alojamiento.precio_por_persona >= double.Parse(Pdesde)
-                                    && alojamiento.precio_por_dia <= double.Parse(Phasta)
-                                    && alojamiento.precio_por_dia >= double.Parse(Pdesde)
-                                    && alojamiento.cantidadDePersonas >= int.Parse(cantPersonas)
-                                    select alojamiento;
-            */
-            //var estan = queryLala.Where(x => x.precio_por_dia == 0);
-
-
-            //if (Phasta != null)
-            //{
-            //    queryAlojamientos = queryAlojamientos.Where(d => d.precio_por_persona == Phasta);
-            //}
-
-
 
             foreach (Entities.Alojamiento a in queryAlojamientos)
             {
@@ -420,7 +402,7 @@ namespace Bussines
                         select reservaDB;
             foreach (Entities.Reserva reservas in query)
             {
-                resultado.Add(new List<string> { "", "", reservas.id_usuario.nombre.ToString(),
+                resultado.Add(new List<string> { "", reservas.id_usuario.nombre.ToString(),
                     reservas.FDesde.ToString(), reservas.FHasta.ToString(),
                     reservas.precio.ToString(), reservas.id.ToString()});
             }
@@ -434,7 +416,7 @@ namespace Bussines
                         select reservaDB;
             foreach (Entities.Reserva reservas in query)
             {
-                resultado.Add(new List<string> { "", "", reservas.id_usuario.nombre.ToString(),
+                resultado.Add(new List<string> { "", reservas.id_usuario.nombre.ToString(),
                     reservas.FDesde.ToString(), reservas.FHasta.ToString(),
                     reservas.precio.ToString(), reservas.id_alojamiento.id.ToString(), reservas.id.ToString()});
             }
