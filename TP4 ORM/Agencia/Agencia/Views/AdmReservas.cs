@@ -17,7 +17,9 @@ namespace Agencia.Views
         public AdmReservas()
         {
             InitializeComponent();
-
+            combo_ciudadHeader.DisplayMember = "nombre";
+            combo_ciudadHeader.ValueMember = "id";
+            combo_ciudadHeader.DataSource = Ag.getCiudades();
 
             panel1.BackColor = Color.FromArgb(60, Color.Black);
         }
