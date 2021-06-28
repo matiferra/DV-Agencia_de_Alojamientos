@@ -40,7 +40,9 @@ namespace Agencia
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (ag.autenticar(txtUsername.Text, txtPassword.Text))
+            string mensaje = ag.autenticar(txtUsername.Text, txtPassword.Text);
+
+            if (mensaje == "OK")
             {
                 Global.GlobalSessionNombre = txtUsername.Text;//creo clase "Global" con el propisto de poder almacenar el nombre del usuario y poder identificar a la hora de cambiar contraseña.
                 Global.GlobalSessionPass = txtPassword.Text;
@@ -72,6 +74,10 @@ namespace Agencia
                 }
                 txtUsername.Text = "";
                 txtPassword.Text = "";
+            }
+            else
+            {
+                MessageBox.Show(mensaje);
             }
         }
 

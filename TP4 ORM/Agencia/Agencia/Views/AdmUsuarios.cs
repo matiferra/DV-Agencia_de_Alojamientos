@@ -98,9 +98,8 @@ namespace Agencia.Views
 
                 if (dr == DialogResult.Yes)
                 {
-                    int id = int.Parse(this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[9].Value.ToString());
-                    bool esBloqueado = bool.Parse(this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[5].Value.ToString());
-                    ag.desbloquearUsuario(id, esBloqueado);
+                    int id = int.Parse(this.dataGridViewUsuarios.Rows[e.RowIndex].Cells[9].Value.ToString());                   
+                    ag.desbloquearUsuario(id);
                     RefresVista();
                 }
 

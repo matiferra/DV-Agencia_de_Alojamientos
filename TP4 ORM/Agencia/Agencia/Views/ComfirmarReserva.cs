@@ -15,8 +15,9 @@ namespace Agencia.Views
         Bussines.AgenciaManager Ag = new Bussines.AgenciaManager();
         public ComfirmarReserva(BusquedaAlojamiento alojaPadre)
         {
-            InitializeComponent();
-        }
+            InitializeComponent();     
+        }    
+
         public delegate void UpdateDelegate(object serder, UpdateEventArgs args);
         public event UpdateDelegate UpdateEventArgsHandler;
 
@@ -40,14 +41,13 @@ namespace Agencia.Views
             if (Ag.reservar(int.Parse(Id_text.Text), recuperoDni.ToString(), desdeFecha.Value, hastaFecha.Value))
             {
                 MessageBox.Show("Reservó con éxito");
+                this.Close();
+                this.Dispose();
             }
             else
             {
                 MessageBox.Show("Error al insertar");
             }
-          
-      
-
              
         }
     }

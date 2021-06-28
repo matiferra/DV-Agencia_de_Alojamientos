@@ -46,3 +46,15 @@ E:\Users\work\Desktop\Nueva carpeta (4)\tpPlataformas\TP4 ORM\Agencia\Entities\o
 E:\Users\work\Desktop\Nueva carpeta (4)\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.dll
 E:\Users\work\Desktop\Nueva carpeta (4)\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\ref\Entities.dll
 E:\Users\work\Desktop\Nueva carpeta (4)\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.pdb
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\bin\Debug\net5.0\Entities.deps.json
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\bin\Debug\net5.0\Entities.dll
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\bin\Debug\net5.0\ref\Entities.dll
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\bin\Debug\net5.0\Entities.pdb
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.dll
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\ref\Entities.dll
+E:\Users\work\Desktop\Nueva carpeta (5)\tpPlataformas\TP4 ORM\Agencia\Entities\obj\Debug\net5.0\Entities.pdb

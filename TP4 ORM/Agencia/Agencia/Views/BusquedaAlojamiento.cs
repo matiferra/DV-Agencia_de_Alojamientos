@@ -114,8 +114,30 @@ namespace Agencia.Views
 
                 reservar.Id_text.Text = this.dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
                 reservar.desdeFecha.Text = this.desdeFecha.Text;
-                reservar.hastaFecha.Text = this.hastaFecha.Text; // dni lo tomamos como pk de la tabla no es valido poder modificarlo
-            
+                reservar.hastaFecha.Text = this.hastaFecha.Text;
+               
+                var cantidadPersonas = text_cantidad.Text;
+                DateTime fechaDesde = desdeFecha.Value.Date;
+                DateTime fechaHasta = hastaFecha.Value.Date;
+                var comparoFechas = ((fechaDesde - fechaHasta).Days) * (-1);
+
+                if (seleccion_tipo.Text == "Hotel")
+                {
+                    var precioPorPersona = this.dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();                
+                    var totales = double.Parse(precioPorPersona) * int.Parse(cantidadPersonas);
+                    reservar.textPreciotot.Text = totales.ToString();
+                }
+               else if(seleccion_tipo.Text == "Cabañas")
+                {                        
+                    var preciopordia = double.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString()) * comparoFechas;
+                    var totales = preciopordia * int.Parse(cantidadPersonas);                    
+                    reservar.textPreciotot.Text = totales.ToString();                
+
+                }
+
+                reservar.text_Candias.Text = comparoFechas.ToString();
+
+
 
                 reservar.Show();
             }

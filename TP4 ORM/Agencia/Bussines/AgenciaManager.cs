@@ -50,36 +50,12 @@ namespace Bussines
 
         // ----------------------- METODOS ALOJAMIENTOS -----------------------
 
-        //public List<List<string>> obtenerAlojamientos(string ciudad)
-        //{
-        //    var query = from alojamientosDB in alojamientos
-        //                select alojamientosDB;
-
-
-        //    List<List<string>> alojamientos = new List<List<string>>();
-        //    foreach (Usuario u in query)
-        //        alojamientos.Add(new List<string> { u.DNI.ToString(), u.nombre, u.mail, u.pass, u.esAdmin.ToString(), u.bloqueado.ToString(), u.intentosLogueo.ToString() });
-        //    return alojamientos;
-
-        //    return null;
-        //}
+      
 
         public List<List<string>> obtenerAlojamientos()
         {
             List<List<string>> salida = new List<List<string>>();
-            /* var query = from alojamiento in alojamientos
-                         select alojamineto
-
-             if(query != null)
-              {
-                  foreach (Entities.Alojamiento u in query)
-                  {
-                      salida.Add(new List<string> {null, null, u.id.ToString(), u.barrio, u.estrellas.ToString(), u.cantidadDePersonas.ToString(),
-                                                u.tv.ToString(), u.esHotel.ToString(), u.id_ciudad.ToString(),u.cantidad_de_habitaciones.ToString(),
-                                                u.precio_por_dia.ToString(), u.precio_por_persona.ToString(), u.cantidadDeBanios.ToString()});
-                  }
-              }
-             */
+      
             if (alojamientos.Count() > 0 || alojamientos != null)
             {
                 foreach (Entities.Alojamiento u in alojamientos)
@@ -110,17 +86,7 @@ namespace Bussines
 
 
 
-            //REVISAR
 
-
-            /*if(tipo == "Hotel")
-            {
-                queryLala = queryLala.where(d=> d.precio_por_persona == double.Parse(Phasta))
-            }
-            if (tipo == "cabania")
-            {
-            }                queryLala = queryLala.where(d => d.precio_por_dia == double.Parse(Phasta))
-            */
 
             IEnumerable<Entities.Alojamiento> queryAlojamientos = null;
 
@@ -642,30 +608,48 @@ namespace Bussines
             }
         }
 
-        public bool autenticar(string nombre, string password)
+        public string autenticar(string nombre, string password)
         {
-            bool respuesta = false;
-            var query = from usuarioDB in misUsuarios
+            contexto.Dispose();
+            inicializarAtributos();
+
+            string respuesta = "";
+            var query = from usuarioDB in contexto.Usuario
                         where usuarioDB.nombre == nombre
                         select usuarioDB;
 
-            if (misUsuarios != null)
+
+            Entities.Usuario usuario = query.FirstOrDefault();
+
+            if (usuario != null)
             {
-                foreach (Entities.Usuario u in query)
+                if (usuario.bloqueado == false)
                 {
-                    if (password == u.pass)
+                    if (password == usuario.pass)
                     {
-                        respuesta = true;
+                        respuesta = "OK";
                     }
                     else
                     {
-                        u.intentosLogueo++;
-                        if (u.intentosLogueo >= 3)
+                        usuario.intentosLogueo++;
+                        if (usuario.intentosLogueo >= 3)
                         {
-                            u.bloqueado = true;
+                            usuario.bloqueado = true;
+                            usuario.intentosLogueo = 0;
+                            respuesta = "USUARIO BLOQUEADO";
+
                         }
-                        contexto.Usuario.Update(u);
+                        else
+                        {
+                            respuesta = "TE QUEDAN " + (3 - usuario.intentosLogueo) + " INTENTOS";
+                        }
+                        contexto.Usuario.Update(usuario);
+                        contexto.SaveChanges();
                     }
+                }
+                else
+                {
+                    respuesta = "USUARIO BLOQUEADO";
                 }
             }
 
@@ -673,15 +657,21 @@ namespace Bussines
         }
 
 
-        public bool desbloquearUsuario(int id, bool valido)
+        public bool desbloquearUsuario(int id)
         {
             bool desbloqueado = false;
 
-            if (valido == true)
+            var query = from usuarioDB in misUsuarios
+                        where usuarioDB.id == id
+                        select usuarioDB;
+
+            Entities.Usuario usuario = query.FirstOrDefault();
+
+            if (usuario != null)
             {
-                var usuario = contexto.Usuario.Find(id);
                 usuario.bloqueado = false;
                 contexto.Usuario.Update(usuario);
+
                 contexto.SaveChanges();
                 desbloqueado = true;
             }
