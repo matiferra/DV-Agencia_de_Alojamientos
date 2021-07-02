@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ABsKHiQAMDZoDAnhcU0os7TE5r+NFf1SpCBQ7C9vRsQ=</dsig:DigestValue>
+        <dsig:DigestValue>pr3NyGviBD0bA2l4ObeBoegHqhadbh05r2kt+7Pxtq0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -122,148 +122,148 @@
       <dsig:DigestValue>Hno//k4TVAvMHMf4f2cNz0oAAuILMbVK20pHAg/dsbI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\all.css" size="78244">
+  <file name="Content\all.css" size="73625">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>huO10JorjtEsorBIGZKjpqc7odrVZL2HKy5az85w9O4=</dsig:DigestValue>
+      <dsig:DigestValue>5a0xpHkTzfwkcKzU4wSYL64rzPYgmIVf7PO4TB5/6jQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\all.min.css" size="59348">
+  <file name="Content\all.min.css" size="59344">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/Uk1JMi+bYTPlZWfkxA2gLP6oqR8kkgtQ/8YNtjAgFU=</dsig:DigestValue>
+      <dsig:DigestValue>2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\brands.css" size="747">
+  <file name="Content\brands.css" size="732">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>SBJLG3uCeFUEfI7UrcdyfKuWzZGNOSZGA7Zudwn7/Ik=</dsig:DigestValue>
+      <dsig:DigestValue>UAmjTjAGP/uJGFJ0aBs1mujH2sGaYG1bFFbuNSTLybA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\brands.min.css" size="679">
+  <file name="Content\brands.min.css" size="675">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>QP2tj/BsYvC0x28waatcSRUc65ognlrj05TGkQB195E=</dsig:DigestValue>
+      <dsig:DigestValue>nNY7jOolBFwUYjxTjSZ1JRiljAxoJ5XOatMHiXbGWjc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\fontawesome.css" size="76575">
+  <file name="Content\fontawesome.css" size="71990">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YfD/F9oq8oW+RgMznbVF8iLF+CcuzL1Z0vRnfOtaFFs=</dsig:DigestValue>
+      <dsig:DigestValue>bIpDwGRWgwbsK1aDr/KE62U7bst6mg3MEPcafHkSCeg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\font-awesome.css" size="39751">
+  <file name="Content\font-awesome.css" size="37414">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YIHlqxkiJtENTMuzIHC9EfZaB5RniGr7kF7juUQJUuc=</dsig:DigestValue>
+      <dsig:DigestValue>NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\fontawesome.min.css" size="57916">
+  <file name="Content\fontawesome.min.css" size="57912">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4DUYdnA0F+sqmYXLFez5kQlm0pQefGHI85B6KDTDg4M=</dsig:DigestValue>
+      <dsig:DigestValue>0BorooBceJV+FaKVgTXeDzy4jpUVndD2wKAyvXaxsOk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\font-awesome.min.css" size="31004">
+  <file name="Content\font-awesome.min.css" size="31000">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>gg4WnOJIJAZtmXP9S2Vhqunc1tvvZDXakF1aHWSCmXw=</dsig:DigestValue>
+      <dsig:DigestValue>eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\regular.css" size="749">
+  <file name="Content\regular.css" size="734">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>kh9BkMTvVZJLSSjyahI09i7RFRg8CFLLtVO8gXhY5qs=</dsig:DigestValue>
+      <dsig:DigestValue>JOdUjmQuMY8GugqgUNNBFAEYI+4jST3+3/1b5HVnS8M=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\regular.min.css" size="681">
+  <file name="Content\regular.min.css" size="677">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>rKWeW/vuHGC0r8HcUN8Czdx4xv5DfghDdwFkRVWk5EQ=</dsig:DigestValue>
+      <dsig:DigestValue>7qPWzNp/ZQMHjM6dxBF2wTV68ck6WzYlEx73zyHJ18Q=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\solid.css" size="743">
+  <file name="Content\solid.css" size="727">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>sznu18R4atwmnIgyOmJh8B4yMT4LLb+gHlCrADIatZs=</dsig:DigestValue>
+      <dsig:DigestValue>k89ulkWeQvn2VuA+xIAFeNwsAh3N5HXJ5eiRp3gLCGY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\solid.min.css" size="673">
+  <file name="Content\solid.min.css" size="669">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>eFTY5EaHND9xePMkVi3mhKF0aE8OksZs4A1MS/F5X8E=</dsig:DigestValue>
+      <dsig:DigestValue>N7q2zVg5gujv9YUBqZ18XE1jZkwco0+eO3z1JsW3OuI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\svg-with-js.css" size="8448">
+  <file name="Content\svg-with-js.css" size="8077">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4JHM+Zalm4bxY5EEccYteR59nSaPn0jHJt/4Tx6CBRI=</dsig:DigestValue>
+      <dsig:DigestValue>296EDt4eprQ6RIUG6kzGhS4OqM6Wco4bwbd91zirOQs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\svg-with-js.min.css" size="6363">
+  <file name="Content\svg-with-js.min.css" size="6359">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>SgAvhH9cNGtI8kS7pazf93vwlc11zfsVw7eh13dHac8=</dsig:DigestValue>
+      <dsig:DigestValue>aLr6D2RuOF/m2nqDnvMsDwttCr1yhPDM5oQ1x3CVUCU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\v4-shims.css" size="43484">
+  <file name="Content\v4-shims.css" size="41312">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>c5FTQveaSa6pOV2ABP0oBmPTepfJ60tmPxovFGfOlmY=</dsig:DigestValue>
+      <dsig:DigestValue>UGiDvawURBmW/scorojYesSCiOJpUF16Ned6weTP+PY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\v4-shims.min.css" size="26706">
+  <file name="Content\v4-shims.min.css" size="26702">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>skbX4gsjcBh4rUXBoDmfuhxmoj+H7jzceNBCmriF2Zc=</dsig:DigestValue>
+      <dsig:DigestValue>xVkCgy+4RSLQLqGmCjB0dAOhQNhlH6dI8TujmLDA3zo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="fonts\FontAwesome.otf" size="134808">
@@ -284,13 +284,13 @@
       <dsig:DigestValue>e/yrbbmdXPvxcFygU23ceFhUMsxfpBu9etDwCQM7KXk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="fonts\fontawesome-webfont.svg" size="447050">
+  <file name="fonts\fontawesome-webfont.svg" size="444379">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/DeCMvna1QCJCqngvdAwpT0vMX1Rc5OjuRQAtN3OTHw=</dsig:DigestValue>
+      <dsig:DigestValue>rWFXkmwWIrpOHQPUePFUE2hSS/xG9R5C/g2UX37zI+Q=</dsig:DigestValue>
     </hash>
   </file>
   <file name="fonts\fontawesome-webfont.ttf" size="165548">
@@ -320,157 +320,157 @@
       <dsig:DigestValue>Kt78vAQefRj88tQXh53FoJmXqmTWdbejxLbOM9oT8/4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\all.js" size="1266049">
+  <file name="Scripts\fontawesome\all.js" size="1261582">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>VXGBrzEpIuPnYRdQVJF527ryOTyr37t4j/3YA0mPNvQ=</dsig:DigestValue>
+      <dsig:DigestValue>vrRvPLoPZ9h48ItDent8X4+3Dw4A9VJVZ3BsLC5pJ+8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\all.min.js" size="1195454">
+  <file name="Scripts\fontawesome\all.min.js" size="1195450">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/x9RlfBsxiFqrbOYsK5IGAJDjb5K0I+5JNAPUVieUyY=</dsig:DigestValue>
+      <dsig:DigestValue>u11/XQI2A6mpXa0j1p0l0UpO3ZuiMTInGUqaT2K9ZWQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\brands.js" size="455827">
+  <file name="Scripts\fontawesome\brands.js" size="455241">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6giQbvMNtAtboPEyn7ZJGmSw+aICTdYojiNCpgMPQPc=</dsig:DigestValue>
+      <dsig:DigestValue>SqQ72xRA23AbmtGIabc18L+oD7Or+gGYQ0b5P3+AqC4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\brands.min.js" size="447937">
+  <file name="Scripts\fontawesome\brands.min.js" size="447933">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>qiff+9TBiC1KCkaAYeYXfvxzYNKVP15sHJqMyRVW/iA=</dsig:DigestValue>
+      <dsig:DigestValue>B9ZAkkLg1pSjLHvvCKGEpIUVbxQ9RAyVwkkN9g6eq7c=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\conflict-detection.js" size="34960">
+  <file name="Scripts\fontawesome\conflict-detection.js" size="33962">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>zVCnrTUSTgHRljLS2Y7TX5kB3IYesbeBmwT5Qz1uMXI=</dsig:DigestValue>
+      <dsig:DigestValue>CiCWdzPnIboiXaEJT8zVzcGHcnpgQVIbSmu2YvCgnQs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\conflict-detection.min.js" size="13537">
+  <file name="Scripts\fontawesome\conflict-detection.min.js" size="13533">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>yWyCXeNJYKcqA1noUd8HWkRo/qLXJs0kFardwVRi5cc=</dsig:DigestValue>
+      <dsig:DigestValue>QKCJRYoRlfjmNwOGedbJfH0jEeCqrkjqhlyMb9VU2B8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\fontawesome.js" size="81930">
+  <file name="Scripts\fontawesome\fontawesome.js" size="79447">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7Y//+HqqjpKCSnHYSFmvmT5b+3SdmjGFYz28BH+en30=</dsig:DigestValue>
+      <dsig:DigestValue>7c57jTpd/j6S6jU63OwnLYB/KvSJHM/DT45g8WJAatg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\fontawesome.min.js" size="37334">
+  <file name="Scripts\fontawesome\fontawesome.min.js" size="37330">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>XX4hDtK4MZWkRznAGOmGMOFuhc8GjaGlMhx3RDdUPwg=</dsig:DigestValue>
+      <dsig:DigestValue>xLAK3iA6CJoaC89O/DhonpICvf5QmdWhcPJyJDOywJM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\regular.js" size="107390">
+  <file name="Scripts\fontawesome\regular.js" size="107110">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>B/d3qdJc1ds2dkjWKNtb4PoUAreR7cH9bl6EHKWEPG0=</dsig:DigestValue>
+      <dsig:DigestValue>+UMMoBq1TsX1NMvUXRj0odIVN9ResIkVw1+DmYgwqIA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\regular.min.js" size="103390">
+  <file name="Scripts\fontawesome\regular.min.js" size="103386">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>em0cHo9MsCxj72sTcgtlWVuN00s6Gl+MVmxlQHhIC48=</dsig:DigestValue>
+      <dsig:DigestValue>rIGMEmpuRAEYRCuC2kaULwzFzeeKjt7gBhzw8+VC96I=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\solid.js" size="621472">
+  <file name="Scripts\fontawesome\solid.js" size="620342">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>cBIQh2vJGMkFGMDSe/BKaSB/MxMrdzlGIV2LmN3vbnM=</dsig:DigestValue>
+      <dsig:DigestValue>p0CYtBLsvcbZxEvYERIw4DgTAHsZVNRMvd80IUdKftY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\solid.min.js" size="607366">
+  <file name="Scripts\fontawesome\solid.min.js" size="607362">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>2Ef3y4vzG+eHVR8CKUEOXyn+sUVcRMZwYANxEaTgeXw=</dsig:DigestValue>
+      <dsig:DigestValue>v0EaefEAEFQj4te506qWzD4Hs4l5i/nUmdriQAsks3Y=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\v4-shims.js" size="17527">
+  <file name="Scripts\fontawesome\v4-shims.js" size="17459">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>wHTsiVJzrD2C9LGzZlNe7pJKyVa/Tr83Wr5K/t9ocMs=</dsig:DigestValue>
+      <dsig:DigestValue>rYhCFGvoG5Tunmx1qbOorgVkjO2D+TizvdnmDK624Fo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Scripts\fontawesome\v4-shims.min.js" size="15059">
+  <file name="Scripts\fontawesome\v4-shims.min.js" size="15055">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>MOznYc9B3ow1l0KGLw7+c0Rhnm1QCk0sr0c+1pqpM+4=</dsig:DigestValue>
+      <dsig:DigestValue>IDABAAlOkDRs9lG2ETHekJPbuWUaGoYt/SgiLHgjSqg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="webfonts\fa-brands-400.svg" size="751262">
+  <file name="webfonts\fa-brands-400.svg" size="747545">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>GRJA9vEcADWM/WWpK9ybrXSJ8b5atclRJGj9YyRgi+w=</dsig:DigestValue>
+      <dsig:DigestValue>Z5taUha735E8wi1q5Ed4we+XXuOHpsTF3ofnXRmiIjI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="webfonts\fa-regular-400.svg" size="145515">
+  <file name="webfonts\fa-regular-400.svg" size="144714">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>XvIfimziC0GWGLuFFZCh7V+GCZ0VnLA8Myh7iORjDF4=</dsig:DigestValue>
+      <dsig:DigestValue>IyaEm2w9+iF6Dp7K7JVTyRCk4ph8hzFchQc9K5WkhPM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="webfonts\fa-solid-900.svg" size="924025">
+  <file name="webfonts\fa-solid-900.svg" size="918991">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>470aT8FxHeq+p3krZkLEGfjMSrZyIfJU7gHnXRqPaQQ=</dsig:DigestValue>
+      <dsig:DigestValue>+kmPsllqUjXFyG17aKf7526YVcAa9LDlq0HEEEfGSOA=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

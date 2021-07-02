@@ -45,10 +45,10 @@ namespace Agencia
                 Global.GlobalSessionNombre = txtUsername.Text;//creo clase "Global" con el propisto de poder almacenar el nombre del usuario y poder identificar a la hora de cambiar contraseña.
                 Global.GlobalSessionPass = txtPassword.Text;
                 DataSet usuario = ag.buscarUsuarioxNombre(txtUsername.Text);
-                bool bloqueado = bool.Parse(usuario.Tables[0].Rows[0]["bloqueado"].ToString());
-                if (ag.validoSiEsAdmin(txtUsername.Text))
+                int bloqueado = int.Parse(usuario.Tables[0].Rows[0]["bloqueado"].ToString());
+                if (usuario.Tables[0].Rows[0]["esAdmin"].ToString() == "S")
                 {
-                    if (!bloqueado)
+                    if (bloqueado == 0)
                     {
                         adminForm.Dock = DockStyle.Fill;
                         adminForm.Show();
@@ -60,7 +60,7 @@ namespace Agencia
                 }
                 else
                 {
-                    if (!bloqueado)
+                    if (bloqueado == 0)
                     {
                         clienteForm.Dock = DockStyle.Fill;
                         clienteForm.Show();
@@ -77,7 +77,7 @@ namespace Agencia
             {
                 DataSet usuario = ag.buscarUsuarioxNombre(txtUsername.Text);
                 int contadorIntentos = 0;
-                if (usuario != null)
+                if (usuario.Tables[0].Rows.Count > 0 && usuario.Tables[0] != null)
                 {
 
                     contadorIntentos = int.Parse(usuario.Tables[0].Rows[0]["intentosLogeo"].ToString());

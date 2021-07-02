@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {}
+    "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {}
   },
   "projects": {
-    "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {
+    "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj",
+        "projectUniqueName": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj",
         "projectName": "Bussines",
-        "projectPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj",
-        "packagesPath": "C:\\Users\\work\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Bussines\\obj\\",
+        "projectPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Bussines\\Bussines.csproj",
+        "packagesPath": "C:\\Users\\mele_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Bussines\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\work\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mele_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj"
               },
-              "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj"
+              "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj"
               }
             }
           }
@@ -61,21 +61,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\work\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\mele_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\work\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mele_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,8 +89,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj"
+              "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj"
               }
             }
           }
@@ -135,21 +135,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj": {
+    "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\work\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\work\\Desktop\\Nueva carpeta (5)\\tpPlataformas\\TP4 ORM\\Agencia\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\mele_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mele_\\OneDrive\\Documents\\GitHub\\tp4Plataformas\\TP4 ORM\\Agencia\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\work\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mele_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -189,7 +189,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

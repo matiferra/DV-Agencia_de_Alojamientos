@@ -392,3 +392,36 @@ D:\My Documents\NUEVO\GitHub\tpPlataformas\TP3\Agencia\obj\Debug\Agencia.applica
 D:\My Documents\NUEVO\GitHub\tpPlataformas\TP3\Agencia\obj\Debug\Agencia.csproj.CopyComplete
 D:\My Documents\NUEVO\GitHub\tpPlataformas\TP3\Agencia\obj\Debug\Agencia.exe
 D:\My Documents\NUEVO\GitHub\tpPlataformas\TP3\Agencia\obj\Debug\Agencia.pdb
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.exe
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.pdb
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\bin\Debug\Agencia.exe.config
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\bin\Debug\Agencia.exe.manifest
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\bin\Debug\Agencia.application
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\bin\Debug\Agencia.exe
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\bin\Debug\Agencia.pdb
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\bin\Debug\Bussines.dll
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\bin\Debug\FontAwesome.Sharp.dll
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\bin\Debug\DataAccess.dll
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\bin\Debug\Bussines.pdb
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\bin\Debug\DataAccess.pdb
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.csprojAssemblyReference.cache
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.ReservasCliente.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Views.BusquedaAlojamiento.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Views.EditarAlojamiento.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Views.EditarUsuario.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Views.ResultadoBusqueda.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Views.Administrador.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Views.AdmReservas.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Views.AdmUsuarios.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Views.AdmAlojamientos.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Views.Cliente.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Views.Form1.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Login.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Properties.Resources.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.RecuperarContraseña.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.Views.RegistroUsuario.resources
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.csproj.GenerateResource.cache
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.csproj.CoreCompileInputs.cache
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.exe.manifest
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.application
+D:\Descargas\tpPlataformas-master\tpPlataformas-master\TP3\Agencia\obj\Debug\Agencia.csproj.CopyComplete
